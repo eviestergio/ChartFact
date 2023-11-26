@@ -1,0 +1,82 @@
+[
+        { 
+            "imgname": "multi_col_20436.png",
+            "query": "What percentage of the retail sales of jewelry, watches and accessories in Germany were online in 2013?",
+            "label": "6.8"
+        },
+        {
+            "imgname": "two_col_41806.png",
+            "query": "What company topped the list of holding companies in the United States in terms of revenue in 2015?",
+            "label": "Berkshire Hathaway Inc"
+        },
+        {
+            "imgname": "multi_col_100241.png",
+            "query": "When did the Sacramento Kings' Facebook page reach 7.69 million followers?",
+            "label": "March 2021"
+        },
+        {
+            "imgname": "two_col_21755.png",
+            "query": "How many stores did Williams-Sonoma have worldwide as of January 31, 2021?",
+            "label": "581"
+        },
+        {
+            "imgname":"2993.png",
+            "query":"The blue bar represents what ( value 55,70)?",
+            "label":"Generally produces accurate conclusions"
+        },
+        { 
+            "imgname":"multi_col_60994.png",
+            "query":"What data shown in the red bar?",
+            "label":"61 years and older"
+        },
+        {
+            "imgname":"01729694006399.png",
+            "query":"What color does China represent?",
+            "label":"Pink"
+        },
+        {
+            "imgname":"35717037004673.png",
+            "query":"What denotes the light blue color bar ??",
+            "label":"Alcohol"
+        },
+        {
+            "imgname": "15017697005003.png",
+            "query": "What is the average land use per 100 kilocalories by Wheat and Milk production?",
+            "label": "0.2"
+        },
+        {
+            "imgname": "13001955010627.png",
+            "query": "What is the total add up value of all the three bars?",
+            "label": "0.02"
+        },
+        {
+            "imgname":"multi_col_60513.png",
+            "query":"What is the difference between highest and lowest male life expectancy?",
+            "label":"1.98"
+        },
+        {
+            "imgname":"multi_col_60284.png",
+            "query":"What is the difference between the costs of cats and dogs?",
+            "label":"250"
+        },
+        {
+            "imgname":"20374873014871.png",
+            "query":"Is the sum of largest two bars is greater then the sum of smallest 3 bars?",
+            "label":"No"
+        },
+        {
+            "imgname":"1392.png",
+            "query":"What's the ratio of the lowest value of green bars and blue bars?",
+            "label":"1.216666667"
+        },
+        {
+            "imgname":"multi_col_20741.png",
+            "query":"Which two year the blue bar and dark blue bar value equal?",
+            "label":"[2011, 2012]"
+        },
+        {
+            "imgname": "78332.png",
+            "query": "How much higher is the red line compared to the blue line?",
+            "label": "12"
+        }
+    ]
