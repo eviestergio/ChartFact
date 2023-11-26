@@ -75,7 +75,7 @@ def main():
         # Extract relevant information from the response
         result_entry = {
             "image": entry.get("imgname", ""),
-            "claim": response.lstrip('Claim: '),
+            "claim": response.lstrip('Claim: ').lstrip('Claims: '),
             "label": "Supports"
         }
 

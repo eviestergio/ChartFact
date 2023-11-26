@@ -1,7 +1,7 @@
 [
     {
         "image": "multi_col_20436.png",
-        "claim": "6.8 percent of the retail sales of jewelry, watches and accessories in Germany were online in 2013.",
+        "claim": "The percentage of the retail sales of jewelry, watches and accessories in Germany that were online in 2013 was 6.8.",
         "label": "Supports"
     },
     {
@@ -11,7 +11,7 @@
     },
     {
         "image": "multi_col_100241.png",
-        "claim": "According to the data, the Sacramento Kings' Facebook page reached 7.69 million followers in March 2021.",
+        "claim": "The Sacramento Kings' Facebook page reached 7.69 million followers in March 2021.",
         "label": "Supports"
     },
     {
@@ -66,12 +66,12 @@
     },
     {
         "image": "1392.png",
-        "claim": "The ratio of the lowest value of green bars to blue bars is 1.216666667.",
+        "claim": "The ratio of the lowest value of green bars and blue bars is 1.216666667.",
         "label": "Supports"
     },
     {
         "image": "multi_col_20741.png",
-        "claim": "During 2011 and 2012, the values of the blue bar and dark blue bar were equal.",
+        "claim": "The blue bar and dark blue bar values are equal in the years 2011 and 2012.",
         "label": "Supports"
     },
     {

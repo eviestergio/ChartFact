@@ -53,7 +53,7 @@ class QueryModel:
             if len(response) > 0:
                 if response[0] == " ":
                     response = response[1:]
-            print("Answer is \"" + response + "\"\n")
+            print("Answer is: " + response)
             try:
                 response = ast.literal_eval(response)
             except:
@@ -69,7 +69,7 @@ class QueryModel:
             if len(response) > 0:
                 if response[0] == " ":
                     response = response[1:]
-            print("Answer is \"" + response + "\"\n")
+            print("Answer is: " + response)
             try:
                 response = ast.literal_eval(response)
             except:
