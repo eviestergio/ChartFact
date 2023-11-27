@@ -1,0 +1,32 @@
+[
+  {
+    "image": "figureQA_1-0-test.png",
+    "question": "Is Medium Purple the minimum?",
+    "answer": "Yes"
+  },
+  {
+    "image": "figureQA_1-0-test.png",
+    "question": "Is Orchid the maximum?",
+    "answer": "No"
+  },
+  {
+    "image": "figureQA_1-1-test.png",
+    "question": "Is Deep Sky Blue greater than Magenta?",
+    "answer": "Yes"
+  },
+  {
+    "image": "figureQA_2-0-test.png",
+    "question": "Is Chartreuse the minimum?",
+    "answer": "Yes"
+  },
+  {
+    "image": "figureQA_2-3-test.png",
+    "question": "Is Gold the maximum?",
+    "answer": "Yes"
+  },
+  {
+    "image": "figureQA_2-20-test.png",
+    "question": "Does Dark Blue have the highest value?",
+    "answer": "No"
+  }
+]

@@ -1,0 +1,12 @@
+[
+    {
+        "image": "figureQA_0-train.png",
+        "claim": "Pale Green is not the minimum.",
+        "label": "Supports"
+    },
+    {
+        "image": "figureQA_2-train.png",
+        "claim": "Violet is less than Navy Blue.",
+        "label": "Supports"
+    }
+]

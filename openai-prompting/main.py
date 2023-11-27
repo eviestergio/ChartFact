@@ -1,18 +1,19 @@
 from model import QueryModel
 import json
+import os
 
 
-def main():
+def process_file(input_file):
     model = QueryModel(query_type='chat')
     
-    with open('qa_pairs.json', 'r') as file:
+    with open(input_file, 'r') as file:
             entries = json.load(file)
 
     results = []
     
     for entry in entries:
 
-         # 2. Few-shot
+        # 2. Few-shot
         prompt = f"""
             You will be provided with a data entry in JSON format deliminated by 3 single quotes. 
 
@@ -23,46 +24,30 @@ def main():
             each 'question' and 'answer' pair to a claim that supports the information.
 
             Examples: < 
-            1.Input: {{
+            1. Input: {
                 "image": "chartQA_multi_col_803.png",
                 "question": "How many stores did Saint Laurent operate in Western Europe in 2020?",
                 "answer": "47"
-            }}
-            Output: {{
-                "image": "chartQA_multi_col_803.png",
-                "claim": "Saint Laurent operated 47 stores in Western Europe in 2020.",
-                "label": "Supports"
-            }},
-            2.Input: {{
+            }
+            Output: "Saint Laurent operated 47 stores in Western Europe in 2020." 
+            2. Input: {
                 "image": "plotQA_11.png",
                 "question": "What is the title of the graph ?",
                 "answer": "Net disbursements of loans from International Monetary Fund"
-            }} 
-                Output: {{
-                "image": "plotQA_11.png",
-                "claim": "The title of the graph is Net disbursements of loans from International Monetary Fund.",
-                "label": "Supports"
-            }},
-            3.Input: {{
+            }
+            Output: "The title of the graph is Net disbursements of loans from International Monetary Fund."
+            3. Input: {
                 "image": "figureQA_400.png",
                 "question": "Is Turquoise the roughest?",
                 "answer": "No"
-            }} 
-                Output: {{
-                "image": "figureQA_400.png",
-                "claim": "Turquoise is not the roughest.",
-                "label": "Supports"
-            }},
-            4.Input: {{
+            }
+            Output: "Turquoise is not the roughest."
+            4. Input: {
                 "image": "figureQA_514.png",
                 "question": "Is Periwinkle greater than Green Yellow?",
                 "answer": "Yes"
-            }} 
-                Output: {{
-                "image": "figureQA_514.png",
-                "claim": "Periwinkle is greater than Green Yellow.",
-                "label": "Supports"
-            }},
+            }
+            Output: "Periwinkle is greater than Green Yellow."
             >
 
             Output only the text for the claim derived from converting the question and answer pair in double quotes.
@@ -72,20 +57,27 @@ def main():
         
         response = model(model_name='gpt-4', query=prompt)
         
-        # Extract relevant information from the response
         result_entry = {
-            "image": entry.get("imgname", ""),
-            "claim": response.lstrip('Claim: ').lstrip('Claims: '),
+            "image": entry.get("image", ""),
+            "claim": response,
             "label": "Supports"
         }
 
         results.append(result_entry)
 
-    # Save the results to 'converted.json'
-    with open('converted.json', 'w') as output_file:
+    output_file = os.path.basename(input_file).replace('preprocessed', 'converted')
+    with open(output_file, 'w') as output_file:
         json.dump(results, output_file, indent=4)
 
-    print("Conversion completed. Results saved to 'converted.json'.")
+    print(f"Conversion completed for {os.path.basename(input_file)}. Results saved to {output_file.name}.")
+
+def main():
+    input_directory = '/Users/evie/Documents/GitHub/ChartFC' # directory containing JSON files
+
+    for filename in os.listdir(input_directory):
+        if filename.endswith('.json') and filename.startswith('preprocessed_'):
+            input_file = os.path.join(input_directory, filename)
+            process_file(input_file)
 
 if __name__ == '__main__':
     main()

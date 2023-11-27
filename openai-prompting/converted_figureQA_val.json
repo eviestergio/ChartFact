@@ -1,0 +1,27 @@
+[
+    {
+        "image": "figureQA_1-1-val.png",
+        "claim": "According to the graph, Sandy Brown is the maximum.",
+        "label": "Supports"
+    },
+    {
+        "image": "figureQA_1-1-val.png",
+        "claim": "Slate is not the minimum.",
+        "label": "Supports"
+    },
+    {
+        "image": "figureQA_1-2-val.png",
+        "claim": "Dark Salmon is not the minimum.",
+        "label": "Supports"
+    },
+    {
+        "image": "figureQA_1-11-val.png",
+        "claim": " Sandy Brown is the minimum.",
+        "label": "Supports"
+    },
+    {
+        "image": "figureQA_2-0-val.png",
+        "claim": "Web Gray is the minimum.",
+        "label": "Supports"
+    }
+]

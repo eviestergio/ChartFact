@@ -1,0 +1,42 @@
+[
+    {
+        "image": "chartQA_10095.png",
+        "claim": " The value of Favorable 38 is in 2015.",
+        "label": "Supports"
+    },
+    {
+        "image": "chartQA_10095.png",
+        "claim": "Six values are below 40 in the Unfavorable graph.",
+        "label": "Supports"
+    },
+    {
+        "image": "chartQA_10149.png",
+        "claim": " The value was 51 in the year 2014.",
+        "label": "Supports"
+    },
+    {
+        "image": "chartQA_10149.png",
+        "claim": "The sum favourable value in the year 2014 and 2015 is 95.",
+        "label": "Supports"
+    },
+    {
+        "image": "chartQA_10154.png",
+        "claim": "Mexican government's campaign against drug traffickers was making 47 percent progress in the year 2012.",
+        "label": "Supports"
+    },
+    {
+        "image": "chartQA_two_col_2954.png",
+        "claim": "League of Legends topped the charts with 512.3 million hours watched on Twitch in the first half of 2019.",
+        "label": "Supports"
+    },
+    {
+        "image": "chartQA_two_col_2954.png",
+        "claim": "League of Legends was watched for 512.3 hours on Twitch in the first half of 2019.",
+        "label": "Supports"
+    },
+    {
+        "image": "chartQA_two_col_61737.png",
+        "claim": "The leading pharmaceutical supplier to Germany in 2019 was Switzerland.",
+        "label": "Supports"
+    }
+]

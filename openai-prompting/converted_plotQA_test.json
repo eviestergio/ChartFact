@@ -1,0 +1,17 @@
+[
+    {
+        "image": "plotQA_14-test.png",
+        "claim": "the percentage of females employed in the Private sector in Maldives does not monotonically increase over the years.",
+        "label": "Supports"
+    },
+    {
+        "image": "plotQA_18-test.png",
+        "claim": "Over 3 years, the percentage of male labour force was greater than the average percentage of male labour force taken over all years.",
+        "label": "Supports"
+    },
+    {
+        "image": "plotQA_39-test.png",
+        "claim": "In 1 year, the income share held by the highest 10% of the population is greater than the average income share held by the highest 10% of the population taken over all years.",
+        "label": "Supports"
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "image": "chartQA_3887.png",
+        "claim": "The color of the graph with 56 as the highest value is Blue.",
+        "label": "Supports"
+    },
+    {
+        "image": "chartQA_3887.png",
+        "claim": "The difference between the blue and green graph is 1 in the year 2018.",
+        "label": "Supports"
+    },
+    {
+        "image": "chartQA_multi_col_20933.png",
+        "claim": "Jon Snow was portrayed by Kit Harington.",
+        "label": "Supports"
+    },
+    {
+        "image": "chartQA_multi_col_20933.png",
+        "claim": "Emilia Clarke played Mother of Dragons Daenerys Targaryen.",
+        "label": "Supports"
+    }
+]

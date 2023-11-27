@@ -1,0 +1,12 @@
+[
+    {
+        "image": "plotQA_32-val.png",
+        "claim": "The legend appears in the center right of the graph.",
+        "label": "Supports"
+    },
+    {
+        "image": "plotQA_0-val.png",
+        "claim": " The number of dotlines is equal to the number of legend labels.",
+        "label": "Supports"
+    }
+]

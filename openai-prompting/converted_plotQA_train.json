@@ -1,0 +1,42 @@
+[
+    {
+        "image": "plotQA_0-train.png",
+        "claim": "the number of dotlines is equal to the number of legend labels.",
+        "label": "Supports"
+    },
+    {
+        "image": "plotQA_43-train.png",
+        "claim": "Thera are 2 different coloured dotlines.",
+        "label": "Supports"
+    },
+    {
+        "image": "plotQA_0-train.png",
+        "claim": "The maximum employment to population ratio(male) across all years is 53.9000015258789.",
+        "label": "Supports"
+    },
+    {
+        "image": "plotQA_0-train.png",
+        "claim": " The employment to population ratio (male) was minimum in 1997.",
+        "label": "Supports"
+    },
+    {
+        "image": "plotQA_0-train.png",
+        "claim": "The minimum employment to population ratio(female) across all years is 43.4000015258789.",
+        "label": "Supports"
+    },
+    {
+        "image": "plotQA_0-train.png",
+        "claim": "The total employment to population ratio(female) in the graph is 181.9999999999999.",
+        "label": "Supports"
+    },
+    {
+        "image": "plotQA_0-train.png",
+        "claim": "The difference between the employment to population ratio(male) in 1998 and that in 1999 is -1.7000007629395029.",
+        "label": "Supports"
+    },
+    {
+        "image": "plotQA_0-train.png",
+        "claim": "The average employment to population ratio(male) per year is 49.55000019073488.",
+        "label": "Supports"
+    }
+]

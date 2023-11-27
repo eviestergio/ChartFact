@@ -1,0 +1,32 @@
+[
+    {
+        "image": "figureQA_1-0-test.png",
+        "claim": "Medium Purple is the minimum.",
+        "label": "Supports"
+    },
+    {
+        "image": "figureQA_1-0-test.png",
+        "claim": "Orchid is not the maximum.",
+        "label": "Supports"
+    },
+    {
+        "image": "figureQA_1-1-test.png",
+        "claim": "Deep Sky Blue is greater than Magenta.",
+        "label": "Supports"
+    },
+    {
+        "image": "figureQA_2-0-test.png",
+        "claim": "Chartreuse is the minimum.",
+        "label": "Supports"
+    },
+    {
+        "image": "figureQA_2-3-test.png",
+        "claim": "Gold is the maximum.",
+        "label": "Supports"
+    },
+    {
+        "image": "figureQA_2-20-test.png",
+        "claim": "Dark Blue does not have the highest value.",
+        "label": "Supports"
+    }
+]

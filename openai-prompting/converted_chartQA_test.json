@@ -1,0 +1,37 @@
+[
+    {
+        "image": "chartQA_166.png",
+        "claim": "62 percent think of President Donald Trump as Dangerous.",
+        "label": "Supports"
+    },
+    {
+        "image": "chartQA_166.png",
+        "claim": "Charismatic and Well-qualified to be president's sum of percents are more than A strong leader.",
+        "label": "Supports"
+    },
+    {
+        "image": "chartQA_multi_col_803.png",
+        "claim": "Saint Laurent operated 47 stores in Western Europe in 2020.",
+        "label": "Supports"
+    },
+    {
+        "image": "chartQA_multi_col_20436.png",
+        "claim": "Online sales made up 6.8 percent of retail sales of jewelry, watches, and accessories in Germany in 2013.",
+        "label": "Supports"
+    },
+    {
+        "image": "chartQA_multi_col_20436.png",
+        "claim": "The percentage of the retail sales of jewelry, watches and accessories in Germany that were online in 2013 was 6.8.",
+        "label": "Supports"
+    },
+    {
+        "image": "chartQA_multi_col_20436.png",
+        "claim": "The predicted increase in online sales of jewelry, watches and accessories in Germany by 2018 is 11.",
+        "label": "Supports"
+    },
+    {
+        "image": "chartQA_multi_col_20505.png",
+        "claim": "36 companies were in Hungary's insurance market in 2013.",
+        "label": "Supports"
+    }
+]
