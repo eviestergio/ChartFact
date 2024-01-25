@@ -72,7 +72,8 @@ def process_file(input_file):
     print(f"Conversion completed for {os.path.basename(input_file)}. Results saved to {output_file.name}.")
 
 def main():
-    input_directory = '/Users/evie/Documents/GitHub/ChartFC' # directory containing JSON files
+    current_folder = os.path.dirname(os.path.abspath(__file__))
+    input_directory = os.path.join(current_folder, "../data_preprocessing") # directory containing JSON files to convert
 
     for filename in os.listdir(input_directory):
         if filename.endswith('.json') and filename.startswith('preprocessed_'):
