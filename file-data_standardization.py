@@ -128,15 +128,15 @@ def process_dataset_and_rename_images(folder_path, preprocess_func, prefix, post
 
 def main():
     # folder paths for each dataset
-    chartQA_train_folder_path = "/Users/evie/seed_datasets/ChartQA/train"
-    chartQA_test_folder_path = "/Users/evie/seed_datasets/ChartQA/test"
-    chartQA_val_folder_path = "/Users/evie/seed_datasets/ChartQA/val"
-    figureQA_train_folder_path = "/Users/evie/seed_datasets/FigureQA/train"
-    figureQA_test_folder_path = "/Users/evie/seed_datasets/FigureQA/test"
-    figureQA_val_folder_path = "/Users/evie/seed_datasets/FigureQA/val"
-    plotQA_train_folder_path = "/Users/evie/seed_datasets/PlotQA/train"
-    plotQA_test_folder_path = "/Users/evie/seed_datasets/PlotQA/test"
-    plotQA_val_folder_path = "/Users/evie/seed_datasets/PlotQA/val"
+    chartQA_train_folder_path = "/seed_datasets/ChartQA/train"
+    chartQA_test_folder_path = "/seed_datasets/ChartQA/test"
+    chartQA_val_folder_path = "/seed_datasets/ChartQA/val"
+    figureQA_train_folder_path = "/seed_datasets/FigureQA/train"
+    figureQA_test_folder_path = "/seed_datasets/FigureQA/test"
+    figureQA_val_folder_path = "/seed_datasets/FigureQA/val"
+    plotQA_train_folder_path = "/seed_datasets/PlotQA/train"
+    plotQA_test_folder_path = "/seed_datasets/PlotQA/test"
+    plotQA_val_folder_path = "/seed_datasets/PlotQA/val"
 
     ''' special figureQA pre-processing '''
     remove_figureQA_syntax(figureQA_test_folder_path)
