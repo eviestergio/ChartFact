@@ -1,7 +1,8 @@
-import openai
+from openai import OpenAI
 import ast
 import os
 
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 class QueryModel:
     """
@@ -16,7 +17,6 @@ class QueryModel:
             'chat'). If you want to query GPT3.5 and up models use 'chat'
             params_dict (): The parameters of the model in dict format
         """
-        openai.api_key = os.getenv("OPENAI_API_KEY")
         self.type = query_type if query_type is not None else 'completion'
         self.params = params_dict if params_dict is not None else {
             'temperature': 0,
@@ -43,11 +43,9 @@ class QueryModel:
         :rtype: String
         """
         if self.type == 'completion':
-            response = openai.Completion.create(
-                model=model_name,
-                prompt=query,
-                **self.params
-            )
+            response = client.completions.create(model=model_name,
+            prompt=query,
+            **self.params)
             response = response.choices[0].text
             response = response.splitlines()[0]
             if len(response) > 0:
@@ -60,10 +58,8 @@ class QueryModel:
                 response = []
             return response
         else:
-            response = openai.ChatCompletion.create(
-                model=model_name,
-                messages=[{"role": "user", "content": query}]
-            )
+            response = client.chat.completions.create(model=model_name,
+            messages=[{"role": "user", "content": query}])
             response = response.choices[0].message.content
             response = response.splitlines()[0]
             if len(response) > 0:
