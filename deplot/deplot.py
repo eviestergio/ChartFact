@@ -1,14 +1,12 @@
 import os
 from transformers import Pix2StructProcessor, Pix2StructForConditionalGeneration
 from PIL import Image
+import csv
 
 processor = Pix2StructProcessor.from_pretrained('google/deplot')
 model = Pix2StructForConditionalGeneration.from_pretrained('google/deplot')
 
 folder_path = '../seed_datasets'
-
-# Initialize counter for number of PNGs found
-num_png_files = 0
 
 # Recursively iterate through all files and directories in folder 
 for root, dirs, files in os.walk(folder_path):
@@ -16,7 +14,6 @@ for root, dirs, files in os.walk(folder_path):
     for file_name in files:
         # Check if the file has a PNG extension
         if file_name.lower().endswith('.png'):
-            num_png_files += 1
             # Construct the full path to the PNG file
             file_path = os.path.join(root, file_name)
             # DePlot the PNG
@@ -26,5 +23,18 @@ for root, dirs, files in os.walk(folder_path):
             decoded_predictions = processor.decode(predictions[0], skip_special_tokens=True)
             print(f"Data for {file_path}:\n{decoded_predictions}\n")
 
-# Print total number of PNGs found
-print(f"Number of PNG files found: {num_png_files}")
+            # Extract the dataset name from the file path
+            dataset_name = root.split(os.path.sep)[-1]
+
+            parent_dir = os.path.dirname(root)
+            # Create CSV directory and file paths relative to the parent directory
+            csv_directory = os.path.join(parent_dir, 'csv')
+            csv_file_path = os.path.join(csv_directory, file_name.replace('.png', '.csv'))
+            os.makedirs(csv_directory, exist_ok=True) #create CSV directory if it doesn't exist
+            
+            # Write prediction to CSV file in respective folder
+            with open(csv_file_path, 'w', newline='') as csv_file:
+                writer = csv.writer(csv_file)
+                writer.writerow([decoded_predictions])
+
+print("CSV files saved successfully.")
