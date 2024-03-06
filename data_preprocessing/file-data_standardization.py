@@ -200,15 +200,15 @@ def main():
     preprocessed_plotQA_val = process_dataset_and_rename_images(plotQA_val_folder_path, preprocess_plotQA, "plotQA", "val")
 
     # save preprocessed datasets to new JSON files
-    output_chartQA_train_filename = "preprocessed_chartQA_train.json"
-    output_chartQA_test_filename = "preprocessed_chartQA_test.json"
-    output_chartQA_val_filename = "preprocessed_chartQA_val.json"
-    output_figureQA_train_filename = "preprocessed_figureQA_train.json"
-    output_figureQA_test_filename = "preprocessed_figureQA_test.json"
-    output_figureQA_val_filename = "preprocessed_figureQA_val.json"
-    output_plotQA_train_filename = "preprocessed_plotQA_train.json"
-    output_plotQA_test_filename = "preprocessed_plotQA_test.json"
-    output_plotQA_val_filename = "preprocessed_plotQA_val.json"
+    output_chartQA_train_filename = os.path.join(chartQA_train_folder_path, "preprocessed_chartQA_train.json")
+    output_chartQA_test_filename = os.path.join(chartQA_test_folder_path, "preprocessed_chartQA_test.json")
+    output_chartQA_val_filename = os.path.join(chartQA_val_folder_path, "preprocessed_chartQA_val.json")
+    output_figureQA_train_filename = os.path.join(figureQA_train_folder_path, "preprocessed_figureQA_train.json")
+    output_figureQA_test_filename = os.path.join(figureQA_test_folder_path, "preprocessed_figureQA_test.json")
+    output_figureQA_val_filename = os.path.join(figureQA_val_folder_path, "preprocessed_figureQA_val.json")
+    output_plotQA_train_filename = os.path.join(plotQA_train_folder_path, "preprocessed_plotQA_train.json")
+    output_plotQA_test_filename = os.path.join(plotQA_test_folder_path, "preprocessed_plotQA_test.json")
+    output_plotQA_val_filename = os.path.join(plotQA_val_folder_path, "preprocessed_plotQA_val.json")
 
     with open(output_chartQA_train_filename, 'w') as chartQA_train_output_file:
         json.dump(preprocessed_chartQA_train, chartQA_train_output_file, indent=2)

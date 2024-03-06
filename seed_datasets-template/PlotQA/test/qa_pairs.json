@@ -1,0 +1,35 @@
+[{ 
+    "image_index":14,
+    "qid":"D6",
+    "question_string":"Does the percentage of females employed in Private sector in Maldives monotonically increase over the years ?",
+    "answer_bbox":[],
+    "template":"compound",
+    "answer":"No",
+    "answer_id":17,
+    "type":"dot",
+    "question_id":301
+ },
+ {
+    "image_index":18,
+    "qid":"CD8",
+    "question_string":"In how many years, is the percentage of male labour force greater than the average percentage of male labour force taken over all years ?",
+    "answer_bbox":[],
+    "template":"compound",
+    "answer":3,
+    "answer_id":38,
+    "type":"dot",
+    "question_id":387
+ },
+ { 
+    "image_index":39,
+    "qid":"CD8",
+    "question_string":"In how many years, is the income share held by highest 10% of the population greater than the average income share held by highest 10% of the population taken over all years ?",
+    "answer_bbox":[
+       
+    ],
+    "template":"compound",
+    "answer":1,
+    "answer_id":16,
+    "type":"dot",
+    "question_id":795
+ }]

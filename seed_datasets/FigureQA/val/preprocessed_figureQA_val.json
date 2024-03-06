@@ -1,0 +1,27 @@
+[
+  {
+    "image": "figureQA_1-1-val.png",
+    "question": "Is Sandy Brown the maximum?",
+    "answer": "Yes"
+  },
+  {
+    "image": "figureQA_1-1-val.png",
+    "question": "Is Slate the minimum?",
+    "answer": "No"
+  },
+  {
+    "image": "figureQA_1-2-val.png",
+    "question": "Is Dark Salmon the minimum?",
+    "answer": "No"
+  },
+  {
+    "image": "figureQA_1-11-val.png",
+    "question": "Is Sandy Brown the minimum?",
+    "answer": "Yes"
+  },
+  {
+    "image": "figureQA_2-0-val.png",
+    "question": "Is Web Gray the minimum?",
+    "answer": "Yes"
+  }
+]

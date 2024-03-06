@@ -1,0 +1,28 @@
+[{ 
+    "image_index":32,
+    "qid":"S2",
+    "question_string":"Where does the legend appear in the graph ?",
+    "answer_bbox":{
+       "y":293,
+       "x":759,
+       "w":186,
+       "h":63
+    },
+    "template":"structural",
+    "answer":"center right",
+    "answer_id":40,
+    "type":"dot",
+    "question_id":29
+ },
+ {
+"image_index":0,
+"qid":"S17",
+"question_string":"Is the number of dotlines equal to the number of legend labels ?",
+"answer_bbox":[],
+"template":"structural",
+"answer":"Yes",
+"answer_id":1,
+"type":"dot",
+"question_id":1
+}
+]
