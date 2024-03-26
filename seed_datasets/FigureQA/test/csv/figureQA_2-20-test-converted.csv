@@ -1,5 +1,5 @@
-TITLE,title
-xaxis_label,Orange Red | Light Seafoam | Purple | Dark Blue | Green Yellow
-xaxis_label,75 | 58.7 | 22.2 | 20.5 | 20
-yaxis_label,70.9 | 58.8 | 23.1 | 22.4 | 20.1
-x100,54.7 | 50.5 | 54.3 | 54.1 | 50.2
+TITLE | title 
+ xaxis_label,Orange Red,Light Seafoam,Purple,Dark Blue,Green Yellow 
+xaxis_label,75.0,58.7,22.2,20.5,20.0
+yaxis_label,70.9,58.8,23.1,22.4,20.1
+x100,54.7,50.5,54.3,54.1,50.2
