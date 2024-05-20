@@ -1,0 +1,95 @@
+[{
+    "image_index":0,
+    "qid":"S17",
+    "question_string":"Is the number of dotlines equal to the number of legend labels ?",
+    "answer_bbox":[],
+    "template":"structural",
+    "answer":"Yes",
+    "answer_id":1,
+    "type":"dot",
+    "question_id":1
+ },
+     {
+        "image_index":43,
+        "qid":"S7",
+        "question_string":"How many different coloured dotlines are there ?",
+        "answer_bbox":[
+           
+        ],
+        "template":"structural",
+        "answer":2,
+        "answer_id":0,
+        "type":"dot",
+        "question_id":0
+     },
+     { 
+    "image_index":0,
+    "qid":"M4",
+    "question_string":"Across all years, what is the maximum employment to population ratio(male) ?",
+    "answer_bbox":[],
+    "template":"min_max",
+    "answer":53.9000015258789,
+    "answer_id":3,
+    "type":"dot",
+    "question_id":3
+ },
+     {
+    "image_index":0,
+    "qid":"M7",
+    "question_string":"In which year was the employment to population ratio(male) minimum?",
+    "answer_bbox":{
+       "y":591,
+       "x":96,
+       "w":14,
+       "h":27.9375
+    },
+    "template":"min_max",
+    "answer":"1997",
+    "answer_id":6,
+    "type":"dot",
+    "question_id":6
+ },
+     {
+    "image_index":0,
+    "qid":"M5",
+    "question_string":"Across all years, what is the minimum employment to population ratio(female) ?",
+    "answer_bbox":[],
+    "template":"min_max",
+    "answer":43.4000015258789,
+    "answer_id":4,
+    "type":"dot",
+    "question_id":4
+ },
+     { 
+    "image_index":0,
+    "qid":"A4",
+    "question_string":"What is the total employment to population ratio(female) in the graph ?",
+    "answer_bbox":[],
+    "template":"arithmetic",
+    "answer":181.9999999999999,
+    "answer_id":7,
+    "type":"dot",
+    "question_id":7
+ },
+ {
+    "image_index":0,
+    "qid":"A5",
+    "question_string":"What is the difference between the employment to population ratio(male) in 1998 and that in 1999 ?",
+    "answer_bbox":[],
+    "template":"arithmetic",
+    "answer":-1.7000007629395029,
+    "answer_id":8,
+    "type":"dot",
+    "question_id":8
+ },
+     {
+    "image_index":0,
+    "qid":"A7",
+    "question_string":"What is the average employment to population ratio(male) per year?",
+    "answer_bbox":[],
+    "template":"arithmetic",
+    "answer":49.55000019073488,
+    "answer_id":10,
+    "type":"dot",
+    "question_id":10
+ }]

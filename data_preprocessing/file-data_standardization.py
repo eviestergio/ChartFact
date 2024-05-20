@@ -70,6 +70,17 @@ def combine_json_files(folder_path):
     with open(combined_json_path, 'w') as combined_json_file:
         json.dump(combined_data, combined_json_file, indent=2)
         
+def rename_tables_with_prefix(folder_path, prefix):
+    tables_folder_path = os.path.join(folder_path, 'tables')
+    if not os.path.exists(tables_folder_path):
+        return
+    
+    for filename in os.listdir(tables_folder_path):
+        if filename.endswith('.csv'):
+            src = os.path.join(tables_folder_path, filename)
+            dst = os.path.join(tables_folder_path, f"{prefix}_{filename}")
+            os.rename(src, dst)
+
 ''' Main dataset preprocessing '''
 def preprocess_chartQA(entry, postfix): #postfix not used
     return {
@@ -187,6 +198,11 @@ def main():
     combine_json_files(chartQA_train_folder_path)
     combine_json_files(chartQA_test_folder_path)
     combine_json_files(chartQA_val_folder_path)
+
+    # rename tables with prefix
+    rename_tables_with_prefix(chartQA_train_folder_path, "chartQA")
+    rename_tables_with_prefix(chartQA_test_folder_path, "chartQA")
+    rename_tables_with_prefix(chartQA_val_folder_path, "chartQA")
 
     # process each dataset and rename images with postfixes where necessary
     preprocessed_chartQA_train = process_dataset_and_rename_images(chartQA_train_folder_path, preprocess_chartQA, "chartQA", "")

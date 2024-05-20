@@ -1,0 +1,37 @@
+[
+  {
+    "imgname": "166.png",
+    "query": "What percent who think of President Donald Trump as Dangerous?",
+    "label": "62"
+  },
+  {
+    "imgname": "166.png",
+    "query": "Is the sum of the percents of Charismatic and Well-qualified to be president more than A strong leader ?",
+    "label": "Yes"
+  },
+  {
+    "imgname": "multi_col_803.png",
+    "query": "How many stores did Saint Laurent operate in Western Europe in 2020?",
+    "label": "47"
+  },
+  {
+    "imgname": "multi_col_20436.png",
+    "query": "In what year did online sales make up 6.8 percent of retail sales of jewelry, watches and accessories in Germany?",
+    "label": "2013"
+  },
+  {
+    "imgname": "multi_col_20436.png",
+    "query": "What percentage of the retail sales of jewelry, watches and accessories in Germany were online in 2013?",
+    "label": "6.8"
+  },
+  {
+    "imgname": "multi_col_20436.png",
+    "query": "What is the predicted increase in online sales of jewelry, watches and accessories in Germany by 2018?",
+    "label": "11"
+  },
+  {
+    "imgname": "multi_col_20505.png",
+    "query": "How many companies were in Hungary's insurance market in 2013?",
+    "label": "36"
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "image": "chartQA_10095.png",
+    "question": "Is the value of Favorable 38 in 2015?",
+    "answer": "Yes"
+  },
+  {
+    "image": "chartQA_10095.png",
+    "question": "How many values are below 40 in Unfavorable graph?",
+    "answer": "6"
+  },
+  {
+    "image": "chartQA_10149.png",
+    "question": "In which year the value was 51?",
+    "answer": "2014"
+  },
+  {
+    "image": "chartQA_10149.png",
+    "question": "What is the sum favourable  value in the year 2014 and 2015?",
+    "answer": "95"
+  },
+  {
+    "image": "chartQA_10154.png",
+    "question": "In which year the Mexican governments campaign against drugs traffickers is making 47 percent progress?",
+    "answer": "2012"
+  },
+  {
+    "image": "chartQA_two_col_2954.png",
+    "question": "What game topped the charts with 512.3 million hours watched on Twitch in the first half of 2019?",
+    "answer": "League of Legends"
+  },
+  {
+    "image": "chartQA_two_col_2954.png",
+    "question": "How many hours did League of Legends watch on Twitch in the first half of 2019?",
+    "answer": "512.3"
+  },
+  {
+    "image": "chartQA_two_col_61737.png",
+    "question": "Which country was the leading pharmaceutical supplier to Germany in 2019?",
+    "answer": "Switzerland"
+  }
+]

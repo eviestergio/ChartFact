@@ -1,0 +1,122 @@
+[
+  {
+    "image_index": "1-0",
+    "color2_name": "--None--",
+    "color1_id": 61,
+    "color1_rgb": [
+      147,
+      112,
+      219
+    ],
+    "question_string": "Is Medium Purple the minimum?",
+    "color2_id": -1,
+    "color1_name": "Medium Purple",
+    "answer": 1,
+    "color2_rgb": [
+      -1,
+      -1,
+      -1
+    ],
+    "question_id": 0
+  },
+  {
+    "image_index": "1-0",
+    "color2_name": "--None--",
+    "color1_id": 73,
+    "color1_rgb": [
+      218,
+      112,
+      214
+    ],
+    "question_string": "Is Orchid the maximum?",
+    "color2_id": -1,
+    "color1_name": "Orchid",
+    "answer": 0,
+    "color2_rgb": [
+      -1,
+      -1,
+      -1
+    ],
+    "question_id": 1
+  },
+  {
+    "image_index": "1-1",
+    "color2_name": "Magenta",
+    "color1_id": 31,
+    "answer": 1,
+    "color1_rgb": [
+      0,
+      191,
+      255
+    ],
+    "question_string": "Is Deep Sky Blue greater than Magenta?",
+    "color2_id": 55,
+    "color1_name": "Deep Sky Blue",
+    "color2_rgb": [
+      255,
+      0,
+      255
+    ],
+    "question_id": 3
+  },
+  {
+    "image_index": "2-0",
+    "color2_name": "--None--",
+    "color1_id": 7,
+    "color1_rgb": [
+      127,
+      255,
+      0
+    ],
+    "question_string": "Is Chartreuse the minimum?",
+    "color2_id": -1,
+    "color1_name": "Chartreuse",
+    "answer": 1,
+    "color2_rgb": [
+      -1,
+      -1,
+      -1
+    ],
+    "question_id": 0
+  },
+  {
+    "image_index": "2-3",
+    "color2_name": "--None--",
+    "color1_id": 37,
+    "color1_rgb": [
+      218,
+      165,
+      32
+    ],
+    "question_string": "Is Gold the maximum?",
+    "color2_id": -1,
+    "color1_name": "Gold",
+    "answer": 1,
+    "color2_rgb": [
+      -1,
+      -1,
+      -1
+    ],
+    "question_id": 1
+  },
+  {
+    "image_index": "2-20",
+    "color2_name": "--None--",
+    "color1_id": 13,
+    "color1_rgb": [
+      0,
+      0,
+      139
+    ],
+    "question_string": "Does Dark Blue have the highest value?",
+    "color2_id": -1,
+    "color1_name": "Dark Blue",
+    "answer": 0,
+    "color2_rgb": [
+      -1,
+      -1,
+      -1
+    ],
+    "question_id": 11
+  }
+]
