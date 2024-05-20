@@ -124,17 +124,20 @@ def rename_images_with_prefix(folder_path, prefix):
             dst = os.path.join(png_folder_path, f"{prefix}_{filename}")
             os.rename(src, dst)
 
-def rename_images_with_postfix(folder_path, postfix):
+def rename_images_with_postfix(folder_path, postfix, chartqa=False):
     png_folder_path = os.path.join(folder_path, 'png')
     for filename in os.listdir(png_folder_path):
         if filename.endswith('.png'):
             src = os.path.join(png_folder_path, filename)
-            dst = os.path.join(png_folder_path, f"{filename.split('.')[0]}-{postfix}.png") #remove file extenstion in original filename (bc added later)
+            if chartqa:
+                dst = os.path.join(png_folder_path, f"{filename.split('.')[0]}.png")  # remove hyphen for ChartQA
+            else:
+                dst = os.path.join(png_folder_path, f"{filename.split('.')[0]}-{postfix}.png")  # keep hyphen for others
             os.rename(src, dst)
 
-def process_dataset_and_rename_images(folder_path, preprocess_func, prefix, postfix):
+def process_dataset_and_rename_images(folder_path, preprocess_func, prefix, postfix, chartqa=False):
     rename_images_with_prefix(folder_path, prefix)
-    rename_images_with_postfix(folder_path, postfix)
+    rename_images_with_postfix(folder_path, postfix, chartqa)
     return process_dataset_in_folder(folder_path, preprocess_func, postfix)
 
 def main():
@@ -205,9 +208,9 @@ def main():
     rename_tables_with_prefix(chartQA_val_folder_path, "chartQA")
 
     # process each dataset and rename images with postfixes where necessary
-    preprocessed_chartQA_train = process_dataset_and_rename_images(chartQA_train_folder_path, preprocess_chartQA, "chartQA", "")
-    preprocessed_chartQA_test = process_dataset_and_rename_images(chartQA_test_folder_path, preprocess_chartQA, "chartQA", "")
-    preprocessed_chartQA_val = process_dataset_and_rename_images(chartQA_val_folder_path, preprocess_chartQA, "chartQA", "")
+    preprocessed_chartQA_train = process_dataset_and_rename_images(chartQA_train_folder_path, preprocess_chartQA, "chartQA", "", chartqa=True)
+    preprocessed_chartQA_test = process_dataset_and_rename_images(chartQA_test_folder_path, preprocess_chartQA, "chartQA", "", chartqa=True)
+    preprocessed_chartQA_val = process_dataset_and_rename_images(chartQA_val_folder_path, preprocess_chartQA, "chartQA", "", chartqa=True)
     preprocessed_figureQA_train = process_dataset_and_rename_images(figureQA_train_folder_path, preprocess_figureQA, "figureQA", "train")
     preprocessed_figureQA_test = process_dataset_and_rename_images(figureQA_test_folder_path, preprocess_figureQA, "figureQA", "test")
     preprocessed_figureQA_val = process_dataset_and_rename_images(figureQA_val_folder_path, preprocess_figureQA, "figureQA", "val")
