@@ -82,7 +82,7 @@ def rename_tables_with_prefix(folder_path, prefix):
             os.rename(src, dst)
 
 ''' Main dataset preprocessing '''
-def preprocess_chartQA(entry, postfix): #postfix not used
+def preprocess_chartQA(entry, _): # Postfix variable not used
     return {
         "image": "chartQA_" + entry["imgname"],
         "question": entry["query"],
