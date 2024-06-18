@@ -88,7 +88,7 @@ def create_nei_prompt(entry, supports_claim):
 
 def generate_supports_claim(csv, question, answer, model):
     prompt = create_supports_prompt(csv, question, answer)
-    response = model(query=prompt)
+    response = model(model_name='gpt-3.5-turbo', query=prompt)
 
     # Parse response to extract claim and explanation
     claim_start = response.find('“Entailment claim”: “') + len('“Entailment claim”: “')
@@ -103,11 +103,11 @@ def generate_supports_claim(csv, question, answer, model):
 
 def generate_refutes_claim(entry, model, supports_claim):
     prompt = create_refutes_prompt(entry, supports_claim)
-    return model(query=prompt)
+    return model(model_name='gpt-3.5-turbo', query=prompt)
 
 def generate_nei_claim(entry, model, supports_claim):
     prompt = create_nei_prompt(entry, supports_claim)
-    return model(query=prompt)
+    return model(model_name='gpt-3.5-turbo', query=prompt)
 
 def process_file(input_file, model):
     
@@ -185,7 +185,7 @@ def save_results(input_file, results):
     print(f"Conversion completed for {os.path.basename(input_file)}. Results saved to {output_path}.")
 
 def main():
-    model = QueryModel(query_type='chat', model_name='gpt-3.5-turbo')
+    model = QueryModel(query_type='chat')
     current_folder = os.path.dirname(os.path.abspath(__file__))
     input_directory = os.path.join(current_folder, "../seed_datasets") # directory containing preprocessed JSON files to convert
 
