@@ -230,7 +230,7 @@ def generate_nei_claim(title, table, supports_claim, model):
 def process_file(input_file, model):
     
     with open(input_file, 'r') as file:
-            entries = json.load(file)
+        entries = json.load(file)
 
     results = []
     
@@ -240,31 +240,15 @@ def process_file(input_file, model):
         answer = entry.get("answer")
         image = entry.get("image")
 
-        if not question or not answer or not image:
-            # Add blank entry if any key is missing
-            results.append({
-                "image": image if image else "",
-                "claim": "",
-                "label": "Supports",
-                "explanation": ""
-            })
-            continue
-
         csv_file_path = os.path.join(os.path.dirname(input_file), "tables", f"{entry['image'].split('.')[0]}.csv")
         title_file_path = os.path.join(os.path.dirname(input_file), "tables", f"{entry['image'].split('.')[0]}-title.txt")
 
+        #Read CSV file
         if os.path.exists(csv_file_path):
             with open(csv_file_path, 'r') as csv_file:
                 table = csv_file.read()
         else:
-            print(f"CSV file {csv_file_path} not found.")
-            results.append({
-                "image": image,
-                "claim": "",
-                "label": "Supports",
-                "explanation": ""
-            })
-            continue
+            table = None
 
         # Read title file if it exists
         if os.path.exists(title_file_path):
@@ -273,10 +257,15 @@ def process_file(input_file, model):
         else:
             title = None
 
+        # Check for missing data (excluding optional title)
+        if not question or not answer or not image or (table is None):
+            print(f"Skipping entry due to missing data: {entry}")
+            continue
+
         # Generate 'supports' claim
         supports_claim, explanation = generate_supports_claim(title, table, question, answer, model)
         results.append({
-            "image": entry.get("image", ""),
+            "image": image,
             "claim": supports_claim,
             "label": "Supports",
             "explanation": explanation
@@ -285,7 +274,7 @@ def process_file(input_file, model):
         # Generate 'refutes' claim using 'supports' claim
         refutes_claim, explanation = generate_refutes_claim(title, table, supports_claim, model)
         results.append({
-            "image": entry.get("image", ""),
+            "image": image,
             "claim": refutes_claim,
             "label": "Refutes",
             "explanation": explanation
@@ -294,7 +283,7 @@ def process_file(input_file, model):
         # Generate 'not enough information' claim using 'supports' claim
         nei_claim, explanation = generate_nei_claim(title, table, supports_claim, model)
         results.append({
-            "image": entry.get("image", ""),
+            "image": image,
             "claim": nei_claim,
             "label": "Not enough information",
             "explanation": explanation
