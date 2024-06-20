@@ -1,8 +1,11 @@
 from openai import OpenAI
+from dotenv import load_dotenv
 import ast
 import os
 
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+load_dotenv()
+
+client = OpenAI(api_key=os.getenv('API_KEY'))
 
 class QueryModel:
     """
