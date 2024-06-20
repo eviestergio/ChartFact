@@ -1,0 +1,128 @@
+[
+    {
+        "image": "chartQA_10095.png",
+        "claim": "The value of Favorable in 2015 is 38.",
+        "label": "Supports",
+        "explanation": "This claim is supported by the data in the provided table. As per the table data, in the year 2015, the value of Favorable is recorded as 38. This information directly matches the value mentioned in the supports claim, indicating that Favorable had a value of 38 in 2015 as stated."
+    },
+    {
+        "image": "chartQA_10095.png",
+        "claim": "The value of Unfavorable in 2005 is 35.",
+        "label": "Refutes",
+        "explanation": "The claim directly contradicts the data provided in the table, which states that the value of Unfavorable in 2005 is 35. By stating that the value is different than what the data shows, it refutes the accuracy of the information presented."
+    },
+    {
+        "image": "chartQA_10095.png",
+        "claim": " \u201cThe increase in the value of Favorable from 2007 to 2009 was due to a change in public opinion.",
+        "label": "Not enough information",
+        "explanation": "This claim cannot be verified or disproven with the given data alone as there is no information provided on the specific reasons or factors that influenced the change in Favorable value during that period. Additional context or data would be necessary to confirm or refute this claim."
+    },
+    {
+        "image": "chartQA_10095.png",
+        "claim": "There are 6 values below 40 in the Unfavorable graph.",
+        "label": "Supports",
+        "explanation": "This claim is supported by the data in the provided table. In the 'Unfavorable' column, there are a total of 6 values that are below 40, specifically in the years 2005, 2007, 2009, 2011, and 2013. Therefore, the supports claim directly states information that is confirmed in the table, specifically matching the data points below 40 in the 'Unfavorable' column."
+    },
+    {
+        "image": "chartQA_10095.png",
+        "claim": " \u201cThe majority of people view Unfavorable as the highest value in the table.",
+        "label": "Refutes",
+        "explanation": "The claim contradicts the data in the table, which shows that Unfavorable has values below 40 for all years. It wrongly states that Unfavorable is the highest value, which is not supported by the actual data provided."
+    },
+    {
+        "image": "chartQA_10095.png",
+        "claim": " \u201cThere may be a correlation between the Favorable and Unfavorable values in the table.",
+        "label": "Not enough information",
+        "explanation": "This claim suggests a potential relationship between the Favorable and Unfavorable values, but without more context or specific data points to analyze the correlation, it remains unverifiable with the current information provided in the table."
+    },
+    {
+        "image": "chartQA_10149.png",
+        "claim": "The value in 2014 was 51.",
+        "label": "Supports",
+        "explanation": "This claim is supported by the data in the provided table. The table indicates that in the year 2014, the favorable value was 51, directly matching the answer provided. Therefore, the supports claim directly states information that is confirmed in the table, specifically corresponding to the data point for 2014 in the 'Favorable' column."
+    },
+    {
+        "image": "chartQA_10149.png",
+        "claim": " \"The majority of people consider President Donald Trump to be caring about ordinary people.\",\n\"explanation\": \"The claim contradicts the data presented in the table, which shows that only 23.0 percent view President Donald Trump as caring about ordinary people. By suggesting a majority view in this aspect, the claim misrepresents the data and presents a false interpretation of the information provided.\"",
+        "label": "Refutes",
+        "explanation": "\": \"The majority of people consider President Donald Trump to be caring about ordinary people.\",\n\"explanation\": \"The claim contradicts the data presented in the table, which shows that only 23.0 percent view President Donald Trump as caring about ordinary people. By suggesting a majority view in this aspect, the claim misrepresents the data and presents a false interpretation of the information provided.\""
+    },
+    {
+        "image": "chartQA_10149.png",
+        "claim": " \u201cThe value in 2013 was 0.",
+        "label": "Not enough information",
+        "explanation": "This claim cannot be confirmed or disproven with the given data since no specifics are provided to support or refute the value of 0 in 2013."
+    },
+    {
+        "image": "chartQA_10149.png",
+        "claim": "The sum of favorable values in the years 2014 and 2015 is 95.",
+        "label": "Supports",
+        "explanation": "This claim is supported by the data in the provided table. In the year 2014, the favorable value is 51, and in 2015, the favorable value is 0. Adding these two values together gives a sum of 95, which matches the answer provided. Therefore, the supports claim directly states information that is confirmed in the table for the specified years."
+    },
+    {
+        "image": "chartQA_10149.png",
+        "claim": " \"The majority of people consider Donald Trump to be charismatic.\",\n\"explanation\": \"The claim counters the data, which shows a lower percentage for 'Charismatic' compared to 'Dangerous'. It misrepresents the data by suggesting that 'Charismatic' has a majority view, which directly contradicts the higher percentage listed for 'Dangerous'.\"",
+        "label": "Refutes",
+        "explanation": "\": \"The majority of people consider Donald Trump to be charismatic.\",\n\"explanation\": \"The claim counters the data, which shows a lower percentage for 'Charismatic' compared to 'Dangerous'. It misrepresents the data by suggesting that 'Charismatic' has a majority view, which directly contradicts the higher percentage listed for 'Dangerous'.\""
+    },
+    {
+        "image": "chartQA_10149.png",
+        "claim": " \u201cThe data does not specify the reasons behind the fluctuations in favorable and unfavorable ratings over the years.",
+        "label": "Not enough information",
+        "explanation": "This claim suggests a lack of information on the factors influencing the favorable and unfavorable values in the given years, making it unverifiable without additional context or data."
+    },
+    {
+        "image": "chartQA_two_col_2954.png",
+        "claim": "League of Legends was the most watched game on Twitch in the first half of 2019 with 512.3 million hours watched.",
+        "label": "Supports",
+        "explanation": "The supports claim is directly supported by the data provided in the table. According to the table, League of Legends had the highest number of hours watched at 512.3, which confirms that it topped the charts in terms of viewership during that period as stated in the claim."
+    },
+    {
+        "image": "chartQA_two_col_2954.png",
+        "claim": " \"Fortnite was the most watched game on Twitch in the first half of 2019 with 465 million hours watched.\",\n\"explanation\": \"The claim contradicts the actual data provided in the table where League of Legends had 512.3 million hours watched, making it the most watched game. By falsely stating that Fortnite was the most watched game, it misinterprets the data and presents incorrect information.\"",
+        "label": "Refutes",
+        "explanation": "\": \"Fortnite was the most watched game on Twitch in the first half of 2019 with 465 million hours watched.\",\n\"explanation\": \"The claim contradicts the actual data provided in the table where League of Legends had 512.3 million hours watched, making it the most watched game. By falsely stating that Fortnite was the most watched game, it misinterprets the data and presents incorrect information.\""
+    },
+    {
+        "image": "chartQA_two_col_2954.png",
+        "claim": " \u201cLeague of Legends' popularity on other platforms influences its viewership on Twitch.",
+        "label": "Not enough information",
+        "explanation": "This claim suggests a potential factor affecting the high viewership of League of Legends on Twitch, but without data on its popularity on other platforms, this connection cannot be verified."
+    },
+    {
+        "image": "chartQA_two_col_2954.png",
+        "claim": "itle\": \"\",\n    \"table\": \"Characteristic,Number of hours watched\nLeague of Legends,512.3\nFortnite,465.0\nJust Chatting,372.5\nGrand Theft Auto V,269.1\nDota 2,237.1\nApex Legends,181.4\nCounter-Strike: Global Offensive,178.0\nOverwatch,127.3\nHearthstone,120.7\nWorld of Warcraft,118.5\",\n    \"question\": \"How many hours did League of Legends watch on Twitch in the first half of 2019?\",\n    \"answer\": \"512.3\"\n    }\n    Output: {\n    \"supports claim\": \"League of Legends was watched for 512.3 hours on Twitch in the first half of 2019.\",\n    \"explanation\": \"This claim is directly supported by the data in the provided table. The table lists the number of hours watched for each game, where League of Legends has a specific value of 512.3 hours. Therefore, the supports claim directly states information recorded in the table, specifically for the first half of 2019 for League of Legends.\"\n    ",
+        "label": "Supports",
+        "explanation": " \"title\": \"\",\n    \"table\": \"Characteristic,Number of hours watched\nLeague of Legends,512.3\nFortnite,465.0\nJust Chatting,372.5\nGrand Theft Auto V,269.1\nDota 2,237.1\nApex Legends,181.4\nCounter-Strike: Global Offensive,178.0\nOverwatch,127.3\nHearthstone,120.7\nWorld of Warcraft,118.5\",\n    \"question\": \"How many hours did League of Legends watch on Twitch in the first half of 2019?\",\n    \"answer\": \"512.3\"\n    }\n    Output: {\n    \"supports claim\": \"League of Legends was watched for 512.3 hours on Twitch in the first half of 2019.\",\n    \"explanation\": \"This claim is directly supported by the data in the provided table. The table lists the number of hours watched for each game, where League of Legends has a specific value of 512.3 hours. Therefore, the supports claim directly states information recorded in the table, specifically for the first half of 2019 for League of Legends.\"\n    "
+    },
+    {
+        "image": "chartQA_two_col_2954.png",
+        "claim": " \u201cThe majority of people consider League of Legends to be the least watched game on Twitch.",
+        "label": "Refutes",
+        "explanation": "This claim refutes the data by falsely stating that League of Legends is the least watched game on Twitch, whereas the table clearly shows that League of Legends was watched for 512.3 hours, making it the most watched game listed. This contradicts the actual data provided in the supports claim and table."
+    },
+    {
+        "image": "chartQA_two_col_2954.png",
+        "claim": " \u201cThere is a correlation between the number of hours watched and the popularity of a game on Twitch.",
+        "label": "Not enough information",
+        "explanation": "This claim suggests a relationship between the number of hours watched and the popularity of a game on Twitch without providing evidence or data to support this causal connection. The data presented only shows the specific number of hours watched for each game and does not provide a direct measure of popularity or viewership trends."
+    },
+    {
+        "image": "chartQA_two_col_61737.png",
+        "claim": "Switzerland was the leading pharmaceutical supplier to Germany in 2019.",
+        "label": "Supports",
+        "explanation": "This claim is supported by the data in the provided table. In the table, under the 'Import value in billion euros' column, Switzerland has the highest import value of 11.87 billion euros, indicating that Switzerland was indeed the leading pharmaceutical supplier to Germany in 2019."
+    },
+    {
+        "image": "chartQA_two_col_61737.png",
+        "claim": " \u201cSwitzerland was not the leading pharmaceutical supplier to Germany in 2019.",
+        "label": "Refutes",
+        "explanation": "The claim directly contradicts the data provided in the table, which shows Switzerland as the top pharmaceutical supplier in terms of import value. By stating that Switzerland was not the leading supplier, it goes against the factual data presented, thereby refuting the original claim."
+    },
+    {
+        "image": "chartQA_two_col_61737.png",
+        "claim": " \u201cSwitzerland's high import value in billion euros indicates a strong economic partnership with Germany.",
+        "label": "Not enough information",
+        "explanation": "The claim suggests a strong economic partnership based on the import values, but without specific data on pharmaceutical exports to Germany or the nature of the relationship, it cannot be confirmed or refuted with the given information."
+    }
+]

@@ -1,0 +1,20 @@
+[
+    {
+        "image": "figureQA_0-train.png",
+        "claim": "Deep Sky Blue has a value of 87.66 which is greater than Magenta's value of 62.45.",
+        "label": "Supports",
+        "explanation": "The table data shows that Deep Sky Blue corresponds to a value of 87.66, whereas Magenta corresponds to 62.45. This directly supports the claim that Deep Sky Blue has a higher value than Magenta based on the numerical comparison in the table."
+    },
+    {
+        "image": "figureQA_0-train.png",
+        "claim": "The majority of people consider Royal Blue to have a value of 75.",
+        "label": "Refutes",
+        "explanation": "This claim refutes the data as the value of Royal Blue in the table is actually 74, not 75. By incorrectly stating the value as 75, it misinterprets the factual data provided and presents a conflicting statement to the actual value listed in the table."
+    },
+    {
+        "image": "figureQA_0-train.png",
+        "claim": "\"Deep Sky Blue has a value of 87.66 which is a representation of its popularity among users.\"\n`explanation`: \"This claim is not supported by the data provided in the table. The data only includes numerical values for different colors and does not indicate popularity among users, making the claim unverifiable without additional information.",
+        "label": "Not enough information",
+        "explanation": "ormation claim`: \"Deep Sky Blue has a value of 87.66 which is a representation of its popularity among users.\"\n`explanation`: \"This claim is not supported by the data provided in the table. The data only includes numerical values for different colors and does not indicate popularity among users, making the claim unverifiable without additional information."
+    }
+]

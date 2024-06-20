@@ -1,0 +1,74 @@
+[
+    {
+        "image": "chartQA_3887.png",
+        "claim": "The color corresponding to the value 56 in the table is Blue.",
+        "label": "Supports",
+        "explanation": "The table data indicates that in the year 2006, the highest value recorded is 56 under the column for Germany. Based on the information provided in the table, we can determine that the color representing the value 56 is Blue, as per the answer provided. Therefore, the claim directly aligns with the data presented in the table for the specified value and year."
+    },
+    {
+        "image": "chartQA_3887.png",
+        "claim": " \u201cThe color corresponding to the value 56 in the table is Green.",
+        "label": "Refutes",
+        "explanation": "The claim incorrectly states the color corresponding to the value 56 in the table as Green, which is not supported by the data. In the table provided, the value 56 corresponds to Germany in the year 2006, not Green."
+    },
+    {
+        "image": "chartQA_3887.png",
+        "claim": " \u201cThe color corresponding to the value 26 in the table is Red.",
+        "label": "Not enough information",
+        "explanation": "This claim cannot be confirmed or disproven based on the provided data as there is no information regarding the color corresponding to the value 26 in the table. Additional details or data would be necessary to verify this claim."
+    },
+    {
+        "image": "chartQA_3887.png",
+        "claim": "The difference between the blue and green graph is 1 in the year 2018.",
+        "label": "Supports",
+        "explanation": "This claim is supported by the data in the provided table file. In the table, the value for Germany in 2018 is 39, and for the U.S. it is also 39. The difference between these two values is 1, as indicated by the question. Therefore, the supports claim directly states information that is confirmed in the table, specifically the difference between the values for the respective years."
+    },
+    {
+        "image": "chartQA_3887.png",
+        "claim": " \u201cThe data shows that the U.S. had a higher value than Germany in the year 2018.",
+        "label": "Refutes",
+        "explanation": "The claim directly contradicts the data presented in the table, which clearly indicates that Germany had a higher value than the U.S. in the year 2018. This misrepresentation of the data refutes the original claim that the U.S. had a higher value compared to Germany in that specific year."
+    },
+    {
+        "image": "chartQA_3887.png",
+        "claim": " \u201cThe difference between the blue and green graph is due to a change in government policies in the year 2018.",
+        "label": "Not enough information",
+        "explanation": "This claim suggests a possible reason for the difference without any data supporting or refuting the impact of government policies on the graphs. Additional information on policies or external factors would be required to verify the claim."
+    },
+    {
+        "image": "chartQA_multi_col_20933.png",
+        "claim": "The number of stores Saint Laurent operated in Western Europe in 2020 was 47.",
+        "label": "Supports",
+        "explanation": "This claim is supported by the data in the provided table file. According to the table, in the year 2020, Saint Laurent operated 47 stores in Western Europe, as recorded under the column \"Western Europe\" for that year. Therefore, the supports claim directly states information that is confirmed in the table, specifically matching the data point for 2020 in the \"Western Europe\" column."
+    },
+    {
+        "image": "chartQA_multi_col_20933.png",
+        "claim": " \u201cThe majority of people consider the actors from the TV show Game of Thrones to have a net worth of over 20 million dollars each.",
+        "label": "Refutes",
+        "explanation": "This claim contradicts the factual data provided in the table, where the net worth of each actor is listed below 20 million dollars. By stating that the actors have a net worth of over 20 million dollars each, it directly refutes the data presented in the table."
+    },
+    {
+        "image": "chartQA_multi_col_20933.png",
+        "claim": " \"The earnings per episode of Sophie Turner is directly proportional to the number of episodes she appeared in.\",\n    \"explanation\": \"This claim cannot be confirmed with the given data as Sophie Turner's earnings per episode are not provided in the table, making it unverifiable.\"",
+        "label": "Not enough information",
+        "explanation": "formation claim\": \"The earnings per episode of Sophie Turner is directly proportional to the number of episodes she appeared in.\",\n    \"explanation\": \"This claim cannot be confirmed with the given data as Sophie Turner's earnings per episode are not provided in the table, making it unverifiable.\""
+    },
+    {
+        "image": "chartQA_multi_col_20933.png",
+        "claim": "The number of stores Saint Laurent operated in Western Europe in 2020 was 47.",
+        "label": "Supports",
+        "explanation": "This claim is supported by the data in the provided table file. According to the table, in the year 2020, Saint Laurent operated 47 stores in Western Europe, as recorded under the column \"Western Europe\" for that year. Therefore, the supports claim directly states information that is confirmed in the table, specifically matching the data point for 2020 in the \"Western Europe\" column."
+    },
+    {
+        "image": "chartQA_multi_col_20933.png",
+        "claim": " \u201cAccording to the data, Peter Dinklage has the highest net worth among the listed actors.",
+        "label": "Refutes",
+        "explanation": "The claim refutes the data by incorrectly stating that Peter Dinklage has the highest net worth when Nikolaj Coster-Waldau actually holds that position according to the table. This misinterpretation of the data presents false information that contradicts the factual data provided."
+    },
+    {
+        "image": "chartQA_multi_col_20933.png",
+        "claim": " \"The net worth of the actors in Game of Thrones correlates with their number of appearances in the series.\",\n\"explanation\": \"This claim assumes a direct relationship between an actor's net worth and their screen time in the series, which is not explicitly supported or denied by the given data. Additional information on factors influencing net worth or contractual agreements would be needed to verify this claim.\"",
+        "label": "Not enough information",
+        "explanation": "formation claim\": \"The net worth of the actors in Game of Thrones correlates with their number of appearances in the series.\",\n\"explanation\": \"This claim assumes a direct relationship between an actor's net worth and their screen time in the series, which is not explicitly supported or denied by the given data. Additional information on factors influencing net worth or contractual agreements would be needed to verify this claim.\""
+    }
+]

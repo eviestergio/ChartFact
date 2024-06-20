@@ -1,0 +1,20 @@
+[
+    {
+        "image": "plotQA_0-val.png",
+        "claim": "The employment to population ratio of Zimbabwe for age group between 15-24 years was highest in the year 2000, with 53.9% for males and 49.0% for females.",
+        "label": "Supports",
+        "explanation": "This claim is supported by the data presented in the table provided. The table shows that in 2000, the employment to population ratio for males was 53.9% and for females was 49.0%, which indicates the highest values recorded for that age group in Zimbabwe. This directly correlates with the information provided in the title about the age group and the country, further confirming the accuracy of the claim."
+    },
+    {
+        "image": "plotQA_0-val.png",
+        "claim": " \"The employment to population ratio of Zimbabwe for age group between 15-24 years was highest in the year 2000, with 49.0% for males and 53.9% for females.\",\n\"explanation\": \"The refutes claim contradicts the actual data provided in the table, where the employment to population ratio was 53.9% for males and 49.0% for females in the year 2000. This claim misrepresents the data by switching the percentages for males and females, thus refuting the original supports claim.\"",
+        "label": "Refutes",
+        "explanation": "\": \"The employment to population ratio of Zimbabwe for age group between 15-24 years was highest in the year 2000, with 49.0% for males and 53.9% for females.\",\n\"explanation\": \"The refutes claim contradicts the actual data provided in the table, where the employment to population ratio was 53.9% for males and 49.0% for females in the year 2000. This claim misrepresents the data by switching the percentages for males and females, thus refuting the original supports claim.\""
+    },
+    {
+        "image": "plotQA_0-val.png",
+        "claim": " \u201cThe employment to population ratio of Zimbabwe for age group between 15-24 years may have been influenced by economic policies implemented during that time.",
+        "label": "Not enough information",
+        "explanation": "This claim introduces the possibility of economic policies impacting the employment ratios, but without specific data on policies or their effects, it cannot be verified or disproven solely based on the given information."
+    }
+]

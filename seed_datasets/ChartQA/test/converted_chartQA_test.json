@@ -1,0 +1,110 @@
+[
+    {
+        "image": "chartQA_166.png",
+        "claim": "The percent who think of President Donald Trump as Dangerous is 62.",
+        "label": "Supports",
+        "explanation": "This claim is directly supported by the data in the provided table. In the 'Values' column, the row corresponding to 'Dangerous' lists the value 62.0, indicating that 62% of the respondents consider President Donald Trump as Dangerous. Therefore, the supports claim directly states information that is confirmed in the table, specifically matching the data point for the perception of Trump as Dangerous."
+    },
+    {
+        "image": "chartQA_166.png",
+        "claim": " \u201cThe majority of people consider Donald Trump to be charismatic.",
+        "label": "Refutes",
+        "explanation": "The claim counteracts the supports claim by stating that the majority view President Trump as charismatic, which is not supported by the data. The data shows that a higher percentage of people think of him as Dangerous compared to Charismatic, thus refuting the claim."
+    },
+    {
+        "image": "chartQA_166.png",
+        "claim": " \u201cThe percentage of individuals who perceive President Donald Trump as Dangerous correlates with his policies on immigration.",
+        "label": "Not enough information",
+        "explanation": "This claim implies a connection between the perception of 'Dangerous' and immigration policies, which is not explicitly supported or refuted by the data provided. Additional information on specific policies or public sentiment towards immigration would be necessary to verify this claim."
+    },
+    {
+        "image": "chartQA_166.png",
+        "claim": "The sum of the percents of Charismatic and Well-qualified to be president is more than A strong leader.",
+        "label": "Supports",
+        "explanation": "This claim is directly supported by the data in the provided table. The values in the 'Values' column for Charismatic and Well-qualified to be president are 39.0 and 26.0 respectively, giving a total of 65.0. In comparison, A strong leader has a value of 55.0. Therefore, the sum of Charismatic and Well-qualified to be president is indeed greater than A strong leader, as stated in the supports claim."
+    },
+    {
+        "image": "chartQA_166.png",
+        "claim": " \u201cThe majority of people consider the entity 'Arrogant' to have a low value.",
+        "label": "Refutes",
+        "explanation": "The claim contradicts the data since it states the majority view on 'Arrogant' being low, while in reality, 'Arrogant' has the highest value of 75.0 in the table. This misrepresentation directly refutes the data presented."
+    },
+    {
+        "image": "chartQA_166.png",
+        "claim": " \"The sum of the percents of Charismatic and Well-qualified to be president is more than A strong leader due to their collaborative leadership styles.\",\n\"explanation\": \"This claim proposes a conclusion based on the comparison of Charismatic and Well-qualified to be president with A strong leader, but the data does not explicitly support this relationship, making it unverifiable without additional context or information.\"",
+        "label": "Not enough information",
+        "explanation": "formation claim\": \"The sum of the percents of Charismatic and Well-qualified to be president is more than A strong leader due to their collaborative leadership styles.\",\n\"explanation\": \"This claim proposes a conclusion based on the comparison of Charismatic and Well-qualified to be president with A strong leader, but the data does not explicitly support this relationship, making it unverifiable without additional context or information.\""
+    },
+    {
+        "image": "chartQA_multi_col_803.png",
+        "claim": "The number of stores Saint Laurent operated in Western Europe in 2020 was 47.",
+        "label": "Supports",
+        "explanation": "This claim is supported by the data in the provided table file. According to the table, in the year 2020, Saint Laurent operated 47 stores in Western Europe, as recorded under the column \"Western Europe\" for that year. Therefore, the supports claim directly states information that is confirmed in the table, specifically matching the data point for 2020 in the \"Western Europe\" column."
+    },
+    {
+        "image": "chartQA_multi_col_803.png",
+        "claim": "The number of stores Saint Laurent operated in Western Europe in 2020 was 40.",
+        "label": "Refutes",
+        "explanation": "The claim contradicts the actual data in the table, which clearly states that Saint Laurent operated 47 stores in Western Europe in 2020. By stating a lower number, it misrepresents the data and does not align with the provided information."
+    },
+    {
+        "image": "chartQA_multi_col_803.png",
+        "claim": " \u201cSaint Laurent's store operations in Emerging countries significantly impacted their market performance.",
+        "label": "Not enough information",
+        "explanation": "This claim suggests a correlation between store operations in Emerging countries and market performance without data to support or refute this relationship. The data provided does not specify the influence of store operations in Emerging countries on Saint Laurent's overall performance, making it unverifiable."
+    },
+    {
+        "image": "chartQA_multi_col_20436.png",
+        "claim": "Online sales made up 6.8 percent of retail sales of jewelry, watches and accessories in Germany in 2013.",
+        "label": "Supports",
+        "explanation": "This claim is supported by the data provided in the table, where in the year 2013, online sales accounted for 6.8% of total sales. The percentage is directly reflected in the table under the column 'Online sales' for the corresponding year. Therefore, the supports claim directly states information recorded in the table file."
+    },
+    {
+        "image": "chartQA_multi_col_20436.png",
+        "claim": " \"Only a small percentage of offline sales contributed to the overall retail sales of jewelry, watches, and accessories in Germany in 2018.\",\n\"explanation\": \"The claim contradicts the data in the table, which shows that in 2018, online sales accounted for a significant 11% of retail sales. By stating that only a small percentage of offline sales contributed to total retail sales, it fails to acknowledge the substantial portion contributed by online sales, misrepresenting the distribution of sales channels.\"",
+        "label": "Refutes",
+        "explanation": "\": \"Only a small percentage of offline sales contributed to the overall retail sales of jewelry, watches, and accessories in Germany in 2018.\",\n\"explanation\": \"The claim contradicts the data in the table, which shows that in 2018, online sales accounted for a significant 11% of retail sales. By stating that only a small percentage of offline sales contributed to total retail sales, it fails to acknowledge the substantial portion contributed by online sales, misrepresenting the distribution of sales channels.\""
+    },
+    {
+        "image": "chartQA_multi_col_20436.png",
+        "claim": " \u201cOnline sales of jewelry, watches, and accessories in Germany have steadily increased since 2013.",
+        "label": "Not enough information",
+        "explanation": "This claim suggests a trend without specific data points beyond 2013 and 2018*, making it unverifiable as the intermediate years or precise growth rates are not provided in the given data."
+    },
+    {
+        "image": "chartQA_multi_col_20436.png",
+        "claim": "The percentage of retail sales of jewelry, watches, and accessories in Germany that were online in 2013 was 6.8%.",
+        "label": "Supports",
+        "explanation": "This claim is directly supported by the data provided in the table. According to the table, in the year 2013, online sales accounted for 6.8% of the total retail sales of jewelry, watches, and accessories in Germany. This information matches the data point under the column \"Online sales\" for the year 2013, confirming the percentage stated in the supports claim."
+    },
+    {
+        "image": "chartQA_multi_col_20436.png",
+        "claim": " \"The percentage of online sales for jewelry, watches, and accessories in Germany increased from 6.8% in 2013 to 11% in 2018.\",\n\"explanation\": \"This claim contradicts the data in the table, which shows that online sales actually decreased from 6.8% in 2013 to 11% in 2018. The claim falsely states an increasing trend in online sales, which is not supported by the data provided.\"",
+        "label": "Refutes",
+        "explanation": "\": \"The percentage of online sales for jewelry, watches, and accessories in Germany increased from 6.8% in 2013 to 11% in 2018.\",\n\"explanation\": \"This claim contradicts the data in the table, which shows that online sales actually decreased from 6.8% in 2013 to 11% in 2018. The claim falsely states an increasing trend in online sales, which is not supported by the data provided.\""
+    },
+    {
+        "image": "chartQA_multi_col_20436.png",
+        "claim": "\"The increase in online sales from 2013 to 2018 could be attributed to the rise of e-commerce platforms and digital marketing strategies.\"\n`explanation`: \"This claim offers a plausible reason for the observed trend in online sales but lacks specific data from the table to directly support this assertion. Additional information on consumer behavior or industry trends would be necessary to verify this claim.",
+        "label": "Not enough information",
+        "explanation": "ormation claim`: \"The increase in online sales from 2013 to 2018 could be attributed to the rise of e-commerce platforms and digital marketing strategies.\"\n`explanation`: \"This claim offers a plausible reason for the observed trend in online sales but lacks specific data from the table to directly support this assertion. Additional information on consumer behavior or industry trends would be necessary to verify this claim."
+    },
+    {
+        "image": "chartQA_multi_col_20436.png",
+        "claim": "The predicted increase in online sales of jewelry, watches and accessories in Germany by 2018 is 11%.",
+        "label": "Supports",
+        "explanation": "This claim is supported by the data provided in the table. As per the table, the online sales for the category of jewelry, watches, and accessories in Germany increased from 6.8% in 2013 to 11% in 2018. The answer of 11% aligns with the data recorded in the table, confirming the predicted increase in online sales for the specified product category and country."
+    },
+    {
+        "image": "chartQA_multi_col_20436.png",
+        "claim": "The predicted increase in online sales of jewelry, watches and accessories in Germany by 2018 is 6.8%.",
+        "label": "Refutes",
+        "explanation": "This claim contradicts the actual data provided in the table, which shows that the predicted increase in online sales by 2018 is 11%. By stating a lower percentage, the claim misinterprets the data and presents inaccurate information regarding the expected growth in online sales."
+    },
+    {
+        "image": "chartQA_multi_col_20436.png",
+        "claim": " \u201cThe increase in online sales of jewelry, watches, and accessories in Germany by 2013 was primarily due to a shift in consumer preferences towards e-commerce platforms.",
+        "label": "Not enough information",
+        "explanation": "This claim suggests a possible reason for the increase in online sales but lacks direct data to confirm or refute the statement. Additional information on consumer behavior or market trends is needed to validate this claim."
+    }
+]

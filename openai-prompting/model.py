@@ -1,6 +1,5 @@
 from openai import OpenAI
 from dotenv import load_dotenv
-import ast
 import os
 
 load_dotenv()
@@ -9,16 +8,15 @@ client = OpenAI(api_key=os.getenv('API_KEY'))
 
 class QueryModel:
     """
-    The class the handles model queries and responses
+    The class that handles model queries and responses
     """
 
     def __init__(self, query_type=None, params_dict=None):
         """
         The constructor
         Args:
-            query_type (): The type of response expected ('completion',
-            'chat'). If you want to query GPT3.5 and up models use 'chat'
-            params_dict (): The parameters of the model in dict format
+            query_type (string): The type of response expected ('completion' or 'chat')
+            params_dict (dict): The parameters of the model in dict format
         """
         self.type = query_type if query_type is not None else 'completion'
         self.params = params_dict if params_dict is not None else {
@@ -32,46 +30,19 @@ class QueryModel:
     def __call__(self, model_name, query, *args, **kwargs):
         """
         A function that returns the response of an OpenAI model to a query
-        :param model_name: The name of the model. It should be noted that
-        GPT3.5 and up only work on 'chat' query_type, whereas
-        text-davinci-003 and below only work in completion mode
-        :type model_name: String
-        :param query: The query
-        :type query: String
-        :param args:
-        :type args:
-        :param kwargs:
-        :type kwargs:
-        :return: The response of the model
-        :rtype: String
+        Args:
+            model_name (string): The name of the model - note: GPT-3.5 and up only work on 'chat' query_type, whereas text-davinci-003 and below only work in completion mode.
+            query (string): The query string
+        Return:
+            response_text (string): The response from the model.
         """
         if self.type == 'completion':
-            response = client.completions.create(model=model_name,
-            prompt=query,
-            **self.params)
-            response = response.choices[0].text
-            response = response.splitlines()[0]
-            if len(response) > 0:
-                if response[0] == " ":
-                    response = response[1:]
-            print("Answer is: " + response)
-            try:
-                response = ast.literal_eval(response)
-            except:
-                response = []
-            return response
+            response = client.completions.create(model=model_name, prompt=query, **self.params)
+            response_text = response.choices[0].text.strip()
+            print("Answer is: " + response_text)
+            return response_text
         else:
-            response = client.chat.completions.create(model=model_name,
-            messages=[{"role": "user", "content": query}])
-            response = response.choices[0].message.content
-            response = response.splitlines()[0]
-            if len(response) > 0:
-                if response[0] == " ":
-                    response = response[1:]
-            print("Answer is: " + response)
-            try:
-                response = ast.literal_eval(response)
-            except:
-                response = []
-            return response
-
+            response = client.chat.completions.create(model=model_name, messages=[{"role": "user", "content": query}])
+            response_text = response.choices[0].message.content.strip()
+            print("Answer is: " + response_text)
+            return response_text
