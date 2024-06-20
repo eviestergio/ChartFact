@@ -191,6 +191,11 @@ def generate_supports_claim(title, table, question, answer, model):
     explanation_end = response.find('”', explanation_start)
     explanation = response[explanation_start:explanation_end]
 
+    # If failed, add empty entries to filter out from final dataset
+    if claim is None or explanation is None:
+        print("Failed to parse response for supports claim.")
+        return "", "" 
+
     return claim, explanation
 
 def generate_refutes_claim(title, table, supports_claim, model):
@@ -206,6 +211,11 @@ def generate_refutes_claim(title, table, supports_claim, model):
     explanation_end = response.find('”', explanation_start)
     explanation = response[explanation_start:explanation_end]
 
+    # If failed, add empty entries to filter out from final dataset
+    if claim is None or explanation is None:
+        print("Failed to parse response for refutes claim.")
+        return "", "" 
+
     return claim, explanation
 
 def generate_nei_claim(title, table, supports_claim, model):
@@ -220,6 +230,11 @@ def generate_nei_claim(title, table, supports_claim, model):
     explanation_start = response.find('“explanation”: “') + len('“explanation”: “')
     explanation_end = response.find('”', explanation_start)
     explanation = response[explanation_start:explanation_end]
+
+    # If failed, add empty entries to filter out from final dataset
+    if claim is None or explanation is None:
+        print("Failed to parse response for not enough information claim.")
+        return "", "" 
 
     return claim, explanation
 
