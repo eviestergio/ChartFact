@@ -8,17 +8,17 @@ client = OpenAI(api_key=os.getenv('API_KEY'))
 
 class QueryModel:
     """
-    The class that handles model queries and responses
+    The class that handles model queries and responses.
     """
 
     def __init__(self, query_type=None, params_dict=None):
         """
-        The constructor
+        The constructor.
         Args:
-            query_type (string): The type of response expected ('completion' or 'chat')
-            params_dict (dict): The parameters of the model in dict format
+            query_type (string): The type of response expected ('completion' or 'chat').
+            params_dict (dict): The parameters of the model in dict format.
         """
-        self.type = query_type if query_type is not None else 'completion'
+        self.type = query_type if query_type is not None else 'chat'
         self.params = params_dict if params_dict is not None else {
             'temperature': 0,
             'max_tokens': 50,
@@ -29,10 +29,10 @@ class QueryModel:
 
     def __call__(self, model_name, query, *args, **kwargs):
         """
-        A function that returns the response of an OpenAI model to a query
+        A function that returns the response of an OpenAI model to a query.
         Args:
             model_name (string): The name of the model - note: GPT-3.5 and up only work on 'chat' query_type, whereas text-davinci-003 and below only work in completion mode.
-            query (string): The query string
+            query (string): The query string.
         Return:
             response_text (string): The response from the model.
         """

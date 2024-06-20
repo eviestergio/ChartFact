@@ -115,7 +115,7 @@ def create_refutes_prompt(title, table, supports_claim): # 519 tokens, 2331 char
             Caring about ordinary people,23.0
             Well-qualified to be president,26.0
             Charismatic,39.0
-            a strong leader,55.0
+            A strong leader,55.0
             Dangerous,62.0
             Intolerant,65.0
             Arrogant,75.0”,
@@ -163,7 +163,7 @@ def create_nei_prompt(title, table, supports_claim): # 512 tokens, 2398 characte
             Caring about ordinary people,23.0
             Well-qualified to be president,26.0
             Charismatic,39.0
-            a strong leader,55.0
+            A strong leader,55.0
             Dangerous,62.0
             Intolerant,65.0
             Arrogant,75.0”,
