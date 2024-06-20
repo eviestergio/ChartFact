@@ -28,7 +28,7 @@ for root, dirs, files in os.walk(folder_path):
 
             parent_dir = os.path.dirname(root)
             # Create CSV directory and file paths relative to the parent directory
-            csv_directory = os.path.join(parent_dir, 'csv')
+            csv_directory = os.path.join(parent_dir, 'tables')
             csv_file_path = os.path.join(csv_directory, file_name.replace('.png', '.csv'))
             os.makedirs(csv_directory, exist_ok=True) #create CSV directory if it doesn't exist
             
