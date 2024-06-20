@@ -2,11 +2,10 @@ from model import QueryModel
 import json
 import os
 
-def create_supports_prompt(title, table,  question, answer):
+def create_supports_prompt(title, table,  question, answer): # 980 tokens, 3860 characters - rm example 1 if needed
     title_ = title if title else ''
     prompt = f"""
-    You will be provided with a data entry in JSON format deliminated by 3 single quotes. 
-    Each data entry contains the following keys: "title", “table”, “question”, “answer”. 
+    You will be provided with a data entry in JSON format delimited by triple single quotes. Each data entry contains the keys "title", “table”, “question”, and “answer”. 
 
     Data entry: '''{{
         “title”: “{title_}”
@@ -15,16 +14,15 @@ def create_supports_prompt(title, table,  question, answer):
         "answer": "{answer}"
     }}'''
 
-    Task: Using the 4 input-output examples deliminated by angle brackets, your task is to convert each 'question' and 'answer' pair to a claim that supports the information and an explanation.
+    Task: Using the 3 input-output examples below delimited by angle brackets, convert each 'question' and 'answer' pair to a claim that supports the information and provide an explanation.
 
-    Process for generating ‘supports’ claim:
-    To provide an explanation as to why this claim is supported by the data, cite specific references of the table in the supports claim. Do not mention the question and answer pair in the explanation. These are examples of valid justifications for labelling a supports claim as 'supports':
-        - Supports claim directly states information that is recorded/confirmed in the table 
-        - Supports claim states information that is synonymous with the information in the table 
+    Process for generating a ‘supports’ claim and explanation:
+        1. Develop a supports claim using the question and answer pair. 
+        2. Provide an explanation on why this claim supports the data, citing specific references from the table and the title (if it exists). Do not mention the question and answer pair in the explanation. Valid justifications include: 
+            - The supports claim directly states information recorded/confirmed in the table.
+            - The supports claim states information synonymous with that in table.
 
-    Output the text for the supports claim derived from converting the question and answer pair and the explanation based off of the title (if it exists) and table data provided. 
-
-    Result format delineated by backticks: 
+    Result format delimited by backticks: 
     `“supports claim”: “”,
     “explanation”: “”`
 
@@ -48,7 +46,7 @@ def create_supports_prompt(title, table,  question, answer):
         “explanation”: “This claim is supported by the data in the provided table file. According to the table, in the year 2020, Saint Laurent operated 47 stores in Western Europe, as recorded under the column "Western Europe" for that year. Therefore, the supports claim directly states information that is confirmed in the table, specifically matching the data point for 2020 in the "Western Europe" column.”
         }}
     2. Input: {{
-        “title”: '', 
+        “title”: 'Net insurance of liabilities of government of Iceland', 
         "table": "Year,Domestic Liabilities,Foreign Liabilities
         2005,102600000,-15510000000
         2006,1899000000,66250000000
@@ -84,11 +82,10 @@ def create_supports_prompt(title, table,  question, answer):
 
     return prompt
 
-def create_refutes_prompt(title, table, supports_claim):
+def create_refutes_prompt(title, table, supports_claim): # 519 tokens, 2331 characters
     title_ = title if title else ''
     prompt = f"""
-    You will be provided with a data entry in JSON format deliminated by 3 single quotes. 
-    Each data entry contains the following keys: “title”, “table”, “supports claim”
+    You will be provided with a data entry in JSON format delimited by triple single quotes. Each data entry contains the keys “title”, “table”, and “supports claim”.
 
     Data entry: '''{{
         “title”: “{title_}”,
@@ -96,87 +93,86 @@ def create_refutes_prompt(title, table, supports_claim):
         “supports claim”: “{supports_claim}”
     }}'''
 
-    Task: Using the input-output example deliminated by angle brackets, your task is to generate a ‘refutes’ claim and an explanation, ensuring alignment with the data or adjusting the claim to agree with the data if necessary.
+    Task: Using the input-output example below delimited by angle brackets, generate a ‘refutes’ claim and an explanation. Ensure the claim aligns with the data or adjust it to fit the data if necessary.
 
-    Process for generating ‘refutes’ claim:
-        Step 1: Identify the information in the table, the title (if it exists), and in the supports claim.
-        Step 2: Use the supports claim to develop a claim that refutes the data without relying on adding unverifiable new information. The mutations you produce should be objective (i.e. not subjective). Here are a few ways this could be done:
-            - Wrongly state factual data such as changing reported numbers or trends.
-            - Misinterpreting or changing one or more factual elements in a way that is still plausible but incorrect based on the data context.
-        Step 3: Explanation: Explain why this claim refutes the data, citing specific discrepancies between the claim and the data provided. These are examples of valid justifications for labelling a claim as Refutes:
-            - Claim directly states information that refutes the data and/or supports claim 
-            - Claim states information that is antonymous with information in the data and/or supports claim
+    Process for generating ‘refutes’ claim and explanation:
+        1. Identify the information in the table, the title (if it exists), and the supports claim.
+        2. Develop a claim that refutes the data based on the supports claim without adding unverifiable information. This can be done by:
+            - Wrongly stating factual data, such as changing reported numbers or trends.
+            - Misinterpreting or changing one or more factual elements in a way that is plausible but incorrect based on the data.
+        3. Provide an explanation on why this claim refutes the data, citing specific discrepancies between the claim and the data. Valid justifications include:
+            - The claim directly states information that refutes the data and/or supports claim 
+            - The claim states information that is antonymous with information in the data and/or supports claim
 
-    Result Format delineated by backticks: 
+    Result format delimited by backticks: 
     `”refutes claim”: “”,
     “explanation”: “”`
 
     Example: <
-        Input: {{
+    Input: {{
         “title”: “Traits of President Donald Trump”,
-        “table”: “Entity	Values
-        Caring about ordinary people	23.0
-        Well-qualified to be president	26.0
-        Charismatic	39.0
-        A strong leader	55.0
-        Dangerous	62.0
-        Intolerant	65.0
-        Arrogant	75.0”,
+        “table”: “Entity,Values
+            Caring about ordinary people,23.0
+            Well-qualified to be president,26.0
+            Charismatic,39.0
+            a strong leader,55.0
+            Dangerous,62.0
+            Intolerant,65.0
+            Arrogant,75.0”,
         “supports claim”: “62 percent view President Donald Trump as Dangerous.”
-        }}
-        Output: {{
+    }}
+    Output: {{
         “refutes claim”: “The majority of people consider Donald Trump to be charismatic.”,
         “explanation”: “The claim counters the data, which shows a lower percentage for 'Charismatic' compared to 'Dangerous'. It misrepresents the data by suggesting that 'Charismatic' has a majority view, which directly contradicts the higher percentage listed for 'Dangerous'.”
-        }}
+    }}
     >
-
     """
     
     return prompt
 
-def create_nei_prompt(title, table, supports_claim):
+def create_nei_prompt(title, table, supports_claim): # 512 tokens, 2398 characters
     title_ = title if title else ''
     prompt = f"""
-    You will be provided with a data entry in JSON format deliminated by 3 single quotes. 
-    Each data entry contains the following keys: “title”, “table”, “supports claim”
+    You will be provided with a data entry in JSON format delimited by triple single quotes. Each data entry contains the keys “title”, “table”, and “supports claim”.
 
     Data entry: '''{{
-    “title”: “{title_}”,
-    “table”: “{table}”, 
-    “supports claim”: “{supports_claim}”
+        “title”: “{title_}”,
+        “table”: “{table}”, 
+        “supports claim”: “{supports_claim}”
     }}'''
 
-    Task: Using the input-output example deliminated by angle brackets, your task is to generate a ‘not enough information’ claim and an explanation, ensuring alignment with the data or adjusting the claim to agree with the data if necessary.
+    Task: Using the input-output example delimited by angle brackets, generate a ‘not enough information’ claim and an explanation. Ensure the claim aligns with the data or adjust it to fit the data if necessary.
 
-    Process for generating ‘not enough information’ claim:
-        Step 1: Assess the data table and title (if it exists) with the supports claim for information gaps or unspecified details.
-        Step 2: Formulate a claim based on these gaps without stating the lack of information. Here are a few ways this could be done:
-        Offering different scenarios or making conclusions outside of the available data without direct contradiction.
-        Suggesting causes or reasons for trends in the data that are not explicitly supported or denied by the data.
-        Step 3: Explanation: Justify the classification as 'Not enough information' by highlighting the lack of data to support or refute the claim and make it unverifiable. These are examples of valid justifications for labelling a claim as Not enough information:
-        The claim could potentially be verified using other publicly available information
+    Process for generating ‘not enough information’ claim and explanation:
+        1. Assess the data table and title (if it exists) with the supports claim for information gaps or unspecified details.
+        2. Develop a claim based on these gaps without explicitly stating the lack of information. This can be done by:
+            - Offering different scenarios or conclusions that are not directly contradicted by the data.
+            - Suggesting causes or reasons for trends in the data that are not explicitly supported or denied by the data.
+        3. Provide an explanation on why this claim is classified as 'not enough information' by highlighting the lack of data to support or refute the claim, making it unverifiable. Valid justifications include:
+            - The claim cannot be confirmed or disproven with the given data.
+            - Additional information from other sources would be required to verify the claim.
 
-    Result Format delineated by backticks: 
+    Result format delimited by backticks: 
     `”not enough information claim”: “”,
     “explanation”: “”`
 
     Example: <
-        Input: {{
+    Input: {{
         “title”: “Traits of President Donald Trump”,
-        “table”: “Entity	Values
-        Caring about ordinary people	23.0
-        Well-qualified to be president	26.0
-        Charismatic	39.0
-        A strong leader	55.0
-        Dangerous	62.0
-        Intolerant	65.0
-        Arrogant	75.0”,
+        “table”: “Entity,Values
+            Caring about ordinary people,23.0
+            Well-qualified to be president,26.0
+            Charismatic,39.0
+            a strong leader,55.0
+            Dangerous,62.0
+            Intolerant,65.0
+            Arrogant,75.0”,
         “supports claim”: “62 percent view President Donald Trump as Dangerous.”
-        }}
-        Output: {{
+    }}
+    Output: {{
         “not enough information claim”: “President Donald Trump's approach to international relations contributes to their perception as Dangerous.”,
         “explanation”: “This claim speculates on information not provided in the table, as there are no data regarding international relations, making the connection to the perception of being 'Dangerous' unverifiable.”
-        }}
+    }}
     >
     """
     
@@ -243,7 +239,7 @@ def process_file(input_file, model):
         csv_file_path = os.path.join(os.path.dirname(input_file), "tables", f"{entry['image'].split('.')[0]}.csv")
         title_file_path = os.path.join(os.path.dirname(input_file), "tables", f"{entry['image'].split('.')[0]}-title.txt")
 
-        #Read CSV file
+        # Read CSV file
         if os.path.exists(csv_file_path):
             with open(csv_file_path, 'r') as csv_file:
                 table = csv_file.read()
