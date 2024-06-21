@@ -1,0 +1,97 @@
+[
+    {
+        "image_index": 2558,
+        "color2_name": "--None--",
+        "color1_id": 30,
+        "color1_rgb": [
+            255,
+            20,
+            147
+        ],
+        "question_string": "Is Deep Pink the low median?",
+        "color2_id": -1,
+        "color1_name": "Deep Pink",
+        "color2_rgb": [
+            -1,
+            -1,
+            -1
+        ],
+        "question_id": 4
+    },
+    {
+        "image_index": 2660,
+        "color2_name": "--None--",
+        "color1_id": 68,
+        "color1_rgb": [
+            0,
+            0,
+            128
+        ],
+        "question_string": "Is Navy Blue the smoothest?",
+        "color2_id": -1,
+        "color1_name": "Navy Blue",
+        "color2_rgb": [
+            -1,
+            -1,
+            -1
+        ],
+        "question_id": 8
+    },
+    {
+        "image_index": 8528,
+        "color2_name": "--None--",
+        "color1_id": 4,
+        "color1_rgb": [
+            165,
+            42,
+            42
+        ],
+        "question_string": "Is Brown the minimum?",
+        "color2_id": -1,
+        "color1_name": "Brown",
+        "color2_rgb": [
+            -1,
+            -1,
+            -1
+        ],
+        "question_id": 0
+    },
+    {
+        "image_index": 8554,
+        "color2_name": "--None--",
+        "color1_id": 20,
+        "color1_rgb": [
+            85,
+            107,
+            47
+        ],
+        "question_string": "Is Dark Olive the low median?",
+        "color2_id": -1,
+        "color1_name": "Dark Olive",
+        "color2_rgb": [
+            -1,
+            -1,
+            -1
+        ],
+        "question_id": 4
+    },
+    {
+        "image_index": 7960,
+        "color2_name": "Peru",
+        "color1_id": 74,
+        "color1_rgb": [
+            152,
+            251,
+            152
+        ],
+        "question_string": "Is Pale Green greater than Peru?",
+        "color2_id": 76,
+        "color1_name": "Pale Green",
+        "color2_rgb": [
+            205,
+            133,
+            63
+        ],
+        "question_id": 13
+    }
+]
