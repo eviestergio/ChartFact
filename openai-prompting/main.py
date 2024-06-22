@@ -5,6 +5,8 @@ import os
 def create_supports_prompt(title, table,  question, answer): # 980 tokens, 3860 characters - rm example 1 if needed
     title_ = title if title else ''
     prompt = f"""
+    You are a helpful assistant designed to output JSON.
+
     You will be provided with a data entry in JSON format delimited by triple single quotes. Each data entry contains the keys "title", “table”, “question”, and “answer”. 
 
     Data entry: '''{{
@@ -22,9 +24,11 @@ def create_supports_prompt(title, table,  question, answer): # 980 tokens, 3860 
             - The supports claim directly states information recorded/confirmed in the table.
             - The supports claim states information synonymous with that in table.
 
-    Result format delimited by backticks: 
-    `“supports claim”: “”,
-    “explanation”: “”`
+    Output the result as a JSON object with the following keys: "supports claim" and "explanation". . The format should strictly follow this structure:
+    {{
+        "supports claim": "your generated supports claim",
+        "explanation": "your explanation for why the claim supports the data"
+    }}
 
     Examples: < 
     1. Input: {{
@@ -85,6 +89,8 @@ def create_supports_prompt(title, table,  question, answer): # 980 tokens, 3860 
 def create_refutes_prompt(title, table, supports_claim): # 519 tokens, 2331 characters
     title_ = title if title else ''
     prompt = f"""
+    You are a helpful assistant designed to output JSON.
+
     You will be provided with a data entry in JSON format delimited by triple single quotes. Each data entry contains the keys “title”, “table”, and “supports claim”.
 
     Data entry: '''{{
@@ -104,9 +110,11 @@ def create_refutes_prompt(title, table, supports_claim): # 519 tokens, 2331 char
             - The claim directly states information that refutes the data and/or supports claim 
             - The claim states information that is antonymous with information in the data and/or supports claim
 
-    Result format delimited by backticks: 
-    `”refutes claim”: “”,
-    “explanation”: “”`
+    Output the result as a JSON object with the following keys: "refutes claim" and "explanation". The format should strictly follow this structure:
+    {{
+        "refutes claim": "your generated refutes claim",
+        "explanation": "your explanation for why the claim refutes the data"
+    }}
 
     Example: <
     Input: {{
@@ -133,6 +141,8 @@ def create_refutes_prompt(title, table, supports_claim): # 519 tokens, 2331 char
 def create_nei_prompt(title, table, supports_claim): # 512 tokens, 2398 characters
     title_ = title if title else ''
     prompt = f"""
+    You are a helpful assistant designed to output JSON.
+
     You will be provided with a data entry in JSON format delimited by triple single quotes. Each data entry contains the keys “title”, “table”, and “supports claim”.
 
     Data entry: '''{{
@@ -152,9 +162,11 @@ def create_nei_prompt(title, table, supports_claim): # 512 tokens, 2398 characte
             - The claim cannot be confirmed or disproven with the given data.
             - Additional information from other sources would be required to verify the claim.
 
-    Result format delimited by backticks: 
-    `”not enough information claim”: “”,
-    “explanation”: “”`
+    Output the result as a JSON object with the following keys: "not enough information claim" and "explanation". The format should strictly follow this structure:
+    {{
+        "not enough information claim": "your generated not enough information claim",
+        "explanation": "your explanation for why the claim lacks enough information"
+    }}
 
     Example: <
     Input: {{
@@ -178,63 +190,57 @@ def create_nei_prompt(title, table, supports_claim): # 512 tokens, 2398 characte
     
     return prompt
 
+def parse_json_response(response):
+    ''' Parse JSON object response to extract claim and explanation '''
+    try:
+        response_json = json.loads(response)
+        return response_json
+    except json.JSONDecodeError:
+        print("Failed to parse JSON response.")
+        return {}
+
 def generate_supports_claim(title, table, question, answer, model):
     prompt = create_supports_prompt(title, table, question, answer)
     response = model(model_name='gpt-3.5-turbo', query=prompt)
-
-    # Parse response to extract claim and explanation
-    claim_start = response.find('“supports claim”: “') + len('“supports claim”: “')
-    claim_end = response.find('”', claim_start)
-    claim = response[claim_start:claim_end]
-    
-    explanation_start = response.find('“explanation”: “') + len('“explanation”: “')
-    explanation_end = response.find('”', explanation_start)
-    explanation = response[explanation_start:explanation_end]
+    response_json = parse_json_response(response)
 
     # If failed, add empty entries to filter out from final dataset
-    if claim is None or explanation is None:
+    if not response_json:
         print("Failed to parse response for supports claim.")
         return "", "" 
+    
+    claim = response_json['supports claim']
+    explanation = response_json['explanation']
 
     return claim, explanation
 
 def generate_refutes_claim(title, table, supports_claim, model):
     prompt = create_refutes_prompt(title, table, supports_claim)
     response = model(model_name='gpt-3.5-turbo', query=prompt)
-
-    # Parse response to extract claim and explanation
-    claim_start = response.find('“refutes claim”: “') + len('“refutes claim”: “')
-    claim_end = response.find('”', claim_start)
-    claim = response[claim_start:claim_end]
-    
-    explanation_start = response.find('“explanation”: “') + len('“explanation”: “')
-    explanation_end = response.find('”', explanation_start)
-    explanation = response[explanation_start:explanation_end]
+    response_json = parse_json_response(response)
 
     # If failed, add empty entries to filter out from final dataset
-    if claim is None or explanation is None:
+    if not response_json:
         print("Failed to parse response for refutes claim.")
         return "", "" 
+    
+    claim = response_json['refutes claim']
+    explanation = response_json['explanation']
 
     return claim, explanation
 
 def generate_nei_claim(title, table, supports_claim, model):
     prompt = create_nei_prompt(title, table, supports_claim)
     response = model(model_name='gpt-3.5-turbo', query=prompt)
-
-    # Parse response to extract claim and explanation
-    claim_start = response.find('“not enough information claim”: “') + len('“not enough information claim”: “')
-    claim_end = response.find('”', claim_start)
-    claim = response[claim_start:claim_end]
-    
-    explanation_start = response.find('“explanation”: “') + len('“explanation”: “')
-    explanation_end = response.find('”', explanation_start)
-    explanation = response[explanation_start:explanation_end]
+    response_json = parse_json_response(response)
 
     # If failed, add empty entries to filter out from final dataset
-    if claim is None or explanation is None:
+    if not response_json:
         print("Failed to parse response for not enough information claim.")
         return "", "" 
+    
+    claim = response_json['not enough information claim']
+    explanation = response_json['explanation']
 
     return claim, explanation
 
@@ -319,7 +325,7 @@ def save_results(input_file, results):
     print(f"Conversion completed for {os.path.basename(input_file)}. Results saved to {output_path}.")
 
 def main():
-    model = QueryModel(query_type='chat')
+    model = QueryModel(query_type='json_object')
     current_folder = os.path.dirname(os.path.abspath(__file__))
     input_directory = os.path.join(current_folder, "../seed_datasets") # directory containing preprocessed JSON files to convert
 
