@@ -7,7 +7,7 @@ import shutil
 
 # Define the paths for the source and destination
 source_folder = '/Users/angwang/ChartFC/random_sample_300'  # Absolute path to the source folder
-destination_folder = 'sampleseed_datasets-new'  # Updated destination folder name
+destination_folder = 'sample-seed_datasets-new'  # Updated destination folder name
 repository_path = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))  # Get one level up from the script's directory
 
 # Define the full paths
