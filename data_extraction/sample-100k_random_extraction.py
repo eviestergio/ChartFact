@@ -1,4 +1,5 @@
 # Test final 100K data extraction script on the smaller 300 sample
+# Creates 244 data entries
 
 import os
 import json
