@@ -148,15 +148,5 @@
         "imgname": "two_col_61350.png",
         "query": "What was Switzerland's import value in U.S. dollars in 2019?",
         "label": "18147.9"
-    },
-    {
-        "imgname": "two_col_3842.png",
-        "query": "How much higher were the prices in the transport sector in May 2021 than they were a year earlier?",
-        "label": "6.3"
-    },
-    {
-        "imgname": "two_col_103013.png",
-        "query": "In what year was the largest amount of money invested in road network infrastructure?",
-        "label": "2018"
     }
 ]

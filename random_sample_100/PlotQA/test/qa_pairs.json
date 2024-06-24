@@ -47,5 +47,53 @@
         "answer_id": 1,
         "type": "vbar",
         "question_id": 300574
+    },
+    {
+        "image_index": 21579,
+        "qid": "S1",
+        "question_string": "Does the graph contain grids ?",
+        "answer_bbox": [
+            {
+                "y": 30,
+                "x": 101,
+                "w": 4,
+                "h": 557
+            },
+            {
+                "y": 30,
+                "x": 1190,
+                "w": 4,
+                "h": 557
+            },
+            {
+                "y": 460,
+                "x": 49,
+                "w": 1197,
+                "h": 4
+            },
+            {
+                "y": 335,
+                "x": 49,
+                "w": 1197,
+                "h": 4
+            },
+            {
+                "y": 210,
+                "x": 49,
+                "w": 1197,
+                "h": 4
+            },
+            {
+                "y": 85,
+                "x": 49,
+                "w": 1197,
+                "h": 4
+            }
+        ],
+        "template": "structural",
+        "answer": "Yes",
+        "answer_id": 1,
+        "type": "line",
+        "question_id": 28
     }
 ]

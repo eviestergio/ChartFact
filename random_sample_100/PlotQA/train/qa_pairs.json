@@ -562,46 +562,5 @@
         "answer_id": 38,
         "type": "vbar",
         "question_id": 30
-    },
-    {
-        "image_index": 45851,
-        "qid": "S14",
-        "question_string": "How many bars are there on the 2nd tick from the bottom ?",
-        "answer_bbox": [
-            {
-                "y": 501,
-                "x": 69,
-                "w": 83,
-                "h": 15
-            },
-            {
-                "y": 486,
-                "x": 69,
-                "w": 97,
-                "h": 15
-            },
-            {
-                "y": 470,
-                "x": 69,
-                "w": 658,
-                "h": 15
-            }
-        ],
-        "template": "structural",
-        "answer": 3,
-        "answer_id": 38,
-        "type": "hbar",
-        "question_id": 95276
-    },
-    {
-        "image_index": 118246,
-        "qid": "CD6",
-        "question_string": "What is the difference between the highest and the second highest amount consumed in the process of production in Virgin Islands ?",
-        "answer_bbox": [],
-        "template": "compound",
-        "answer": 35879335.25202799,
-        "answer_id": 1264795,
-        "type": "vbar",
-        "question_id": 1850933
     }
 ]

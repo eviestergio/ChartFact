@@ -78,5 +78,16 @@
         "answer_id": 17,
         "type": "line",
         "question_id": 283170
+    },
+    {
+        "image_index": 19779,
+        "qid": "D15",
+        "question_string": "What is the percentage of male workers in industry in 1986 ?",
+        "answer_bbox": [],
+        "template": "data_retrieval",
+        "answer": 51.2000007629395,
+        "answer_id": 27249,
+        "type": "line",
+        "question_id": 272498
     }
 ]
