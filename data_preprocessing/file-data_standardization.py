@@ -19,6 +19,11 @@ def remove_figureQA_syntax(folder_path):
 
 def rename_images_with_number_prefix(folder_path, prefix):
     png_folder_path = os.path.join(folder_path, f"png-{prefix}")
+
+    if not os.path.exists(png_folder_path):
+        print(f"Skipping processing for folder {png_folder_path} because it does not exist.")
+        return
+    
     for filename in os.listdir(png_folder_path):
         if filename.endswith('.png'):
             src = os.path.join(png_folder_path, filename)
@@ -111,6 +116,11 @@ def preprocess_plotQA(entry, postfix):
 # process datasets in their respective folders (and rename image_index)
 def process_dataset_in_folder(folder_path, preprocess_func, postfix):
     json_file_path = os.path.join(folder_path, "qa_pairs.json")
+
+    if not os.path.exists(json_file_path) or os.path.getsize(json_file_path) == 0:
+        print(f"Skipping processing for {json_file_path} because it doesn't exist or is empty")
+        return []
+    
     with open(json_file_path, 'r') as json_file:
         data = json.load(json_file)
         preprocessed_data = [preprocess_func(entry, postfix) for entry in data]
@@ -143,59 +153,88 @@ def process_dataset_and_rename_images(folder_path, preprocess_func, prefix, post
 def main():
     # folder paths for each dataset
     current_folder = os.path.dirname(os.path.abspath(__file__))
+    base_path = os.path.join(current_folder, "../sample-seed_datasets-new")
 
-    chartQA_train_folder_path = os.path.join(current_folder, "../seed_datasets/ChartQA/train")
-    chartQA_test_folder_path = os.path.join(current_folder, "../seed_datasets/ChartQA/test")
-    chartQA_val_folder_path = os.path.join(current_folder, "../seed_datasets/ChartQA/val")
+    chartQA_train_folder_path = os.path.join(base_path, "ChartQA/train")
+    chartQA_test_folder_path = os.path.join(base_path, "ChartQA/test")
+    chartQA_val_folder_path = os.path.join(base_path, "ChartQA/val")
 
-    figureQA_train_folder_path = os.path.join(current_folder, "../seed_datasets/FigureQA/train")
-    figureQA_test_folder_path = os.path.join(current_folder, "../seed_datasets/FigureQA/test")
-    figureQA_val_folder_path = os.path.join(current_folder, "../seed_datasets/FigureQA/val")
+    figureQA_train_folder_path = os.path.join(base_path, "FigureQA/train")
+    figureQA_test_folder_path = os.path.join(base_path, "FigureQA/test")
+    figureQA_val_folder_path = os.path.join(base_path, "FigureQA/val")
 
-    plotQA_train_folder_path = os.path.join(current_folder, "../seed_datasets/PlotQA/train")
-    plotQA_test_folder_path = os.path.join(current_folder, "../seed_datasets/PlotQA/test")
-    plotQA_val_folder_path = os.path.join(current_folder, "../seed_datasets/PlotQA/val")
+    plotQA_train_folder_path = os.path.join(base_path, "PlotQA/train")
+    plotQA_test_folder_path = os.path.join(base_path, "PlotQA/test")
+    plotQA_val_folder_path = os.path.join(base_path, "PlotQA/val")
 
     ''' special figureQA pre-processing '''
     remove_figureQA_syntax(figureQA_test_folder_path)
     remove_figureQA_syntax(figureQA_train_folder_path)
     remove_figureQA_syntax(figureQA_val_folder_path)
 
-    file1_path = os.path.join(figureQA_test_folder_path, "qa_pairs-1.json")
-    if os.path.exists(file1_path):
-        preprocess_figureQA_json_files(file1_path, "1")
-    else:
-        print("qa_pairs-1.json not found in the folder.")
+    # Check if jsons are empty
+    for folder_path in [figureQA_test_folder_path, figureQA_val_folder_path]:
+        for file_index in [1, 2]:
+            file_path = os.path.join(folder_path, f"qa_pairs-{file_index}.json")
+            if os.path.exists(file_path) and os.path.getsize(file_path) > 0:
+                preprocess_figureQA_json_files(file_path, str(file_index))
+            else:
+                print(f"qa_pairs-{file_index}.json not found or is empty in the folder.")
 
-    file2_path = os.path.join(figureQA_test_folder_path, "qa_pairs-2.json")
-    if os.path.exists(file2_path):
-        preprocess_figureQA_json_files(file2_path, "2")
-    else:
-        print("qa_pairs-2.json not found in the folder.")
+    # Combine qa_pairs.json files in FigureQA dataset if there are entries
+    if any(os.path.getsize(os.path.join(figureQA_test_folder_path, f"qa_pairs-{i}.json")) > 0 for i in [1, 2]):
+        combine_json_files(figureQA_test_folder_path)
+    if any(os.path.getsize(os.path.join(figureQA_val_folder_path, f"qa_pairs-{i}.json")) > 0 for i in [1, 2]):
+        combine_json_files(figureQA_val_folder_path)
 
-    file1_path = os.path.join(figureQA_val_folder_path, "qa_pairs-1.json")
-    if os.path.exists(file1_path):
-        preprocess_figureQA_json_files(file1_path, "1")
-    else:
-        print("qa_pairs-1.json not found in the folder.")
-
-    file2_path = os.path.join(figureQA_val_folder_path, "qa_pairs-2.json")
-    if os.path.exists(file2_path):
-        preprocess_figureQA_json_files(file2_path, "2")
-    else:
-        print("qa_pairs-2.json not found in the folder.")
-
-    #combine qa_pairs.json files in figureQA dataset
-    combine_json_files(figureQA_test_folder_path)
-    combine_json_files(figureQA_val_folder_path)
-
-    rename_images_with_number_prefix(figureQA_test_folder_path, "1")
-    rename_images_with_number_prefix(figureQA_test_folder_path, "2")
-    rename_images_with_number_prefix(figureQA_val_folder_path, "1")
-    rename_images_with_number_prefix(figureQA_val_folder_path, "2")
+    # Check for existence of png folders before renaming
+    if os.path.exists(os.path.join(figureQA_test_folder_path, "png-1")):
+        rename_images_with_number_prefix(figureQA_test_folder_path, "1")
+    if os.path.exists(os.path.join(figureQA_test_folder_path, "png-2")):
+        rename_images_with_number_prefix(figureQA_test_folder_path, "2")
+    if os.path.exists(os.path.join(figureQA_val_folder_path, "png-1")):
+        rename_images_with_number_prefix(figureQA_val_folder_path, "1")
+    if os.path.exists(os.path.join(figureQA_val_folder_path, "png-2")):
+        rename_images_with_number_prefix(figureQA_val_folder_path, "2")
 
     combine_png_folders(figureQA_test_folder_path)
     combine_png_folders(figureQA_val_folder_path)
+
+    # file1_path = os.path.join(figureQA_test_folder_path, "qa_pairs-1.json")
+    # if os.path.exists(file1_path):
+    #     preprocess_figureQA_json_files(file1_path, "1")
+    # else:
+    #     print("qa_pairs-1.json not found in the folder.")
+
+    # file2_path = os.path.join(figureQA_test_folder_path, "qa_pairs-2.json")
+    # if os.path.exists(file2_path):
+    #     preprocess_figureQA_json_files(file2_path, "2")
+    # else:
+    #     print("qa_pairs-2.json not found in the folder.")
+
+    # file1_path = os.path.join(figureQA_val_folder_path, "qa_pairs-1.json")
+    # if os.path.exists(file1_path):
+    #     preprocess_figureQA_json_files(file1_path, "1")
+    # else:
+    #     print("qa_pairs-1.json not found in the folder.")
+
+    # file2_path = os.path.join(figureQA_val_folder_path, "qa_pairs-2.json")
+    # if os.path.exists(file2_path):
+    #     preprocess_figureQA_json_files(file2_path, "2")
+    # else:
+    #     print("qa_pairs-2.json not found in the folder.")
+
+    #combine qa_pairs.json files in figureQA dataset
+    # combine_json_files(figureQA_test_folder_path)
+    # combine_json_files(figureQA_val_folder_path)
+
+    # rename_images_with_number_prefix(figureQA_test_folder_path, "1")
+    # rename_images_with_number_prefix(figureQA_test_folder_path, "2")
+    # rename_images_with_number_prefix(figureQA_val_folder_path, "1")
+    # rename_images_with_number_prefix(figureQA_val_folder_path, "2")
+
+    # combine_png_folders(figureQA_test_folder_path)
+    # combine_png_folders(figureQA_val_folder_path)
 
     # combine qa_pairs.json files in chartQA dataset
     combine_json_files(chartQA_train_folder_path)
