@@ -153,7 +153,7 @@ def process_dataset_and_rename_images(folder_path, preprocess_func, prefix, post
 def main():
     # folder paths for each dataset
     current_folder = os.path.dirname(os.path.abspath(__file__))
-    base_path = os.path.join(current_folder, "../sample-seed_datasets-new")
+    base_path = os.path.join(current_folder, "../random_sample_100")
 
     chartQA_train_folder_path = os.path.join(base_path, "ChartQA/train")
     chartQA_test_folder_path = os.path.join(base_path, "ChartQA/test")

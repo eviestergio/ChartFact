@@ -1,0 +1,27 @@
+[
+  {
+    "imgname": "two_col_20869.png",
+    "query": "What is the difference between maximum profit contribution and minimum profit contribution?",
+    "label": "21"
+  },
+  {
+    "imgname": "multi_col_40930.png",
+    "query": "Which year the blue bar is above 5?",
+    "label": "2020"
+  },
+  {
+    "imgname": "two_col_43627.png",
+    "query": "How much was the expenses of the Green Bay Packers in 2017?",
+    "label": "376.1"
+  },
+  {
+    "imgname": "two_col_43066.png",
+    "query": "What was Google's ranking out of 100 ACSI index points in 2020?",
+    "label": "79"
+  },
+  {
+    "imgname": "multi_col_20676.png",
+    "query": "How many smart home devices were sold to dealers in the United States in 2014?",
+    "label": "20.7"
+  }
+]
