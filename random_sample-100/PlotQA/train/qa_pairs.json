@@ -1,0 +1,566 @@
+[
+    {
+        "image_index": 40066,
+        "qid": "D5",
+        "question_string": "What is the label of the 2nd group of bars from the top ?",
+        "answer_bbox": {
+            "y": 430,
+            "x": 33,
+            "w": 79.375,
+            "h": 14
+        },
+        "template": "data_retrieval",
+        "answer": "Female entrants",
+        "answer_id": 53933,
+        "type": "hbar",
+        "question_id": 95263
+    },
+    {
+        "image_index": 133988,
+        "qid": "M5",
+        "question_string": "Across all countries, what is the minimum ppp conversion factor for private consumption ?",
+        "answer_bbox": [],
+        "template": "min_max",
+        "answer": 0.346369995118561,
+        "answer_id": 1363143,
+        "type": "vbar",
+        "question_id": 115372
+    },
+    {
+        "image_index": 140860,
+        "qid": "C4",
+        "question_string": "In how many years, is the value added in manufacturing food and tobacco in Sri Lanka greater than 28 %?",
+        "answer_bbox": [],
+        "template": "comparison",
+        "answer": 4,
+        "answer_id": 12,
+        "type": "vbar",
+        "question_id": 2069102
+    },
+    {
+        "image_index": 103743,
+        "qid": "C0",
+        "question_string": "In how many years, is the total water productivity greater than 0.30000000000000004 US$ ?",
+        "answer_bbox": [],
+        "template": "comparison",
+        "answer": 1,
+        "answer_id": 16,
+        "type": "line",
+        "question_id": 1744002
+    },
+    {
+        "image_index": 41193,
+        "qid": "M5",
+        "question_string": "Across all years, what is the minimum net official aid received in St. Kitts and Nevis ?",
+        "answer_bbox": {
+            "y": 537,
+            "x": 69,
+            "w": 0,
+            "h": 14
+        },
+        "template": "min_max",
+        "answer": 5010000.0,
+        "answer_id": 154794,
+        "type": "hbar",
+        "question_id": 159979
+    },
+    {
+        "image_index": 86304,
+        "qid": "S1",
+        "question_string": "Does the graph contain grids ?",
+        "answer_bbox": [],
+        "template": "structural",
+        "answer": "No",
+        "answer_id": 17,
+        "type": "line",
+        "question_id": 28
+    },
+    {
+        "image_index": 148613,
+        "qid": "A1",
+        "question_string": "What is the difference between the value lost due to electrical outages in 2006 and 2009 ?",
+        "answer_bbox": [],
+        "template": "arithmetic",
+        "answer": 0.6,
+        "answer_id": 169,
+        "type": "vbar",
+        "question_id": 226145
+    },
+    {
+        "image_index": 26296,
+        "qid": "S7",
+        "question_string": "How many different coloured bars are there ?",
+        "answer_bbox": [],
+        "template": "structural",
+        "answer": 2,
+        "answer_id": 0,
+        "type": "hbar",
+        "question_id": 95188
+    },
+    {
+        "image_index": 92173,
+        "qid": "D10",
+        "question_string": "Does \"Senegal\" appear as one of the legend labels in the graph ?",
+        "answer_bbox": [],
+        "template": "data_retrieval",
+        "answer": "No",
+        "answer_id": 17,
+        "type": "line",
+        "question_id": 16325
+    },
+    {
+        "image_index": 13192,
+        "qid": "S7",
+        "question_string": "How many different coloured dotlines are there ?",
+        "answer_bbox": [],
+        "template": "structural",
+        "answer": 3,
+        "answer_id": 38,
+        "type": "dot",
+        "question_id": 0
+    },
+    {
+        "image_index": 37698,
+        "qid": "S13",
+        "question_string": "How many bars are there on the 2nd tick from the top ?",
+        "answer_bbox": [
+            {
+                "y": 521,
+                "x": 236,
+                "w": 645,
+                "h": 54
+            },
+            {
+                "y": 467,
+                "x": 236,
+                "w": 327,
+                "h": 54
+            },
+            {
+                "y": 414,
+                "x": 236,
+                "w": 758,
+                "h": 54
+            }
+        ],
+        "template": "structural",
+        "answer": 3,
+        "answer_id": 38,
+        "type": "hbar",
+        "question_id": 95192
+    },
+    {
+        "image_index": 101809,
+        "qid": "M3",
+        "question_string": "In which year was the merchandise exports minimum ?",
+        "answer_bbox": {
+            "y": 598,
+            "x": 99,
+            "w": 14,
+            "h": 24.4375
+        },
+        "template": "min_max",
+        "answer": "2007",
+        "answer_id": 534,
+        "type": "line",
+        "question_id": 85289
+    },
+    {
+        "image_index": 99631,
+        "qid": "D7",
+        "question_string": "What is the difference between two consecutive major ticks on the Y-axis ?",
+        "answer_bbox": [],
+        "template": "data_retrieval",
+        "answer": 5000000.0,
+        "answer_id": 356,
+        "type": "line",
+        "question_id": 25
+    },
+    {
+        "image_index": 28366,
+        "qid": "D10",
+        "question_string": "Does \"Low & middle income\" appear as one of the legend labels in the graph ?",
+        "answer_bbox": [],
+        "template": "data_retrieval",
+        "answer": "No",
+        "answer_id": 17,
+        "type": "hbar",
+        "question_id": 1567
+    },
+    {
+        "image_index": 123057,
+        "qid": "S6",
+        "question_string": "How many bars are there ?",
+        "answer_bbox": [
+            {
+                "y": 94,
+                "x": 103,
+                "w": 23,
+                "h": 488
+            },
+            {
+                "y": 206,
+                "x": 259,
+                "w": 23,
+                "h": 377
+            },
+            {
+                "y": 165,
+                "x": 414,
+                "w": 23,
+                "h": 417
+            },
+            {
+                "y": 67,
+                "x": 569,
+                "w": 23,
+                "h": 515
+            },
+            {
+                "y": 79,
+                "x": 724,
+                "w": 23,
+                "h": 503
+            },
+            {
+                "y": 60,
+                "x": 880,
+                "w": 23,
+                "h": 522
+            },
+            {
+                "y": 93,
+                "x": 127,
+                "w": 23,
+                "h": 489
+            },
+            {
+                "y": 206,
+                "x": 282,
+                "w": 23,
+                "h": 377
+            },
+            {
+                "y": 165,
+                "x": 437,
+                "w": 23,
+                "h": 417
+            },
+            {
+                "y": 67,
+                "x": 592,
+                "w": 23,
+                "h": 515
+            },
+            {
+                "y": 80,
+                "x": 748,
+                "w": 23,
+                "h": 502
+            },
+            {
+                "y": 60,
+                "x": 903,
+                "w": 23,
+                "h": 522
+            },
+            {
+                "y": 92,
+                "x": 150,
+                "w": 23,
+                "h": 490
+            },
+            {
+                "y": 206,
+                "x": 305,
+                "w": 23,
+                "h": 377
+            },
+            {
+                "y": 165,
+                "x": 460,
+                "w": 23,
+                "h": 417
+            },
+            {
+                "y": 67,
+                "x": 616,
+                "w": 23,
+                "h": 515
+            },
+            {
+                "y": 81,
+                "x": 771,
+                "w": 23,
+                "h": 501
+            },
+            {
+                "y": 60,
+                "x": 926,
+                "w": 23,
+                "h": 522
+            }
+        ],
+        "template": "structural",
+        "answer": 18,
+        "answer_id": 18808,
+        "type": "vbar",
+        "question_id": 95216
+    },
+    {
+        "image_index": 8347,
+        "qid": "CD7",
+        "question_string": "What is the difference between the highest and the lowest percentage of total merchandise exports in Uruguay ?",
+        "answer_bbox": [],
+        "template": "compound",
+        "answer": 1.9291992575408452,
+        "answer_id": 569023,
+        "type": "dot",
+        "question_id": 870706
+    },
+    {
+        "image_index": 145467,
+        "qid": "S12",
+        "question_string": "How many bars are there on the 2nd tick from the right ?",
+        "answer_bbox": [
+            {
+                "y": 53,
+                "x": 94,
+                "w": 73,
+                "h": 448
+            },
+            {
+                "y": 409,
+                "x": 167,
+                "w": 73,
+                "h": 92
+            },
+            {
+                "y": 501,
+                "x": 240,
+                "w": 73,
+                "h": 0
+            },
+            {
+                "y": 500,
+                "x": 313,
+                "w": 73,
+                "h": 1
+            }
+        ],
+        "template": "structural",
+        "answer": 4,
+        "answer_id": 12,
+        "type": "vbar",
+        "question_id": 300605
+    },
+    {
+        "image_index": 139568,
+        "qid": "CD5",
+        "question_string": "Is the difference between the labor force participation rate in North America in 2002 and 2005 greater than the difference between the labor force participation rate in Kazakhstan in 2002 and 2005 ?",
+        "answer_bbox": [],
+        "template": "compound",
+        "answer": "Yes",
+        "answer_id": 1,
+        "type": "vbar",
+        "question_id": 2056798
+    },
+    {
+        "image_index": 47197,
+        "qid": "D11",
+        "question_string": "What is the label or title of the X-axis ?",
+        "answer_bbox": {
+            "y": 627.1525,
+            "x": 449,
+            "w": 321.015625,
+            "h": 19
+        },
+        "template": "data_retrieval",
+        "answer": "Educated males (% of male labor force)",
+        "answer_id": 12213,
+        "type": "hbar",
+        "question_id": 34
+    },
+    {
+        "image_index": 49754,
+        "qid": "S15",
+        "question_string": "Are all the bars in the graph horizontal ?",
+        "answer_bbox": [],
+        "template": "structural",
+        "answer": "Yes",
+        "answer_id": 1,
+        "type": "hbar",
+        "question_id": 95217
+    },
+    {
+        "image_index": 36612,
+        "qid": "A7",
+        "question_string": "What is the average percentage of labor force who received tertiary education per year ?",
+        "answer_bbox": [],
+        "template": "arithmetic",
+        "answer": 25.365,
+        "answer_id": 755001,
+        "type": "hbar",
+        "question_id": 123103
+    },
+    {
+        "image_index": 41979,
+        "qid": "S10",
+        "question_string": "Are the number of bars on each tick of the Y-axis equal ?",
+        "answer_bbox": [],
+        "template": "structural",
+        "answer": "Yes",
+        "answer_id": 1,
+        "type": "hbar",
+        "question_id": 95191
+    },
+    {
+        "image_index": 98527,
+        "qid": "S1",
+        "question_string": "Does the graph contain grids ?",
+        "answer_bbox": [],
+        "template": "structural",
+        "answer": "No",
+        "answer_id": 17,
+        "type": "line",
+        "question_id": 28
+    },
+    {
+        "image_index": 126784,
+        "qid": "CD5",
+        "question_string": "Is the difference between the percentage of HIV infected female population in 1992 in Suriname and Swaziland greater than the difference between the percentage of HIV infected female population in 1991 in Suriname and Swaziland ?",
+        "answer_bbox": [],
+        "template": "compound",
+        "answer": "No",
+        "answer_id": 17,
+        "type": "vbar",
+        "question_id": 1933303
+    },
+    {
+        "image_index": 131728,
+        "qid": "D7",
+        "question_string": "What is the difference between two consecutive major ticks on the Y-axis ?",
+        "answer_bbox": [],
+        "template": "data_retrieval",
+        "answer": 5.0,
+        "answer_id": 53,
+        "type": "vbar",
+        "question_id": 25
+    },
+    {
+        "image_index": 58019,
+        "qid": "CD8",
+        "question_string": "In how many years, is the percentage of rural population growth in Lower middle income greater than the average percentage of rural population growth in Lower middle income taken over all years ?",
+        "answer_bbox": [],
+        "template": "compound",
+        "answer": 3,
+        "answer_id": 38,
+        "type": "hbar",
+        "question_id": 1400111
+    },
+    {
+        "image_index": 29819,
+        "qid": "D13",
+        "question_string": "In how many cases, is the number of bars for a given year not equal to the number of legend labels ?",
+        "answer_bbox": [],
+        "template": "data_retrieval",
+        "answer": 6,
+        "answer_id": 34,
+        "type": "hbar",
+        "question_id": 95195
+    },
+    {
+        "image_index": 156791,
+        "qid": "M3",
+        "question_string": "In which year was the amount of fertilizer consumption minimum ?",
+        "answer_bbox": {
+            "y": 598,
+            "x": 246,
+            "w": 14,
+            "h": 24.4375
+        },
+        "template": "min_max",
+        "answer": "2008",
+        "answer_id": 253,
+        "type": "vbar",
+        "question_id": 84989
+    },
+    {
+        "image_index": 154195,
+        "qid": "S5",
+        "question_string": "How many years are there in the graph ?",
+        "answer_bbox": [
+            {
+                "y": 598,
+                "x": 114,
+                "w": 14,
+                "h": 24.4375
+            },
+            {
+                "y": 598,
+                "x": 290,
+                "w": 14,
+                "h": 24.4375
+            },
+            {
+                "y": 598,
+                "x": 466,
+                "w": 14,
+                "h": 24.4375
+            },
+            {
+                "y": 598,
+                "x": 642,
+                "w": 14,
+                "h": 24.4375
+            },
+            {
+                "y": 598,
+                "x": 818,
+                "w": 14,
+                "h": 23.625
+            },
+            {
+                "y": 598,
+                "x": 994,
+                "w": 14,
+                "h": 24.4375
+            }
+        ],
+        "template": "structural",
+        "answer": 6,
+        "answer_id": 34,
+        "type": "vbar",
+        "question_id": 24
+    },
+    {
+        "image_index": 127221,
+        "qid": "S3",
+        "question_string": "How many legend labels are there ?",
+        "answer_bbox": [
+            {
+                "y": 619,
+                "x": 979,
+                "w": 57,
+                "h": 20
+            },
+            {
+                "y": 619,
+                "x": 1064,
+                "w": 83,
+                "h": 20
+            },
+            {
+                "y": 619,
+                "x": 1175,
+                "w": 46,
+                "h": 20
+            }
+        ],
+        "template": "structural",
+        "answer": 3,
+        "answer_id": 38,
+        "type": "vbar",
+        "question_id": 30
+    }
+]

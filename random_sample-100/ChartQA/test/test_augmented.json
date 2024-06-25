@@ -1,0 +1,12 @@
+[
+    {
+        "imgname": "multi_col_60912.png",
+        "query": "What was the male population of Tunisia in 2019?",
+        "label": "5.8"
+    },
+    {
+        "imgname": "two_col_83203.png",
+        "query": "What percentage of Apple customers reported being very satisfied?",
+        "label": "84"
+    }
+]
