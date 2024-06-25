@@ -1,0 +1,99 @@
+[
+    {
+        "image_index": 1178,
+        "qid": "CD7",
+        "question_string": "What is the difference between the highest and the lowest total amount earned by exporting goods and services in Uganda ?",
+        "answer_bbox": [],
+        "template": "compound",
+        "answer": 34564811.277677,
+        "answer_id": 277683,
+        "type": "dot",
+        "question_id": 434301
+    },
+    {
+        "image_index": 23071,
+        "qid": "CD6",
+        "question_string": "What is the difference between the highest and the second highest net bilateral aid flow in 1997 ?",
+        "answer_bbox": [],
+        "template": "compound",
+        "answer": 30910000.0,
+        "answer_id": 190930,
+        "type": "vbar",
+        "question_id": 111228
+    },
+    {
+        "image_index": 1467,
+        "qid": "D11",
+        "question_string": "What is the label or title of the X-axis ?",
+        "answer_bbox": {
+            "y": 589.8075,
+            "x": 533,
+            "w": 32.890625,
+            "h": 18
+        },
+        "template": "data_retrieval",
+        "answer": "Year",
+        "answer_id": 22,
+        "type": "dot",
+        "question_id": 34
+    },
+    {
+        "image_index": 29479,
+        "qid": "S10",
+        "question_string": "Are the number of bars on each tick of the X-axis equal ?",
+        "answer_bbox": [],
+        "template": "structural",
+        "answer": "Yes",
+        "answer_id": 1,
+        "type": "vbar",
+        "question_id": 300574
+    },
+    {
+        "image_index": 21579,
+        "qid": "S1",
+        "question_string": "Does the graph contain grids ?",
+        "answer_bbox": [
+            {
+                "y": 30,
+                "x": 101,
+                "w": 4,
+                "h": 557
+            },
+            {
+                "y": 30,
+                "x": 1190,
+                "w": 4,
+                "h": 557
+            },
+            {
+                "y": 460,
+                "x": 49,
+                "w": 1197,
+                "h": 4
+            },
+            {
+                "y": 335,
+                "x": 49,
+                "w": 1197,
+                "h": 4
+            },
+            {
+                "y": 210,
+                "x": 49,
+                "w": 1197,
+                "h": 4
+            },
+            {
+                "y": 85,
+                "x": 49,
+                "w": 1197,
+                "h": 4
+            }
+        ],
+        "template": "structural",
+        "answer": "Yes",
+        "answer_id": 1,
+        "type": "line",
+        "question_id": 28
+    }
+]
