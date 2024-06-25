@@ -1,0 +1,93 @@
+[
+    {
+        "image_index": 4212,
+        "qid": "A4",
+        "question_string": "What is the total total grants received by the government in Cote d'Ivoire in the graph ?",
+        "answer_bbox": [],
+        "template": "arithmetic",
+        "answer": "548650000",
+        "answer_id": 40789,
+        "type": "dot",
+        "question_id": 67969
+    },
+    {
+        "image_index": 20477,
+        "qid": "D8",
+        "question_string": "Are the values on the major ticks of Y-axis written in scientific E-notation ?",
+        "answer_bbox": [
+            {
+                "y": 623,
+                "x": 35,
+                "w": 6.984375,
+                "h": 14
+            },
+            {
+                "y": 486,
+                "x": 28,
+                "w": 13.96875,
+                "h": 14
+            },
+            {
+                "y": 348,
+                "x": 28,
+                "w": 13.96875,
+                "h": 14
+            },
+            {
+                "y": 210,
+                "x": 28,
+                "w": 13.96875,
+                "h": 14
+            },
+            {
+                "y": 72,
+                "x": 28,
+                "w": 13.96875,
+                "h": 14
+            }
+        ],
+        "template": "data_retrieval",
+        "answer": "No",
+        "answer_id": 17,
+        "type": "line",
+        "question_id": 26
+    },
+    {
+        "image_index": 27994,
+        "qid": "M5",
+        "question_string": "Across all countries, what is the minimum total calories needed to lift the undernourished population in 1992 ?",
+        "answer_bbox": {
+            "y": 495,
+            "x": 693,
+            "w": 45,
+            "h": 59
+        },
+        "template": "min_max",
+        "answer": 89.0,
+        "answer_id": 15436,
+        "type": "vbar",
+        "question_id": 123180
+    },
+    {
+        "image_index": 20471,
+        "qid": "C6",
+        "question_string": "Is the cpia rating of social protection in 2008 less than that in 2012 ?",
+        "answer_bbox": [],
+        "template": "comparison",
+        "answer": "No",
+        "answer_id": 17,
+        "type": "line",
+        "question_id": 283170
+    },
+    {
+        "image_index": 19779,
+        "qid": "D15",
+        "question_string": "What is the percentage of male workers in industry in 1986 ?",
+        "answer_bbox": [],
+        "template": "data_retrieval",
+        "answer": 51.2000007629395,
+        "answer_id": 27249,
+        "type": "line",
+        "question_id": 272498
+    }
+]

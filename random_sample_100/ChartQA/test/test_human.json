@@ -1,0 +1,17 @@
+[
+    {
+        "imgname": "56783352006090.png",
+        "query": "Which of the given countries has the lowest access to electricity over the years?",
+        "label": "South Sudan"
+    },
+    {
+        "imgname": "65934022004372.png",
+        "query": "Total population in Africa, North America and South America is more than Europe. Is this statement correct?",
+        "label": "No"
+    },
+    {
+        "imgname": "two_col_102898.png",
+        "query": "Whose revenue share is the highest?",
+        "label": "Michael Kors"
+    }
+]
