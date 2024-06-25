@@ -1,0 +1,110 @@
+[
+    {
+        "image": "figureQA_1-0-test.png",
+        "claim": "Medium Purple has a value of 12 which is the minimum value in the table.",
+        "label": "Supports",
+        "explanation": "The table data includes various colors with corresponding values. Among these values, Medium Purple has the lowest value of 12, making it the minimum recorded value in the table. This supports the claim that Medium Purple is the minimum based on the direct comparison of numerical data in the table."
+    },
+    {
+        "image": "figureQA_1-0-test.png",
+        "claim": "Purple has a value of 12 which is the maximum value in the table.",
+        "label": "Refutes",
+        "explanation": "The claim misinterprets the data by stating that 'Purple' has the maximum value in the table when in reality, 'Orchid' has the highest value of 86. This directly contradicts the data provided and the supports claim, which identifies 'Medium Purple' as having the minimum value."
+    },
+    {
+        "image": "figureQA_1-0-test.png",
+        "claim": "Medium Purple's low value of 12 could be due to being an outlier in the dataset.",
+        "label": "Not enough information",
+        "explanation": "This claim suggests a possible reason for the value of 12 for Medium Purple, but without additional data or context, it cannot be confirmed or disproven, making it unverifiable."
+    },
+    {
+        "image": "figureQA_1-0-test.png",
+        "claim": "Dark Blue has a value of 36 which is not the maximum.",
+        "label": "Supports",
+        "explanation": "The table data shows that Dark Blue corresponds to a value of 36. The table also includes higher values such as Orchid with a value of 86. Based on this information, it is clear that Dark Blue is not the maximum value in the dataset, thus supporting the claim that it is not the maximum."
+    },
+    {
+        "image": "figureQA_1-0-test.png",
+        "claim": "Purple has a value of 61 which is the maximum.",
+        "label": "Refutes",
+        "explanation": "The claim contradicts the data as it incorrectly states that Purple has the maximum value when in fact Orchid has the highest value of 86. This misinterpretation of the data refutes the original claim that Dark Blue is not the maximum."
+    },
+    {
+        "image": "figureQA_1-0-test.png",
+        "claim": "Dark Blue's value of 36 may indicate a trend that is not the highest among all colors in the table.",
+        "label": "Not enough information",
+        "explanation": "This claim suggests a potential trend or pattern based on the available data but lacks information on the absolute maximum value in the table to confirm or refute this assertion. Without knowing the highest value, the claim remains inconclusive and requires additional data to validate."
+    },
+    {
+        "image": "figureQA_1-1-test.png",
+        "claim": "Deep Sky Blue has a value of 87.66 which is greater than Magenta's value of 62.45.",
+        "label": "Supports",
+        "explanation": "The table data shows that Deep Sky Blue corresponds to a value of 87.66, whereas Magenta corresponds to 62.45. This directly supports the claim that Deep Sky Blue has a higher value than Magenta based on the numerical comparison in the table."
+    },
+    {
+        "image": "figureQA_1-1-test.png",
+        "claim": "Magenta has a value of 50.67 which is lower than Light Salmon's value of 59.18.",
+        "label": "Refutes",
+        "explanation": "The claim misrepresents the data by stating that Magenta has a value lower than Light Salmon, whereas in the actual table, Magenta has a higher value than Light Salmon. This presents an incorrect interpretation of the data and contradicts the information provided in the table."
+    },
+    {
+        "image": "figureQA_1-1-test.png",
+        "claim": "Deep Sky Blue's value of 87.66 may be influenced by external factors not accounted for in the data.",
+        "label": "Not enough information",
+        "explanation": "This claim suggests a possible explanation for the high value attributed to Deep Sky Blue, but without additional context or details in the table, the influence of external factors cannot be confirmed or refuted, indicating a lack of information to verify the claim."
+    },
+    {
+        "image": "figureQA_2-0-test.png",
+        "claim": "Dark Slate has a value of 51 which is not the minimum.",
+        "label": "Supports",
+        "explanation": "The provided table explicitly shows that the value corresponding to Dark Slate is 51. Since there are other values in the table that are lower than 51 (such as Navy Blue with a value of 16 and Chartreuse with a value of 16), it is clear that Dark Slate is not the minimum value in the dataset. Therefore, the supports claim directly states information that is recorded and confirmed in the table."
+    },
+    {
+        "image": "figureQA_2-0-test.png",
+        "claim": "Navy Blue has a value of 16 which is the minimum.",
+        "label": "Refutes",
+        "explanation": "The claim misinterprets the data by stating that Navy Blue has the minimum value when Dark Slate actually has a lower value of 51. This directly contradicts the supports claim that Dark Slate has a value of 51 which is not the minimum."
+    },
+    {
+        "image": "figureQA_2-0-test.png",
+        "claim": "Dark Slate's value of 51 may not accurately represent its overall significance in the data set.",
+        "label": "Not enough information",
+        "explanation": "This claim introduces doubt regarding the extent to which Dark Slate's value of 51 influences the dataset as a whole. Without additional context or comparisons to other values, it is uncertain whether Dark Slate's value truly stands out or has a notable impact in the given data."
+    },
+    {
+        "image": "figureQA_2-3-test.png",
+        "claim": "Deep Sky Blue has a value of 87.66 which is greater than Magenta's value of 62.45.",
+        "label": "Supports",
+        "explanation": "The table data shows that Deep Sky Blue corresponds to a value of 87.66, whereas Magenta corresponds to 62.45. This directly supports the claim that Deep Sky Blue has a higher value than Magenta based on the numerical comparison in the table."
+    },
+    {
+        "image": "figureQA_2-3-test.png",
+        "claim": "Crimson has a value of 7.75 which is greater than Pale Green's value of 37.75.",
+        "label": "Refutes",
+        "explanation": "The claim directly contradicts the data in the table by stating that Crimson has a higher value than Pale Green, whereas the table clearly shows that Pale Green has a value of 37.75, which is higher than Crimson's value of 7.75."
+    },
+    {
+        "image": "figureQA_2-3-test.png",
+        "claim": "Deep Sky Blue's uniqueness in the color spectrum could influence its value compared to Magenta.",
+        "label": "Not enough information",
+        "explanation": "This claim introduces a different factor that could potentially impact the value of colors in the data table. However, without specific details on the uniqueness of Deep Sky Blue or its influence on value, this claim lacks enough information to be confirmed or refuted."
+    },
+    {
+        "image": "figureQA_2-20-test.png",
+        "claim": "Dark Blue does not have the highest value.",
+        "label": "Supports",
+        "explanation": "This claim is supported by the data in the provided table file. Looking at the values in the table, Dark Blue has a value of 20.5, while Orange Red has a value of 75.0 and Light Seafoam has a value of 58.7, both of which are higher. Therefore, the supports claim directly states information that is confirmed in the table, specifically showing that Dark Blue does not hold the highest value among the listed colors."
+    },
+    {
+        "image": "figureQA_2-20-test.png",
+        "claim": "Purple has the highest value on the x-axis.",
+        "label": "Refutes",
+        "explanation": "The claim contradicts the data where Purple has a value of 22.2, which is not the highest value on the x-axis. It misinterprets the data by stating that Purple has the highest value when in fact it is not the case based on the provided information."
+    },
+    {
+        "image": "figureQA_2-20-test.png",
+        "claim": "Purple has the highest value among all data points in the table.",
+        "label": "Not enough information",
+        "explanation": "This claim lacks enough information as it is not directly supported or refuted by the data provided. While Purple does have a high value, the claim does not consider the possibility of other data points having even higher values, making it unverifiable without additional data."
+    }
+]

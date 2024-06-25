@@ -1,0 +1,110 @@
+[
+    {
+        "image": "chartQA_166.png",
+        "claim": "The percent of people who think of President Donald Trump as Dangerous is 62.",
+        "label": "Supports",
+        "explanation": "This claim is directly supported by the data in the provided table. In the table under the 'Values' column, the value corresponding to 'Dangerous' is recorded as 62. Therefore, the supports claim states information that is confirmed in the table, specifically matching the data point for 'Dangerous'."
+    },
+    {
+        "image": "chartQA_166.png",
+        "claim": "The majority of people consider President Donald Trump to be well-qualified to be president.",
+        "label": "Refutes",
+        "explanation": "The refutes claim directly contradicts the data provided which shows that only 26.0% of people think of President Donald Trump as well-qualified to be president. By falsely claiming that the majority view him as well-qualified, it misinterprets the data and presents incorrect information."
+    },
+    {
+        "image": "chartQA_166.png",
+        "claim": "President Donald Trump's approval ratings are influenced by his political experience.",
+        "label": "Not enough information",
+        "explanation": "This claim suggests a potential factor influencing the perception of President Donald Trump but lacks data from the table to verify or refute this statement. The table does not provide information on President Trump's political experience, leading to an unverifiable connection between political experience and approval ratings."
+    },
+    {
+        "image": "chartQA_166.png",
+        "claim": "The sum of the percents of Charismatic and Well-qualified to be president is more than a strong leader.",
+        "label": "Supports",
+        "explanation": "This claim is supported by the data provided in the table file. According to the table, the percent values for Charismatic and Well-qualified to be president are 39.0 and 26.0 respectively, resulting in a sum of 65.0. On the other hand, the percent value for a strong leader is 55.0. Therefore, the supports claim directly states information recorded in the table, indicating that the sum of the percents of Charismatic and Well-qualified to be president is indeed more than the percent value for a strong leader."
+    },
+    {
+        "image": "chartQA_166.png",
+        "claim": "The majority of people consider the individual well-qualified to be president.",
+        "label": "Refutes",
+        "explanation": "The claim contradicts the data presented in the table, which shows a higher percentage for 'Arrogant' compared to 'Well-qualified to be president'. By falsely stating that the majority view the individual as well-qualified for the presidency, it directly contradicts the higher percentage listed for 'Arrogant'."
+    },
+    {
+        "image": "chartQA_166.png",
+        "claim": "The public perception of being Arrogant is influenced by media coverage of the individual.",
+        "label": "Not enough information",
+        "explanation": "This claim is considered 'not enough information' as the data provided does not include any mention of media coverage or its impact on the perception of being 'Arrogant'. Without this additional information, the claim cannot be verified or refuted solely based on the table given."
+    },
+    {
+        "image": "chartQA_multi_col_803.png",
+        "claim": "The number of stores Saint Laurent operated in Western Europe in 2020 was 47.",
+        "label": "Supports",
+        "explanation": "This claim is supported by the data in the provided table file. According to the table, in the year 2020, Saint Laurent operated 47 stores in Western Europe, as recorded under the column 'Western Europe' for that year. Therefore, the supports claim directly states information that is confirmed in the table, specifically matching the data point for 2020 in the 'Western Europe' column."
+    },
+    {
+        "image": "chartQA_multi_col_803.png",
+        "claim": "The number of stores Saint Laurent operated in Japan in 2020 was 32.",
+        "label": "Refutes",
+        "explanation": "The claim directly contradicts the data provided in the table, which states that Saint Laurent operated 32 stores in Japan in 2020, not in Western Europe as the refutes claim suggests. This misinterpretation of the data undermines the accuracy of the statement, thereby refuting the supports claim."
+    },
+    {
+        "image": "chartQA_multi_col_803.png",
+        "claim": "Saint Laurent's store expansion strategy in Western Europe could have influenced the increase in the number of stores operated in 2020.",
+        "label": "Not enough information",
+        "explanation": "The data provided only includes the number of stores operated each year without specifying the reason for the increase in 2020. Without additional information on Saint Laurent's expansion strategy, it is not possible to confirm or refute the claim, making it unverifiable."
+    },
+    {
+        "image": "chartQA_multi_col_20436.png",
+        "claim": "In what year did online sales make up 6.8 percent of retail sales of jewelry, watches and accessories in Germany was 2013.",
+        "label": "Supports",
+        "explanation": "This claim is directly supported by the data in the provided table. According to the table, in the year 2013, online sales accounted for 6.8% of retail sales, as recorded under the column 'Online sales' for that year. Therefore, the supports claim states information that is confirmed in the table, matching the data point for 2013 in the 'Online sales' column."
+    },
+    {
+        "image": "chartQA_multi_col_20436.png",
+        "claim": "In what year did online sales make up 11 percent of retail sales of jewelry, watches, and accessories in Germany was 2018*.",
+        "label": "Refutes",
+        "explanation": "The claim misinterprets the data by stating that online sales made up 11% of retail sales in 2018, while the actual data shows that online sales accounted for 6.8% in 2013 and increased to 11% by 2018*. This claim directly refutes the data provided."
+    },
+    {
+        "image": "chartQA_multi_col_20436.png",
+        "claim": "Online sales in Germany were influenced by a change in consumer behavior, leading to the shift observed in 2013.",
+        "label": "Not enough information",
+        "explanation": "This claim offers a potential reason for the increase in online sales in 2013, but without specific data on consumer behavior or factors influencing the shift, it cannot be confirmed or disproven with the given table information alone."
+    },
+    {
+        "image": "chartQA_multi_col_20436.png",
+        "claim": "What percentage of the retail sales of jewelry, watches and accessories in Germany were online in 2013 was 6.8%.",
+        "label": "Supports",
+        "explanation": "This claim is supported by the data in the provided table. The table lists the percentage of offline sales and online sales for the years 2013 and 2018. In 2013, the table shows that online sales accounted for 6.8% of the total retail sales of jewelry, watches, and accessories in Germany. Therefore, the supports claim directly states information that is confirmed in the table for the year 2013, matching the data point recorded under 'Online sales' for that year."
+    },
+    {
+        "image": "chartQA_multi_col_20436.png",
+        "claim": "Online sales of jewelry, watches, and accessories in Germany in 2018 accounted for less than 10%.",
+        "label": "Refutes",
+        "explanation": "The claim contradicts the data which shows that online sales in 2018 accounted for 11%, which is above the 10% threshold. Therefore, the claim misrepresents the data by providing incorrect information that refutes the actual percentage of online sales in 2018."
+    },
+    {
+        "image": "chartQA_multi_col_20436.png",
+        "claim": "The shift in consumer behavior towards online shopping may have impacted the percentage of online retail sales of jewelry, watches, and accessories in Germany.",
+        "label": "Not enough information",
+        "explanation": "This claim introduces a potential reason for the change in online sales percentage but lacks concrete data to support or refute it. Without additional information on consumer behavior or market trends, this claim remains unverifiable."
+    },
+    {
+        "image": "chartQA_multi_col_20436.png",
+        "claim": "The predicted increase in online sales of jewelry, watches and accessories in Germany by 2018 is 11%.",
+        "label": "Supports",
+        "explanation": "This claim is supported by the data in the provided table. The table shows that in 2013, online sales accounted for 6.8% of total sales, which increased to 11% by 2018. The answer of 11% aligns with the data in the 'Online sales' column for 2018, confirming the predicted increase in online sales for that specific product category in Germany."
+    },
+    {
+        "image": "chartQA_multi_col_20436.png",
+        "claim": "The majority of people consider that online sales of jewelry, watches, and accessories in Germany decreased by 2018.",
+        "label": "Refutes",
+        "explanation": "The claim contradicts the data in the table, which clearly shows an increase in online sales from 6.8% in 2013 to 11% in 2018. By stating a decrease, the claim directly goes against the trend indicated in the data and the supports claim."
+    },
+    {
+        "image": "chartQA_multi_col_20436.png",
+        "claim": "The predicted increase in online sales of jewelry, watches and accessories in Germany by 2018 could be influenced by changes in consumer preferences.",
+        "label": "Not enough information",
+        "explanation": "This claim suggests a possible factor affecting the increase in online sales, but without data on consumer preferences or other influencing factors in the table, it cannot be confirmed or disproven. Additional information would be needed to verify this claim."
+    }
+]

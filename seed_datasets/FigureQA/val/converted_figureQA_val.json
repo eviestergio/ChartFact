@@ -1,0 +1,92 @@
+[
+    {
+        "image": "figureQA_1-1-val.png",
+        "claim": "Sandy Brown has a value of 43.68 which is the maximum in the provided table.",
+        "label": "Supports",
+        "explanation": "The data in the provided table lists the different colors along with their corresponding values. Sandy Brown has the highest value of 43.68, making it the maximum among all the colors mentioned in the table. This claim is directly supported by the recorded values in the table."
+    },
+    {
+        "image": "figureQA_1-1-val.png",
+        "claim": "Indigo has a value of 25.38 which is the minimum in the provided table.",
+        "label": "Refutes",
+        "explanation": "The generated claim refutes the supports claim by stating that Indigo is the minimum value in the table, whereas the supports claim indicates that Sandy Brown has the maximum value. This misrepresentation of factual data directly contradicts the information provided in the table and the supports claim."
+    },
+    {
+        "image": "figureQA_1-1-val.png",
+        "claim": "Sandy Brown's color choice in clothing influences their value of 43.68 in the table.",
+        "label": "Not enough information",
+        "explanation": "This claim suggests a potential factor affecting Sandy Brown's value in the table without concrete data to support or disprove the relationship between color choice and value. Additional information on the context or factors affecting the values would be necessary to verify this claim."
+    },
+    {
+        "image": "figureQA_1-1-val.png",
+        "claim": "Slate does not have the minimum value in the data provided.",
+        "label": "Supports",
+        "explanation": "The table data shows that the minimum value in the table is attributed to Deep Pink with a value of 10.88, which is lower than the value of Slate at 32.99. This confirms that Slate is not the minimum value recorded in the table, as directly supported by the numerical comparison in the provided data."
+    },
+    {
+        "image": "figureQA_1-1-val.png",
+        "claim": "Deep Pink has the highest value in the data provided.",
+        "label": "Refutes",
+        "explanation": "The claim contradicts the data as Deep Pink has the lowest value in the table provided, not the highest. This misrepresentation directly goes against the factual information present in the data."
+    },
+    {
+        "image": "figureQA_1-1-val.png",
+        "claim": "Slate's color popularity may vary based on seasonal trends.",
+        "label": "Not enough information",
+        "explanation": "This claim suggests a possible reason for the color Slate not having the minimum value in the data provided. The data does not include information on seasonal trends or external factors affecting color popularity, making it unverifiable without additional context."
+    },
+    {
+        "image": "figureQA_1-2-val.png",
+        "claim": "Dark Salmon has a value of 96 which is not the minimum value in the table provided.",
+        "label": "Supports",
+        "explanation": "The table data lists values for Dark Salmon (96), Turquoise (98), Coral (94), and Saddle Brown (91). The value of Dark Salmon (96) is greater than the value of Coral (94), which indicates that Dark Salmon is not the minimum value in the table. Therefore, the supports claim directly states information that is confirmed in the table, specifically showcasing that the value of Dark Salmon is not the smallest in the dataset."
+    },
+    {
+        "image": "figureQA_1-2-val.png",
+        "claim": "Turquoise has a value of 98 which is the maximum value in the table provided.",
+        "label": "Refutes",
+        "explanation": "The claim contradicts the data by stating that Turquoise, with a value of 98, is the maximum value in the table when in fact there are higher values listed like Dark Salmon with 96 and Coral with 94. This misrepresentation of the data directly refutes the claim made in the supports claim."
+    },
+    {
+        "image": "figureQA_1-2-val.png",
+        "claim": "Dark Salmon's high value of 96 could be influenced by external factors not accounted for in the table.",
+        "label": "Not enough information",
+        "explanation": "This claim suggests a possible reason for the high value of Dark Salmon in the table provided, but without additional data or details, it cannot be verified or refuted."
+    },
+    {
+        "image": "figureQA_1-11-val.png",
+        "claim": "Sandy Brown is the minimum value in the given table.",
+        "label": "Supports",
+        "explanation": "This claim is supported by the data in the provided table file. Looking at the values in the table, Sandy Brown has the lowest value of 4.6, indicating that it is indeed the minimum value among all the listed colors. Therefore, the supports claim directly states information that is confirmed in the table."
+    },
+    {
+        "image": "figureQA_1-11-val.png",
+        "claim": "Deep Sky Blue is the maximum value in the given table.",
+        "label": "Refutes",
+        "explanation": "The claim contradicts the data as 'Burlywood' is listed with a higher value (95.5) compared to 'Deep Sky Blue' (76.7). This misrepresentation of the information in the table directly refutes the claim made about 'Deep Sky Blue' being the maximum value."
+    },
+    {
+        "image": "figureQA_1-11-val.png",
+        "claim": "The minimum value in the given table represents the least popular color choice among participants.",
+        "label": "Not enough information",
+        "explanation": "This claim is classified as 'not enough information' because the data table only shows the popularity of different colors without specifying the context or criteria for popularity. Without additional details on the survey participants, their preferences, or the specific measurements used to determine popularity, it is impossible to definitively conclude that the minimum value represents the least popular color choice."
+    },
+    {
+        "image": "figureQA_2-0-val.png",
+        "claim": "Web Gray has a value of 17, which is the minimum value among all listed colors in the table.",
+        "label": "Supports",
+        "explanation": "This claim is supported by the data in the provided table. As per the table, Web Gray has the lowest value of 17 compared to all other colors listed. Therefore, the supports claim directly states information recorded in the table, specifically identifying Web Gray as the color with the minimum value."
+    },
+    {
+        "image": "figureQA_2-0-val.png",
+        "claim": "Rebecca Purple has a value of 10, which is the highest value among all listed colors in the table.",
+        "label": "Refutes",
+        "explanation": "The claim contradicts the data in the table by stating that Rebecca Purple has a value of 10, which is higher than the actual value of 32. This misrepresentation of data refutes the supports claim that Web Gray has the minimum value among all listed colors."
+    },
+    {
+        "image": "figureQA_2-0-val.png",
+        "claim": "The color Sandy Brown in the table might have a higher value than 54.",
+        "label": "Not enough information",
+        "explanation": "This claim is based on a potential scenario not explicitly stated in the data. As the table only shows specific values for each color without indicating the full range or specific order, it cannot be confirmed or disproven whether Sandy Brown has a value higher than 54."
+    }
+]

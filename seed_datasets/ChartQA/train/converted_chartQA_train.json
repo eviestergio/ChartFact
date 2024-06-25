@@ -1,0 +1,128 @@
+[
+    {
+        "image": "chartQA_10095.png",
+        "claim": "The value of Favorable in 2015 is 38.",
+        "label": "Supports",
+        "explanation": "This claim is supported by the data in the provided table file. According to the table, in the year 2015, the value of Favorable is indeed 38, as recorded under the column 'Favorable' for that year. Therefore, the supports claim directly states information that is confirmed in the table, specifically matching the data point for 2015 in the 'Favorable' column."
+    },
+    {
+        "image": "chartQA_10095.png",
+        "claim": "The value of Favorable in 2013 is 54.",
+        "label": "Refutes",
+        "explanation": "The claim directly contradicts the data provided in the table, which shows that the value of Favorable in 2013 is 35, not 54. This misrepresentation of the data refutes the supports claim that the value of Favorable in 2015 is 38."
+    },
+    {
+        "image": "chartQA_10095.png",
+        "claim": "The values of Favorable and Unfavorable in 2013 could be influenced by external factors not captured in the data.",
+        "label": "Not enough information",
+        "explanation": "This claim suggests a possible reasoning behind the fluctuation of Favorable and Unfavorable values in 2013 but lacks concrete evidence from the given table to support or refute the claim, making it unverifiable."
+    },
+    {
+        "image": "chartQA_10095.png",
+        "claim": "The number of values below 40 in the Unfavorable graph is 6.",
+        "label": "Supports",
+        "explanation": "This claim is supported by the data in the provided table. By examining the 'Unfavorable' column, it is evident that in the years 2005, 2009, 2011, and 2013, the values are all below 40. Specifically, the values are 35, 38, 36, and 52 respectively, totaling to 4 values below 40. Hence, the claim of there being 6 values below 40 in the Unfavorable graph is affirmed by the recorded data."
+    },
+    {
+        "image": "chartQA_10095.png",
+        "claim": "The majority of people consider the Unfavorable values to be below 40.",
+        "label": "Refutes",
+        "explanation": "The claim contradicts the data in the table, which shows that the Unfavorable values are consistently above 40 for each year listed. This misrepresentation of the data directly refutes the statement made in the supports claim."
+    },
+    {
+        "image": "chartQA_10095.png",
+        "claim": "The fluctuation in Favorable and Unfavorable values over the years suggests underlying factors affecting public opinion.",
+        "label": "Not enough information",
+        "explanation": "This claim delves into potential reasons for the changes in the Favorable and Unfavorable values but lacks concrete data from the table to support or refute these factors, making it unverifiable without additional information."
+    },
+    {
+        "image": "chartQA_10149.png",
+        "claim": "The number of stores Saint Laurent operated in Western Europe in 2020 was 47.",
+        "label": "Supports",
+        "explanation": "This claim is supported by the data in the provided table. According to the table, in the year 2020, Saint Laurent operated 47 stores in Western Europe, as recorded under the column 'Western Europe' for that year. Therefore, the supports claim directly states information that is confirmed in the table, specifically matching the data point for 2020 in the 'Western Europe' column."
+    },
+    {
+        "image": "chartQA_10149.png",
+        "claim": "The majority of stores Saint Laurent operated in Western Europe in 2020 was 56.",
+        "label": "Refutes",
+        "explanation": "The claim contradicts the data in the table provided, which shows that in 2012, Saint Laurent operated 56 stores in Western Europe, not in 2020 as stated. This misrepresented information directly refutes the supports claim by presenting incorrect data that goes against the facts provided."
+    },
+    {
+        "image": "chartQA_10149.png",
+        "claim": "The number of Saint Laurent stores in Western Europe in 2020 may have influenced their overall performance.",
+        "label": "Not enough information",
+        "explanation": "This claim suggests a possible relationship between the number of stores and the performance of Saint Laurent in Western Europe, but without specific data on the number of stores in 2020, this claim cannot be verified or disproven with the given information."
+    },
+    {
+        "image": "chartQA_10149.png",
+        "claim": "The sum of favorable values in the years 2014 and 2015 is 95.",
+        "label": "Supports",
+        "explanation": "This claim is directly supported by the data provided in the table. By adding the favorable values for the years 2014 (51) and 2015 (53), we get a total of 95. This calculation aligns with the information presented in the table under the 'Favorable' column for the respective years, confirming the accuracy of the sum as 95."
+    },
+    {
+        "image": "chartQA_10149.png",
+        "claim": "The majority of people consider 2012 to be an unfavorable year.",
+        "label": "Refutes",
+        "explanation": "The claim contradicts the data provided in the table, where 2012 is reported to have 56 points in the Favorable category and only 38 points in the Unfavorable category. This misrepresentation directly contradicts the data and supports the claim mentioned, which states the sum of favorable values in the years 2014 and 2015 is 95."
+    },
+    {
+        "image": "chartQA_10149.png",
+        "claim": "The increase in favorable values over the years could be attributed to changes in the organization's marketing strategy.",
+        "label": "Not enough information",
+        "explanation": "This claim is classified as 'not enough information' as the data provided only shows numerical values without revealing the specific reasons for the changes. Without additional information on the organization's marketing strategy or external factors, it is impossible to verify or refute the claim."
+    },
+    {
+        "image": "chartQA_two_col_2954.png",
+        "claim": "League of Legends topped the charts with 512.3 million hours watched on Twitch in the first half of 2019.",
+        "label": "Supports",
+        "explanation": "This claim is supported by the data in the provided table file. According to the table, the game 'League of Legends' had the highest number of hours watched at 512.3 million, which is the highest value among all the games listed. Therefore, the supports claim directly states information that is confirmed in the 'Number of hours watched' column of the table, highlighting the dominance of League of Legends in terms of viewership during the specified time period."
+    },
+    {
+        "image": "chartQA_two_col_2954.png",
+        "claim": "League of Legends was at the bottom of the charts with only 118.5 million hours watched on Twitch in the first half of 2019.",
+        "label": "Refutes",
+        "explanation": "The claim directly contradicts the data provided, which clearly shows League of Legends at the top of the list with 512.3 million hours watched. By stating that League of Legends had the least hours watched, it misinterprets the factual data and goes against the supports claim that highlighted its top position."
+    },
+    {
+        "image": "chartQA_two_col_2954.png",
+        "claim": "The popularity of Fortnite on Twitch is influenced by its frequent updates and events.",
+        "label": "Not enough information",
+        "explanation": "This claim suggests a potential reason for Fortnite's popularity but lacks data on viewership patterns, player demographics, or specific events that could confirm or refute the claim."
+    },
+    {
+        "image": "chartQA_two_col_2954.png",
+        "claim": "The number of hours League of Legends was watched on Twitch in the first half of 2019 was 512.3.",
+        "label": "Supports",
+        "explanation": "This claim is supported by the data in the provided table. The 'League of Legends' row in the 'Number of hours watched' column shows the specific value of 512.3, which directly matches the answer provided. Therefore, the supports claim states information recorded in the table, confirming the number of hours watched for League of Legends on Twitch in the specified time period."
+    },
+    {
+        "image": "chartQA_two_col_2954.png",
+        "claim": "League of Legends was watched for 200 hours on Twitch in the first half of 2019.",
+        "label": "Refutes",
+        "explanation": "The claim refutes the data by misrepresenting the actual number of hours watched for League of Legends, which is 512.3 hours according to the data provided. By stating a significantly lower number, the claim contradicts the supported claim and the data itself."
+    },
+    {
+        "image": "chartQA_two_col_2954.png",
+        "claim": "The number of hours Fortnite was watched on Twitch in the first half of 2019 was higher than that of League of Legends.",
+        "label": "Not enough information",
+        "explanation": "This claim lacks enough information as it cannot be confirmed or disproven with the given data. The data provided only shows the number of hours watched for each game, but it does not contain comparative information to determine which game was watched more in the first half of 2019."
+    },
+    {
+        "image": "chartQA_two_col_61737.png",
+        "claim": "Switzerland was the leading pharmaceutical supplier to Germany in 2019.",
+        "label": "Supports",
+        "explanation": "This claim is supported by the data in the provided table file. According to the table, Switzerland had an import value of 11.87 billion euros, which is the highest among all the countries listed. This directly matches the claim that Switzerland was the leading pharmaceutical supplier to Germany in 2019, as recorded in the 'answer' key."
+    },
+    {
+        "image": "chartQA_two_col_61737.png",
+        "claim": "Switzerland was not a major pharmaceutical supplier to Germany in 2019.",
+        "label": "Refutes",
+        "explanation": "The claim contradicts the data provided in the table, which shows Switzerland as the leading pharmaceutical supplier to Germany with an import value of 11.87 billion euros. By stating that Switzerland was not a major supplier, it directly refutes the factual information presented in the table."
+    },
+    {
+        "image": "chartQA_two_col_61737.png",
+        "claim": "Switzerland's pharmaceutical policies may have influenced its position as the leading supplier to Germany in 2019.",
+        "label": "Not enough information",
+        "explanation": "This claim suggests a possible connection between Switzerland's pharmaceutical policies and its leading position as a supplier to Germany. However, without specific data on Switzerland's pharmaceutical policies or agreements with Germany, this claim cannot be verified or refuted with the data provided."
+    }
+]

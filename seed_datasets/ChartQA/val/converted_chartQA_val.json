@@ -1,0 +1,74 @@
+[
+    {
+        "image": "chartQA_3887.png",
+        "claim": "The color of the graph with 56 as the highest value is Blue.",
+        "label": "Supports",
+        "explanation": "This claim is supported by the data in the provided table file. According to the table, in the year 2006, Germany had a value of 56, which is the highest value recorded in the table. As the color associated with Germany in the table is Blue, the supports claim directly states information that is confirmed in the table, specifically matching the highest value to the corresponding color."
+    },
+    {
+        "image": "chartQA_3887.png",
+        "claim": "The majority of people view Germany as the country with the highest value in 2006.",
+        "label": "Refutes",
+        "explanation": "This claim directly contradicts the data presented in the table, where it is clearly stated that the U.S. has the highest value of 56 in 2006, not Germany. The claim incorrectly states factual data by switching the countries with the highest values for that year."
+    },
+    {
+        "image": "chartQA_3887.png",
+        "claim": "The trend of decreasing values for Germany from 2006 to 2010 could be due to changes in government policies or economic factors.",
+        "label": "Not enough information",
+        "explanation": "This claim is classified as 'not enough information' because the data provided does not include any details on the specific reasons for the fluctuations in values for Germany during those years. Without additional information on government policies or economic conditions, it is impossible to confirm or refute this claim based solely on the given data."
+    },
+    {
+        "image": "chartQA_3887.png",
+        "claim": "The difference between the blue and green graph in 2018 was 39.",
+        "label": "Supports",
+        "explanation": "This claim is supported by the data in the provided table file. According to the table, in 2018, the blue graph had a value of 39 and the green graph also had a value of 39, resulting in a difference of 0. Therefore, the supports claim directly states information that is confirmed by the data recorded in the table for the year 2018."
+    },
+    {
+        "image": "chartQA_3887.png",
+        "claim": "In 2012, Germany had 40 more points than the U.S.",
+        "label": "Refutes",
+        "explanation": "The claim misinterprets the data by suggesting that Germany had 40 more points than the U.S. in 2012, whereas the table shows that the difference in points between Germany and the U.S. in 2012 was actually 11 (29-40). This directly contradicts the actual data provided."
+    },
+    {
+        "image": "chartQA_3887.png",
+        "claim": "The difference between the blue and green graph in 2017 can be attributed to external factors.",
+        "label": "Not enough information",
+        "explanation": "This claim lacks enough information as there are no specific data or context provided in the table to support or refute any external factors influencing the values in 2017. Additional information or context would be necessary to verify this claim."
+    },
+    {
+        "image": "chartQA_multi_col_20933.png",
+        "claim": "Kit Harington portrayed Jon Snow.",
+        "label": "Supports",
+        "explanation": "This claim is directly supported by the data provided in the table. According to the table, Kit Harington has a characteristic of 'Kit Harington' and a net worth of 12, which matches the character 'Jon Snow' in the title of the series. Therefore, the supports claim states information synonymous with that in the table."
+    },
+    {
+        "image": "chartQA_multi_col_20933.png",
+        "claim": "Sophie Turner has a higher net worth than Maisie Williams.",
+        "label": "Refutes",
+        "explanation": "The claim directly contradicts the data provided in the table, where Maisie Williams has a higher net worth of 6 compared to Sophie Turner's net worth of - (unknown). This misrepresentation of financial status refutes the fact-based data presented in the table."
+    },
+    {
+        "image": "chartQA_multi_col_20933.png",
+        "claim": "Kit Harington's character in the show presents a conflicted and complex personality.",
+        "label": "Not enough information",
+        "explanation": "This claim is not supported by the data provided in the table. The data only mentions the net worth and earnings per episode of the actors, not the description of the characters they portray. Additional information about the character traits would be needed to verify or refute this claim."
+    },
+    {
+        "image": "chartQA_multi_col_20933.png",
+        "claim": "Emilia Clarke played Mother of Dragons Daenerys Targaryen.",
+        "label": "Supports",
+        "explanation": "This claim is supported by the data in the provided table. In the 'table' under the 'Characteristic' column, 'Emilia Clarke' is listed as one of the actors with a corresponding 'Net worth' of '13'. Additionally, the title of the data entry does not provide relevant information to support this claim. Therefore, the supports claim matches the information recorded in the table and directly confirms the role played by Emilia Clarke."
+    },
+    {
+        "image": "chartQA_multi_col_20933.png",
+        "claim": "More than half of the characters in the table earn at least $1 million per episode.",
+        "label": "Refutes",
+        "explanation": "The claim contradicts the data in the table, which shows that none of the characters listed earn anywhere close to $1 million per episode. The highest earnings per episode listed are 0.5, which is significantly lower than the claim of earning at least $1 million per episode."
+    },
+    {
+        "image": "chartQA_multi_col_20933.png",
+        "claim": "Emilia Clarke's character in Game of Thrones influenced her net worth.",
+        "label": "Not enough information",
+        "explanation": "This claim suggests a possible reason for Emilia Clarke's net worth based on her portrayal of Daenerys Targaryen, but there is no direct data in the table showing a correlation between her character and net worth. Additional information about her earnings, contracts, or endorsement deals would be needed to verify this claim."
+    }
+]

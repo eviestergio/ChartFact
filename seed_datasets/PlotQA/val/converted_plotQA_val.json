@@ -1,0 +1,20 @@
+[
+    {
+        "image": "plotQA_0-val.png",
+        "claim": "The number of dotlines equal the number of legend labels.",
+        "label": "Supports",
+        "explanation": "This claim is supported by the data in the provided table file. The table lists the data for each year with corresponding values for Female and Male employment rates in Zimbabwe for the age group between 15-24 years. The table mentions 'Year' as the first column, 'Female' as the second column, and 'Male' as the third column. Each row in the table represents a different year with respective values for Female and Male employment rates. Therefore, as the provided table contains information for each year along with the Female and Male employment rates, the claim that the number of dotlines equal the number of legend labels is validated."
+    },
+    {
+        "image": "plotQA_0-val.png",
+        "claim": "The majority of people consider Zimbabwean females to be more employed than males in the age group of 15-24 years.",
+        "label": "Refutes",
+        "explanation": "The claim contradicts the data in the table, which shows consistently higher employment ratios for males compared to females across all years listed. This misinterpretation of the data falsely suggests that females are more employed in this age group, which directly refutes the actual trend shown in the table."
+    },
+    {
+        "image": "plotQA_0-val.png",
+        "claim": "The employment rate for the age group between 15-24 years is influenced by external economic factors.",
+        "label": "Not enough information",
+        "explanation": "This claim suggests a possible reason for fluctuations in the employment rate based on external economic factors, but without specific data on these factors in the provided table, the claim lacks enough information to be confirmed or disproven."
+    }
+]

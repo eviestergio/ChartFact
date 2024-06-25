@@ -1,0 +1,56 @@
+[
+    {
+        "image": "plotQA_14-test.png",
+        "claim": "The percentage of females employed in Private sector in Maldives monotonically increases over the years.",
+        "label": "Supports",
+        "explanation": "This claim is contradicted by the data in the table file. The table provides the percentage of repeaters in secondary general education of St. Lucia over different years. There is no information related to the female employment in the private sector in Maldives. Therefore, the claim does not directly state any information recorded or confirmed in the table."
+    },
+    {
+        "image": "plotQA_14-test.png",
+        "claim": "The majority of females in secondary general education of St. Lucia decreased over the years.",
+        "label": "Refutes",
+        "explanation": "The claim contradicts the data in the table showing an overall increase in the percentage of females enrolled in secondary general education from 2002 to 2011. This refutes the original supports claim that indicated a monotonically increasing trend for females employed in a different sector."
+    },
+    {
+        "image": "plotQA_14-test.png",
+        "claim": "The percentage of females employed in Private sector in Maldives monotonically increases over the years due to economic growth and changing social norms.",
+        "label": "Not enough information",
+        "explanation": "This claim introduces additional factors such as economic growth and changing social norms which are not directly supported or refuted by the data provided. The data solely presents the percentage of repeaters in secondary general education of St. Lucia, making it insufficient to confirm or disprove specific reasons for trends in the employment sector of Maldives."
+    },
+    {
+        "image": "plotQA_18-test.png",
+        "claim": "The number of teachers providing primary education in Trinidad and Tobago was greater than the number of teachers providing secondary education in 3 years.",
+        "label": "Supports",
+        "explanation": "This claim is supported by the data in the provided table file. By examining the 'Primary education' and 'Secondary education' columns, it can be observed that in the years 1972, 1973, and 1974, the number of teachers providing primary education was higher than the number of teachers providing secondary education. This is directly reflected in the table data and aligns with the information presented in the title regarding the comparison between primary and secondary education teachers in Trinidad and Tobago."
+    },
+    {
+        "image": "plotQA_18-test.png",
+        "claim": "The number of teachers providing primary education in Trinidad and Tobago was less than the number of teachers providing secondary education in 3 years.",
+        "label": "Refutes",
+        "explanation": "This claim directly contradicts the data provided in the table which states that the number of teachers providing primary education was greater than the number providing secondary education in all 3 years mentioned. By stating that primary education had fewer teachers than secondary education in 3 years, it goes against the factual information presented, refuting the original claim."
+    },
+    {
+        "image": "plotQA_18-test.png",
+        "claim": "The difference in the number of teachers providing primary and secondary education in Trinidad and Tobago could be influenced by educational policies or funding allocations.",
+        "label": "Not enough information",
+        "explanation": "This claim suggests a possible reason for the varying numbers of teachers in primary and secondary education, but without direct data on policies or funding, it cannot be confirmed or refuted, highlighting the lack of information to support it."
+    },
+    {
+        "image": "plotQA_39-test.png",
+        "claim": "The domestic liabilities increased significantly from 2005 to 2009.",
+        "label": "Supports",
+        "explanation": "The table data shows a clear trend where domestic liabilities grew substantially over the years, starting from 102600000 in 2005 to 184518000000 in 2009. This increase is directly supported by the numerical values provided in the table."
+    },
+    {
+        "image": "plotQA_39-test.png",
+        "claim": "45 percent view President Donald Trump as charismatic.",
+        "label": "Refutes",
+        "explanation": "The claim misrepresents the data by stating a lower percentage for 'Charismatic' compared to the actual data, which shows 'Charismatic' at 39.0 percent. This refutes the initial supports claim that 62 percent view President Donald Trump as Dangerous."
+    },
+    {
+        "image": "plotQA_39-test.png",
+        "claim": "The net incurrence of liabilities of the government of Iceland could be influenced by global economic trends and government policies.",
+        "label": "Not enough information",
+        "explanation": "This claim suggests possible factors that could contribute to the changes in domestic and foreign liabilities, but without specific data on external influences or governmental decisions, it cannot be confirmed or refuted with the given information."
+    }
+]

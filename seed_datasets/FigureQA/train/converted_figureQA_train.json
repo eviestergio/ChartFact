@@ -1,0 +1,20 @@
+[
+    {
+        "image": "figureQA_0-train.png",
+        "claim": "Royal Blue has a value of 74 which is greater than Pale Green's value of 88.",
+        "label": "Supports",
+        "explanation": "The table data shows that Royal Blue corresponds to a value of 74, whereas Pale Green corresponds to 88. This directly supports the claim that Royal Blue has a higher value than Pale Green based on the numerical comparison in the table."
+    },
+    {
+        "image": "figureQA_0-train.png",
+        "claim": "Pale Green has a value of 88 which is greater than Royal Blue's value of 74.",
+        "label": "Refutes",
+        "explanation": "The refutes claim contradicts the supports claim by reversing the comparison between the values of Pale Green and Royal Blue. In the supports claim, it states that Royal Blue has a greater value than Pale Green, but the refutes claim incorrectly asserts the opposite, which goes against the data in the table."
+    },
+    {
+        "image": "figureQA_0-train.png",
+        "claim": "Royal Blue's value of 74 in the table could be influenced by external factors not accounted for in the data.",
+        "label": "Not enough information",
+        "explanation": "The claim suggests a comparison between Royal Blue and Pale Green without detailing the specific factors or context that led to the values in the table. Without this additional information, it is impossible to verify or refute the claim accurately."
+    }
+]

@@ -1,0 +1,146 @@
+[
+    {
+        "image": "plotQA_0-train.png",
+        "claim": "The number of dotlines is equal to the number of legend labels.",
+        "label": "Supports",
+        "explanation": "This claim is supported by the data provided in the table. The table contains two columns for each year, one for 'Age 65(female)' and one for 'Age 65(male)'. Each year has two data points recorded, one for females and one for males, indicating a total of two dotlines or legend labels for each year. Therefore, the supports claim directly states information that is confirmed in the table, specifically matching the structure of the data presented."
+    },
+    {
+        "image": "plotQA_0-train.png",
+        "claim": "More than 90% of the total population of Singapore did not survive till the age of 65 years.",
+        "label": "Refutes",
+        "explanation": "The claim contradicts the data in the table, which shows increasing percentages for survival till the age of 65 years for both females and males over the years. This statement misrepresents the data by stating the opposite of the actual trend observed in the table."
+    },
+    {
+        "image": "plotQA_0-train.png",
+        "claim": "The survival rate of individuals in Singapore over the age of 65 may be influenced by socioeconomic factors.",
+        "label": "Not enough information",
+        "explanation": "This claim suggests a potential factor that could impact the survival rate of individuals in Singapore but lacks specific data or evidence from the table to support or refute this claim. Without additional information on socioeconomic factors or other relevant variables, the claim remains unverifiable."
+    },
+    {
+        "image": "plotQA_43-train.png",
+        "claim": "Undisbursed external debt of Congo (Republic) in 1990 was 345762000.",
+        "label": "Supports",
+        "explanation": "This claim is supported by the data in the provided table file. According to the table, in the year 1990, the undisbursed external debt of Congo (Republic) was recorded as 345762000 under the column 'Official creditors'. Therefore, the supports claim directly states information that is confirmed in the table, specifically matching the data point for 1990 in the 'Official creditors' column."
+    },
+    {
+        "image": "plotQA_43-train.png",
+        "claim": "Undisbursed external debt of Congo (Republic) in 1990 was higher than reported in the data.",
+        "label": "Refutes",
+        "explanation": "The claim directly contradicts the data provided, which states that the undisbursed external debt of Congo (Republic) in 1990 was 345762000. By stating that the debt was actually higher than reported, it refutes the accuracy of the information presented in the table and the supports claim."
+    },
+    {
+        "image": "plotQA_43-train.png",
+        "claim": "The fluctuation in the undisbursed external debt of Congo (Republic) from 1988 to 1992 indicates potential economic instability.",
+        "label": "Not enough information",
+        "explanation": "This claim suggests a possible scenario based on the data provided but lacks specific information about the economic conditions, policies, or external factors that may have influenced the debt changes. Without additional details, the claim remains unverifiable."
+    },
+    {
+        "image": "plotQA_0-train.png",
+        "claim": "The maximum employment to population ratio(male) across all years is 53.9000015258789.",
+        "label": "Supports",
+        "explanation": "This claim is directly supported by the data provided in the table. By examining the values in the 'Age 65(male)' column for all years, it can be observed that the highest value recorded is 53.9000015258789, which corresponds to the employment to population ratio(male) for a specific year. Therefore, the supports claim aligns with the information present in the table and accurately identifies the maximum employment to population ratio(male) across all years."
+    },
+    {
+        "image": "plotQA_0-train.png",
+        "claim": "The majority of females in Singapore survived till the age of 65 years in 1997.",
+        "label": "Refutes",
+        "explanation": "This claim directly contradicts the data provided in the table, which shows that the percentage of females surviving till the age of 65 in 1997 was 88.76, not a majority. The claim misinterprets the data by incorrectly stating that the majority of females survived till the age of 65 in that specific year."
+    },
+    {
+        "image": "plotQA_0-train.png",
+        "claim": "The data suggests a trend of increasing longevity for the population of Singapore who survived till the age of 65 years.",
+        "label": "Not enough information",
+        "explanation": "This claim derives from the data provided in the table, but it does not account for potential external factors or reasons for this trend. Without additional information or context, the claim lacks enough evidence to support or refute it conclusively."
+    },
+    {
+        "image": "plotQA_0-train.png",
+        "claim": "Percent of total population of Singapore who survived till the age of 65 years was highest in the year 1997.",
+        "label": "Supports",
+        "explanation": "The claim is supported by the data in the provided table. According to the table, the survival percentages for both females and males at the age of 65 were the highest in the year 1997 with values of 88.76 and 82.08 respectively. This information directly matches the data points for 1997 in the table, confirming that the highest survival percentages were indeed recorded in that specific year."
+    },
+    {
+        "image": "plotQA_0-train.png",
+        "claim": "The majority of people in Singapore did not survive till the age of 65 years in the year 1993.",
+        "label": "Refutes",
+        "explanation": "The claim directly contradicts the data in the table which shows that in 1993, 87.4% of the population survived till the age of 65. By stating that the majority did not survive, it misrepresents the data and goes against the reported percentage of survivors in that year."
+    },
+    {
+        "image": "plotQA_0-train.png",
+        "claim": "The increase in the percentage of people surviving till the age of 65 years in Singapore could be attributed to advancements in healthcare and lifestyle changes.",
+        "label": "Not enough information",
+        "explanation": "This claim suggests a possible reason for the trend in the data but lacks enough information to verify its accuracy. It would require additional data on healthcare improvements or lifestyle changes in Singapore during the specified years to confirm the claim."
+    },
+    {
+        "image": "plotQA_0-train.png",
+        "claim": "The number of people aged 65 years in Singapore who survived across all years ranged from 80.12 to 82.08.",
+        "label": "Supports",
+        "explanation": "This claim is supported by the data in the provided table file. According to the table, the survival rates for people aged 65 years in Singapore varied from 80.12 in 1993 to 82.08 in 1997. These values are directly taken from the 'Age 65(male)' column, representing the range of survival rates for the specified age group across the years mentioned in the title."
+    },
+    {
+        "image": "plotQA_0-train.png",
+        "claim": "The majority of people aged 65 years in Singapore did not survive till the age of 65.",
+        "label": "Refutes",
+        "explanation": "The claim directly contradicts the data presented in the table, which shows that the percentage of people aged 65 years in Singapore who survived ranged from 80.12% to 82.08%. By stating that the majority did not survive, it goes against the information provided in the table, which indicates that a significant portion of the population did indeed survive till the age of 65 years."
+    },
+    {
+        "image": "plotQA_0-train.png",
+        "claim": "The survival rates of individuals aged 65 years in Singapore may be influenced by healthcare accessibility and lifestyle choices.",
+        "label": "Not enough information",
+        "explanation": "This claim suggests potential factors that could impact the survival rates of individuals aged 65 years in Singapore, but without additional data on healthcare accessibility, lifestyle choices, or other relevant factors, it cannot be confirmed or disproven with the given data. Additional information would be needed to verify the claim."
+    },
+    {
+        "image": "plotQA_0-train.png",
+        "claim": "The total employment to population ratio(female) in the graph is 181.9999999999999.",
+        "label": "Supports",
+        "explanation": "This claim is supported by the data provided in the table. The table includes data for the percentage of the population surviving till the age of 65 for females for the years 1993 to 1997. By analyzing the data in the table, it can be observed that the values for Age 65(female) range from 87.4 to 88.76. Therefore, the total employment to population ratio(female) for the specific year in question would be 181.9999999999999 as indicated in the answer, aligning with the trend seen in the table."
+    },
+    {
+        "image": "plotQA_0-train.png",
+        "claim": "The majority of people in Singapore who survived till the age of 65 years did not reach a life expectancy of 85 years.",
+        "label": "Refutes",
+        "explanation": "The claim contradicts the data provided in the table, which shows an increase in percentage for both Age 65(female) and Age 65(male) over the years. The claim wrongly states that the majority did not reach 85 years old, which goes against the trend of increasing percentages of survival till the age of 65 years in Singapore."
+    },
+    {
+        "image": "plotQA_0-train.png",
+        "claim": "The percentage of elderly survivors in Singapore may be influenced by advancements in healthcare and access to medical facilities.",
+        "label": "Not enough information",
+        "explanation": "This claim suggests a possible factor affecting the survival rate of the elderly population in Singapore, but without data on healthcare infrastructure or medical advancements, the claim lacks enough information to confirm or refute it."
+    },
+    {
+        "image": "plotQA_0-train.png",
+        "claim": "The difference between the employment to population ratio (male) in 1998 and that in 1999 is -1.7000007629395029.",
+        "label": "Supports",
+        "explanation": "This claim is supported by the data provided in the table for the years 1998 and 1999. According to the table, the employment to population ratio for males in 1998 is 80.58 and in 1999 is 82.08. Calculating the difference between these two values results in -1.50. Therefore, the supports claim directly states information recorded in the table, specifically matching the data points for the employment to population ratio for males in 1998 and 1999."
+    },
+    {
+        "image": "plotQA_0-train.png",
+        "claim": "The majority of people consider the employment to population ratio for males in 1999 to be higher than in 1998.",
+        "label": "Refutes",
+        "explanation": "This claim directly contradicts the data provided in the table, where the percentage for males at age 65 is consistently increasing from 1993 to 1997. The supports claim mentioning a decrease in the ratio for males in 1999 is in line with this trend, making the refutes claim falsely assert that the ratio for males in 1999 is higher than in 1998."
+    },
+    {
+        "image": "plotQA_0-train.png",
+        "claim": "The survival rate of individuals in Singapore may correlate with advancements in healthcare technology and access to healthcare services.",
+        "label": "Not enough information",
+        "explanation": "This claim introduces a potential factor, healthcare technology and access, that could influence the survival rates provided in the data. However, without specific data on healthcare technology and access in Singapore during the years in question, it is not possible to verify or refute this claim."
+    },
+    {
+        "image": "plotQA_0-train.png",
+        "claim": "The average employment to population ratio(male) per year is 49.55.",
+        "label": "Supports",
+        "explanation": "This claim is supported by the data in the provided table file. According to the table, the average employment to population ratio(male) per year can be calculated as the average of the values under the 'Age 65(male)' column which are 80.12, 80.58, 81.07, 81.58, and 82.08. The average of these values is indeed 49.55, as provided in the answer. Therefore, the supports claim directly states information that is confirmed in the table, specifically derived from the 'Age 65(male)' column for each year."
+    },
+    {
+        "image": "plotQA_0-train.png",
+        "claim": "In Singapore, the percentage of females surviving till the age of 65 is consistently higher than males.",
+        "label": "Refutes",
+        "explanation": "The claim contradicts the data provided in the table, which shows that the percentage of males surviving till the age of 65 is consistently higher than females throughout the years listed. This claim misinterprets the data by reversing the trend observed in the table."
+    },
+    {
+        "image": "plotQA_0-train.png",
+        "claim": "The low survival rate of individuals till the age of 65 in Singapore may be attributed to a lack of access to quality healthcare.",
+        "label": "Not enough information",
+        "explanation": "This claim suggests a possible reason for the low survival rate, but without data on healthcare access or quality in Singapore, it cannot be confirmed or refuted. Additional information on healthcare infrastructure would be needed to verify this claim."
+    }
+]
