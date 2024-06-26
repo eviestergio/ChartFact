@@ -1,51 +1,57 @@
 from transformers import Pix2StructProcessor, Pix2StructForConditionalGeneration
 from PIL import Image
 import torch
+import glob
 import csv
 import os
 
 # Check for CREATE GPU availability and set as device
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-processor = Pix2StructProcessor.from_pretrained('google/deplot')
-model = Pix2StructForConditionalGeneration.from_pretrained('google/deplot').to(device) # move to GPU
+model_name = 'google/deplot'
+model = Pix2StructForConditionalGeneration.from_pretrained(model_name).to(device) # move to GPU
+processor = Pix2StructProcessor.from_pretrained(model_name)
 
-folder_path = '../seed_datasets_100-2'
+# Paths to FigureQA and PlotQA datasets
+figureqa_pattern = '../random_sample_100-2/FigureQA/**/*.png'
+plotqa_pattern = '../random_sample_100-2/PlotQA/**/*.png'
 
-# Recursively iterate through all files and directories in folder 
-for root, dirs, files in os.walk(folder_path):
-    # Iterate through all files in the current directory
-    for file_name in files:
-        # Check if the file has a PNG extension
-        if file_name.lower().endswith('.png'):
-            # Construct the full path to the PNG file
-            file_path = os.path.join(root, file_name)
+# Combine the patterns to match all csv files in FigureQA and PlotQA
+patterns = [figureqa_pattern, plotqa_pattern]
 
-            # Determine the path for the corresponding CSV file
-            parent_dir = os.path.dirname(root)
-            # Create CSV directory and file paths relative to the parent directory
-            csv_directory = os.path.join(parent_dir, 'tables')
-            csv_file_path = os.path.join(csv_directory, file_name.replace('.png', '.csv'))
-            
-            # Check if the CSV file already exists
-            if os.path.exists(csv_file_path):
-                print(f"Skipping because CSV file already exists for {file_path}.")
-                continue
+# Process files matching the patterns
+for pattern in patterns:
+    for file_path in glob.glob(pattern, recursive=True):
+        # Construct the full path to the PNG file
+        parent_dir = os.path.dirname(file_path)
+        file_name = os.path.basename(file_path)
 
-            # DePlot the PNG
-            image = Image.open(file_path)
-            inputs = processor(images=image, text="Generate underlying data table of the figure below:", return_tensors="pt").to(device) # move to GPU
-            predictions = model.generate(**inputs, max_new_tokens=512)
-            decoded_predictions = processor.decode(predictions[0], skip_special_tokens=True)
-            print(f"Data for {file_path}:\n{decoded_predictions}\n")
+        # Determine the path for the corresponding CSV file
+        csv_directory = os.path.join(parent_dir, 'tables')
+        base_name = os.path.splitext(file_name)[0]
+        csv_file_path = os.path.join(csv_directory, f"{base_name}-dp.csv")
+        
+        # Skip if the CSV already exists
+        if os.path.exists(csv_file_path):
+            print(f"Skipping because CSV already exists for {file_path}.")
+            continue
+        
+        # Create CSV directory if it doesn't exist
+        os.makedirs(csv_directory, exist_ok=True) 
 
-            # Create CSV directory if it doesn't exist
-            os.makedirs(csv_directory, exist_ok=True) 
-            
-            # Write prediction to CSV file in respective folder
-            with open(csv_file_path, 'w', newline='') as csv_file:
-                writer = csv.writer(csv_file)
-                writer.writerow([decoded_predictions])
-            print(f"CSV file saved for {file_path}")
+        # DePlot the PNG
+        image = Image.open(file_path)
+        inputs = processor(images=image, text="Generate underlying data table of the figure below:", return_tensors="pt")
+        inputs = {key: value.to(device) for key, value in inputs.items()} # move to GPU
+        predictions = model.generate(**inputs, max_new_tokens=512)
+        decoded_predictions = processor.decode(predictions[0], skip_special_tokens=True)
+        
+        print(f"Extracted table for {file_path}:\n{decoded_predictions}\n")
+
+        # Write prediction to CSV file in respective folder
+        with open(csv_file_path, 'w', newline='') as csv_file:
+            writer = csv.writer(csv_file)
+            writer.writerow([decoded_predictions])
+        print(f"CSV file saved for {file_path}")
 
 print("CSV files saved successfully.")
