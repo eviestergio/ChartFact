@@ -75,7 +75,7 @@ def combine_json_files(folder_path):
     with open(combined_json_path, 'w') as combined_json_file:
         json.dump(combined_data, combined_json_file, indent=2)
         
-def rename_tables_with_prefix(folder_path, prefix):
+def rename_chartQA_tables(folder_path, prefix, postfix):
     tables_folder_path = os.path.join(folder_path, 'tables')
     if not os.path.exists(tables_folder_path):
         return
@@ -83,13 +83,13 @@ def rename_tables_with_prefix(folder_path, prefix):
     for filename in os.listdir(tables_folder_path):
         if filename.endswith('.csv'):
             src = os.path.join(tables_folder_path, filename)
-            dst = os.path.join(tables_folder_path, f"{prefix}_{filename}")
+            dst = os.path.join(tables_folder_path, f"{prefix}_{filename.split('.')[0]}-{postfix}.csv")
             os.rename(src, dst)
 
 ''' Main dataset preprocessing '''
-def preprocess_chartQA(entry, _): # Postfix variable not used
+def preprocess_chartQA(entry, postfix): 
     return {
-        "image": "chartQA_" + entry["imgname"],
+        "image": f"chartQA_{entry['imgname']}-{postfix}.png",
         "question": entry["query"],
         "answer": str(entry["label"])
     }
@@ -134,26 +134,29 @@ def rename_images_with_prefix(folder_path, prefix):
             dst = os.path.join(png_folder_path, f"{prefix}_{filename}")
             os.rename(src, dst)
 
-def rename_images_with_postfix(folder_path, postfix, chartqa=False):
+def rename_images_with_postfix(folder_path, postfix):
     png_folder_path = os.path.join(folder_path, 'png')
     for filename in os.listdir(png_folder_path):
         if filename.endswith('.png'):
             src = os.path.join(png_folder_path, filename)
-            if chartqa:
-                dst = os.path.join(png_folder_path, f"{filename.split('.')[0]}.png")  # remove hyphen for ChartQA
-            else:
-                dst = os.path.join(png_folder_path, f"{filename.split('.')[0]}-{postfix}.png")  # keep hyphen for others
+            dst = os.path.join(png_folder_path, f"{filename.split('.')[0]}-{postfix}.png")  
             os.rename(src, dst)
 
-def process_dataset_and_rename_images(folder_path, preprocess_func, prefix, postfix, chartqa=False):
+def process_dataset_and_rename_images(folder_path, preprocess_func, prefix, postfix):
     rename_images_with_prefix(folder_path, prefix)
-    rename_images_with_postfix(folder_path, postfix, chartqa)
-    return process_dataset_in_folder(folder_path, preprocess_func, postfix)
+    rename_images_with_postfix(folder_path, postfix)
+    preprocessed_data = process_dataset_in_folder(folder_path, preprocess_func, postfix)
+    
+    return preprocessed_data, os.path.join(folder_path, "qa_pairs.json") # return path to original qa_pairs.json for deletion later
+
+# combine qa_pairs.json files in figureQA if there are entries
+def any_json_files_exist(folder_path):
+    return any(os.path.exists(os.path.join(folder_path, f"qa_pairs-{i}.json")) and os.path.getsize(os.path.join(folder_path, f"qa_pairs-{i}.json")) > 0 for i in [1, 2])
 
 def main():
     # folder paths for each dataset
     current_folder = os.path.dirname(os.path.abspath(__file__))
-    base_path = os.path.join(current_folder, "../random_sample_100")
+    base_path = os.path.join(current_folder, "../seed_datasets-100-2")
 
     chartQA_train_folder_path = os.path.join(base_path, "ChartQA/train")
     chartQA_test_folder_path = os.path.join(base_path, "ChartQA/test")
@@ -182,9 +185,9 @@ def main():
                 print(f"qa_pairs-{file_index}.json not found or is empty in the folder.")
 
     # Combine qa_pairs.json files in FigureQA dataset if there are entries
-    if any(os.path.getsize(os.path.join(figureQA_test_folder_path, f"qa_pairs-{i}.json")) > 0 for i in [1, 2]):
+    if any_json_files_exist(figureQA_test_folder_path):
         combine_json_files(figureQA_test_folder_path)
-    if any(os.path.getsize(os.path.join(figureQA_val_folder_path, f"qa_pairs-{i}.json")) > 0 for i in [1, 2]):
+    if any_json_files_exist(figureQA_val_folder_path):
         combine_json_files(figureQA_val_folder_path)
 
     # Check for existence of png folders before renaming
@@ -200,62 +203,26 @@ def main():
     combine_png_folders(figureQA_test_folder_path)
     combine_png_folders(figureQA_val_folder_path)
 
-    # file1_path = os.path.join(figureQA_test_folder_path, "qa_pairs-1.json")
-    # if os.path.exists(file1_path):
-    #     preprocess_figureQA_json_files(file1_path, "1")
-    # else:
-    #     print("qa_pairs-1.json not found in the folder.")
-
-    # file2_path = os.path.join(figureQA_test_folder_path, "qa_pairs-2.json")
-    # if os.path.exists(file2_path):
-    #     preprocess_figureQA_json_files(file2_path, "2")
-    # else:
-    #     print("qa_pairs-2.json not found in the folder.")
-
-    # file1_path = os.path.join(figureQA_val_folder_path, "qa_pairs-1.json")
-    # if os.path.exists(file1_path):
-    #     preprocess_figureQA_json_files(file1_path, "1")
-    # else:
-    #     print("qa_pairs-1.json not found in the folder.")
-
-    # file2_path = os.path.join(figureQA_val_folder_path, "qa_pairs-2.json")
-    # if os.path.exists(file2_path):
-    #     preprocess_figureQA_json_files(file2_path, "2")
-    # else:
-    #     print("qa_pairs-2.json not found in the folder.")
-
-    #combine qa_pairs.json files in figureQA dataset
-    # combine_json_files(figureQA_test_folder_path)
-    # combine_json_files(figureQA_val_folder_path)
-
-    # rename_images_with_number_prefix(figureQA_test_folder_path, "1")
-    # rename_images_with_number_prefix(figureQA_test_folder_path, "2")
-    # rename_images_with_number_prefix(figureQA_val_folder_path, "1")
-    # rename_images_with_number_prefix(figureQA_val_folder_path, "2")
-
-    # combine_png_folders(figureQA_test_folder_path)
-    # combine_png_folders(figureQA_val_folder_path)
-
     # combine qa_pairs.json files in chartQA dataset
     combine_json_files(chartQA_train_folder_path)
     combine_json_files(chartQA_test_folder_path)
     combine_json_files(chartQA_val_folder_path)
 
     # rename tables with prefix
-    rename_tables_with_prefix(chartQA_train_folder_path, "chartQA")
-    rename_tables_with_prefix(chartQA_test_folder_path, "chartQA")
-    rename_tables_with_prefix(chartQA_val_folder_path, "chartQA")
+    rename_chartQA_tables(chartQA_train_folder_path, "chartQA", "train")
+    rename_chartQA_tables(chartQA_test_folder_path, "chartQA", "test")
+    rename_chartQA_tables(chartQA_val_folder_path, "chartQA", "val")
 
     # process each dataset and rename images with postfixes where necessary
-    preprocessed_chartQA_train = process_dataset_and_rename_images(chartQA_train_folder_path, preprocess_chartQA, "chartQA", "", chartqa=True)
-    preprocessed_chartQA_test = process_dataset_and_rename_images(chartQA_test_folder_path, preprocess_chartQA, "chartQA", "", chartqa=True)
-    preprocessed_chartQA_val = process_dataset_and_rename_images(chartQA_val_folder_path, preprocess_chartQA, "chartQA", "", chartqa=True)
-    preprocessed_figureQA_train = process_dataset_and_rename_images(figureQA_train_folder_path, preprocess_figureQA, "figureQA", "train")
-    preprocessed_figureQA_test = process_dataset_and_rename_images(figureQA_test_folder_path, preprocess_figureQA, "figureQA", "test")
-    preprocessed_figureQA_val = process_dataset_and_rename_images(figureQA_val_folder_path, preprocess_figureQA, "figureQA", "val")
-    preprocessed_plotQA_train = process_dataset_and_rename_images(plotQA_train_folder_path, preprocess_plotQA, "plotQA", "train")
-    preprocessed_plotQA_test = process_dataset_and_rename_images(plotQA_test_folder_path, preprocess_plotQA, "plotQA", "test")
-    preprocessed_plotQA_val = process_dataset_and_rename_images(plotQA_val_folder_path, preprocess_plotQA, "plotQA", "val")
+    preprocessed_chartQA_train, old_chartQA_train_json = process_dataset_and_rename_images(chartQA_train_folder_path, preprocess_chartQA, "chartQA", "train")
+    preprocessed_chartQA_test, old_chartQA_test_json = process_dataset_and_rename_images(chartQA_test_folder_path, preprocess_chartQA, "chartQA", "test")
+    preprocessed_chartQA_val, old_chartQA_val_json = process_dataset_and_rename_images(chartQA_val_folder_path, preprocess_chartQA, "chartQA", "val")
+    preprocessed_figureQA_train, old_figureQA_train_json = process_dataset_and_rename_images(figureQA_train_folder_path, preprocess_figureQA, "figureQA", "train")
+    preprocessed_figureQA_test, old_figureQA_test_json = process_dataset_and_rename_images(figureQA_test_folder_path, preprocess_figureQA, "figureQA", "test")
+    preprocessed_figureQA_val, old_figureQA_val_json = process_dataset_and_rename_images(figureQA_val_folder_path, preprocess_figureQA, "figureQA", "val")
+    preprocessed_plotQA_train, old_plotQA_train_json = process_dataset_and_rename_images(plotQA_train_folder_path, preprocess_plotQA, "plotQA", "train")
+    preprocessed_plotQA_test, old_plotQA_test_json = process_dataset_and_rename_images(plotQA_test_folder_path, preprocess_plotQA, "plotQA", "test")
+    preprocessed_plotQA_val, old_plotQA_val_json = process_dataset_and_rename_images(plotQA_val_folder_path, preprocess_plotQA, "plotQA", "val")
 
     # save preprocessed datasets to new JSON files
     output_chartQA_train_filename = os.path.join(chartQA_train_folder_path, "preprocessed_chartQA_train.json")
@@ -294,6 +261,17 @@ def main():
 
     with open(output_plotQA_val_filename, 'w') as plotQA_val_output_file:
         json.dump(preprocessed_plotQA_val, plotQA_val_output_file, indent=2)
+
+    # Remove old qa_pairs.json files
+    os.remove(old_chartQA_train_json)
+    os.remove(old_chartQA_test_json)
+    os.remove(old_chartQA_val_json)
+    os.remove(old_figureQA_train_json)
+    os.remove(old_figureQA_test_json)
+    os.remove(old_figureQA_val_json)
+    os.remove(old_plotQA_train_json)
+    os.remove(old_plotQA_test_json)
+    os.remove(old_plotQA_val_json)
 
     print("The preprocessed datasets have been saved.")
 
