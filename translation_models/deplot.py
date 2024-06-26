@@ -1,12 +1,16 @@
-import os
 from transformers import Pix2StructProcessor, Pix2StructForConditionalGeneration
 from PIL import Image
+import torch
 import csv
+import os
+
+# Check for CREATE GPU availability and set as device
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 processor = Pix2StructProcessor.from_pretrained('google/deplot')
-model = Pix2StructForConditionalGeneration.from_pretrained('google/deplot')
+model = Pix2StructForConditionalGeneration.from_pretrained('google/deplot').to(device) # move to GPU
 
-folder_path = '../random_sample_100'
+folder_path = '../seed_datasets_100-2'
 
 # Recursively iterate through all files and directories in folder 
 for root, dirs, files in os.walk(folder_path):
@@ -30,7 +34,7 @@ for root, dirs, files in os.walk(folder_path):
 
             # DePlot the PNG
             image = Image.open(file_path)
-            inputs = processor(images=image, text="Generate underlying data table of the figure below:", return_tensors="pt")
+            inputs = processor(images=image, text="Generate underlying data table of the figure below:", return_tensors="pt").to(device) # move to GPU
             predictions = model.generate(**inputs, max_new_tokens=512)
             decoded_predictions = processor.decode(predictions[0], skip_special_tokens=True)
             print(f"Data for {file_path}:\n{decoded_predictions}\n")
