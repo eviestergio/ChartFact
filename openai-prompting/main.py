@@ -3,24 +3,24 @@ import json
 import os
 
 def create_supports_prompt(title, table,  question, answer): # 1390 tokens, 6087 characters 
-    title_ = title if title else ''
+    title_ = f'"title": "{title}",' if title else ''
     prompt = f"""
     You are a helpful assistant designed to output JSON.
 
-    You will be provided with a data entry in JSON format delimited by triple single quotes. Each data entry contains the keys "title", "table”, "question”, and "answer”. The title and table represent the underlying data of a chart.
+    You will be provided with a data entry in JSON format delimited by triple single quotes. Each data entry contains the keys "title", "table", "question", and "answer". The "title" and "table" represent the underlying data of a chart.
 
     Data entry: '''{{
-        "title”: "{title_}”
+        {title_}
         "table": "{table}",
         "question": "{question}",
         "answer": "{answer}"
     }}'''
 
-    Task: Using the 3 input-output examples below delimited by angle brackets, convert each 'question' and 'answer' pair to a claim that supports the information and provide an explanation.
+    Task: Using the two input-output examples below delimited by angle brackets, convert each 'question' and 'answer' pair to a claim that supports the information and provide an explanation.
 
-    Process for generating a 'supports’ claim and explanation:
-        1. Develop a supports claim using the question and answer pair. 
-        2. Provide an explanation on why this claim supports the data, citing specific references from the chart which is represented by the table and title (if it exists) given. Do not mention the table, or question and answer pair in the explanation; instead, refer to the chart. Valid justifications include: 
+    Process for generating a 'supports' claim and explanation:
+        1. Using only the "question" and "answer", develop a claim that is supported by the data. 
+        2. Provide an explanation on why this claim supports the data from the "table" and “title" (if it exists), referring to them as "chart". If there is no title, do not mention the chart being titled. Valid justifications include: 
             - The supports claim directly states information recorded/confirmed in the chart.
             - The supports claim states information synonymous with that in the chart.
 
@@ -31,66 +31,64 @@ def create_supports_prompt(title, table,  question, answer): # 1390 tokens, 6087
     }}
 
     Examples: < 
-    1. Input: {{
-        "title”: 'Net insurance of liabilities of government of Iceland', 
+     1. Input: {{
+        "title": 'Net insurance of liabilities of government of Iceland', 
         "table": "Year,Domestic Liabilities,Foreign Liabilities
-        2005,102600000,-15510000000
-        2006,1899000000,66250000000
-        2007,5358700000,-15510000000
-        2008,46958100000,27577000000
-        2009,184518000000,20612000000",
+            2005,102600000,-15510000000
+            2006,1899000000,66250000000
+            2007,5358700000,-15510000000
+            2008,46958100000,27577000000
+            2009,184518000000,20612000000",
         "question": "In how many years, is the income share held by highest 10% of the population greater than the average income share held by highest 10% of the population taken over all years ?",
         "answer": "1"
         }}
         Output: {{
-        "supports claim”: "The domestic liabilities increased significantly from 2005 to 2009.”, 
-        "explanation”: "The chart shows a clear trend where domestic liabilities grew substantially over the years, starting from 102600000 in 2005 to 184518000000 in 2009. This increase is directly supported by the numerical values provided in the chart."
+        "supports claim": "The income share held by the highest 10% of the population was greater than the average income share held by the highest 10% of the population in 1 year.", 
+        "explanation": "The chart shows data over several years where the income shares of the highest 10% are listed. Comparing these figures reveals that in one specific year, the income share of the top 10% exceeded the average income share held by the top 10% across all years."
         }}
-    2. Input: {{
-        "title”: '', 
-        "table": " y axis label, x axis label 
-        Light Salmon,59.18
-        Deep Sky Blue,87.66
-        Magenta,62.45
-        Navy Blue,69.7
-        Rosy Brown,83.18
-        Lawn Green,85.84
-        Indian Red,74.26",
+     2. Input: {{
+        "table": "y axis label, x axis label 
+            Light Salmon,59.18
+            Deep Sky Blue,87.66
+            Magenta,62.45
+            Navy Blue,69.7
+            Rosy Brown,83.18
+            Lawn Green,85.84
+            Indian Red,74.26",
         "question": "Is Deep Sky Blue greater than Magenta?",
         "answer": "Yes"
         }}
         Output: {{
-        "supports claim”: "Deep Sky Blue has a value of 87.66 which is greater than Magenta's value of 62.45.”,
-        "explanation”: "The chart shows that Deep Sky Blue corresponds to a value of 87.66, whereas Magenta corresponds to 62.45. This directly supports the claim that Deep Sky Blue has a higher value than Magenta based on the numerical comparison in the chart."
+        "supports claim": "Deep Sky Blue has a higher value than Magenta.",
+        "explanation": "The chart indicates that Deep Sky Blue is recorded with a value of 87.66, while Magenta is recorded with 62.45. Therefore, it is confirmed that Deep Sky Blue's value is indeed greater than that of Magenta, supporting the claim."
         }}
-        >
-        """
+    >
+    """
 
     return prompt
 
 def create_refutes_prompt(title, table, supports_claim): # 519 tokens, 2331 characters
-    title_ = title if title else ''
+    title_ = f'"title": "{title}",' if title else ''    
     prompt = f"""
     You are a helpful assistant designed to output JSON.
 
-    You will be provided with a data entry in JSON format delimited by triple single quotes. Each data entry contains the keys "title”, "table”, and "supports claim”. The title and table represent the underlying data of a chart.
+    You will be provided with a data entry in JSON format delimited by triple single quotes. Each data entry contains the keys "title", "table", and "supports claim". The "title" and "table" represent the underlying data of a chart.
 
     Data entry: '''{{
-        "title”: "{title_}”,
-        "table”: "{table}”, 
-        "supports claim”: "{supports_claim}”
+        {title_}
+        "table": "{table}", 
+        "supports claim": "{supports_claim}"
     }}'''
 
-    Task: Using the input-output example below delimited by angle brackets, generate a 'refutes’ claim and an explanation. Ensure the claim aligns with the data or adjust it to fit the data if necessary.
+    Task: Using the two input-output example below delimited by angle brackets, generate a 'refutes' claim and an explanation. Ensure the claim aligns with the data or adjust it to fit the data if necessary.
 
-    Process for generating 'refutes’ claim and explanation:
-        1. Identify the information in the chart from the table and title (if it exists), and the supports claim.
-        2. Develop a claim that refutes the data based on the supports claim without adding unverifiable information. This can be done by:
+    Process for generating 'refutes' claim and explanation:
+        1. Develop a claim that refutes the data based on the supports claim without adding unverifiable information. This can be done by:
             - Wrongly stating factual data, such as changing reported numbers or trends.
             - Misinterpreting or changing one or more factual elements in a way that is plausible but incorrect based on the data.
-        3. Provide an explanation on why this claim refutes the data, citing specific discrepancies between the claim and the chart. Valid justifications include:
-            - The claim directly states information that refutes the data and/or supports claim 
-            - The claim states information that is antonymous with information in the chart and/or supports claim
+        2. Explain why the claim refutes the data. Use specific references to the table and title (if it exists) but referring to neither by name, instead call both the "chart" instead. In the explanation, do not refer to the supports claim. Valid justifications include:
+            - The claim directly states information that refutes the chart. 
+            - The claim states information that is antonymous with information in the chart.
 
     Output the result as a JSON object with the following keys: "refutes claim" and "explanation". The format should strictly follow this structure:
     {{
@@ -98,49 +96,54 @@ def create_refutes_prompt(title, table, supports_claim): # 519 tokens, 2331 char
         "explanation": "your explanation for why the claim refutes the chart"
     }}
 
-    Example: <
-    Input: {{
-        "title”: "Traits of President Donald Trump”,
-        "table”: "Entity,Values
-            Caring about ordinary people,23.0
-            Well-qualified to be president,26.0
-            Charismatic,39.0
-            A strong leader,55.0
-            Dangerous,62.0
-            Intolerant,65.0
-            Arrogant,75.0”,
-        "supports claim”: "62 percent view President Donald Trump as Dangerous.”
-    }}
-    Output: {{
-        "refutes claim”: "The majority of people consider Donald Trump to be charismatic.”,
-        "explanation”: "The claim counters the chart, which shows a lower percentage for 'Charismatic' compared to 'Dangerous'. It misrepresents the chart by suggesting that 'Charismatic' has a majority view, which directly contradicts the higher percentage listed for 'Dangerous'.”
-    }}
+    Examples: <
+     1. Input: {{
+        "title": "Merchandise exports between developing economies in Europe and Heavily indebted poor countries",
+        "table": "Year,Merchandise Exports
+            2007,0.99
+            2008,1.22
+            2009,1.06
+            2010,1.05",
+        "supports claim": "The merchandise exports in 2007 were the minimum among the years shown in the chart."
+        }}
+        Output: {{
+        "refutes claim": "The merchandise exports in 2010 were the highest among the years shown in the chart.",
+        "explanation": "This claim refutes the chart as it inaccurately states that merchandise exports peaked in 2010. However, according to the chart, merchandise exports were highest in 2008 with a value of 1.22, and in 2010, the exports decreased to 1.05. Therefore, the claim contradicts the actual data presented in the chart."
+        }}
+     2. Input: {{
+        "table": "yaxis_label,title Magenta,0 Medium Mint,18 Web Gray,36 Chartreuse,55",
+        "supports claim": "Chartreuse has a value of 55, which is the maximum in the chart."
+        }}
+        Output: {{
+        "refutes claim": "Medium Mint has a value of 0, which is the minimum in the chart.",
+        "explanation": "The refutes claim incorrectly states that Medium Mint has a value of 0, indicating it is the minimum in the chart. However, according to the chart data, Medium Mint actually has a value of 18. This misstatement contradicts the factual information present in the chart, where 0 is associated with a different color. Therefore, the refutes claim directly contradicts the actual data provided in the chart."
+        }}
     >
     """
     
     return prompt
 
 def create_nei_prompt(title, table, supports_claim): # 512 tokens, 2398 characters
-    title_ = title if title else ''
+    title_ = f'"title": "{title}",' if title else ''  
     prompt = f"""
     You are a helpful assistant designed to output JSON.
 
-    You will be provided with a data entry in JSON format delimited by triple single quotes. Each data entry contains the keys "title”, "table”, and "supports claim”. The title and table represent the underlying data of a chart.
+    You will be provided with a data entry in JSON format delimited by triple single quotes. Each data entry contains the keys "title", "table", and "supports claim". The title and table represent the underlying data of a chart.
 
     Data entry: '''{{
-        "title”: "{title_}”,
-        "table”: "{table}”, 
-        "supports claim”: "{supports_claim}”
+        {title_}
+        "table": "{table}", 
+        "supports claim": "{supports_claim}"
     }}'''
 
-    Task: Using the input-output example delimited by angle brackets, generate a 'not enough information’ claim and an explanation. Ensure the claim aligns with the data or adjust it to fit the data if necessary.
+    Task: Using the two input-output example delimited by angle brackets, generate a 'not enough information' claim and an explanation. Ensure the claim aligns with the data or adjust it to fit the data if necessary.
 
-    Process for generating 'not enough information’ claim and explanation:
+    Process for generating 'not enough information' claim and explanation:
         1. Assess the chart data from table and title (if it exists) with the supports claim for information gaps or unspecified details.
         2. Develop a claim based on these gaps without explicitly stating the lack of information. This can be done by:
             - Offering different scenarios or conclusions that are not directly contradicted by the data in the chart.
             - Suggesting causes or reasons for trends in the data that are not explicitly supported or denied by the data in the chart.
-        3. Provide an explanation on why this claim is classified as 'not enough information' by highlighting the lack of data in the chart to support or refute the claim, making it unverifiable. Valid justifications include:
+        3. Provide an explanation on why this claim is classified as 'not enough information' by highlighting the lack of data in the chart to support or refute the claim, making it unverifiable. In the explanation, do not refer to the supports claim. Valid justifications include:
             - The claim cannot be confirmed or disproven with the given data.
             - Additional information from other sources would be required to verify the claim.
 
@@ -151,22 +154,30 @@ def create_nei_prompt(title, table, supports_claim): # 512 tokens, 2398 characte
     }}
 
     Example: <
-    Input: {{
-        "title”: "Traits of President Donald Trump”,
-        "table”: "Entity,Values
+     1. Input: {{
+        "title": "Traits of President Donald Trump",
+        "table": "Entity,Values
             Caring about ordinary people,23.0
             Well-qualified to be president,26.0
             Charismatic,39.0
             A strong leader,55.0
             Dangerous,62.0
             Intolerant,65.0
-            Arrogant,75.0”,
-        "supports claim”: "62 percent view President Donald Trump as Dangerous.”
-    }}
-    Output: {{
-        "not enough information claim”: "President Donald Trump's approach to international relations contributes to their perception as Dangerous.”,
-        "explanation”: "This claim speculates on information not provided in the table, as there are no data regarding international relations, making the connection to the perception of being 'Dangerous' unverifiable.”
-    }}
+            Arrogant,75.0",
+        "supports claim": "62 percent view President Donald Trump as Dangerous."
+        }}
+        Output: {{
+        "not enough information claim": "President Donald Trump's approach to international relations contributes to their perception as Dangerous.",
+        "explanation": "This claim speculates on information not provided in the table, as there is no data regarding international relations, making the connection to the perception of being 'Dangerous' unverifiable."
+        }}
+     2. Input: {{
+        "table": "y axis label,title Indian Red,35 Dim Gray,57 Dark Cyan,22 Light Salmon,55 Dark Khaki,95 Salmon,15 Indigo,5 Web Maroon,46 Navy Blue,18",
+        "supports claim": "Dark Cyan is not the low median."
+        }}
+        Output: {{
+        "not enough information claim": "Dark Cyan would be the median if the dataset included more color values.",
+        "explanation": "This claim suggests that adding more color values could shift the median to Dark Cyan. However, the current dataset does not provide information on potential additional values or their distribution, making it impossible to verify this claim."
+        }}
     >
     """
     
