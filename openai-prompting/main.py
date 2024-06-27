@@ -2,7 +2,7 @@ from model import QueryModel
 import json
 import os
 
-def create_supports_prompt(title, table,  question, answer): # 1390 tokens, 6087 characters 
+def create_supports_prompt(title, table,  question, answer): # 783 tokens, 3349 characters 
     title_ = f'"title": "{title}",' if title else ''
     prompt = f"""
     You are a helpful assistant designed to output JSON.
@@ -67,7 +67,7 @@ def create_supports_prompt(title, table,  question, answer): # 1390 tokens, 6087
 
     return prompt
 
-def create_refutes_prompt(title, table, supports_claim): # 519 tokens, 2331 characters
+def create_refutes_prompt(title, table, supports_claim): # 771 tokens, 3433 characters
     title_ = f'"title": "{title}",' if title else ''    
     prompt = f"""
     You are a helpful assistant designed to output JSON.
@@ -123,7 +123,7 @@ def create_refutes_prompt(title, table, supports_claim): # 519 tokens, 2331 char
     
     return prompt
 
-def create_nei_prompt(title, table, supports_claim): # 512 tokens, 2398 characters
+def create_nei_prompt(title, table, supports_claim): # 733 tokens, 3531 characters
     title_ = f'"title": "{title}",' if title else ''  
     prompt = f"""
     You are a helpful assistant designed to output JSON.
