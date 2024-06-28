@@ -1,0 +1,322 @@
+[
+  {
+    "image": "plotQA_40066-train.png",
+    "question": "What is the label of the 2nd group of bars from the top ?",
+    "answer": "Female entrants"
+  },
+  {
+    "image": "plotQA_40066-train.png",
+    "question": "What is the difference between the primary completion rate of female entrants in Hungary and the primary completion rate of male entrants in Sweden ?",
+    "answer": "1.9016100000000051"
+  },
+  {
+    "image": "plotQA_133988-train.png",
+    "question": "Across all countries, what is the minimum ppp conversion factor for private consumption ?",
+    "answer": "0.346369995118561"
+  },
+  {
+    "image": "plotQA_133988-train.png",
+    "question": "Are the number of bars on each tick of the X-axis equal ?",
+    "answer": "Yes"
+  },
+  {
+    "image": "plotQA_140860-train.png",
+    "question": "In how many years, is the value added in manufacturing food and tobacco in Sri Lanka greater than 28 %?",
+    "answer": "4"
+  },
+  {
+    "image": "plotQA_140860-train.png",
+    "question": "What is the average value added in manufacturing food and tobacco in Senegal per year?",
+    "answer": "38.876927634015"
+  },
+  {
+    "image": "plotQA_103743-train.png",
+    "question": "In how many years, is the total water productivity greater than 0.30000000000000004 US$ ?",
+    "answer": "1"
+  },
+  {
+    "image": "plotQA_41193-train.png",
+    "question": "Across all years, what is the minimum net official aid received in St. Kitts and Nevis ?",
+    "answer": "5010000.0"
+  },
+  {
+    "image": "plotQA_86304-train.png",
+    "question": "Does the graph contain grids ?",
+    "answer": "No"
+  },
+  {
+    "image": "plotQA_148613-train.png",
+    "question": "What is the difference between the value lost due to electrical outages in 2006 and 2009 ?",
+    "answer": "0.6"
+  },
+  {
+    "image": "plotQA_26296-train.png",
+    "question": "How many different coloured bars are there ?",
+    "answer": "2"
+  },
+  {
+    "image": "plotQA_92173-train.png",
+    "question": "Does \"Senegal\" appear as one of the legend labels in the graph ?",
+    "answer": "No"
+  },
+  {
+    "image": "plotQA_13192-train.png",
+    "question": "How many different coloured dotlines are there ?",
+    "answer": "3"
+  },
+  {
+    "image": "plotQA_37698-train.png",
+    "question": "How many bars are there on the 2nd tick from the top ?",
+    "answer": "3"
+  },
+  {
+    "image": "plotQA_101809-train.png",
+    "question": "In which year was the merchandise exports minimum ?",
+    "answer": "2007"
+  },
+  {
+    "image": "plotQA_99631-train.png",
+    "question": "What is the difference between two consecutive major ticks on the Y-axis ?",
+    "answer": "5000000.0"
+  },
+  {
+    "image": "plotQA_28366-train.png",
+    "question": "Does \"Low & middle income\" appear as one of the legend labels in the graph ?",
+    "answer": "No"
+  },
+  {
+    "image": "plotQA_123057-train.png",
+    "question": "How many bars are there ?",
+    "answer": "18"
+  },
+  {
+    "image": "plotQA_8347-train.png",
+    "question": "What is the difference between the highest and the lowest percentage of total merchandise exports in Uruguay ?",
+    "answer": "1.9291992575408452"
+  },
+  {
+    "image": "plotQA_145467-train.png",
+    "question": "How many bars are there on the 2nd tick from the right ?",
+    "answer": "4"
+  },
+  {
+    "image": "plotQA_139568-train.png",
+    "question": "Is the difference between the labor force participation rate in North America in 2002 and 2005 greater than the difference between the labor force participation rate in Kazakhstan in 2002 and 2005 ?",
+    "answer": "Yes"
+  },
+  {
+    "image": "plotQA_47197-train.png",
+    "question": "What is the label or title of the X-axis ?",
+    "answer": "Educated males (% of male labor force)"
+  },
+  {
+    "image": "plotQA_49754-train.png",
+    "question": "Are all the bars in the graph horizontal ?",
+    "answer": "Yes"
+  },
+  {
+    "image": "plotQA_36612-train.png",
+    "question": "What is the average percentage of labor force who received tertiary education per year ?",
+    "answer": "25.365"
+  },
+  {
+    "image": "plotQA_41979-train.png",
+    "question": "Are the number of bars on each tick of the Y-axis equal ?",
+    "answer": "Yes"
+  },
+  {
+    "image": "plotQA_98527-train.png",
+    "question": "Does the graph contain grids ?",
+    "answer": "No"
+  },
+  {
+    "image": "plotQA_126784-train.png",
+    "question": "Is the difference between the percentage of HIV infected female population in 1992 in Suriname and Swaziland greater than the difference between the percentage of HIV infected female population in 1991 in Suriname and Swaziland ?",
+    "answer": "No"
+  },
+  {
+    "image": "plotQA_131728-train.png",
+    "question": "What is the difference between two consecutive major ticks on the Y-axis ?",
+    "answer": "5.0"
+  },
+  {
+    "image": "plotQA_58019-train.png",
+    "question": "In how many years, is the percentage of rural population growth in Lower middle income greater than the average percentage of rural population growth in Lower middle income taken over all years ?",
+    "answer": "3"
+  },
+  {
+    "image": "plotQA_29819-train.png",
+    "question": "In how many cases, is the number of bars for a given year not equal to the number of legend labels ?",
+    "answer": "6"
+  },
+  {
+    "image": "plotQA_156791-train.png",
+    "question": "In which year was the amount of fertilizer consumption minimum ?",
+    "answer": "2008"
+  },
+  {
+    "image": "plotQA_154195-train.png",
+    "question": "How many years are there in the graph ?",
+    "answer": "6"
+  },
+  {
+    "image": "plotQA_127221-train.png",
+    "question": "How many legend labels are there ?",
+    "answer": "3"
+  },
+  {
+    "image": "plotQA_45851-train.png",
+    "question": "How many bars are there on the 2nd tick from the bottom ?",
+    "answer": "3"
+  },
+  {
+    "image": "plotQA_118246-train.png",
+    "question": "What is the difference between the highest and the second highest amount consumed in the process of production in Virgin Islands ?",
+    "answer": "35879335.25202799"
+  },
+  {
+    "image": "plotQA_53496-train.png",
+    "question": "What is the difference between the number of tourist arrivals in Rwanda in 2010 and the number of tourist arrivals in Egypt, Arab Rep. in 2012 ?",
+    "answer": "-10692000.0"
+  },
+  {
+    "image": "plotQA_68337-train.png",
+    "question": "What is the difference between the highest and the lowest net official aid flow in Slovenia ?",
+    "answer": "220000.0"
+  },
+  {
+    "image": "plotQA_106783-train.png",
+    "question": "What is the label or title of the X-axis ?",
+    "answer": "Education levels"
+  },
+  {
+    "image": "plotQA_53437-train.png",
+    "question": "How many countries are there in the graph ?",
+    "answer": "3"
+  },
+  {
+    "image": "plotQA_18081-train.png",
+    "question": "What is the difference between two consecutive major ticks on the Y-axis ?",
+    "answer": "5.0"
+  },
+  {
+    "image": "plotQA_28610-train.png",
+    "question": "Is the sum of the percentage of self-employed male workers in 1981 in Norway and Spain greater than the maximum percentage of self-employed male workers in 1980 across all countries ?",
+    "answer": "Yes"
+  },
+  {
+    "image": "plotQA_6064-train.png",
+    "question": "Is it the case that in every year, the sum of the death rate in Fiji and death rate in Middle East & North Africa (all income levels)  is greater than the death rate in Fragile and conflict affected situations ?",
+    "answer": "Yes"
+  },
+  {
+    "image": "plotQA_115985-train.png",
+    "question": "How are the legend labels stacked ?",
+    "answer": "horizontal"
+  },
+  {
+    "image": "plotQA_140724-train.png",
+    "question": "In which year was the CPIA rating in Middle East & North Africa (all income levels) maximum?",
+    "answer": "2012"
+  },
+  {
+    "image": "plotQA_79519-train.png",
+    "question": "How many different coloured lines are there ?",
+    "answer": "2"
+  },
+  {
+    "image": "plotQA_68118-train.png",
+    "question": "Is it the case that in every country, the sum of the amount received by the population participating in social insurance programs and amount received by the population participating in social protection programs is greater than the amount received by the population participating in unemployment benefits programs ?",
+    "answer": "Yes"
+  },
+  {
+    "image": "plotQA_118467-train.png",
+    "question": "What is the label or title of the Y-axis ?",
+    "answer": "Amount (in US$)"
+  },
+  {
+    "image": "plotQA_72717-train.png",
+    "question": "What is the average precipitation in depth in 1987 ?",
+    "answer": "591"
+  },
+  {
+    "image": "plotQA_111464-train.png",
+    "question": "What is the label of the 1st group of bars from the left ?",
+    "answer": "1998"
+  },
+  {
+    "image": "plotQA_124531-train.png",
+    "question": "How many bars are there on the 2nd tick from the left ?",
+    "answer": "3"
+  },
+  {
+    "image": "plotQA_120567-train.png",
+    "question": "What is the label or title of the Y-axis ?",
+    "answer": "Discrepancy in expenditure estimate of GDP (constant LCU)"
+  },
+  {
+    "image": "plotQA_65251-train.png",
+    "question": "How many bars are there ?",
+    "answer": "24"
+  },
+  {
+    "image": "plotQA_84307-train.png",
+    "question": "What is the title of the graph ?",
+    "answer": "Value added by agricultural sector in current LCU"
+  },
+  {
+    "image": "plotQA_55168-train.png",
+    "question": "What is the title of the graph ?",
+    "answer": "Percentage of adults (ages 15+) in different countries who smoke any form of tobacco"
+  },
+  {
+    "image": "plotQA_31554-train.png",
+    "question": "In which year was the number of borrowers maximum?",
+    "answer": "2008"
+  },
+  {
+    "image": "plotQA_126289-train.png",
+    "question": "How many groups of bars are there ?",
+    "answer": "4"
+  },
+  {
+    "image": "plotQA_148001-train.png",
+    "question": "How many bars are there ?",
+    "answer": "20"
+  },
+  {
+    "image": "plotQA_34027-train.png",
+    "question": "Across all countries, what is the maximum net disbursements of loan from government ?",
+    "answer": "45477000.0"
+  },
+  {
+    "image": "plotQA_123359-train.png",
+    "question": "What is the average net savings(excluding particulate emission damage) per country ?",
+    "answer": "12509797141.627909"
+  },
+  {
+    "image": "plotQA_51060-train.png",
+    "question": "What is the title of the graph ?",
+    "answer": "Urban population of a country"
+  },
+  {
+    "image": "plotQA_80793-train.png",
+    "question": "What is the difference between the highest and the second highest percentage of underweight children ?",
+    "answer": "3.299999237060618"
+  },
+  {
+    "image": "plotQA_84584-train.png",
+    "question": "Does the percentage of ores and metals imports monotonically increase over the years ?",
+    "answer": "No"
+  },
+  {
+    "image": "plotQA_118686-train.png",
+    "question": "What is the difference between the highest and the lowest percentage of female teachers in Guyana ?",
+    "answer": "1.2704162597655824"
+  },
+  {
+    "image": "plotQA_101088-train.png",
+    "question": "What is the sum of the amount of waste generated ?",
+    "answer": "407.16411143781477"
+  }
+]
