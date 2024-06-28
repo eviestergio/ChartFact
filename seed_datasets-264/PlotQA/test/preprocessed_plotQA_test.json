@@ -1,0 +1,42 @@
+[
+  {
+    "image": "plotQA_1178-test.png",
+    "question": "What is the difference between the highest and the lowest total amount earned by exporting goods and services in Uganda ?",
+    "answer": "34564811.277677"
+  },
+  {
+    "image": "plotQA_1178-test.png",
+    "question": "What is the label or title of the Y-axis ?",
+    "answer": "Earning from trade(constant 2005 US)"
+  },
+  {
+    "image": "plotQA_23071-test.png",
+    "question": "What is the difference between the highest and the second highest net bilateral aid flow in 1997 ?",
+    "answer": "30910000.0"
+  },
+  {
+    "image": "plotQA_23071-test.png",
+    "question": "Is the net bilateral aid flow in 1996 in Bosnia and Herzegovina less than that in World ?",
+    "answer": "Yes"
+  },
+  {
+    "image": "plotQA_1467-test.png",
+    "question": "What is the label or title of the X-axis ?",
+    "answer": "Year"
+  },
+  {
+    "image": "plotQA_29479-test.png",
+    "question": "Are the number of bars on each tick of the X-axis equal ?",
+    "answer": "Yes"
+  },
+  {
+    "image": "plotQA_21579-test.png",
+    "question": "Does the graph contain grids ?",
+    "answer": "Yes"
+  },
+  {
+    "image": "plotQA_14634-test.png",
+    "question": "Are the number of bars per tick equal to the number of legend labels ?",
+    "answer": "Yes"
+  }
+]
