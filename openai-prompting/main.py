@@ -294,6 +294,8 @@ def process_file(input_file, model):
         entries = json.load(file)
 
     results = []
+    claim_types = ['Supports', 'Refutes', 'Not enough information']
+    claim_index = 0
     
     for entry in entries:
         # Check if necessary keys exist
@@ -328,34 +330,45 @@ def process_file(input_file, model):
             print(f"Skipping entry due to missing data: {entry}")
             continue
 
-        # Generate 'supports' claim
-        supports_claim, explanation = generate_supports_claim(title, table, question, answer, model)
-        results.append({
-            "image": image,
-            "claim": supports_claim,
-            "label": "Supports",
-            "explanation": explanation
-        })
+        claim_type = claim_types[claim_index % 3]
 
-        # Generate 'refutes' claim using 'supports' claim
-        simple_supports_claim = generate_supports_claim_simple(question, answer, model)
-        refutes_claim, explanation = generate_refutes_claim(title, table, simple_supports_claim, model)
-        results.append({
-            "image": image,
-            "claim": refutes_claim,
-            "label": "Refutes",
-            "explanation": explanation
-        })
+        # Generate 'supports' claim
+        if claim_type == 'Supports':
+            supports_claim, explanation = generate_supports_claim(title, table, question, answer, model)
+            results.append({
+                "image": image,
+                "claim": supports_claim,
+                "label": "Supports",
+                "explanation": explanation
+            })
+            claim_index += 1
+            continue
+
+        # Generate 'refutes' claim using 'supports' claim from simplified function
+        if claim_type == 'Refutes':
+            simple_supports_claim = generate_supports_claim_simple(question, answer, model)
+            refutes_claim, explanation = generate_refutes_claim(title, table, simple_supports_claim, model)
+            results.append({
+                "image": image,
+                "claim": refutes_claim,
+                "label": "Refutes",
+                "explanation": explanation
+            })
+            claim_index += 1
+            continue
 
         # Generate 'not enough information' claim using 'supports' claim
-        simple_supports_claim = generate_supports_claim_simple(question,answer, model)
-        nei_claim, explanation = generate_nei_claim(title, table, simple_supports_claim, model)
-        results.append({
-            "image": image,
-            "claim": nei_claim,
-            "label": "Not enough information",
-            "explanation": explanation
-        })
+        if claim_type == 'Not enough information':
+            simple_supports_claim = generate_supports_claim_simple(question, answer, model)
+            nei_claim, explanation = generate_nei_claim(title, table, simple_supports_claim, model)
+            results.append({
+                "image": image,
+                "claim": nei_claim,
+                "label": "Not enough information",
+                "explanation": explanation
+            })
+            claim_index += 1
+            continue
 
     # Save results to output file
     save_results(input_file, results)
