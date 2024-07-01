@@ -3,6 +3,7 @@ import json
 import os
 
 def create_supports_prompt(title, table,  question, answer): # 783 tokens, 3349 characters 
+    ''' Creates a prompt to generate a 'supports' claim with an explanation. '''
     title_ = f'"title": "{title}",' if title else ''
     prompt = f"""
     You are a helpful assistant designed to output JSON.
@@ -68,6 +69,7 @@ def create_supports_prompt(title, table,  question, answer): # 783 tokens, 3349 
     return prompt
 
 def create_supports_prompt_simple(question, answer): # 272 tokens, 1278 characters
+    ''' Creates a simplified prompt to generate a 'supports' claim without an explanation. '''
     prompt = f"""
     You are a helpful assistant designed to output JSON.
 
@@ -106,6 +108,7 @@ def create_supports_prompt_simple(question, answer): # 272 tokens, 1278 characte
     return prompt
 
 def create_refutes_prompt(title, table, supports_claim): # 771 tokens, 3433 characters
+    ''' Creates a prompt to generate a 'refutes' claim with an explanation. '''
     title_ = f'"title": "{title}",' if title else ''    
     prompt = f"""
     You are a helpful assistant designed to output JSON.
@@ -162,6 +165,7 @@ def create_refutes_prompt(title, table, supports_claim): # 771 tokens, 3433 char
     return prompt
 
 def create_nei_prompt(title, table, supports_claim): # 733 tokens, 3531 characters
+    ''' Creates a prompt to generate a 'not enough information' claim with an explanation. '''
     title_ = f'"title": "{title}",' if title else ''  
     prompt = f"""
     You are a helpful assistant designed to output JSON.
@@ -222,7 +226,7 @@ def create_nei_prompt(title, table, supports_claim): # 733 tokens, 3531 characte
     return prompt
 
 def parse_json_response(response):
-    ''' Parse JSON object response to extract claim and explanation '''
+    ''' Parse JSON object response to extract claim and explanation. '''
     try:
         response_json = json.loads(response)
         return response_json
@@ -231,6 +235,7 @@ def parse_json_response(response):
         return {}
 
 def generate_supports_claim(title, table, question, answer, model):
+    ''' Generate a 'supports' claim with an explanation. '''
     prompt = create_supports_prompt(title, table, question, answer)
     response = model(model_name='gpt-3.5-turbo', query=prompt)
     response_json = parse_json_response(response)
@@ -246,6 +251,7 @@ def generate_supports_claim(title, table, question, answer, model):
     return claim, explanation
 
 def generate_supports_claim_simple(title, table, question, answer, model):
+    ''' Generate a simplified 'supports' claim without an explanation. '''
     prompt = create_supports_prompt_simple(title, table, question, answer)
     response = model(model_name='gpt-3.5-turbo', query=prompt)
     response_json = parse_json_response(response)
@@ -259,6 +265,7 @@ def generate_supports_claim_simple(title, table, question, answer, model):
     return claim
 
 def generate_refutes_claim(title, table, supports_claim, model):
+    ''' Generate a 'refutes' claim with an explanation. '''
     prompt = create_refutes_prompt(title, table, supports_claim)
     response = model(model_name='gpt-3.5-turbo', query=prompt)
     response_json = parse_json_response(response)
@@ -274,6 +281,7 @@ def generate_refutes_claim(title, table, supports_claim, model):
     return claim, explanation
 
 def generate_nei_claim(title, table, supports_claim, model):
+    ''' Generate a 'not enough information' claim with an explanation. '''
     prompt = create_nei_prompt(title, table, supports_claim)
     response = model(model_name='gpt-3.5-turbo', query=prompt)
     response_json = parse_json_response(response)
@@ -288,8 +296,8 @@ def generate_nei_claim(title, table, supports_claim, model):
 
     return claim, explanation
 
-def process_file(input_file, model):
-    
+def generate_claims_from_file(input_file, model):
+    ''' Process an input file to generate one claim for each Q&A pair entry. '''
     with open(input_file, 'r') as file:
         entries = json.load(file)
 
@@ -357,7 +365,7 @@ def process_file(input_file, model):
             claim_index += 1
             continue
 
-        # Generate 'not enough information' claim using 'supports' claim
+        # Generate 'not enough information' claim using 'supports' claim from simplified function
         if claim_type == 'Not enough information':
             simple_supports_claim = generate_supports_claim_simple(question, answer, model)
             nei_claim, explanation = generate_nei_claim(title, table, simple_supports_claim, model)
@@ -374,6 +382,7 @@ def process_file(input_file, model):
     save_results(input_file, results)
 
 def save_results(input_file, results):
+    ''' Save generated results to an output file. '''
     output_folder = os.path.dirname(input_file) # Determine the output folder based on the input file path
     output_file_name = os.path.basename(input_file).replace('preprocessed', 'converted')
     output_path = os.path.join(output_folder, output_file_name)
@@ -384,15 +393,16 @@ def save_results(input_file, results):
     print(f"Conversion completed for {os.path.basename(input_file)}. Results saved to {output_path}.")
 
 def main():
+    ''' Main function to process all JSON files in specified directory. '''
     model = QueryModel(query_type='json_object')
     current_folder = os.path.dirname(os.path.abspath(__file__))
-    input_directory = os.path.join(current_folder, "../seed_datasets") # directory containing preprocessed JSON files to convert
+    input_directory = os.path.join(current_folder, "../seed_datasets") # Directory containing preprocessed JSON files to convert
 
-    for root, dirs, files in os.walk(input_directory):
+    for root, _, files in os.walk(input_directory):
         for filename in files:
             if filename.startswith('preprocessed_') and filename.endswith('.json'):
                 input_file = os.path.join(root, filename)
-                process_file(input_file, model)
+                generate_claims_from_file(input_file, model)
 
 if __name__ == '__main__':
     main()
