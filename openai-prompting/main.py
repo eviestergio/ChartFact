@@ -67,6 +67,44 @@ def create_supports_prompt(title, table,  question, answer): # 783 tokens, 3349 
 
     return prompt
 
+def create_supports_prompt_simple(question, answer): # 272 tokens, 1278 characters
+    prompt = f"""
+    You are a helpful assistant designed to output JSON.
+
+    You will be provided with a data entry in JSON format delimited by triple single quotes. Each data entry contains the keys "question", and "answer".
+
+    Data entry: '''{{
+        "question": "{question}",
+        "answer": "{answer}"
+    }}'''
+
+    Task: Using the two input-output examples delimited by angle brackets, convert each 'question' and 'answer' pair to a claim that supports the information.
+
+    Output the result as a JSON object with the key "supports claim". The format should strictly follow this structure:
+    {{
+        "supports claim": "your generated supports claim"
+    }}
+
+    Examples: < 
+     1. Input: {{
+            "question": "How many stores did Saint Laurent operate in Western Europe in 2020?",
+            "answer": "47"
+        }}
+        Output: {{
+            "supports claim": "Saint Laurent operated 47 stores in Western Europe in 2020."
+        }},
+     2. Input: {{
+            "question": "What is the title of the graph?",
+            "answer": "Net disbursements of loans from International Monetary Fund"
+        }} 
+        Output: {{
+            "supports claim": "The title of the graph is Net disbursements of loans from International Monetary Fund."
+        }},
+    >
+    """
+    
+    return prompt
+
 def create_refutes_prompt(title, table, supports_claim): # 771 tokens, 3433 characters
     title_ = f'"title": "{title}",' if title else ''    
     prompt = f"""
@@ -80,7 +118,7 @@ def create_refutes_prompt(title, table, supports_claim): # 771 tokens, 3433 char
         "supports claim": "{supports_claim}"
     }}'''
 
-    Task: Using the two input-output example below delimited by angle brackets, generate a 'refutes' claim and an explanation. Ensure the claim aligns with the data or adjust it to fit the data if necessary.
+    Task: Using the two input-output examples below delimited by angle brackets, generate a 'refutes' claim and an explanation. Ensure the claim aligns with the data or adjust it to fit the data if necessary.
 
     Process for generating 'refutes' claim and explanation:
         1. Develop a claim that refutes the data based on the supports claim without adding unverifiable information. This can be done by:
@@ -136,7 +174,7 @@ def create_nei_prompt(title, table, supports_claim): # 733 tokens, 3531 characte
         "supports claim": "{supports_claim}"
     }}'''
 
-    Task: Using the two input-output example delimited by angle brackets, generate a 'not enough information' claim and an explanation. Ensure the claim aligns with the data or adjust it to fit the data if necessary.
+    Task: Using the two input-output examples delimited by angle brackets, generate a 'not enough information' claim and an explanation. Ensure the claim aligns with the data or adjust it to fit the data if necessary.
 
     Process for generating 'not enough information' claim and explanation:
         1. Assess the chart data from table and title (if it exists) with the supports claim for information gaps or unspecified details.
@@ -206,6 +244,19 @@ def generate_supports_claim(title, table, question, answer, model):
     explanation = response_json['explanation']
 
     return claim, explanation
+
+def generate_supports_claim_simple(title, table, question, answer, model):
+    prompt = create_supports_prompt_simple(title, table, question, answer)
+    response = model(model_name='gpt-3.5-turbo', query=prompt)
+    response_json = parse_json_response(response)
+
+    # If failed, add empty entries to filter out from final dataset
+    if not response_json:
+        print("Failed to parse response for supports claim.")
+        return ""
+
+    claim = response_json['supports claim']
+    return claim
 
 def generate_refutes_claim(title, table, supports_claim, model):
     prompt = create_refutes_prompt(title, table, supports_claim)
@@ -287,7 +338,8 @@ def process_file(input_file, model):
         })
 
         # Generate 'refutes' claim using 'supports' claim
-        refutes_claim, explanation = generate_refutes_claim(title, table, supports_claim, model)
+        simple_supports_claim = generate_supports_claim_simple(question, answer, model)
+        refutes_claim, explanation = generate_refutes_claim(title, table, simple_supports_claim, model)
         results.append({
             "image": image,
             "claim": refutes_claim,
@@ -296,7 +348,8 @@ def process_file(input_file, model):
         })
 
         # Generate 'not enough information' claim using 'supports' claim
-        nei_claim, explanation = generate_nei_claim(title, table, supports_claim, model)
+        simple_supports_claim = generate_supports_claim_simple(question,answer, model)
+        nei_claim, explanation = generate_nei_claim(title, table, simple_supports_claim, model)
         results.append({
             "image": image,
             "claim": nei_claim,
