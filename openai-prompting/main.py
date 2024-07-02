@@ -21,7 +21,7 @@ def create_supports_prompt(title, table,  question, answer): # 783 tokens, 3349 
 
     Process for generating a 'supports' claim and explanation:
         1. Using only the "question" and "answer", develop a claim that is supported by the data. 
-        2. Provide an explanation on why this claim supports the data from the "table" and “title" (if it exists), referring to both as "chart". If there is no title, do not mention the chart being titled. Do not say the words "table" or "title", instead, say "chart". Valid justifications include:
+        2. Provide an explanation on why this claim supports the data. Use specific references to the table and title (if it exists) but referring to neither by name, instead call both the "chart". If there is no title, do not mention the chart being titled. Valid justifications include: 
             - The supports claim directly states information recorded/confirmed in the chart.
             - The supports claim states information synonymous with that in the chart.
 
@@ -127,7 +127,7 @@ def create_refutes_prompt(title, table, supports_claim): # 771 tokens, 3433 char
         1. Develop a claim that refutes the data based on the supports claim without adding unverifiable information. This can be done by:
             - Wrongly stating factual data, such as changing reported numbers or trends.
             - Misinterpreting or changing one or more factual elements in a way that is plausible but incorrect based on the data.
-        2. Explain why the claim refutes the data. Use specific references to the table and title (if it exists) but referring to neither by name, instead call both the "chart" instead. In the explanation, do not refer to the supports claim. Valid justifications include:
+        2. Explain why the claim refutes the data. Use specific references to the table and title (if it exists) but referring to neither by name, instead call both the "chart". In the explanation, do not refer to the supports claim. Valid justifications include:
             - The claim directly states information that refutes the chart. 
             - The claim states information that is antonymous with information in the chart.
 
@@ -185,7 +185,7 @@ def create_nei_prompt(title, table, supports_claim): # 733 tokens, 3531 characte
         2. Develop a claim based on these gaps without explicitly stating the lack of information. This can be done by:
             - Offering different scenarios or conclusions that are not directly contradicted by the data in the chart.
             - Suggesting causes or reasons for trends in the data that are not explicitly supported or denied by the data in the chart.
-        3. Provide an explanation on why this claim is classified as 'not enough information' by highlighting specific references to the table and title (if it exists) but referring to neither by name, instead call both the "chart" instead. Show the lack of data in the chart to support or refute the claim, making it unverifiable. In the explanation, do not refer to the supports claim. Valid justifications include:
+        3. Provide an explanation on why this claim is classified as 'not enough information'. Use specific references to the table and title (if it exists) but referring to neither by name, instead call both the "chart". Show the lack of data in the chart to support or refute the claim, making it unverifiable. In the explanation, do not refer to the supports claim. Valid justifications include:
             - The claim cannot be confirmed or disproven with the given data.
             - Additional information from other sources would be required to verify the claim.
 
