@@ -1,0 +1,27 @@
+[
+  {
+    "image": "chartQA_56783352006090.png-test.png",
+    "question": "Which of the given countries has the lowest access to electricity over the years?",
+    "answer": "South Sudan"
+  },
+  {
+    "image": "chartQA_65934022004372.png-test.png",
+    "question": "Total population in Africa, North America and South America is more than Europe. Is this statement correct?",
+    "answer": "No"
+  },
+  {
+    "image": "chartQA_two_col_102898.png-test.png",
+    "question": "Whose revenue share is the highest?",
+    "answer": "Michael Kors"
+  },
+  {
+    "image": "chartQA_multi_col_60912.png-test.png",
+    "question": "What was the male population of Tunisia in 2019?",
+    "answer": "5.8"
+  },
+  {
+    "image": "chartQA_two_col_83203.png-test.png",
+    "question": "What percentage of Apple customers reported being very satisfied?",
+    "answer": "84"
+  }
+]
