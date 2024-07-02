@@ -53,7 +53,7 @@ for pattern in patterns:
         # Encode chart figure and tokenize text
         img = Image.open(file_path)
         pixel_values = processor(img.convert("RGB"), random_padding=False, return_tensors="pt").pixel_values.to(device)
-        decoder_input_ids = processor.tokenizer(input_prompt, add_special_tokens=False, return_tensors="pt", max_length=510).input_ids.to(device)
+        decoder_input_ids = processor.tokenizer(input_prompt, add_special_tokens=False, return_tensors="pt", max_length=510, truncation=True).input_ids.to(device)
 
         outputs = model.generate(
             pixel_values,
