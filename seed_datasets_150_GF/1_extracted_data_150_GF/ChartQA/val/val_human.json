@@ -1,0 +1,27 @@
+[
+    {
+        "imgname": "6312.png",
+        "query": "Take the median of orange bars, multiply it by 3, is the result greater than the smallest value of the green bar?",
+        "label": "No"
+    },
+    {
+        "imgname": "1218.png",
+        "query": "What's the ratio of Never/Rarely and Occasionally/Frequently in Luo?",
+        "label": "0.085416667"
+    },
+    {
+        "imgname": "4502.png",
+        "query": "Is the median of green bars greater than the largest value of the gray bar?",
+        "label": "No"
+    },
+    {
+        "imgname": "9812.png",
+        "query": "What's the average of the two smallest bar??",
+        "label": "38.5"
+    },
+    {
+        "imgname": "5860.png",
+        "query": "Is the sum of Bachelors more than the sum of Women?",
+        "label": "Yes"
+    }
+]
