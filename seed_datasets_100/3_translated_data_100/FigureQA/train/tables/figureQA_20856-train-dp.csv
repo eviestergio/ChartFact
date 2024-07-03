@@ -1,1 +1,7 @@
-TITLE | title <0x0A> xaxis label | yaxis label <0x0A> Light Slate | 97 <0x0A> Cornflower | 22 <0x0A> Dark Turquoise | 55 <0x0A> Bubblinggum | 13 <0x0A> Light Green | 67 <0x0A> Saddle Brown | 67
+xaxis label,yaxis label
+Light Slate,97
+Cornflower,22
+Dark Turquoise,55
+Bubblinggum,13
+Light Green,67
+Saddle Brown,67

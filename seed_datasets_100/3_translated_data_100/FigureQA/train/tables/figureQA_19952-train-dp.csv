@@ -1,1 +1,10 @@
-TITLE | title <0x0A> y axis label | title <0x0A> Indian Red | 35 <0x0A> Dim Gray | 57 <0x0A> Dark Cyan | 22 <0x0A> Light Salmon | 55 <0x0A> Dark Khaki | 95 <0x0A> Salmon | 15 <0x0A> Indigo | 5 <0x0A> Web Maroon | 46 <0x0A> Navy Blue | 18
+y axis label,title
+Indian Red,35
+Dim Gray,57
+Dark Cyan,22
+Light Salmon,55
+Dark Khaki,95
+Salmon,15
+Indigo,5
+Web Maroon,46
+Navy Blue,18

@@ -1,1 +1,4 @@
-TITLE | title <0x0A> xaxis label | yards label <0x0A> Green Yellow | 93 <0x0A> Orchid | 72 <0x0A> Brown | 35
+xaxis label,yards label
+Green Yellow,93
+Orchid,72
+Brown,35

@@ -1,1 +1,6 @@
-TITLE | title <0x0A> xaxis_label | yaxis label <0x0A> Dark Orange | 54 <0x0A> Olive | 94 <0x0A> Firebrick | 80 <0x0A> Brown | 9 <0x0A> Gold | 71
+xaxis_label,yaxis label
+Dark Orange,54
+Olive,94
+Firebrick,80
+Brown,9
+Gold,71
