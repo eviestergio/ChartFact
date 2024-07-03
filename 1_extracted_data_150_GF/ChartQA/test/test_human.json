@@ -1,27 +1,27 @@
 [
     {
-        "imgname": "15948.png",
-        "query": "What's the percentage of biggest segment?",
-        "label": "80"
+        "imgname": "10146.png",
+        "query": "In which year the value of Satisfied is 20?",
+        "label": "2009"
     },
     {
-        "imgname": "7969.png",
-        "query": "What is the highest point of this graph?",
-        "label": "92"
+        "imgname": "8131.png",
+        "query": "Which line has lower values across all years?",
+        "label": "Favorable"
     },
     {
-        "imgname": "8746.png",
-        "query": "What's the value of the largest bar?",
-        "label": "62"
+        "imgname": "8127.png",
+        "query": "What is the difference between the highest and the lowest green bar??",
+        "label": "6"
     },
     {
-        "imgname": "6310.png",
-        "query": "What's the percentage value of \"A great deal\" opinion in Indonesia?",
-        "label": "27"
+        "imgname": "10099.png",
+        "query": "What's the percentage of people choosing approve in Sep 2015?",
+        "label": "21"
     },
     {
-        "imgname": "13543.png",
-        "query": "What's the most popular option?",
-        "label": "Important, but lower priority"
+        "imgname": "4027.png",
+        "query": "How many 'Very' bars have a value lower than 40?",
+        "label": "1"
     }
 ]

@@ -1,99 +1,92 @@
 [
     {
-        "image_index": 6160,
-        "qid": "S5",
-        "question_string": "How many years are there in the graph ?",
+        "image_index": 12070,
+        "qid": "S13",
+        "question_string": "How many bars are there on the 1st tick from the top ?",
         "answer_bbox": [
             {
-                "y": 545,
-                "x": 30,
-                "w": 27.9375,
+                "y": 102,
+                "x": 139,
+                "w": 1088,
                 "h": 14
             },
             {
-                "y": 450,
-                "x": 30,
-                "w": 27.9375,
+                "y": 88,
+                "x": 139,
+                "w": 1086,
                 "h": 14
             },
             {
-                "y": 356,
-                "x": 30,
-                "w": 27.9375,
+                "y": 74,
+                "x": 139,
+                "w": 1085,
                 "h": 14
             },
             {
-                "y": 261,
-                "x": 30,
-                "w": 27.9375,
-                "h": 14
-            },
-            {
-                "y": 166,
-                "x": 30,
-                "w": 27.9375,
-                "h": 14
-            },
-            {
-                "y": 72,
-                "x": 30,
-                "w": 27.9375,
+                "y": 60,
+                "x": 139,
+                "w": 1084,
                 "h": 14
             }
         ],
         "template": "structural",
-        "answer": 6,
-        "answer_id": 34,
+        "answer": 4,
+        "answer_id": 12,
         "type": "hbar",
-        "question_id": 24
+        "question_id": 95332
     },
     {
-        "image_index": 28543,
+        "image_index": 14337,
         "qid": "D11",
         "question_string": "What is the label or title of the X-axis ?",
         "answer_bbox": {
-            "y": 677.1525,
-            "x": 416,
-            "w": 44.015625,
-            "h": 19
+            "y": 679.8074999999999,
+            "x": 528,
+            "w": 245.25,
+            "h": 18
         },
         "template": "data_retrieval",
-        "answer": "Years",
-        "answer_id": 152,
-        "type": "vbar",
+        "answer": "Employment to population ratio(%)",
+        "answer_id": 23,
+        "type": "hbar",
         "question_id": 34
     },
     {
-        "image_index": 11066,
-        "qid": "CD8",
-        "question_string": "In how many countries, is the net energy imports in 1961 greater than the average net energy imports in 1961 taken over all countries ?",
-        "answer_bbox": [],
-        "template": "compound",
-        "answer": 1,
-        "answer_id": 16,
+        "image_index": 11287,
+        "qid": "M6",
+        "question_string": "In which country was the account balance in 2005 maximum?",
+        "answer_bbox": {
+            "y": 275,
+            "x": 55,
+            "w": 31.796875,
+            "h": 14
+        },
+        "template": "min_max",
+        "answer": "Israel",
+        "answer_id": 51519,
         "type": "hbar",
-        "question_id": 142062
+        "question_id": 136811
     },
     {
-        "image_index": 10188,
-        "qid": "CD7",
-        "question_string": "What is the difference between the highest and the lowest percentage of electricity produced by hydroelectric sources ?",
+        "image_index": 10652,
+        "qid": "A7",
+        "question_string": "What is the average balance of payments for transport services in 2007 per country ?",
         "answer_bbox": [],
-        "template": "compound",
-        "answer": 40.22,
-        "answer_id": 54992,
+        "template": "arithmetic",
+        "answer": 36.47507780295097,
+        "answer_id": 346996,
         "type": "hbar",
-        "question_id": 108982
+        "question_id": 148562
     },
     {
-        "image_index": 720,
-        "qid": "D17",
-        "question_string": "Is the export of goods and services strictly greater than the imports of goods and services over the years ?",
+        "image_index": 23271,
+        "qid": "S7",
+        "question_string": "How many different coloured bars are there ?",
         "answer_bbox": [],
-        "template": "compound",
-        "answer": "No",
-        "answer_id": 17,
-        "type": "dot",
-        "question_id": 4210
+        "template": "structural",
+        "answer": 2,
+        "answer_id": 0,
+        "type": "vbar",
+        "question_id": 95188
     }
 ]
