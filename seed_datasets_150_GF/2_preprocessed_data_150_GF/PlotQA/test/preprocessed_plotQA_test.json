@@ -1,0 +1,27 @@
+[
+  {
+    "image": "plotQA_12070-test.png",
+    "question": "How many bars are there on the 1st tick from the top ?",
+    "answer": "4"
+  },
+  {
+    "image": "plotQA_14337-test.png",
+    "question": "What is the label or title of the X-axis ?",
+    "answer": "Employment to population ratio(%)"
+  },
+  {
+    "image": "plotQA_11287-test.png",
+    "question": "In which country was the account balance in 2005 maximum?",
+    "answer": "Israel"
+  },
+  {
+    "image": "plotQA_10652-test.png",
+    "question": "What is the average balance of payments for transport services in 2007 per country ?",
+    "answer": "36.47507780295097"
+  },
+  {
+    "image": "plotQA_23271-test.png",
+    "question": "How many different coloured bars are there ?",
+    "answer": "2"
+  }
+]

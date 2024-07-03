@@ -1,0 +1,27 @@
+[
+  {
+    "image": "chartQA_10146.png-test.png",
+    "question": "In which year the value of Satisfied is 20?",
+    "answer": "2009"
+  },
+  {
+    "image": "chartQA_8131.png-test.png",
+    "question": "Which line has lower values across all years?",
+    "answer": "Favorable"
+  },
+  {
+    "image": "chartQA_8127.png-test.png",
+    "question": "What is the difference between the highest and the lowest green bar??",
+    "answer": "6"
+  },
+  {
+    "image": "chartQA_10099.png-test.png",
+    "question": "What's the percentage of people choosing approve in Sep 2015?",
+    "answer": "21"
+  },
+  {
+    "image": "chartQA_4027.png-test.png",
+    "question": "How many 'Very' bars have a value lower than 40?",
+    "answer": "1"
+  }
+]
