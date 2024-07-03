@@ -1,0 +1,150 @@
+[
+    {
+        "image_index": 31647,
+        "qid": "D7",
+        "question_string": "What is the difference between two consecutive major ticks on the Y-axis ?",
+        "answer_bbox": [],
+        "template": "data_retrieval",
+        "answer": 2.0,
+        "answer_id": 0,
+        "type": "vbar",
+        "question_id": 25
+    },
+    {
+        "image_index": 5893,
+        "qid": "M6",
+        "question_string": "In which country was the value added by industrial sector maximum?",
+        "answer_bbox": [],
+        "template": "min_max",
+        "answer": "Costa Rica",
+        "answer_id": 54209,
+        "type": "hbar",
+        "question_id": 99577
+    },
+    {
+        "image_index": 11868,
+        "qid": "D8",
+        "question_string": "Are the values on the major ticks of X-axis written in scientific E-notation ?",
+        "answer_bbox": [
+            {
+                "y": 522,
+                "x": 27,
+                "w": 24.4375,
+                "h": 14
+            },
+            {
+                "y": 376,
+                "x": 27,
+                "w": 24.4375,
+                "h": 14
+            },
+            {
+                "y": 229,
+                "x": 27,
+                "w": 24.4375,
+                "h": 14
+            },
+            {
+                "y": 83,
+                "x": 27,
+                "w": 24.4375,
+                "h": 14
+            }
+        ],
+        "template": "data_retrieval",
+        "answer": "No",
+        "answer_id": 17,
+        "type": "hbar",
+        "question_id": 95219
+    },
+    {
+        "image_index": 15718,
+        "qid": "D8",
+        "question_string": "Are the values on the major ticks of X-axis written in scientific E-notation ?",
+        "answer_bbox": [
+            {
+                "y": 612,
+                "x": 39,
+                "w": 46.125,
+                "h": 14
+            },
+            {
+                "y": 612,
+                "x": 182,
+                "w": 46.125,
+                "h": 14
+            },
+            {
+                "y": 612,
+                "x": 326,
+                "w": 46.125,
+                "h": 14
+            },
+            {
+                "y": 612,
+                "x": 469,
+                "w": 46.125,
+                "h": 14
+            },
+            {
+                "y": 612,
+                "x": 613,
+                "w": 46.125,
+                "h": 14
+            },
+            {
+                "y": 612,
+                "x": 756,
+                "w": 46.125,
+                "h": 14
+            },
+            {
+                "y": 612,
+                "x": 900,
+                "w": 46.125,
+                "h": 14
+            }
+        ],
+        "template": "data_retrieval",
+        "answer": "Yes",
+        "answer_id": 1,
+        "type": "hbar",
+        "question_id": 95219
+    },
+    {
+        "image_index": 15389,
+        "qid": "S6",
+        "question_string": "How many bars are there ?",
+        "answer_bbox": [
+            {
+                "y": 546,
+                "x": 98,
+                "w": 572,
+                "h": 24
+            },
+            {
+                "y": 384,
+                "x": 98,
+                "w": 363,
+                "h": 24
+            },
+            {
+                "y": 222,
+                "x": 98,
+                "w": 165,
+                "h": 24
+            },
+            {
+                "y": 60,
+                "x": 98,
+                "w": 861,
+                "h": 24
+            }
+        ],
+        "template": "structural",
+        "answer": 4,
+        "answer_id": 12,
+        "type": "hbar",
+        "question_id": 95216
+    }
+]
