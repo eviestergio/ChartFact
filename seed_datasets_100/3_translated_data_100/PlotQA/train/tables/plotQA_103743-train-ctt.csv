@@ -1,1 +1,3 @@
-TITLE | Total water productivity of Afghanistan &&& Group | Year | Per cubic meter of total freshwater withdrawal(constant 2005 US$ GDP) &&& Water productivity | 0 | 0.2539665210346 &&& Water productivity | 1 | 0.6253529634977559
+Group,Year,Per cubic meter of total freshwater withdrawal(constant 2005 US$ GDP)
+Water productivity,0,0.2539665210346
+Water productivity,1,0.6253529634977559

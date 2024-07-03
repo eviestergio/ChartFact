@@ -1,1 +1,7 @@
-TITLE | Percentage of firms either registered or unregistered in different countries &&& Group | % of firms | Firms &&& Macedonia | 73.9 | Competing against unregistered firms &&& Macedonia | 99.2 | Formally registered &&& Philippines | 37.5 | Competing against unregistered firms &&& Philippines | 97.5 | Formally registered &&& Tonga | 86.8 | Competing against unregistered firms &&& Tonga | 93.5 | Formally registered
+Group,% of firms,Firms
+Macedonia,73.9,Competing against unregistered firms
+Macedonia,99.2,Formally registered
+Philippines,37.5,Competing against unregistered firms
+Philippines,97.5,Formally registered
+Tonga,86.8,Competing against unregistered firms
+Tonga,93.5,Formally registered

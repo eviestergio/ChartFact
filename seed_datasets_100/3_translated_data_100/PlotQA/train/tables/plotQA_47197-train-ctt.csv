@@ -1,1 +1,10 @@
-TITLE | Educated male labor force in different countries in the year 1991 &&& Group | Educated males (% of male labor force) | Level of education &&& Austria | 25.39999961853031 | Primary education &&& Austria | 67.5 | Secondary education &&& Austria | 7.099999904632571 | Tertiary education &&& Costa Rica | 51.5 | Primary education &&& Costa Rica | 14.5 | Secondary education &&& Costa Rica | 6.800000190734861 | Tertiary education &&& Uganda | 56.5999984741211 | Primary education &&& Uganda | 16.2999992370605 | Secondary education &&& Uganda | 0.599999904632571 | Tertiary education
+Group,Educated males (% of male labor force),Level of education
+Austria,25.39999961853031,Primary education
+Austria,67.5,Secondary education
+Austria,7.099999904632571,Tertiary education
+Costa Rica,51.5,Primary education
+Costa Rica,14.5,Secondary education
+Costa Rica,6.800000190734861,Tertiary education
+Uganda,56.5999984741211,Primary education
+Uganda,16.2999992370605,Secondary education
+Uganda,0.599999904632571,Tertiary education

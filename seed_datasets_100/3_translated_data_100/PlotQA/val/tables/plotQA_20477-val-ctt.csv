@@ -1,1 +1,17 @@
-TITLE | Pupil-teacher ratio in primary education &&& Group | Years | Pupil-teacher ratio(headcount basis) &&& Angola | 0 | 32.223 &&& Angola | 1 | 31.96599 &&& Angola | 2 | 31.32729 &&& Angola | 3 | 23.68647 &&& Jordan | 0 | 14.04629 &&& Jordan | 1 | 14.1045 &&& Jordan | 2 | 14.21575 &&& Jordan | 3 | 15.69623 &&& Malta | 0 | 24.45004 &&& Malta | 1 | 23.25915 &&& Malta | 2 | 23.68691 &&& Malta | 3 | 20.86577 &&& United States | 0 | 31.76099 &&& United States | 1 | 29.86804 &&& United States | 2 | 33.60921 &&& United States | 3 | 41.66698
+Group,Years,Pupil-teacher ratio(headcount basis)
+Angola,0,32.223
+Angola,1,31.96599
+Angola,2,31.32729
+Angola,3,23.68647
+Jordan,0,14.04629
+Jordan,1,14.1045
+Jordan,2,14.21575
+Jordan,3,15.69623
+Malta,0,24.45004
+Malta,1,23.25915
+Malta,2,23.68691
+Malta,3,20.86577
+United States,0,31.76099
+United States,1,29.86804
+United States,2,33.60921
+United States,3,41.66698

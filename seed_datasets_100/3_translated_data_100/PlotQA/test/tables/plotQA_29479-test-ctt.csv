@@ -1,1 +1,21 @@
-"TITLE | Neonatal mortality rate in different countries &&& Group | Years | Mortality rate(per 1,000 live births) &&& Azerbaijan | 1995 | 37.3 &&& Azerbaijan | 1996 | 37.0 &&& Azerbaijan | 1997 | 36.5 &&& Azerbaijan | 1998 | 35.8 &&& Azerbaijan | 1999 | 34.6 &&& Haiti | 1995 | 33.5 &&& Haiti | 1996 | 32.8 &&& Haiti | 1997 | 22.1 &&& Haiti | 1998 | 31.4 &&& Haiti | 1999 | 30.0 &&& Israel | 1995 | 4.5 &&& Israel | 1996 | 4.2 &&& Israel | 1997 | 4.0 &&& Israel | 1998 | 3.8 &&& Israel | 1999 | 3.7 &&& Panama | 1995 | 15.9 &&& Panama | 1996 | 15.7 &&& Panama | 1997 | 15.5 &&& Panama | 1998 | 15.3 &&& Panama | 1999 | 15.0"
+Group,Years,"Mortality rate(per 1,000 live births)"
+Azerbaijan,1995,37.3
+Azerbaijan,1996,37.0
+Azerbaijan,1997,36.5
+Azerbaijan,1998,35.8
+Azerbaijan,1999,34.6
+Haiti,1995,33.5
+Haiti,1996,32.8
+Haiti,1997,22.1
+Haiti,1998,31.4
+Haiti,1999,30.0
+Israel,1995,4.5
+Israel,1996,4.2
+Israel,1997,4.0
+Israel,1998,3.8
+Israel,1999,3.7
+Panama,1995,15.9
+Panama,1996,15.7
+Panama,1997,15.5
+Panama,1998,15.3
+Panama,1999,"15.0"""

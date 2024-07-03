@@ -1,1 +1,21 @@
-TITLE | Total labor force participation rate for ages 60+ &&& Group | Years | Total Labor Force (in %) &&& Low & middle income | 2001 | 69.9374498546221 &&& Low & middle income | 2002 | 69.8193805251366 &&& Low & middle income | 2003 | 69.6208315062901 &&& Low & middle income | 2004 | 69.5596324703516 &&& Low & middle income | 2005 | 69.42966956298821 &&& North America | 2001 | 75.88178192859951 &&& North America | 2002 | 75.5706864501363 &&& North America | 2003 | 74.9683940784617 &&& North America | 2004 | 74.7484528898535 &&& North America | 2005 | 74.6232729874978 &&& Other small states | 2001 | 66.599998474121 &&& Other small states | 2002 | 66.71999969482422 &&& Other small states | 2003 | 66.81099998474121 &&& Other small states | 2004 | 66.8000030517578 &&& Other small states | 2005 | 66.8000030517578 &&& Kazakhstan | 2001 | 76.1999969482422 &&& Kazakhstan | 2002 | 76.4000015258789 &&& Kazakhstan | 2003 | 76.4000015258789 &&& Kazakhstan | 2004 | 76.099998474121 &&& Kazakhstan | 2005 | 76.4000015258789
+Group,Years,Total Labor Force (in %)
+Low & middle income,2001,69.9374498546221
+Low & middle income,2002,69.8193805251366
+Low & middle income,2003,69.6208315062901
+Low & middle income,2004,69.5596324703516
+Low & middle income,2005,69.42966956298821
+North America,2001,75.88178192859951
+North America,2002,75.5706864501363
+North America,2003,74.9683940784617
+North America,2004,74.7484528898535
+North America,2005,74.6232729874978
+Other small states,2001,66.599998474121
+Other small states,2002,66.71999969482422
+Other small states,2003,66.81099998474122
+Other small states,2004,66.8000030517578
+Other small states,2005,66.8000030517578
+Kazakhstan,2001,76.1999969482422
+Kazakhstan,2002,76.4000015258789
+Kazakhstan,2003,76.4000015258789
+Kazakhstan,2004,76.099998474121
+Kazakhstan,2005,76.4000015258789

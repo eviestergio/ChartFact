@@ -1,1 +1,19 @@
-TITLE | Official Aid received by a country &&& Group | Aid received (constant 2012 US$) | Years &&& East Asia (all income levels) | 13364470000.0 | 1995 &&& East Asia (all income levels) | 11497470000.0 | 1996 &&& East Asia (all income levels) | 10971520000.0 | 1997 &&& East Asia (all income levels) | 13732890000.0 | 1998 &&& East Asia (all income levels) | 14649960000.0 | 1999 &&& East Asia (all income levels) | 13586000000.0 | 2000 &&& Iran | 2080710000.0 | 1995 &&& Iran | 188840000.0 | 1996 &&& Iran | 2675180000.0 | 1997 &&& Iran | 2160470000.0 | 1998 &&& Iran | 2231470000.0 | 1999 &&& Iran | 186410000.0 | 2000 &&& St. Kitts and Nevis | 4660000.0 | 1995 &&& St. Kitts and Nevis | 4660000.0 | 1996 &&& St. Kitts and Nevis | 4570000.0 | 1997 &&& St. Kitts and Nevis | 4570000.0 | 1998 &&& St. Kitts and Nevis | 4200000.0 | 1999 &&& St. Kitts and Nevis | 4620000.0 | 2000
+Group,Aid received (constant 2012 US$),Years
+East Asia (all income levels),13364470000.0,1995
+East Asia (all income levels),11497470000.0,1996
+East Asia (all income levels),10971520000.0,1997
+East Asia (all income levels),13732890000.0,1998
+East Asia (all income levels),14649960000.0,1999
+East Asia (all income levels),13586000000.0,2000
+Iran,2080710000.0,1995
+Iran,188840000.0,1996
+Iran,2675180000.0,1997
+Iran,2160470000.0,1998
+Iran,2231470000.0,1999
+Iran,186410000.0,2000
+St. Kitts and Nevis,4660000.0,1995
+St. Kitts and Nevis,4660000.0,1996
+St. Kitts and Nevis,4570000.0,1997
+St. Kitts and Nevis,4570000.0,1998
+St. Kitts and Nevis,4200000.0,1999
+St. Kitts and Nevis,4620000.0,2000

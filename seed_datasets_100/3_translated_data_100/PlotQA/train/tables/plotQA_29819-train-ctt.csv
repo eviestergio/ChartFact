@@ -1,1 +1,13 @@
-TITLE | Total earnings of Bahamas by trading goods and services &&& Group | Total Trade (current US$) | Year &&& Goods | -660548135.0 | 2009 &&& Goods | -665430079.0 | 2010 &&& Goods | -766700238.0 | 2011 &&& Goods | -1262670022.0 | 2012 &&& Goods | -1473073384.0 | 2013 &&& Goods | -1475173005.0 | 2014 &&& Services | -5983199526.0 | 2009 &&& Services | -626753005.0 | 2010 &&& Services | -1038260000.0 | 2011 &&& Services | -15052020000.0 | 2012 &&& Services | -11182020000.0 | 2013 &&& Services | -12552020000.0 | 2014
+Group,Total Trade (current US$),Year
+Goods,-660548135.0,2009
+Goods,-665430079.0,2010
+Goods,-766700238.0,2011
+Goods,-1262670022.0,2012
+Goods,-1473073384.0,2013
+Goods,-1475173005.0,2014
+Services,-5983199526.0,2009
+Services,-626753005.0,2010
+Services,-1038260000.0,2011
+Services,-15052020000.0,2012
+Services,-11182020000.0,2013
+Services,-12552020000.0,2014

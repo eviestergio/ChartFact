@@ -1,1 +1,7 @@
-TITLE | Percentage of new entrants in the last grade of primary education in different countries &&& Group | Primary completion rate (% of total enrollments) | Gender &&& Botswana | 84.53476 | Female entrants &&& Botswana | 62.54737 | Male entrants &&& Hungary | 94.64327 | Female entrants &&& Hungary | 94.11216 | Male entrants &&& Sweden | 94.01664 | Female entrants &&& Sweden | 92.7128 | Male entrants
+Group,Primary completion rate (% of total enrollments),Gender
+Botswana,84.53476,Female entrants
+Botswana,62.54737,Male entrants
+Hungary,94.64327,Female entrants
+Hungary,94.11216,Male entrants
+Sweden,94.01664,Female entrants
+Sweden,92.7128,Male entrants

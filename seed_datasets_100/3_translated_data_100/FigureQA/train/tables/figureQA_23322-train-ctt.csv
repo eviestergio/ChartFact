@@ -1,1 +1,4 @@
-TITLE | title &&& Entity | Year | Medium Blue | Medium Aqua | Red &&& Dark Orange | 0 | 0 | 31 | 48 &&& Medium Aqua | 0 | 0 | 32 | 8 &&& Red | 0 | 0 | 29 | 10
+Entity,Year,Medium Blue,Medium Aqua,Red
+Dark Orange,0,0,31,48
+Medium Aqua,0,0,32,8
+Red,0,0,29,10

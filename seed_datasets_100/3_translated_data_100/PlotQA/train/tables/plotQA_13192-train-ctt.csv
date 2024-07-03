@@ -1,1 +1,13 @@
-TITLE | Total reserves (excluding gold) of a country &&& Group | Years | Total reserves (current US$) &&& Equatorial Guinea | 0 | 3184427500.0 &&& Equatorial Guinea | 1 | 2376112000.0 &&& Equatorial Guinea | 2 | 30378644500.0 &&& Equatorial Guinea | 3 | 4373374000.0 &&& Nicaragua | 0 | 1561579193.6 &&& Nicaragua | 1 | 1759326123.4 &&& Nicaragua | 2 | 1842744749.782 &&& Nicaragua | 3 | 1842744050.4446 &&& Norway | 0 | 48896711162.5271 &&& Norway | 1 | 52867287527.355 &&& Norway | 2 | 49394412522.495 &&& Norway | 3 | 51926510352.5232
+Group,Years,Total reserves (current US$)
+Equatorial Guinea,0,3184427500.0
+Equatorial Guinea,1,2376112000.0
+Equatorial Guinea,2,30378644500.0
+Equatorial Guinea,3,4373374000.0
+Nicaragua,0,1561579193.6
+Nicaragua,1,1759326123.4
+Nicaragua,2,1842744749.782
+Nicaragua,3,1842744050.4446
+Norway,0,48896711162.5271
+Norway,1,52867287527.355
+Norway,2,49394412522.495
+Norway,3,51926510352.5232

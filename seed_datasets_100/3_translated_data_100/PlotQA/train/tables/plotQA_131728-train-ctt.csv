@@ -1,1 +1,13 @@
-TITLE | Long-term male unemployment in a country &&& Group | Country | Unemployment (% of male unemployment) &&& 1980 | Australia | 19.7000007629395 &&& 1980 | Canada | 5.400000095367429 &&& 1980 | Japan | 16.0 &&& 1980 | United States | 5.199999809265138 &&& 1981 | Australia | 21.2999992370605 &&& 1981 | Canada | 6.5 &&& 1981 | Japan | 14.3999996185303 &&& 1981 | United States | 8.199999809265138 &&& 1982 | Australia | 20.1000003814697 &&& 1982 | Canada | 7.300000190734861 &&& 1982 | Japan | 13.1999998092651 &&& 1982 | United States | 9.19999980926514
+Group,Country,Unemployment (% of male unemployment)
+1980,Australia,19.7000007629395
+1980,Canada,5.400000095367429
+1980,Japan,16.0
+1980,United States,5.199999809265138
+1981,Australia,21.2999992370605
+1981,Canada,6.5
+1981,Japan,14.3999996185303
+1981,United States,8.199999809265138
+1982,Australia,20.1000003814697
+1982,Canada,7.300000190734861
+1982,Japan,13.1999998092651
+1982,United States,9.19999980926514

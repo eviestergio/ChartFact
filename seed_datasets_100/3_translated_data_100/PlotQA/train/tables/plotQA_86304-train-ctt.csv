@@ -1,1 +1,22 @@
-TITLE | Number of new businesses registered in a country &&& Group | Years | Number of registrations &&& Cyprus | 0 | 20351.0 &&& Cyprus | 1 | 29052.0 &&& Cyprus | 2 | 24459.0 &&& Cyprus | 3 | 16219.0 &&& Cyprus | 4 | 19325.0 &&& Cyprus | 5 | 19659.0 &&& Cyprus | 6 | 18134.0 &&& Korea (Republic) | 0 | 50291.0 &&& Korea (Republic) | 1 | 53144.0 &&& Korea (Republic) | 2 | 50572.0 &&& Korea (Republic) | 3 | 56359.0 &&& Korea (Republic) | 4 | 60467.0 &&& Korea (Republic) | 5 | 65908.0 &&& Korea (Republic) | 6 | 73923.0 &&& Philippines | 0 | 13359.0 &&& Philippines | 1 | 12286.0 &&& Philippines | 2 | 13427.0 &&& Philippines | 3 | 11500.0 &&& Philippines | 4 | 11766.0 &&& Philippines | 5 | 12532.0 &&& Philippines | 6 | 16115.0
+Group,Years,Number of registrations
+Cyprus,0,20351.0
+Cyprus,1,29052.0
+Cyprus,2,24459.0
+Cyprus,3,16219.0
+Cyprus,4,19325.0
+Cyprus,5,19659.0
+Cyprus,6,18134.0
+Korea (Republic),0,50291.0
+Korea (Republic),1,53144.0
+Korea (Republic),2,50572.0
+Korea (Republic),3,56359.0
+Korea (Republic),4,60467.0
+Korea (Republic),5,65908.0
+Korea (Republic),6,73923.0
+Philippines,0,13359.0
+Philippines,1,12286.0
+Philippines,2,13427.0
+Philippines,3,11500.0
+Philippines,4,11766.0
+Philippines,5,12532.0
+Philippines,6,16115.0

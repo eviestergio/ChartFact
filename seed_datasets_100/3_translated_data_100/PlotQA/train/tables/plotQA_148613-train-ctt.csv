@@ -1,1 +1,3 @@
-TITLE | Value lost due to electrical outages in Niger &&& Group | Year | Value (as % of sales) &&& Value lost due to electrical outages | 2006 | 2.5 &&& Value lost due to electrical outages | 2009 | 1.9
+Group,Year,Value (as % of sales)
+Value lost due to electrical outages,2006,2.5
+Value lost due to electrical outages,2009,1.9

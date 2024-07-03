@@ -1,1 +1,32 @@
-TITLE | Grants received by the government including technical cooeration &&& Group | Years | Grants(current US$) &&& Cayman Islands | 0 | 70000.0 &&& Cayman Islands | 1 | 300000.0 &&& Cayman Islands | 2 | 80000.0 &&& Cayman Islands | 3 | 250000.0 &&& Cayman Islands | 4 | 250000.0 &&& Cayman Islands | 5 | 250000.0 &&& Cayman Islands | 6 | 250000.0 &&& Cote d'Ivoire | 0 | 62190000.0 &&& Cote d'Ivoire | 1 | 55740000.0 &&& Cote d'Ivoire | 2 | 58560000.0 &&& Cote d'Ivoire | 3 | 43200000.0 &&& Cote d'Ivoire | 4 | 86830000.0 &&& Cote d'Ivoire | 5 | 79130000.0 &&& Cote d'Ivoire | 6 | 64160000.0 &&& Cote d'Ivoire | 7 | 99150000.0 &&& French Polynesia | 0 | 19450000.0 &&& French Polynesia | 1 | 18710000.0 &&& French Polynesia | 2 | 14560000.0 &&& French Polynesia | 3 | 16560000.0 &&& French Polynesia | 4 | 20830000.0 &&& French Polynesia | 5 | 20480000.0 &&& French Polynesia | 6 | 29320000.0 &&& French Polynesia | 7 | 25970000.0 &&& Swaziland | 0 | 103480000.0 &&& Swaziland | 1 | 126620000.0 &&& Swaziland | 2 | 114300000.0 &&& Swaziland | 3 | 135360000.0 &&& Swaziland | 4 | 16770000.0 &&& Swaziland | 5 | 22990000.0 &&& Swaziland | 6 | 25410000.0 &&&& Swaziland | 7 | 12620000.0
+Group,Years,Grants(current US$)
+Cayman Islands,0,70000.0
+Cayman Islands,1,300000.0
+Cayman Islands,2,80000.0
+Cayman Islands,3,250000.0
+Cayman Islands,4,250000.0
+Cayman Islands,5,250000.0
+Cayman Islands,6,250000.0
+Cote d'Ivoire,0,62190000.0
+Cote d'Ivoire,1,55740000.0
+Cote d'Ivoire,2,58560000.0
+Cote d'Ivoire,3,43200000.0
+Cote d'Ivoire,4,86830000.0
+Cote d'Ivoire,5,79130000.0
+Cote d'Ivoire,6,64160000.0
+Cote d'Ivoire,7,99150000.0
+French Polynesia,0,19450000.0
+French Polynesia,1,18710000.0
+French Polynesia,2,14560000.0
+French Polynesia,3,16560000.0
+French Polynesia,4,20830000.0
+French Polynesia,5,20480000.0
+French Polynesia,6,29320000.0
+French Polynesia,7,25970000.0
+Swaziland,0,103480000.0
+Swaziland,1,126620000.0
+Swaziland,2,114300000.0
+Swaziland,3,135360000.0
+Swaziland,4,16770000.0
+Swaziland,5,22990000.0
+Swaziland,6,25410000.0
+& Swaziland,7,12620000.0
