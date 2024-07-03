@@ -1,0 +1,27 @@
+[
+  {
+    "image": "plotQA_31647-val.png",
+    "question": "What is the difference between two consecutive major ticks on the Y-axis ?",
+    "answer": "2.0"
+  },
+  {
+    "image": "plotQA_5893-val.png",
+    "question": "In which country was the value added by industrial sector maximum?",
+    "answer": "Costa Rica"
+  },
+  {
+    "image": "plotQA_11868-val.png",
+    "question": "Are the values on the major ticks of X-axis written in scientific E-notation ?",
+    "answer": "No"
+  },
+  {
+    "image": "plotQA_15718-val.png",
+    "question": "Are the values on the major ticks of X-axis written in scientific E-notation ?",
+    "answer": "Yes"
+  },
+  {
+    "image": "plotQA_15389-val.png",
+    "question": "How many bars are there ?",
+    "answer": "4"
+  }
+]
