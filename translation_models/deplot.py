@@ -14,11 +14,11 @@ model = Pix2StructForConditionalGeneration.from_pretrained(model_name).to(device
 processor = Pix2StructProcessor.from_pretrained(model_name)
 print("Model and processor loaded successfully")
 
-# Paths to FigureQA and PlotQA datasets
-# figureqa_pattern = '../seed_datasets_100-2/FigureQA/**/*.png'
-# plotqa_pattern = '../seed_datasets_100-2/PlotQA/**/*.png'
-figureqa_pattern = os.path.expanduser('~/seed_datasets-100-2/FigureQA/**/*.png')
-plotqa_pattern = os.path.expanduser('~/seed_datasets-100-2/PlotQA/**/*.png')
+# Paths to FigureQA and PlotQA datasets 
+figureqa_pattern = '/Users/angwang/ChartFC/seed_datasets_150_GF/3_translated_data_150_GF/FigureQA/**/*.png'
+plotqa_pattern = '/Users/angwang/ChartFC/seed_datasets_150_GF/3_translated_data_150_GF/PlotQA/**/*.png'
+# figureqa_pattern = os.path.expanduser('../seed_datasets_150_GF/3_translated_data_150_GF/FigureQA/**/*.png')
+# plotqa_pattern = os.path.expanduser('../seed_datasets_150_GF/3_translated_data_150_GF/PlotQA/**/*.png')
 
 print(f"FigureQA pattern: {figureqa_pattern}")
 print(f"PlotQA pattern: {plotqa_pattern}")
