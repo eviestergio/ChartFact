@@ -147,7 +147,17 @@ def process_dataset_and_rename_images(folder_path, preprocess_func, prefix, post
     rename_images_with_postfix(folder_path, postfix)
     preprocessed_data = process_dataset_in_folder(folder_path, preprocess_func, postfix)
     
-    return preprocessed_data, os.path.join(folder_path, "qa_pairs.json") # return path to original qa_pairs.json for deletion later
+    return preprocessed_data
+
+# Remove old qa_pairs.json, qa_pairs-1.json, and qa_pairs-2.json files
+def remove_old_json_files(base_path):
+    for root, dirs, files in os.walk(base_path):
+        for filename in files:
+            if filename.startswith('qa_pairs') and filename.endswith('.json'):
+                file_path = os.path.join(root, filename)
+                os.remove(file_path)
+                print(f"Removed old JSON file: {file_path}")
+
 
 # combine qa_pairs.json files in figureQA if there are entries
 def any_json_files_exist(folder_path):
@@ -156,7 +166,7 @@ def any_json_files_exist(folder_path):
 def main():
     # folder paths for each dataset
     current_folder = os.path.dirname(os.path.abspath(__file__))
-    base_path = os.path.join(current_folder, "../seed_datasets-100-2")
+    base_path = os.path.join(current_folder, "../seed_datasets_150_GF/2_preprocessed_data_150_GF")
 
     chartQA_train_folder_path = os.path.join(base_path, "ChartQA/train")
     chartQA_test_folder_path = os.path.join(base_path, "ChartQA/test")
@@ -214,15 +224,15 @@ def main():
     rename_chartQA_tables(chartQA_val_folder_path, "chartQA", "val")
 
     # process each dataset and rename images with postfixes where necessary
-    preprocessed_chartQA_train, old_chartQA_train_json = process_dataset_and_rename_images(chartQA_train_folder_path, preprocess_chartQA, "chartQA", "train")
-    preprocessed_chartQA_test, old_chartQA_test_json = process_dataset_and_rename_images(chartQA_test_folder_path, preprocess_chartQA, "chartQA", "test")
-    preprocessed_chartQA_val, old_chartQA_val_json = process_dataset_and_rename_images(chartQA_val_folder_path, preprocess_chartQA, "chartQA", "val")
-    preprocessed_figureQA_train, old_figureQA_train_json = process_dataset_and_rename_images(figureQA_train_folder_path, preprocess_figureQA, "figureQA", "train")
-    preprocessed_figureQA_test, old_figureQA_test_json = process_dataset_and_rename_images(figureQA_test_folder_path, preprocess_figureQA, "figureQA", "test")
-    preprocessed_figureQA_val, old_figureQA_val_json = process_dataset_and_rename_images(figureQA_val_folder_path, preprocess_figureQA, "figureQA", "val")
-    preprocessed_plotQA_train, old_plotQA_train_json = process_dataset_and_rename_images(plotQA_train_folder_path, preprocess_plotQA, "plotQA", "train")
-    preprocessed_plotQA_test, old_plotQA_test_json = process_dataset_and_rename_images(plotQA_test_folder_path, preprocess_plotQA, "plotQA", "test")
-    preprocessed_plotQA_val, old_plotQA_val_json = process_dataset_and_rename_images(plotQA_val_folder_path, preprocess_plotQA, "plotQA", "val")
+    preprocessed_chartQA_train = process_dataset_and_rename_images(chartQA_train_folder_path, preprocess_chartQA, "chartQA", "train")
+    preprocessed_chartQA_test = process_dataset_and_rename_images(chartQA_test_folder_path, preprocess_chartQA, "chartQA", "test")
+    preprocessed_chartQA_val = process_dataset_and_rename_images(chartQA_val_folder_path, preprocess_chartQA, "chartQA", "val")
+    preprocessed_figureQA_train = process_dataset_and_rename_images(figureQA_train_folder_path, preprocess_figureQA, "figureQA", "train")
+    preprocessed_figureQA_test = process_dataset_and_rename_images(figureQA_test_folder_path, preprocess_figureQA, "figureQA", "test")
+    preprocessed_figureQA_val = process_dataset_and_rename_images(figureQA_val_folder_path, preprocess_figureQA, "figureQA", "val")
+    preprocessed_plotQA_train = process_dataset_and_rename_images(plotQA_train_folder_path, preprocess_plotQA, "plotQA", "train")
+    preprocessed_plotQA_test = process_dataset_and_rename_images(plotQA_test_folder_path, preprocess_plotQA, "plotQA", "test")
+    preprocessed_plotQA_val = process_dataset_and_rename_images(plotQA_val_folder_path, preprocess_plotQA, "plotQA", "val")
 
     # save preprocessed datasets to new JSON files
     output_chartQA_train_filename = os.path.join(chartQA_train_folder_path, "preprocessed_chartQA_train.json")
@@ -262,18 +272,8 @@ def main():
     with open(output_plotQA_val_filename, 'w') as plotQA_val_output_file:
         json.dump(preprocessed_plotQA_val, plotQA_val_output_file, indent=2)
 
-    # Remove old qa_pairs.json files
-    os.remove(old_chartQA_train_json)
-    os.remove(old_chartQA_test_json)
-    os.remove(old_chartQA_val_json)
-    os.remove(old_figureQA_train_json)
-    os.remove(old_figureQA_test_json)
-    os.remove(old_figureQA_val_json)
-    os.remove(old_plotQA_train_json)
-    os.remove(old_plotQA_test_json)
-    os.remove(old_plotQA_val_json)
-
-    print("The preprocessed datasets have been saved.")
+    # Remove old qa_pairs(-1/2).json files
+    remove_old_json_files(base_path)
 
 if __name__ == "__main__":
     main()
