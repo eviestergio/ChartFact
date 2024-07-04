@@ -1,13 +1,16 @@
 # Test final 100K data extraction script on the smaller 300 sample
-# Creates 244 data entries
+# Create 244 data entries
+# Grab all from ChartQA
+# Grab only from train FigureQA 
+# Specify no number of duplicates
 
 import os
 import json
 import shutil
 
 # Define the paths for the source and destination
-source_folder = '/Users/angwang/ChartFC/random_sample_300'  # Absolute path to the source folder
-destination_folder = 'sample-seed_datasets-new'  # Updated destination folder name
+source_folder = '/Users/angwang/ChartFC/seed_datasets_300/1_extracted_data_300'  # Absolute path to the source folder
+destination_folder = '/seed_datasets_244/1_extracted_data_244'  # Updated destination folder name
 repository_path = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))  # Get one level up from the script's directory
 
 # Define the full paths
