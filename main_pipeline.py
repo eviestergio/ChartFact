@@ -55,7 +55,7 @@ def main():
     preprocessing_script = 'data_preprocessing/file-data_standardization.py'
     translation_script = 'data_translation/deplot.py' #default translation model: DePlot, not Chart-to-Table
     formatting_script = 'data_translation/deplot_CSV_format.py'
-    prompting_script = 'openai_prompting/main.py'
+    prompting_script = 'data_prompting/main.py'
     final_script = 'final_dataset_creation/combine_datasets.py'
 
     # define steps
