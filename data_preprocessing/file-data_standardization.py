@@ -1,8 +1,39 @@
 import os
 import json
 import shutil
+import sys
+
+def preprocess_chartQA(entry, postfix): 
+    ''' Preprocess a ChartQA entry by renaming image keys and converting answers to strings. '''
+    return {
+        "image": f"chartQA_{entry['imgname'].split('.')[0]}-{postfix}.png",
+        "question": entry["query"],
+        "answer": str(entry["label"])
+    }
+
+def preprocess_figureQA(entry, postfix):
+    ''' Preprocess a FigureQA entry by extracting relevant information, renaming image keys, and converting binary answers. '''
+    binary_answer = entry["answer"]
+    if binary_answer == 0:
+        answer_str = "No"
+    elif binary_answer == 1:
+        answer_str = "Yes"
+    return {
+        "image": f"figureQA_{entry['image_index']}-{postfix}.png",
+        "question": entry["question_string"],
+        "answer": answer_str
+    }
+
+def preprocess_plotQA(entry, postfix):
+    ''' Preprocess a PlotQA entry by extracting relevant information, renaming image keys, and converting answers to strings. '''
+    return {
+        "image": f"plotQA_{entry['image_index']}-{postfix}.png",
+        "question": entry["question_string"],
+        "answer": str(entry["answer"])
+    }
 
 def remove_figureQA_syntax(folder_path):
+    ''' Remove unnecessary syntax from FigureQA JSON files. '''
     for filename in os.listdir(folder_path):
         if filename.endswith(".json"):
             file_path = os.path.join(folder_path, filename)
@@ -18,6 +49,7 @@ def remove_figureQA_syntax(folder_path):
                 file.write(data)
 
 def rename_images_with_number_prefix(folder_path, prefix):
+    ''' Rename images in given folder with a number prefix. '''
     png_folder_path = os.path.join(folder_path, f"png-{prefix}")
 
     if not os.path.exists(png_folder_path):
@@ -31,6 +63,7 @@ def rename_images_with_number_prefix(folder_path, prefix):
             os.rename(src, dst)
 
 def combine_png_folders(dataset_folder_path):
+    ''' Combine multiple PNG folders into a single folder. '''
     png_folder_path = os.path.join(dataset_folder_path, 'png')
     if not os.path.exists(png_folder_path):
         os.mkdir(png_folder_path)
@@ -50,6 +83,7 @@ def combine_png_folders(dataset_folder_path):
         shutil.rmtree(folder_to_delete)
 
 def preprocess_figureQA_json_files(file_path, prefix):
+    ''' Preprocess FigureQA JSON files by adding a prefix to image indices. '''
     with open(file_path, 'r') as file:
         data = json.load(file)
 
@@ -61,6 +95,7 @@ def preprocess_figureQA_json_files(file_path, prefix):
         json.dump(data, file, indent=2)
     
 def combine_json_files(folder_path):
+    ''' Combine multiple JSON files into a single JSON file. '''
     json_files = [f for f in os.listdir(folder_path) if f.endswith('.json') and f != 'qa_pairs.json']
     combined_data = []
     
@@ -76,6 +111,7 @@ def combine_json_files(folder_path):
         json.dump(combined_data, combined_json_file, indent=2)
         
 def rename_chartQA_tables(folder_path, prefix, postfix):
+    ''' Rename ChartQA table files by adding prefixes and postfixes to match image names. '''
     tables_folder_path = os.path.join(folder_path, 'tables')
     if not os.path.exists(tables_folder_path):
         return
@@ -86,35 +122,15 @@ def rename_chartQA_tables(folder_path, prefix, postfix):
             dst = os.path.join(tables_folder_path, f"{prefix}_{filename.split('.')[0]}-{postfix}.csv")
             os.rename(src, dst)
 
-''' Main dataset preprocessing '''
-def preprocess_chartQA(entry, postfix): 
-    return {
-        "image": f"chartQA_{entry['imgname']}-{postfix}.png",
-        "question": entry["query"],
-        "answer": str(entry["label"])
-    }
+def copy_entire_folder(src, dst):
+    ''' Copy the entire contents of source folder to destination folder. '''
+    if os.path.exists(dst):
+        shutil.rmtree(dst)
+    shutil.copytree(src, dst)
+    print(f"Copied {src} to {dst}")
 
-def preprocess_figureQA(entry, postfix):
-    binary_answer = entry["answer"]
-    if binary_answer == 0:
-        answer_str = "No"
-    elif binary_answer == 1:
-        answer_str = "Yes"
-    return {
-        "image": f"figureQA_{entry['image_index']}-{postfix}.png",
-        "question": entry["question_string"],
-        "answer": answer_str
-    }
-
-def preprocess_plotQA(entry, postfix):
-    return {
-        "image": f"plotQA_{entry['image_index']}-{postfix}.png",
-        "question": entry["question_string"],
-        "answer": str(entry["answer"])
-    }
-
-# process datasets in their respective folders (and rename image_index)
 def process_dataset_in_folder(folder_path, preprocess_func, postfix):
+    ''' Process a dataset in the given folder using the specified preprocessing function. '''
     json_file_path = os.path.join(folder_path, "qa_pairs.json")
 
     if not os.path.exists(json_file_path) or os.path.getsize(json_file_path) == 0:
@@ -124,9 +140,14 @@ def process_dataset_in_folder(folder_path, preprocess_func, postfix):
     with open(json_file_path, 'r') as json_file:
         data = json.load(json_file)
         preprocessed_data = [preprocess_func(entry, postfix) for entry in data]
+
+    with open(json_file_path, 'w') as json_file:
+        json.dump(preprocessed_data, json_file, indent=2)
+        
     return preprocessed_data
 
 def rename_images_with_prefix(folder_path, prefix):
+    ''' Rename images in given folder by adding a dataset name specific prefix. '''
     png_folder_path = os.path.join(folder_path, f"png")
     for filename in os.listdir(png_folder_path):
         if filename.endswith('.png'):
@@ -135,6 +156,7 @@ def rename_images_with_prefix(folder_path, prefix):
             os.rename(src, dst)
 
 def rename_images_with_postfix(folder_path, postfix):
+    ''' Rename images in the given folder by adding a data split specific postfix. '''
     png_folder_path = os.path.join(folder_path, 'png')
     for filename in os.listdir(png_folder_path):
         if filename.endswith('.png'):
@@ -143,14 +165,19 @@ def rename_images_with_postfix(folder_path, postfix):
             os.rename(src, dst)
 
 def process_dataset_and_rename_images(folder_path, preprocess_func, prefix, postfix):
+    ''' Process dataset and rename images with specified prefixes and postfixes. '''
     rename_images_with_prefix(folder_path, prefix)
     rename_images_with_postfix(folder_path, postfix)
     preprocessed_data = process_dataset_in_folder(folder_path, preprocess_func, postfix)
     
     return preprocessed_data
 
-# Remove old qa_pairs.json, qa_pairs-1.json, and qa_pairs-2.json files
+def any_json_files_exist(folder_path):
+    ''' Boolean check if any JSON files exist in given folder path. '''
+    return any(os.path.exists(os.path.join(folder_path, f"qa_pairs-{i}.json")) and os.path.getsize(os.path.join(folder_path, f"qa_pairs-{i}.json")) > 0 for i in [1, 2])
+
 def remove_old_json_files(base_path):
+    ''' Remove old JSON files (qa_pairs.json, qa_pairs-1.json, and/or qa_pairs-2.json) in the given base path. '''
     for root, dirs, files in os.walk(base_path):
         for filename in files:
             if filename.startswith('qa_pairs') and filename.endswith('.json'):
@@ -158,16 +185,14 @@ def remove_old_json_files(base_path):
                 os.remove(file_path)
                 print(f"Removed old JSON file: {file_path}")
 
+def main(src, dst):
+    # Copy entire source directory to destination directory
+    copy_entire_folder(src, dst)
 
-# combine qa_pairs.json files in figureQA if there are entries
-def any_json_files_exist(folder_path):
-    return any(os.path.exists(os.path.join(folder_path, f"qa_pairs-{i}.json")) and os.path.getsize(os.path.join(folder_path, f"qa_pairs-{i}.json")) > 0 for i in [1, 2])
+    # Base path for all datasets
+    base_path = dst
 
-def main():
-    # folder paths for each dataset
-    current_folder = os.path.dirname(os.path.abspath(__file__))
-    base_path = os.path.join(current_folder, "../seed_datasets_150_GF/2_preprocessed_data_150_GF")
-
+    # Folder paths for each dataset
     chartQA_train_folder_path = os.path.join(base_path, "ChartQA/train")
     chartQA_test_folder_path = os.path.join(base_path, "ChartQA/test")
     chartQA_val_folder_path = os.path.join(base_path, "ChartQA/val")
@@ -180,12 +205,12 @@ def main():
     plotQA_test_folder_path = os.path.join(base_path, "PlotQA/test")
     plotQA_val_folder_path = os.path.join(base_path, "PlotQA/val")
 
-    ''' special figureQA pre-processing '''
+    # FigureQA: Remove unnecessary syntax
     remove_figureQA_syntax(figureQA_test_folder_path)
     remove_figureQA_syntax(figureQA_train_folder_path)
     remove_figureQA_syntax(figureQA_val_folder_path)
 
-    # Check if jsons are empty
+    # FigureQA: Check if JSONs are empty for test and val splits
     for folder_path in [figureQA_test_folder_path, figureQA_val_folder_path]:
         for file_index in [1, 2]:
             file_path = os.path.join(folder_path, f"qa_pairs-{file_index}.json")
@@ -194,13 +219,13 @@ def main():
             else:
                 print(f"qa_pairs-{file_index}.json not found or is empty in the folder.")
 
-    # Combine qa_pairs.json files in FigureQA dataset if there are entries
+    # FigureQA: Combine qa_pairs.json files if they are not empty
     if any_json_files_exist(figureQA_test_folder_path):
         combine_json_files(figureQA_test_folder_path)
     if any_json_files_exist(figureQA_val_folder_path):
         combine_json_files(figureQA_val_folder_path)
 
-    # Check for existence of png folders before renaming
+    # FigureQA: Check for existence of multiple PNG folders before renaming
     if os.path.exists(os.path.join(figureQA_test_folder_path, "png-1")):
         rename_images_with_number_prefix(figureQA_test_folder_path, "1")
     if os.path.exists(os.path.join(figureQA_test_folder_path, "png-2")):
@@ -210,20 +235,21 @@ def main():
     if os.path.exists(os.path.join(figureQA_val_folder_path, "png-2")):
         rename_images_with_number_prefix(figureQA_val_folder_path, "2")
 
+    # FigureQA: Combine PNG folders if needed
     combine_png_folders(figureQA_test_folder_path)
     combine_png_folders(figureQA_val_folder_path)
 
-    # combine qa_pairs.json files in chartQA dataset
+    # ChartQA: Combine human and machine generated JSON files
     combine_json_files(chartQA_train_folder_path)
     combine_json_files(chartQA_test_folder_path)
     combine_json_files(chartQA_val_folder_path)
 
-    # rename tables with prefix
+    # ChartQA: Rename tables with prefix and postfix to match image names
     rename_chartQA_tables(chartQA_train_folder_path, "chartQA", "train")
     rename_chartQA_tables(chartQA_test_folder_path, "chartQA", "test")
     rename_chartQA_tables(chartQA_val_folder_path, "chartQA", "val")
 
-    # process each dataset and rename images with postfixes where necessary
+    # Process each dataset and rename images with prefixes and postfixes
     preprocessed_chartQA_train = process_dataset_and_rename_images(chartQA_train_folder_path, preprocess_chartQA, "chartQA", "train")
     preprocessed_chartQA_test = process_dataset_and_rename_images(chartQA_test_folder_path, preprocess_chartQA, "chartQA", "test")
     preprocessed_chartQA_val = process_dataset_and_rename_images(chartQA_val_folder_path, preprocess_chartQA, "chartQA", "val")
@@ -234,7 +260,7 @@ def main():
     preprocessed_plotQA_test = process_dataset_and_rename_images(plotQA_test_folder_path, preprocess_plotQA, "plotQA", "test")
     preprocessed_plotQA_val = process_dataset_and_rename_images(plotQA_val_folder_path, preprocess_plotQA, "plotQA", "val")
 
-    # save preprocessed datasets to new JSON files
+    # Save preprocessed datasets to new JSON files
     output_chartQA_train_filename = os.path.join(chartQA_train_folder_path, "preprocessed_chartQA_train.json")
     output_chartQA_test_filename = os.path.join(chartQA_test_folder_path, "preprocessed_chartQA_test.json")
     output_chartQA_val_filename = os.path.join(chartQA_val_folder_path, "preprocessed_chartQA_val.json")
@@ -272,8 +298,14 @@ def main():
     with open(output_plotQA_val_filename, 'w') as plotQA_val_output_file:
         json.dump(preprocessed_plotQA_val, plotQA_val_output_file, indent=2)
 
-    # Remove old qa_pairs(-1/2).json files
+    # Remove old JSON files
     remove_old_json_files(base_path)
 
 if __name__ == "__main__":
-    main()
+    if len(sys.argv) != 3:
+        print("Usage: python data_preprocessing.py <from_path> <to_path>") # Indicate correct usage if wrong command line arguments
+        sys.exit(1)
+    src = sys.argv[1]
+    dst = sys.argv[2]
+    main(src, dst)
+    print("Preprocessed files saved successfully.")
