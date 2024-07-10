@@ -122,10 +122,11 @@ def rename_chartQA_tables(folder_path, prefix, postfix):
             dst = os.path.join(tables_folder_path, f"{prefix}_{filename.split('.')[0]}-{postfix}.csv")
             os.rename(src, dst)
 
-def copy_entire_folder(src, dst):
-    ''' Copy the entire contents of source folder to destination folder. '''
+def copy_folder_structure_and_files(src, dst):
+    ''' Copy entire folder structure and contents of source folder to destination folder. '''
     if os.path.exists(dst):
-        shutil.rmtree(dst)
+        shutil.rmtree(dst) # Remove destination folder if it exists
+        
     shutil.copytree(src, dst)
     print(f"Copied {src} to {dst}")
 
@@ -187,7 +188,7 @@ def remove_old_json_files(base_path):
 
 def main(src, dst):
     # Copy entire source directory to destination directory
-    copy_entire_folder(src, dst)
+    copy_folder_structure_and_files(src, dst)
 
     # Base path for all datasets
     base_path = dst
