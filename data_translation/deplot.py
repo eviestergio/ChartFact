@@ -76,4 +76,4 @@ if __name__ == "__main__":
     src = os.path.expanduser(sys.argv[1])
     dst = os.path.expanduser(sys.argv[2])
     main(src, dst)
-    print("CSV files saved successfully.")
+    print("Generated DePlot tables saved successfully.")

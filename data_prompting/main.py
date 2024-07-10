@@ -1,6 +1,8 @@
 from model import QueryModel
 import json
 import os
+import shutil
+import sys
 
 def create_supports_prompt(title, table,  question, answer): # 783 tokens, 3349 characters 
     ''' Creates a prompt to generate a 'supports' claim with an explanation. '''
@@ -250,9 +252,9 @@ def generate_supports_claim(title, table, question, answer, model):
 
     return claim, explanation
 
-def generate_supports_claim_simple(title, table, question, answer, model):
+def generate_supports_claim_simple(question, answer, model):
     ''' Generate a simplified 'supports' claim without an explanation. '''
-    prompt = create_supports_prompt_simple(title, table, question, answer)
+    prompt = create_supports_prompt_simple(question, answer)
     response = model(model_name='gpt-3.5-turbo', query=prompt)
     response_json = parse_json_response(response)
 
@@ -312,11 +314,11 @@ def generate_claims_from_file(input_file, model):
         image = entry.get("image")
 
         base_csv_file_path = os.path.join(os.path.dirname(input_file), "tables", f"{entry['image'].split('.')[0]}")
-        csv_file_path = base_csv_file_path + "-converted.csv"
+        csv_file_path = base_csv_file_path + "-dp.csv"
         regular_csv_file_path = base_csv_file_path + ".csv"
         title_file_path = base_csv_file_path + "-title.txt"
 
-        # Read CSV file (prioritize '-converted' file)
+        # Read CSV file (prioritize '-dp' file)
         if os.path.exists(csv_file_path):
             with open(csv_file_path, 'r') as csv_file:
                 table = csv_file.read()
@@ -392,17 +394,41 @@ def save_results(input_file, results):
 
     print(f"Conversion completed for {os.path.basename(input_file)}. Results saved to {output_path}.")
 
-def main():
+    # Remove old 'preprocessed' file
+    os.remove(input_file)
+    print(f"Removed old preprocessed file: {input_file}")
+
+# def copy_entire_folder(src, dst):
+#     if os.path.exists(dst):
+#         shutil.rmtree(dst)
+#     shutil.copytree(src, dst)
+
+def copy_folder_structure_and_files(src, dst):
+    ''' Copy entire folder structure and contents of source folder to destination folder. '''
+    if os.path.exists(dst):
+        shutil.rmtree(dst)  # Remove destination folder if it exists
+
+    shutil.copytree(src, dst)
+    print(f"Copied {src} to {dst}")
+
+def main(src, dst):
     ''' Main function to process all JSON files in specified directory. '''
     model = QueryModel(query_type='json_object')
-    current_folder = os.path.dirname(os.path.abspath(__file__))
-    input_directory = os.path.join(current_folder, "../seed_datasets") # Directory containing preprocessed JSON files to convert
 
-    for root, _, files in os.walk(input_directory):
+    # Copy entire source directory to destination directory
+    copy_folder_structure_and_files(src, dst)
+
+    for root, _, files in os.walk(dst):
         for filename in files:
             if filename.startswith('preprocessed_') and filename.endswith('.json'):
                 input_file = os.path.join(root, filename)
                 generate_claims_from_file(input_file, model)
 
 if __name__ == '__main__':
-    main()
+    if len(sys.argv) != 3:
+        print("Usage: python data_prompting.py <from_path> <to_path>") # Indicate correct usage if wrong command line arguments
+        sys.exit(1)
+    from_path = sys.argv[1]
+    to_path = sys.argv[2]
+    main(from_path, to_path)
+    print("Prompted files saved successfully.")
