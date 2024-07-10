@@ -1,27 +1,27 @@
 [
   {
-    "image": "plotQA_31647-val.png",
-    "question": "What is the difference between two consecutive major ticks on the Y-axis ?",
-    "answer": "2.0"
-  },
-  {
-    "image": "plotQA_5893-val.png",
-    "question": "In which country was the value added by industrial sector maximum?",
-    "answer": "Costa Rica"
-  },
-  {
-    "image": "plotQA_11868-val.png",
-    "question": "Are the values on the major ticks of X-axis written in scientific E-notation ?",
-    "answer": "No"
-  },
-  {
-    "image": "plotQA_15718-val.png",
-    "question": "Are the values on the major ticks of X-axis written in scientific E-notation ?",
+    "image": "plotQA_17140-val.png",
+    "question": "Does the graph contain grids ?",
     "answer": "Yes"
   },
   {
-    "image": "plotQA_15389-val.png",
-    "question": "How many bars are there ?",
-    "answer": "4"
+    "image": "plotQA_19926-val.png",
+    "question": "Is the number of lines equal to the number of legend labels ?",
+    "answer": "Yes"
+  },
+  {
+    "image": "plotQA_24683-val.png",
+    "question": "Is the difference between the number of out-of-school children in Mozambique in 2007 and 2009 greater than the difference between the number of out-of-school children in Poland in 2007 and 2009 ?",
+    "answer": "Yes"
+  },
+  {
+    "image": "plotQA_17469-val.png",
+    "question": "How many different coloured lines are there ?",
+    "answer": "2"
+  },
+  {
+    "image": "plotQA_3349-val.png",
+    "question": "Is the difference between the gross intake ratio in High income: OECD in 2007 and 2008 greater than the difference between the gross intake ratio in Central African Republic in 2007 and 2008 ?",
+    "answer": "Yes"
   }
 ]

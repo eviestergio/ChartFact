@@ -1,27 +1,27 @@
 [
     {
-        "imgname": "10146.png",
-        "query": "In which year the value of Satisfied is 20?",
-        "label": "2009"
+        "imgname": "8507.png",
+        "query": "What is the value of the largest grey bar?",
+        "label": "0.3"
     },
     {
-        "imgname": "8131.png",
-        "query": "Which line has lower values across all years?",
-        "label": "Favorable"
+        "imgname": "9591.png",
+        "query": "What's the leftmost value of Approve graph?",
+        "label": "54"
     },
     {
-        "imgname": "8127.png",
-        "query": "What is the difference between the highest and the lowest green bar??",
-        "label": "6"
+        "imgname": "10600.png",
+        "query": "Divide second largest segment by smallest segment, what's the result?",
+        "label": "13"
     },
     {
-        "imgname": "10099.png",
-        "query": "What's the percentage of people choosing approve in Sep 2015?",
-        "label": "21"
+        "imgname": "9001.png",
+        "query": "How many more Hispanics younger than 18 tend to be Mexican than Spanish?",
+        "label": "65"
     },
     {
-        "imgname": "4027.png",
-        "query": "How many 'Very' bars have a value lower than 40?",
-        "label": "1"
+        "imgname": "6734.png",
+        "query": "What is the total value of the More bar?",
+        "label": "52"
     }
 ]

@@ -1,27 +1,27 @@
 [
   {
-    "image": "plotQA_12070-test.png",
-    "question": "How many bars are there on the 1st tick from the top ?",
-    "answer": "4"
+    "image": "plotQA_28184-test.png",
+    "question": "How many groups of bars are there ?",
+    "answer": "3"
   },
   {
-    "image": "plotQA_14337-test.png",
-    "question": "What is the label or title of the X-axis ?",
-    "answer": "Employment to population ratio(%)"
+    "image": "plotQA_14687-test.png",
+    "question": "Across all years, what is the minimum agricultural production index in Oman ?",
+    "answer": "16.88"
   },
   {
-    "image": "plotQA_11287-test.png",
-    "question": "In which country was the account balance in 2005 maximum?",
-    "answer": "Israel"
+    "image": "plotQA_11327-test.png",
+    "question": "How many bars are there on the 2nd tick from the top ?",
+    "answer": "3"
   },
   {
-    "image": "plotQA_10652-test.png",
-    "question": "What is the average balance of payments for transport services in 2007 per country ?",
-    "answer": "36.47507780295097"
+    "image": "plotQA_9960-test.png",
+    "question": "How many legend labels are there ?",
+    "answer": "3"
   },
   {
-    "image": "plotQA_23271-test.png",
-    "question": "How many different coloured bars are there ?",
-    "answer": "2"
+    "image": "plotQA_27508-test.png",
+    "question": "Are the values on the major ticks of Y-axis written in scientific E-notation ?",
+    "answer": "No"
   }
 ]

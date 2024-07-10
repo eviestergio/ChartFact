@@ -1,252 +1,252 @@
 [
   {
-    "image": "figureQA_96926-train.png",
+    "image": "figureQA_77373-train.png",
+    "question": "Does Light Green have the highest value?",
+    "answer": "No"
+  },
+  {
+    "image": "figureQA_93810-train.png",
+    "question": "Is Light Seafoam the smoothest?",
+    "answer": "No"
+  },
+  {
+    "image": "figureQA_76797-train.png",
+    "question": "Does Teal have the highest value?",
+    "answer": "No"
+  },
+  {
+    "image": "figureQA_44620-train.png",
+    "question": "Is Magenta less than Dark Violet?",
+    "answer": "Yes"
+  },
+  {
+    "image": "figureQA_35384-train.png",
+    "question": "Is Chocolate the maximum?",
+    "answer": "Yes"
+  },
+  {
+    "image": "figureQA_56479-train.png",
+    "question": "Is Teal less than Deep Sky Blue?",
+    "answer": "Yes"
+  },
+  {
+    "image": "figureQA_86124-train.png",
+    "question": "Is Medium Purple the smoothest?",
+    "answer": "Yes"
+  },
+  {
+    "image": "figureQA_73252-train.png",
+    "question": "Is Dark Olive less than Burlywood?",
+    "answer": "Yes"
+  },
+  {
+    "image": "figureQA_61985-train.png",
+    "question": "Is Tomato the roughest?",
+    "answer": "Yes"
+  },
+  {
+    "image": "figureQA_29959-train.png",
+    "question": "Is Maroon greater than Crimson?",
+    "answer": "No"
+  },
+  {
+    "image": "figureQA_30299-train.png",
+    "question": "Is Coral the maximum?",
+    "answer": "No"
+  },
+  {
+    "image": "figureQA_22928-train.png",
+    "question": "Is Medium Turquoise greater than Light Salmon?",
+    "answer": "Yes"
+  },
+  {
+    "image": "figureQA_88613-train.png",
+    "question": "Does Forest Green have the lowest value?",
+    "answer": "No"
+  },
+  {
+    "image": "figureQA_43830-train.png",
+    "question": "Is Pale Green greater than Red?",
+    "answer": "No"
+  },
+  {
+    "image": "figureQA_78145-train.png",
+    "question": "Does Light Green have the maximum area under the curve?",
+    "answer": "Yes"
+  },
+  {
+    "image": "figureQA_67334-train.png",
+    "question": "Is Gray the roughest?",
+    "answer": "Yes"
+  },
+  {
+    "image": "figureQA_43267-train.png",
+    "question": "Is Blue Violet the maximum?",
+    "answer": "No"
+  },
+  {
+    "image": "figureQA_19335-train.png",
+    "question": "Is Medium Turquoise the maximum?",
+    "answer": "Yes"
+  },
+  {
+    "image": "figureQA_86051-train.png",
+    "question": "Is Blue less than Violet Red?",
+    "answer": "Yes"
+  },
+  {
+    "image": "figureQA_92139-train.png",
+    "question": "Does Salmon have the highest value?",
+    "answer": "No"
+  },
+  {
+    "image": "figureQA_59494-train.png",
+    "question": "Is Dark Orange the minimum?",
+    "answer": "No"
+  },
+  {
+    "image": "figureQA_426-train.png",
+    "question": "Is Aqua greater than Orange?",
+    "answer": "No"
+  },
+  {
+    "image": "figureQA_68887-train.png",
+    "question": "Does Green have the minimum area under the curve?",
+    "answer": "Yes"
+  },
+  {
+    "image": "figureQA_7737-train.png",
+    "question": "Is Forest Green the maximum?",
+    "answer": "No"
+  },
+  {
+    "image": "figureQA_9596-train.png",
+    "question": "Is Sandy Brown the high median?",
+    "answer": "Yes"
+  },
+  {
+    "image": "figureQA_73151-train.png",
+    "question": "Is Dark Olive the smoothest?",
+    "answer": "No"
+  },
+  {
+    "image": "figureQA_18610-train.png",
+    "question": "Is Dark Red the minimum?",
+    "answer": "Yes"
+  },
+  {
+    "image": "figureQA_27388-train.png",
+    "question": "Is Dark Magenta the high median?",
+    "answer": "No"
+  },
+  {
+    "image": "figureQA_71753-train.png",
+    "question": "Does Coral have the minimum area under the curve?",
+    "answer": "Yes"
+  },
+  {
+    "image": "figureQA_49794-train.png",
+    "question": "Is Dark Seafoam less than Dark Khaki?",
+    "answer": "Yes"
+  },
+  {
+    "image": "figureQA_89166-train.png",
+    "question": "Does Sienna have the highest value?",
+    "answer": "Yes"
+  },
+  {
+    "image": "figureQA_8365-train.png",
+    "question": "Is Light Seafoam greater than Blue Violet?",
+    "answer": "Yes"
+  },
+  {
+    "image": "figureQA_18626-train.png",
+    "question": "Is Turquoise greater than Red?",
+    "answer": "Yes"
+  },
+  {
+    "image": "figureQA_59161-train.png",
+    "question": "Is Royal Blue the high median?",
+    "answer": "No"
+  },
+  {
+    "image": "figureQA_35077-train.png",
+    "question": "Is Chartreuse the low median?",
+    "answer": "No"
+  },
+  {
+    "image": "figureQA_12269-train.png",
+    "question": "Is Crimson the low median?",
+    "answer": "Yes"
+  },
+  {
+    "image": "figureQA_11697-train.png",
+    "question": "Is Purple the low median?",
+    "answer": "Yes"
+  },
+  {
+    "image": "figureQA_59224-train.png",
+    "question": "Is Firebrick greater than Pale Green?",
+    "answer": "Yes"
+  },
+  {
+    "image": "figureQA_45061-train.png",
+    "question": "Is Purple greater than Red?",
+    "answer": "Yes"
+  },
+  {
+    "image": "figureQA_60797-train.png",
+    "question": "Is Green less than Navy Blue?",
+    "answer": "No"
+  },
+  {
+    "image": "figureQA_71523-train.png",
+    "question": "Does Sandy Brown have the lowest value?",
+    "answer": "Yes"
+  },
+  {
+    "image": "figureQA_96061-train.png",
+    "question": "Does Burlywood have the minimum area under the curve?",
+    "answer": "Yes"
+  },
+  {
+    "image": "figureQA_13510-train.png",
+    "question": "Is Medium Aqua greater than Light Gold?",
+    "answer": "No"
+  },
+  {
+    "image": "figureQA_33692-train.png",
+    "question": "Is Orange less than Steel Blue?",
+    "answer": "No"
+  },
+  {
+    "image": "figureQA_98111-train.png",
+    "question": "Does Orchid have the maximum area under the curve?",
+    "answer": "No"
+  },
+  {
+    "image": "figureQA_40841-train.png",
+    "question": "Is Medium Seafoam the minimum?",
+    "answer": "Yes"
+  },
+  {
+    "image": "figureQA_63707-train.png",
+    "question": "Is Steel Blue the roughest?",
+    "answer": "No"
+  },
+  {
+    "image": "figureQA_59149-train.png",
+    "question": "Is Medium Blue less than Coral?",
+    "answer": "Yes"
+  },
+  {
+    "image": "figureQA_85040-train.png",
+    "question": "Does Tan intersect Hot Pink?",
+    "answer": "Yes"
+  },
+  {
+    "image": "figureQA_85320-train.png",
     "question": "Does Firebrick have the highest value?",
-    "answer": "Yes"
-  },
-  {
-    "image": "figureQA_15311-train.png",
-    "question": "Is Violet Red the maximum?",
-    "answer": "Yes"
-  },
-  {
-    "image": "figureQA_98884-train.png",
-    "question": "Is Burlywood less than Lawn Green?",
-    "answer": "No"
-  },
-  {
-    "image": "figureQA_81266-train.png",
-    "question": "Does Dim Gray have the highest value?",
-    "answer": "No"
-  },
-  {
-    "image": "figureQA_34426-train.png",
-    "question": "Is Dark Salmon the minimum?",
-    "answer": "No"
-  },
-  {
-    "image": "figureQA_51558-train.png",
-    "question": "Is Coral greater than Saddle Brown?",
-    "answer": "No"
-  },
-  {
-    "image": "figureQA_80895-train.png",
-    "question": "Does Tan have the highest value?",
-    "answer": "No"
-  },
-  {
-    "image": "figureQA_33773-train.png",
-    "question": "Is Dark Salmon the low median?",
-    "answer": "No"
-  },
-  {
-    "image": "figureQA_31128-train.png",
-    "question": "Is Medium Aqua the low median?",
-    "answer": "No"
-  },
-  {
-    "image": "figureQA_49291-train.png",
-    "question": "Is Dodger Blue the maximum?",
-    "answer": "No"
-  },
-  {
-    "image": "figureQA_33461-train.png",
-    "question": "Is Turquoise greater than Medium Purple?",
-    "answer": "No"
-  },
-  {
-    "image": "figureQA_97683-train.png",
-    "question": "Does Web Purple have the lowest value?",
-    "answer": "Yes"
-  },
-  {
-    "image": "figureQA_61574-train.png",
-    "question": "Is Olive less than Cyan?",
-    "answer": "Yes"
-  },
-  {
-    "image": "figureQA_10448-train.png",
-    "question": "Is Light Gold the low median?",
-    "answer": "Yes"
-  },
-  {
-    "image": "figureQA_16865-train.png",
-    "question": "Is Orange Red the minimum?",
-    "answer": "No"
-  },
-  {
-    "image": "figureQA_15810-train.png",
-    "question": "Is Indian Red the maximum?",
-    "answer": "Yes"
-  },
-  {
-    "image": "figureQA_44558-train.png",
-    "question": "Is Aqua the low median?",
-    "answer": "No"
-  },
-  {
-    "image": "figureQA_22998-train.png",
-    "question": "Is Medium Orchid less than Maroon?",
-    "answer": "No"
-  },
-  {
-    "image": "figureQA_10137-train.png",
-    "question": "Is Crimson less than Green Yellow?",
-    "answer": "Yes"
-  },
-  {
-    "image": "figureQA_2604-train.png",
-    "question": "Is Rosy Brown the minimum?",
-    "answer": "No"
-  },
-  {
-    "image": "figureQA_3483-train.png",
-    "question": "Is Dark Khaki the maximum?",
-    "answer": "Yes"
-  },
-  {
-    "image": "figureQA_99536-train.png",
-    "question": "Does Black intersect Dodger Blue?",
-    "answer": "Yes"
-  },
-  {
-    "image": "figureQA_53800-train.png",
-    "question": "Is Violet Red the minimum?",
-    "answer": "Yes"
-  },
-  {
-    "image": "figureQA_78387-train.png",
-    "question": "Is Web Gray greater than Olive Drab?",
-    "answer": "No"
-  },
-  {
-    "image": "figureQA_70355-train.png",
-    "question": "Is Dark Periwinkle the roughest?",
-    "answer": "No"
-  },
-  {
-    "image": "figureQA_86227-train.png",
-    "question": "Is Orange greater than Firebrick?",
-    "answer": "Yes"
-  },
-  {
-    "image": "figureQA_73577-train.png",
-    "question": "Is Blue Violet the roughest?",
-    "answer": "Yes"
-  },
-  {
-    "image": "figureQA_21272-train.png",
-    "question": "Is Medium Blue the low median?",
-    "answer": "No"
-  },
-  {
-    "image": "figureQA_13202-train.png",
-    "question": "Is Crimson less than Medium Aqua?",
-    "answer": "Yes"
-  },
-  {
-    "image": "figureQA_75499-train.png",
-    "question": "Does Purple have the maximum area under the curve?",
-    "answer": "Yes"
-  },
-  {
-    "image": "figureQA_88572-train.png",
-    "question": "Does Magenta have the minimum area under the curve?",
-    "answer": "Yes"
-  },
-  {
-    "image": "figureQA_14982-train.png",
-    "question": "Is Orange the high median?",
-    "answer": "No"
-  },
-  {
-    "image": "figureQA_95767-train.png",
-    "question": "Does Teal have the maximum area under the curve?",
-    "answer": "No"
-  },
-  {
-    "image": "figureQA_49556-train.png",
-    "question": "Is Green Yellow less than Crimson?",
-    "answer": "Yes"
-  },
-  {
-    "image": "figureQA_63661-train.png",
-    "question": "Does Dark Slate have the lowest value?",
-    "answer": "No"
-  },
-  {
-    "image": "figureQA_489-train.png",
-    "question": "Is Tomato less than Light Green?",
-    "answer": "No"
-  },
-  {
-    "image": "figureQA_80654-train.png",
-    "question": "Does Rosy Brown have the maximum area under the curve?",
-    "answer": "No"
-  },
-  {
-    "image": "figureQA_96745-train.png",
-    "question": "Is Dark Seafoam less than Sky Blue?",
-    "answer": "No"
-  },
-  {
-    "image": "figureQA_18956-train.png",
-    "question": "Is Dark Green greater than Orange Red?",
-    "answer": "No"
-  },
-  {
-    "image": "figureQA_48802-train.png",
-    "question": "Is Coral the minimum?",
-    "answer": "No"
-  },
-  {
-    "image": "figureQA_9624-train.png",
-    "question": "Is Web Purple less than Dark Slate?",
-    "answer": "Yes"
-  },
-  {
-    "image": "figureQA_6269-train.png",
-    "question": "Is Pale Green the maximum?",
-    "answer": "Yes"
-  },
-  {
-    "image": "figureQA_41738-train.png",
-    "question": "Is Yellow Green less than Dim Gray?",
-    "answer": "No"
-  },
-  {
-    "image": "figureQA_13096-train.png",
-    "question": "Is Lime Green the low median?",
-    "answer": "No"
-  },
-  {
-    "image": "figureQA_19772-train.png",
-    "question": "Is Gray the high median?",
-    "answer": "No"
-  },
-  {
-    "image": "figureQA_86573-train.png",
-    "question": "Is Forest Green the smoothest?",
-    "answer": "Yes"
-  },
-  {
-    "image": "figureQA_33036-train.png",
-    "question": "Is Yellow greater than Indigo?",
-    "answer": "No"
-  },
-  {
-    "image": "figureQA_50080-train.png",
-    "question": "Is Cyan the high median?",
-    "answer": "No"
-  },
-  {
-    "image": "figureQA_38848-train.png",
-    "question": "Is Light Gold the maximum?",
-    "answer": "Yes"
-  },
-  {
-    "image": "figureQA_81312-train.png",
-    "question": "Does Burlywood have the highest value?",
     "answer": "No"
   }
 ]

@@ -1,6 +1,8 @@
 # Grabs 50 data entries from ChartQA from Pew
 # 50 data entries from FigureQA train
 # 40 entries from PlotQA train, 5 from PlotQA test, 5 from PlotQA val
+# No duplicate imgname or image_index
+# Random selection 
 
 # name the new dataset 1_extracted_data_150_GF
 
@@ -33,7 +35,7 @@ def copy_structure(src, dst):
 
         for file in files:
             # Skip files in png and tables folders
-            if 'png' in root.split(os.sep) or 'tables' in root.split(os.sep):
+            if 'png' in root.split(os.sep) or 'tables' in root.split(os.sep) or 'png-1' in root.split(os.sep) or 'png-2' in root.split(os.sep):
                 continue
 
             file_path = os.path.join(root, file)
@@ -51,6 +53,7 @@ def copy_structure(src, dst):
 def copy_selected_entries_and_files(src, dst, dataset, folder, file_pairs, num_entries, unique_identifiers):
     copied_files = set()
     selected_entries = []
+    entries_available = True
 
     for qa_pairs_file, num in file_pairs:
         qa_pairs_path = os.path.join(src, dataset, folder, qa_pairs_file)
@@ -89,7 +92,7 @@ def copy_selected_entries_and_files(src, dst, dataset, folder, file_pairs, num_e
         if dataset == 'ChartQA':
             imgname_dict = defaultdict(list)
             for entry in qa_pairs:
-                if 'imgname' in entry and len(entry['imgname']) <= 9 and entry['imgname'] not in unique_identifiers:
+                if 'imgname' in entry and len(entry['imgname']) <= 9:
                     imgname_dict[entry['imgname']].append(entry)
 
             if len(imgname_dict) == 0:
@@ -102,17 +105,23 @@ def copy_selected_entries_and_files(src, dst, dataset, folder, file_pairs, num_e
 
             if len(all_entries) < num:
                 print(f"Not enough valid entries in {qa_pairs_path}. Required: {num}, Found: {len(all_entries)}")
-                continue
+                entries_available = False
 
-            entries_for_file = random.sample(all_entries, num)
-            for entry in entries_for_file:
-                unique_identifiers.add(entry['imgname'])
-            print(f"Selected {len(entries_for_file)} entries from {qa_pairs_path}")
+            selected_imgnames = set()
+            while len(selected_entries) < num and all_entries:
+                entry = random.choice(all_entries)
+                if entry['imgname'] not in selected_imgnames:
+                    selected_entries.append(entry)
+                    selected_imgnames.add(entry['imgname'])
+                    unique_identifiers.add(entry['imgname'])
+                    all_entries.remove(entry)
+
+            print(f"Selected {len(selected_entries)} entries from {qa_pairs_path}")
 
         else:
             image_index_dict = defaultdict(list)
             for entry in qa_pairs:
-                if 'image_index' in entry and entry['image_index'] not in unique_identifiers:
+                if 'image_index' in entry:
                     image_index_dict[entry['image_index']].append(entry)
 
             if len(image_index_dict) == 0:
@@ -125,23 +134,30 @@ def copy_selected_entries_and_files(src, dst, dataset, folder, file_pairs, num_e
 
             if len(all_entries) < num:
                 print(f"Not enough valid entries in {qa_pairs_path}. Required: {num}, Found: {len(all_entries)}")
-                continue
+                entries_available = False
 
-            entries_for_file = random.sample(all_entries, num)
-            for entry in entries_for_file:
-                unique_identifiers.add(entry['image_index'])
-            print(f"Selected {len(entries_for_file)} entries from {qa_pairs_path}")
+            selected_indices = set()
+            while len(selected_entries) < num and all_entries:
+                entry = random.choice(all_entries)
+                if entry['image_index'] not in selected_indices:
+                    selected_entries.append(entry)
+                    selected_indices.add(entry['image_index'])
+                    unique_identifiers.add(entry['image_index'])
+                    all_entries.remove(entry)
+
+            print(f"Selected {len(selected_entries)} entries from {qa_pairs_path}")
 
         with open(destination_qa_pairs_path, 'w') as f:
-            json.dump(entries_for_file, f, indent=4)
+            json.dump(selected_entries, f, indent=4)
 
-        for entry in entries_for_file:
+        for entry in selected_entries:
             if dataset == 'ChartQA' and 'imgname' in entry:
                 imgname = entry['imgname']
                 src_png_file = os.path.join(png_folder_path, imgname)
                 dst_png_file = os.path.join(destination_png_folder_path, imgname)
                 if os.path.exists(src_png_file):
                     shutil.copyfile(src_png_file, dst_png_file)
+                    copied_files.add(dst_png_file)
                 else:
                     print(f"PNG file {src_png_file} does not exist.")
                 if tables_folder_path:
@@ -150,20 +166,17 @@ def copy_selected_entries_and_files(src, dst, dataset, folder, file_pairs, num_e
                     dst_table_file = os.path.join(destination_tables_folder_path, table_file)
                     if os.path.exists(src_table_file):
                         shutil.copyfile(src_table_file, dst_table_file)
-                    else:
-                        print(f"Table file {src_table_file} does not exist.")
             elif 'image_index' in entry:
                 png_file = f"{entry['image_index']}.png"
                 src_png_file = os.path.join(png_folder_path, png_file)
                 dst_png_file = os.path.join(destination_png_folder_path, png_file)
                 if os.path.exists(src_png_file):
                     shutil.copyfile(src_png_file, dst_png_file)
+                    copied_files.add(dst_png_file)
                 else:
                     print(f"PNG file {src_png_file} does not exist.")
 
-        selected_entries.extend(entries_for_file)
-
-    return len(selected_entries), len(copied_files)
+    return len(selected_entries), len(copied_files), entries_available
 
 # Function to handle special case for FigureQA test and val qa_pairs JSON files
 def handle_figureqa_test_val(src, dst, folder):
@@ -184,40 +197,21 @@ def handle_figureqa_test_val(src, dst, folder):
             if dir in png_folders_to_exclude:
                 destination_dir = os.path.join(dst, 'FigureQA', folder, dir)
                 os.makedirs(destination_dir, exist_ok=True)
-
-# Function to handle extra selection logic for ChartQA
-def handle_chartqa_selection(src, dst, folder, primary_file, secondary_file, primary_num, total_num, unique_identifiers):
-    primary_path = os.path.join(src, 'ChartQA', folder, primary_file)
-    secondary_path = os.path.join(src, 'ChartQA', folder, secondary_file)
-    destination_primary_path = os.path.join(dst, 'ChartQA', folder, primary_file)
-    destination_secondary_path = os.path.join(dst, 'ChartQA', folder, secondary_file)
-    
-    selected_primary_entries = 0
-    selected_secondary_entries = 0
-    
-    # Check primary file first
-    primary_entries, primary_files = copy_selected_entries_and_files(src, dst, 'ChartQA', folder, [(primary_file, primary_num)], primary_num, unique_identifiers)
-    selected_primary_entries += primary_entries
-    
-    if primary_entries < primary_num:
-        remaining_entries = total_num - primary_entries
-        secondary_entries, secondary_files = copy_selected_entries_and_files(src, dst, 'ChartQA', folder, [(secondary_file, remaining_entries)], remaining_entries, unique_identifiers)
-        selected_secondary_entries += secondary_entries
-    else:
-        secondary_entries, secondary_files = copy_selected_entries_and_files(src, dst, 'ChartQA', folder, [(secondary_file, total_num - selected_primary_entries)], total_num - selected_primary_entries, unique_identifiers)
-        selected_secondary_entries += secondary_entries
-    
-    return selected_primary_entries, selected_secondary_entries
+                # Ensure folders png-1 and png-2 are empty
+                for file in os.listdir(os.path.join(root, dir)):
+                    file_path = os.path.join(root, dir, file)
+                    if os.path.isfile(file_path):
+                        os.remove(file_path)
 
 # Execute the function to copy structure without files and to copy selected entries and corresponding files
 copy_structure(source_path, destination_path)
 
 datasets = ['PlotQA', 'FigureQA', 'ChartQA']
 folders = ['train', 'test', 'val']
-num_entries = {'train': {'PlotQA': 40, 'FigureQA': 50, 'ChartQA': 20}, 'test': {'PlotQA': 5, 'ChartQA': 5}, 'val': {'PlotQA': 5, 'ChartQA': 5}}
-file_counts = {'train': {'FigureQA': [('qa_pairs.json', 50)], 'ChartQA': [('train_augmented.json', 20), ('train_human.json', 20)], 'PlotQA': [('qa_pairs.json', 40)]},
-               'test': {'ChartQA': [('test_augmented.json', 2)], 'PlotQA': [('qa_pairs.json', 5)]},
-               'val': {'ChartQA': [('val_augmented.json', 2)], 'PlotQA': [('qa_pairs.json', 5)]}}
+num_entries = {'train': {'PlotQA': 40, 'FigureQA': 50, 'ChartQA': 40}, 'test': {'PlotQA': 5, 'ChartQA': 5}, 'val': {'PlotQA': 5, 'ChartQA': 5}}
+file_counts = {'train': {'FigureQA': [('qa_pairs.json', 50)], 'ChartQA': [('train_human.json', 40)], 'PlotQA': [('qa_pairs.json', 40)]},
+               'test': {'FigureQA': [('qa_pairs-1.json', 0), ('qa_pairs-2.json', 0)], 'ChartQA': [('test_human.json', 5)], 'PlotQA': [('qa_pairs.json', 5)]},
+               'val': {'FigureQA': [('qa_pairs-1.json', 0), ('qa_pairs-2.json', 0)], 'ChartQA': [('val_human.json', 5)], 'PlotQA': [('qa_pairs.json', 5)]}}
 
 results = {}
 unique_identifiers = set()
@@ -228,43 +222,16 @@ for dataset in datasets:
         if dataset == 'FigureQA' and folder in ['test', 'val']:
             handle_figureqa_test_val(source_path, destination_path, folder)
             results[dataset][folder] = (0, 0)  # No entries or files copied
-        elif dataset == 'FigureQA':
-            file_pairs = file_counts[folder][dataset]
-            num, copied = copy_selected_entries_and_files(
-                source_path, destination_path, dataset, folder, file_pairs, num_entries[folder][dataset], unique_identifiers)
-        elif dataset == 'ChartQA':
-            if folder == 'test':
-                primary_file = 'test_augmented.json'
-                secondary_file = 'test_human.json'
-                primary_num = 2
-                total_num = 5
-            elif folder == 'val':
-                primary_file = 'val_augmented.json'
-                secondary_file = 'val_human.json'
-                primary_num = 2
-                total_num = 5
-            else:
-                file_pairs = file_counts[folder][dataset]
-                num, copied = copy_selected_entries_and_files(
-                    source_path, destination_path, dataset, folder, file_pairs, num_entries[folder][dataset], unique_identifiers)
-                results[dataset][folder] = (num, copied)
-                continue
-
-            selected_primary_entries, selected_secondary_entries = handle_chartqa_selection(
-                source_path, destination_path, folder, primary_file, secondary_file, primary_num, total_num, unique_identifiers)
-            results[dataset][folder] = (selected_primary_entries + selected_secondary_entries, 0)  # PNG and table counts will be handled inside the functions
         else:
             file_pairs = file_counts[folder][dataset]
-            num, copied = copy_selected_entries_and_files(
+            num, copied, entries_available = copy_selected_entries_and_files(
                 source_path, destination_path, dataset, folder, file_pairs, num_entries[folder][dataset], unique_identifiers)
-
+            if not entries_available:
+                print(f"Could not fill {num_entries[folder][dataset]} entries for {dataset}/{folder}")
             results[dataset][folder] = (num, copied)
 
 print(f"The new folder has been created.")
 for dataset in results:
     for folder in results[dataset]:
         num_entries, num_files = results[dataset][folder]
-        if dataset == 'ChartQA':
-            print(f"{dataset}/{folder}: {num_entries} JSON entries")
-        else:
-            print(f"{dataset}/{folder}: {num_entries} JSON entries, {num_files} PNG files")
+        print(f"{dataset}/{folder}: {num_entries} JSON entries, {num_files} PNG files")

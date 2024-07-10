@@ -1,27 +1,27 @@
 [
   {
-    "image": "chartQA_6312.png-val.png",
-    "question": "Take the median of orange bars, multiply it by 3, is the result greater than the smallest value of the green bar?",
-    "answer": "No"
+    "image": "chartQA_7705.png-val.png",
+    "question": "What's the value of leftmost bar in the bottom?",
+    "answer": "12"
   },
   {
-    "image": "chartQA_1218.png-val.png",
-    "question": "What's the ratio of Never/Rarely and Occasionally/Frequently in Luo?",
-    "answer": "0.085416667"
+    "image": "chartQA_2515.png-val.png",
+    "question": "46, 43, 41 which data is missed?",
+    "answer": "47"
   },
   {
-    "image": "chartQA_4502.png-val.png",
-    "question": "Is the median of green bars greater than the largest value of the gray bar?",
-    "answer": "No"
+    "image": "chartQA_1914.png-val.png",
+    "question": "What\ufffds the difference between the maximum and the minimum value in the last bar?",
+    "answer": "49"
   },
   {
-    "image": "chartQA_9812.png-val.png",
-    "question": "What's the average of the two smallest bar??",
-    "answer": "38.5"
+    "image": "chartQA_7940.png-val.png",
+    "question": "What does dark blue bar represents?",
+    "answer": "Very Important"
   },
   {
-    "image": "chartQA_5860.png-val.png",
-    "question": "Is the sum of Bachelors more than the sum of Women?",
-    "answer": "Yes"
+    "image": "chartQA_3861.png-val.png",
+    "question": "What's the sum of all the gray bars whose value exceeds 15?",
+    "answer": "72"
   }
 ]
