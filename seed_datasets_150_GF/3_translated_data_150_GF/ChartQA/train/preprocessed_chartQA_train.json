@@ -1,0 +1,202 @@
+[
+  {
+    "image": "chartQA_4628-train.png",
+    "question": "How confident are people about Angela Merkel doing the right thing regarding world affairs?",
+    "answer": "0.52"
+  },
+  {
+    "image": "chartQA_4637-train.png",
+    "question": "What's the highest value of blue graph?",
+    "answer": "0.88"
+  },
+  {
+    "image": "chartQA_7897-train.png",
+    "question": "Scientists understand health effects of GM foods in fairly well more then Climate scientist understand causes of climate change?",
+    "answer": "Yes"
+  },
+  {
+    "image": "chartQA_17117-train.png",
+    "question": "What is the percentage of other reasons and economic force?",
+    "answer": "[10, 12]"
+  },
+  {
+    "image": "chartQA_12459-train.png",
+    "question": "Is Bad and Good graph crossed each other after 2013?",
+    "answer": "Yes"
+  },
+  {
+    "image": "chartQA_6912-train.png",
+    "question": "Is the median of green bars greater than the largest orange bar?",
+    "answer": "Yes"
+  },
+  {
+    "image": "chartQA_7710-train.png",
+    "question": "Is the largest segment is three times the value of smallest segment?",
+    "answer": "No"
+  },
+  {
+    "image": "chartQA_12963-train.png",
+    "question": "What's the percentage of vote for BJP?",
+    "answer": "63"
+  },
+  {
+    "image": "chartQA_11320-train.png",
+    "question": "What is the difference in value between Same and sum of More and Less?",
+    "answer": "12"
+  },
+  {
+    "image": "chartQA_86-train.png",
+    "question": "Which montht recorded the most optimistic sentiment of covid-19 outbreak?",
+    "answer": "Jun"
+  },
+  {
+    "image": "chartQA_7972-train.png",
+    "question": "What is the highest value in yes?",
+    "answer": "81"
+  },
+  {
+    "image": "chartQA_3475-train.png",
+    "question": "What's the highest value in the Dark Blue bar?",
+    "answer": "47"
+  },
+  {
+    "image": "chartQA_5838-train.png",
+    "question": "What's the sum of all the bars above 20 or equal to 20?",
+    "answer": "56"
+  },
+  {
+    "image": "chartQA_14452-train.png",
+    "question": "What is the color of DK?",
+    "answer": "Light yellow"
+  },
+  {
+    "image": "chartQA_8774-train.png",
+    "question": "How many groups have net support rates over 40%?",
+    "answer": "2"
+  },
+  {
+    "image": "chartQA_1270-train.png",
+    "question": "What is sum of those who answered 'most of the time' and 'almost all of the time' for hispanics?",
+    "answer": "46"
+  },
+  {
+    "image": "chartQA_5510-train.png",
+    "question": "In how many countries do more than 12% of the respondents support the proposed US-Mexico border wall?",
+    "answer": "3"
+  },
+  {
+    "image": "chartQA_8682-train.png",
+    "question": "They mostly voted for how many issues? The second most voted has how many issues? How many factors are there in these categories?",
+    "answer": "[1, 3, 14]"
+  },
+  {
+    "image": "chartQA_1839-train.png",
+    "question": "What's the percentage of Americans who think Trump did something wrong?",
+    "answer": "46"
+  },
+  {
+    "image": "chartQA_6394-train.png",
+    "question": "What's the average population from 2000 to 2016?",
+    "answer": "48"
+  },
+  {
+    "image": "chartQA_13486-train.png",
+    "question": "What is the color of Don't know?",
+    "answer": "gray"
+  },
+  {
+    "image": "chartQA_4517-train.png",
+    "question": "What's the value of Male?",
+    "answer": "69"
+  },
+  {
+    "image": "chartQA_4180-train.png",
+    "question": "What is the value of I do not register or eligible to vote is this a major reason why they didn't vote?",
+    "answer": "19"
+  },
+  {
+    "image": "chartQA_264-train.png",
+    "question": "What's the percentage of U.S. adults who are very/somewhat confident that the federal government will keep their personal records safe from hackers or unauthorized users?",
+    "answer": "0.49"
+  },
+  {
+    "image": "chartQA_1854-train.png",
+    "question": "What's the value of the 1st bar?",
+    "answer": "87"
+  },
+  {
+    "image": "chartQA_8397-train.png",
+    "question": "How many countries have less than 50% people thinking about the increasing likelihood of terrorism?",
+    "answer": "2"
+  },
+  {
+    "image": "chartQA_17370-train.png",
+    "question": "What's the lowest value of of green line?",
+    "answer": "1"
+  },
+  {
+    "image": "chartQA_7706-train.png",
+    "question": "What's the occurrences of bar with value 5?",
+    "answer": "3"
+  },
+  {
+    "image": "chartQA_657-train.png",
+    "question": "What's the value of the yellow bar in New York?",
+    "answer": "25"
+  },
+  {
+    "image": "chartQA_9249-train.png",
+    "question": "What's the color of the Dati segment in the chart?",
+    "answer": "Blue"
+  },
+  {
+    "image": "chartQA_7503-train.png",
+    "question": "What is the total view of whites and blacks as generally bad??",
+    "answer": "106"
+  },
+  {
+    "image": "chartQA_9177-train.png",
+    "question": "How many more people are favorable of ISIS than the Taliban?",
+    "answer": "0.03"
+  },
+  {
+    "image": "chartQA_5161-train.png",
+    "question": "What does the yellow indicate?",
+    "answer": "Not bothered"
+  },
+  {
+    "image": "chartQA_11844-train.png",
+    "question": "What's the ratio of Catholic and Muslim (A:B)?",
+    "answer": "0.043055556"
+  },
+  {
+    "image": "chartQA_4370-train.png",
+    "question": "What is the value of the smallest red bar?",
+    "answer": "9"
+  },
+  {
+    "image": "chartQA_2281-train.png",
+    "question": "what percent have Confidence in Angela Merkel?",
+    "answer": "46"
+  },
+  {
+    "image": "chartQA_9103-train.png",
+    "question": "What is the total distribution of the US and the Middle East??",
+    "answer": "139"
+  },
+  {
+    "image": "chartQA_8266-train.png",
+    "question": "Take the sum of the two smallest green bars and smallest blue bars, deduct the smaller value from the larger value, what's the result??",
+    "answer": "18"
+  },
+  {
+    "image": "chartQA_8393-train.png",
+    "question": "What's the value of the first leftmost bar from the bottom?",
+    "answer": "45"
+  },
+  {
+    "image": "chartQA_7873-train.png",
+    "question": "In which year is the difference between light and brown graph 1?",
+    "answer": "2017"
+  }
+]

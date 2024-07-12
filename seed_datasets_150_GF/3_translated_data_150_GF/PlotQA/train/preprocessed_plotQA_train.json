@@ -1,0 +1,202 @@
+[
+  {
+    "image": "plotQA_92386-train.png",
+    "question": "What is the difference between two consecutive major ticks on the Y-axis ?",
+    "answer": "10.0"
+  },
+  {
+    "image": "plotQA_51142-train.png",
+    "question": "What is the ratio of the pupil teacher ratio on secondary education in Euro area to that in Albania ?",
+    "answer": "0.7523428586657471"
+  },
+  {
+    "image": "plotQA_57137-train.png",
+    "question": "Are the number of bars per tick equal to the number of legend labels ?",
+    "answer": "Yes"
+  },
+  {
+    "image": "plotQA_2579-train.png",
+    "question": "What is the total amount of grants received(including technical cooperation) in the graph ?",
+    "answer": "245820000"
+  },
+  {
+    "image": "plotQA_27297-train.png",
+    "question": "How many legend labels are there ?",
+    "answer": "2"
+  },
+  {
+    "image": "plotQA_34639-train.png",
+    "question": "In which country was the percentage of self-employed female workers in 1980 maximum?",
+    "answer": "Spain"
+  },
+  {
+    "image": "plotQA_44371-train.png",
+    "question": "Does the graph contain any zero values ?",
+    "answer": "No"
+  },
+  {
+    "image": "plotQA_69701-train.png",
+    "question": "What is the average amount collected by the government from taxes on exports in Nepal per year ?",
+    "answer": "646000000.0"
+  },
+  {
+    "image": "plotQA_115593-train.png",
+    "question": "What is the difference between the number of neonatal deaths in in 1991 in Macedonia and the number of neonatal deaths in in 1992 in Lithuania?",
+    "answer": "-107"
+  },
+  {
+    "image": "plotQA_152022-train.png",
+    "question": "What is the median government expenditure per student ?",
+    "answer": "21.83364009857175"
+  },
+  {
+    "image": "plotQA_43790-train.png",
+    "question": "What does the 2nd bar from the bottom in Greece represents ?",
+    "answer": "1961"
+  },
+  {
+    "image": "plotQA_39685-train.png",
+    "question": "Where does the legend appear in the graph ?",
+    "answer": "top right"
+  },
+  {
+    "image": "plotQA_132351-train.png",
+    "question": "How many legend labels are there ?",
+    "answer": "3"
+  },
+  {
+    "image": "plotQA_76697-train.png",
+    "question": "What is the ratio of the amount spent in making social contributions in 2003 to that in 2005?",
+    "answer": "1.12"
+  },
+  {
+    "image": "plotQA_50492-train.png",
+    "question": "What is the title of the graph ?",
+    "answer": "Percentage of total electricity produced from oil, gas and coal"
+  },
+  {
+    "image": "plotQA_112918-train.png",
+    "question": "How many groups of bars are there ?",
+    "answer": "5"
+  },
+  {
+    "image": "plotQA_126631-train.png",
+    "question": "What is the total electric power consumption in in 1961 in the graph ?",
+    "answer": "6625.454658476907"
+  },
+  {
+    "image": "plotQA_151576-train.png",
+    "question": "What is the sum of the co2 intensity ?",
+    "answer": "12.63931701496411"
+  },
+  {
+    "image": "plotQA_15444-train.png",
+    "question": "What is the CPIA rating in Eritrea in 2012 ?",
+    "answer": "2.5"
+  },
+  {
+    "image": "plotQA_40447-train.png",
+    "question": "In how many years, is the freight insurance provided on exported goods in Jordan greater than 7.2 % ?",
+    "answer": "3"
+  },
+  {
+    "image": "plotQA_122858-train.png",
+    "question": "What is the label or title of the X-axis ?",
+    "answer": "Country"
+  },
+  {
+    "image": "plotQA_156503-train.png",
+    "question": "Across all countries, what is the maximum percentage of children who were provided with treatment diarrhoea ?",
+    "answer": "68.8"
+  },
+  {
+    "image": "plotQA_129889-train.png",
+    "question": "Are the number of bars on each tick of the X-axis equal ?",
+    "answer": "Yes"
+  },
+  {
+    "image": "plotQA_17581-train.png",
+    "question": "In which year was the percentage of students enrolled in pre-primary schools in Seychelles minimum?",
+    "answer": "2001"
+  },
+  {
+    "image": "plotQA_62887-train.png",
+    "question": "Is the value added by the industrial sector in 1960 in France less than that in Indonesia ?",
+    "answer": "No"
+  },
+  {
+    "image": "plotQA_153644-train.png",
+    "question": "How many years are there in the graph ?",
+    "answer": "6"
+  },
+  {
+    "image": "plotQA_50675-train.png",
+    "question": "How many bars are there ?",
+    "answer": "15"
+  },
+  {
+    "image": "plotQA_3539-train.png",
+    "question": "What is the difference between two consecutive major ticks on the Y-axis ?",
+    "answer": "5.0"
+  },
+  {
+    "image": "plotQA_121747-train.png",
+    "question": "What is the label of the 6th group of bars from the left ?",
+    "answer": "2008"
+  },
+  {
+    "image": "plotQA_35724-train.png",
+    "question": "What is the average employment to population ratio(male) per year ?",
+    "answer": "45.575"
+  },
+  {
+    "image": "plotQA_21999-train.png",
+    "question": "Is the sum of the percentage of employed females who are vulnerable to fall into poverty in 2005 and 2008 greater than the maximum percentage of employed females who are vulnerable to fall into poverty across all years ?",
+    "answer": "Yes"
+  },
+  {
+    "image": "plotQA_16644-train.png",
+    "question": "In which year was the oil rent in Kazakhstan minimum?",
+    "answer": "2013"
+  },
+  {
+    "image": "plotQA_47438-train.png",
+    "question": "In how many years, is the amount earned from merchandise imports in Canada greater than the average amount earned from merchandise imports in Canada taken over all years ?",
+    "answer": "3"
+  },
+  {
+    "image": "plotQA_125386-train.png",
+    "question": "Are the values on the major ticks of Y-axis written in scientific E-notation ?",
+    "answer": "No"
+  },
+  {
+    "image": "plotQA_38809-train.png",
+    "question": "In which year was the insurance provided to nonresidents in Portugal minimum?",
+    "answer": "2006"
+  },
+  {
+    "image": "plotQA_108537-train.png",
+    "question": "What is the difference between the share of the income held by third 20% of the population in China and the share of the income held by first 20% of the population in Turkmenistan?",
+    "answer": "-26.749999999999996"
+  },
+  {
+    "image": "plotQA_144487-train.png",
+    "question": "In which year was the total theoretical duration of secondary education in Slovak Republic maximum?",
+    "answer": "1990"
+  },
+  {
+    "image": "plotQA_31394-train.png",
+    "question": "How many different coloured bars are there ?",
+    "answer": "2"
+  },
+  {
+    "image": "plotQA_87883-train.png",
+    "question": "How are the legend labels stacked ?",
+    "answer": "vertical"
+  },
+  {
+    "image": "plotQA_89646-train.png",
+    "question": "How many years are there in the graph ?",
+    "answer": "3"
+  }
+]
