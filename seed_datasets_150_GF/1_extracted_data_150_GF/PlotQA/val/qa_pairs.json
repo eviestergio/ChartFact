@@ -1,150 +1,118 @@
 [
     {
-        "image_index": 31647,
-        "qid": "D7",
-        "question_string": "What is the difference between two consecutive major ticks on the Y-axis ?",
-        "answer_bbox": [],
-        "template": "data_retrieval",
-        "answer": 2.0,
-        "answer_id": 0,
-        "type": "vbar",
-        "question_id": 25
-    },
-    {
-        "image_index": 5893,
-        "qid": "M6",
-        "question_string": "In which country was the value added by industrial sector maximum?",
-        "answer_bbox": [],
-        "template": "min_max",
-        "answer": "Costa Rica",
-        "answer_id": 54209,
-        "type": "hbar",
-        "question_id": 99577
-    },
-    {
-        "image_index": 11868,
-        "qid": "D8",
-        "question_string": "Are the values on the major ticks of X-axis written in scientific E-notation ?",
+        "image_index": 17140,
+        "qid": "S1",
+        "question_string": "Does the graph contain grids ?",
         "answer_bbox": [
             {
-                "y": 522,
-                "x": 27,
-                "w": 24.4375,
-                "h": 14
+                "y": 34,
+                "x": 126,
+                "w": 4,
+                "h": 546
             },
             {
-                "y": 376,
-                "x": 27,
-                "w": 24.4375,
-                "h": 14
+                "y": 34,
+                "x": 220,
+                "w": 4,
+                "h": 546
             },
             {
-                "y": 229,
-                "x": 27,
-                "w": 24.4375,
-                "h": 14
+                "y": 34,
+                "x": 313,
+                "w": 4,
+                "h": 546
             },
             {
-                "y": 83,
-                "x": 27,
-                "w": 24.4375,
-                "h": 14
-            }
-        ],
-        "template": "data_retrieval",
-        "answer": "No",
-        "answer_id": 17,
-        "type": "hbar",
-        "question_id": 95219
-    },
-    {
-        "image_index": 15718,
-        "qid": "D8",
-        "question_string": "Are the values on the major ticks of X-axis written in scientific E-notation ?",
-        "answer_bbox": [
-            {
-                "y": 612,
-                "x": 39,
-                "w": 46.125,
-                "h": 14
+                "y": 34,
+                "x": 406,
+                "w": 4,
+                "h": 546
             },
             {
-                "y": 612,
-                "x": 182,
-                "w": 46.125,
-                "h": 14
+                "y": 34,
+                "x": 500,
+                "w": 4,
+                "h": 546
             },
             {
-                "y": 612,
-                "x": 326,
-                "w": 46.125,
-                "h": 14
+                "y": 34,
+                "x": 593,
+                "w": 4,
+                "h": 546
             },
             {
-                "y": 612,
-                "x": 469,
-                "w": 46.125,
-                "h": 14
+                "y": 449,
+                "x": 105,
+                "w": 513,
+                "h": 4
             },
             {
-                "y": 612,
-                "x": 613,
-                "w": 46.125,
-                "h": 14
+                "y": 320,
+                "x": 105,
+                "w": 513,
+                "h": 4
             },
             {
-                "y": 612,
-                "x": 756,
-                "w": 46.125,
-                "h": 14
+                "y": 191,
+                "x": 105,
+                "w": 513,
+                "h": 4
             },
             {
-                "y": 612,
-                "x": 900,
-                "w": 46.125,
-                "h": 14
-            }
-        ],
-        "template": "data_retrieval",
-        "answer": "Yes",
-        "answer_id": 1,
-        "type": "hbar",
-        "question_id": 95219
-    },
-    {
-        "image_index": 15389,
-        "qid": "S6",
-        "question_string": "How many bars are there ?",
-        "answer_bbox": [
-            {
-                "y": 546,
-                "x": 98,
-                "w": 572,
-                "h": 24
-            },
-            {
-                "y": 384,
-                "x": 98,
-                "w": 363,
-                "h": 24
-            },
-            {
-                "y": 222,
-                "x": 98,
-                "w": 165,
-                "h": 24
-            },
-            {
-                "y": 60,
-                "x": 98,
-                "w": 861,
-                "h": 24
+                "y": 62,
+                "x": 105,
+                "w": 513,
+                "h": 4
             }
         ],
         "template": "structural",
-        "answer": 4,
-        "answer_id": 12,
-        "type": "hbar",
-        "question_id": 95216
+        "answer": "Yes",
+        "answer_id": 1,
+        "type": "line",
+        "question_id": 28
+    },
+    {
+        "image_index": 19926,
+        "qid": "S17",
+        "question_string": "Is the number of lines equal to the number of legend labels ?",
+        "answer_bbox": [],
+        "template": "structural",
+        "answer": "Yes",
+        "answer_id": 1,
+        "type": "line",
+        "question_id": 235803
+    },
+    {
+        "image_index": 24683,
+        "qid": "CD5",
+        "question_string": "Is the difference between the number of out-of-school children in Mozambique in 2007 and 2009 greater than the difference between the number of out-of-school children in Poland in 2007 and 2009 ?",
+        "answer_bbox": [],
+        "template": "compound",
+        "answer": "Yes",
+        "answer_id": 1,
+        "type": "vbar",
+        "question_id": 322749
+    },
+    {
+        "image_index": 17469,
+        "qid": "S7",
+        "question_string": "How many different coloured lines are there ?",
+        "answer_bbox": [],
+        "template": "structural",
+        "answer": 2,
+        "answer_id": 0,
+        "type": "line",
+        "question_id": 235801
+    },
+    {
+        "image_index": 3349,
+        "qid": "CD5",
+        "question_string": "Is the difference between the gross intake ratio in High income: OECD in 2007 and 2008 greater than the difference between the gross intake ratio in Central African Republic in 2007 and 2008 ?",
+        "answer_bbox": [],
+        "template": "compound",
+        "answer": "Yes",
+        "answer_id": 1,
+        "type": "dot",
+        "question_id": 62021
     }
 ]

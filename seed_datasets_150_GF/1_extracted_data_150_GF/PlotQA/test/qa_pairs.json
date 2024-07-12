@@ -1,92 +1,137 @@
 [
     {
-        "image_index": 12070,
+        "image_index": 28184,
+        "qid": "S8",
+        "question_string": "How many groups of bars are there ?",
+        "answer_bbox": [],
+        "template": "structural",
+        "answer": 3,
+        "answer_id": 38,
+        "type": "vbar",
+        "question_id": 95189
+    },
+    {
+        "image_index": 14687,
+        "qid": "M5",
+        "question_string": "Across all years, what is the minimum agricultural production index in Oman ?",
+        "answer_bbox": {
+            "y": 515,
+            "x": 62,
+            "w": 173,
+            "h": 17
+        },
+        "template": "min_max",
+        "answer": 16.88,
+        "answer_id": 263692,
+        "type": "hbar",
+        "question_id": 600946
+    },
+    {
+        "image_index": 11327,
         "qid": "S13",
-        "question_string": "How many bars are there on the 1st tick from the top ?",
+        "question_string": "How many bars are there on the 2nd tick from the top ?",
         "answer_bbox": [
             {
-                "y": 102,
-                "x": 139,
-                "w": 1088,
-                "h": 14
+                "y": 521,
+                "x": 147,
+                "w": 833,
+                "h": 54
             },
             {
-                "y": 88,
-                "x": 139,
-                "w": 1086,
-                "h": 14
+                "y": 467,
+                "x": 147,
+                "w": 0,
+                "h": 54
             },
             {
-                "y": 74,
-                "x": 139,
-                "w": 1085,
-                "h": 14
-            },
-            {
-                "y": 60,
-                "x": 139,
-                "w": 1084,
-                "h": 14
+                "y": 414,
+                "x": 147,
+                "w": 3,
+                "h": 54
             }
         ],
         "template": "structural",
-        "answer": 4,
-        "answer_id": 12,
+        "answer": 3,
+        "answer_id": 38,
         "type": "hbar",
-        "question_id": 95332
+        "question_id": 95192
     },
     {
-        "image_index": 14337,
-        "qid": "D11",
-        "question_string": "What is the label or title of the X-axis ?",
-        "answer_bbox": {
-            "y": 679.8074999999999,
-            "x": 528,
-            "w": 245.25,
-            "h": 18
-        },
-        "template": "data_retrieval",
-        "answer": "Employment to population ratio(%)",
-        "answer_id": 23,
-        "type": "hbar",
-        "question_id": 34
-    },
-    {
-        "image_index": 11287,
-        "qid": "M6",
-        "question_string": "In which country was the account balance in 2005 maximum?",
-        "answer_bbox": {
-            "y": 275,
-            "x": 55,
-            "w": 31.796875,
-            "h": 14
-        },
-        "template": "min_max",
-        "answer": "Israel",
-        "answer_id": 51519,
-        "type": "hbar",
-        "question_id": 136811
-    },
-    {
-        "image_index": 10652,
-        "qid": "A7",
-        "question_string": "What is the average balance of payments for transport services in 2007 per country ?",
-        "answer_bbox": [],
-        "template": "arithmetic",
-        "answer": 36.47507780295097,
-        "answer_id": 346996,
-        "type": "hbar",
-        "question_id": 148562
-    },
-    {
-        "image_index": 23271,
-        "qid": "S7",
-        "question_string": "How many different coloured bars are there ?",
-        "answer_bbox": [],
+        "image_index": 9960,
+        "qid": "S3",
+        "question_string": "How many legend labels are there ?",
+        "answer_bbox": [
+            {
+                "y": 573,
+                "x": 791,
+                "w": 84,
+                "h": 20
+            },
+            {
+                "y": 596,
+                "x": 791,
+                "w": 71,
+                "h": 20
+            },
+            {
+                "y": 619,
+                "x": 791,
+                "w": 62,
+                "h": 20
+            }
+        ],
         "template": "structural",
-        "answer": 2,
-        "answer_id": 0,
+        "answer": 3,
+        "answer_id": 38,
+        "type": "hbar",
+        "question_id": 30
+    },
+    {
+        "image_index": 27508,
+        "qid": "D8",
+        "question_string": "Are the values on the major ticks of Y-axis written in scientific E-notation ?",
+        "answer_bbox": [
+            {
+                "y": 623,
+                "x": 28,
+                "w": 6.984375,
+                "h": 14
+            },
+            {
+                "y": 513,
+                "x": 28,
+                "w": 6.984375,
+                "h": 14
+            },
+            {
+                "y": 402,
+                "x": 28,
+                "w": 6.984375,
+                "h": 14
+            },
+            {
+                "y": 291,
+                "x": 28,
+                "w": 6.984375,
+                "h": 14
+            },
+            {
+                "y": 180,
+                "x": 28,
+                "w": 6.984375,
+                "h": 14
+            },
+            {
+                "y": 69,
+                "x": 28,
+                "w": 6.984375,
+                "h": 14
+            }
+        ],
+        "template": "data_retrieval",
+        "answer": "No",
+        "answer_id": 17,
         "type": "vbar",
-        "question_id": 95188
+        "question_id": 26
     }
 ]
