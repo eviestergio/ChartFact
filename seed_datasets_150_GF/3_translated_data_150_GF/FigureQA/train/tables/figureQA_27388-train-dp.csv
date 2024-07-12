@@ -1,1 +1,4 @@
-TITLE | title <0x0A> yonis label | xaxis <0x0A> Dark Magenta | 0 <0x0A> Dark Periwinkle | 44 <0x0A> Lime Green | 88
+yonis label,xaxis
+,0
+,44
+,88

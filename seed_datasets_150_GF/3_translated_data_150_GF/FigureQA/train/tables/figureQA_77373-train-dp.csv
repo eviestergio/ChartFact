@@ -1,1 +1,6 @@
-TITLE | title <0x0A> xaxis_label | Coral | Orange | Gold | Medium Seafoam | Light Green <0x0A> xaxis_label | 75.4 | 76.1 | 83.01 | 48.11 | 75.11 <0x0A> xaxis_label | 75.2 | 77.3 | 82.91 | 75.81 | 77.04 <0x0A> xaxis_label | 75.8 | 77.7 | 82.93 | 75.68 | 77.03 <0x0A> medium seafoam | 75.3 | 84.1 | 82.93 | 76.11 | 84.67 <0x0A> light Green | 76.0 | 89.5 | 81.05 | 75.04 | 85.56
+xaxis_label,Coral,Orange,Gold,Medium Seafoam,Light Green
+,75.4,76.1,83.01,48.11,75.11
+,75.2,77.3,82.91,75.81,77.04
+,75.8,77.7,82.93,75.68,77.03
+,75.3,84.1,82.93,76.11,84.67
+,76.0,89.5,81.05,75.04,85.56

@@ -1,1 +1,10 @@
-TITLE | title <0x0A> xaxis label | xaxis <0x0A> Medium Blue | 15.5 <0x0A> Dark Orange | 71.2 <0x0A> Khaki | 45.7 <0x0A> Medium Aqua | 46.3 <0x0A> Midnight Blue | 24.2 <0x0A> Bubblegum | 76.7 <0x0A> Medium Seafoam | 94.9 <0x0A> Light Gold | 77.6 <0x0A> Dark Blue | 89.7
+xaxis label,xaxis
+,15.5
+,71.2
+,45.7
+,46.3
+,24.2
+,76.7
+,94.9
+,77.6
+,89.7

@@ -1,1 +1,9 @@
-TITLE | title <0x0A> y axis_label | title <0x0A> Chocolate | 76 <0x0A> Chartreuse | 9.8 <0x0A> Light Coral | 71.6 <0x0A> Mint | 65.7 <0x0A> Medium Mint | 30.7 <0x0A> Indian Red | 56.2 <0x0A> Dark Olive | 34.9 <0x0A> Green | 98.3
+y axis_label,title
+,76.0
+,9.8
+,71.6
+,65.7
+,30.7
+,56.2
+,34.9
+,98.3

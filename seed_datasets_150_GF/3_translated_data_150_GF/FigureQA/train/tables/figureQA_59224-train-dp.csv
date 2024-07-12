@@ -1,1 +1,5 @@
-TITLE | title <0x0A> xaxis label | yaxis label <0x0A> Firebrick | 91 <0x0A> Pale Green | 80 <0x0A> Light Seafoam | 61 <0x0A> Green Yellow | 83
+xaxis label,yaxis label
+,91
+,80
+,61
+,83

@@ -1,1 +1,9 @@
-TITLE | title <0x0A> xaxis label | xaxis label <0x0A> Crimson | 63 <0x0A> Maroon | 14 <0x0A> Dark Blue | 65 <0x0A> Dark Salmon | 84 <0x0A> Brown | 97 <0x0A> Periwinkle | 33 <0x0A> Orange | 11 <0x0A> Tomato | 64
+xaxis label,xaxis label
+,63
+,14
+,65
+,84
+,97
+,33
+,11
+,64

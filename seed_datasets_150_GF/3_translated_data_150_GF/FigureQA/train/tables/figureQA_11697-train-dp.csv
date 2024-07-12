@@ -1,1 +1,6 @@
-TITLE | title <0x0A> xaxis label | yaxis label <0x0A> Dark Orchid | 99 <0x0A> Medium Purple | 82 <0x0A> Purple | 65 <0x0A> Dark Salmon | 49 <0x0A> Forest Green | 32
+xaxis label,yaxis label
+,99
+,82
+,65
+,49
+,32

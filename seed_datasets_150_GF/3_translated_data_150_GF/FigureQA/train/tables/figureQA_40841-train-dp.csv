@@ -1,1 +1,10 @@
-TITLE | title <0x0A> xaxis_label | xaxis <0x0A> Dark Salmon | 90 <0x0A> Coral | 27 <0x0A> Cornflower | 8 <0x0A> Dark Green | 84 <0x0A> Dark Red | 14 <0x0A> Forest Green | 18 <0x0A> Orchid | 63 <0x0A> Light Slate | 58 <0x0A> Medium Seafoam | 7
+xaxis_label,xaxis
+,90
+,27
+,8
+,84
+,14
+,18
+,63
+,58
+,7

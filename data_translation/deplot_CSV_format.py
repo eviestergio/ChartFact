@@ -97,7 +97,8 @@ def main(src, dst):
     # Check for files not converted properly
     csvs_not_converted_properly = test_csv_conversion(data_pattern)
     if csvs_not_converted_properly:
-        print("CSV files not converted properly:", csvs_not_converted_properly)
+        print(f"CSV files not converted properly: {csvs_not_converted_properly}")
+        print(f"Number of CSVs not converted properly: {len(csvs_not_converted_properly)}")
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:

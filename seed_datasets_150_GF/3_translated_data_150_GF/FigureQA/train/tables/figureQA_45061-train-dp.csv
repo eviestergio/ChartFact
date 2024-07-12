@@ -1,1 +1,3 @@
-TITLE | title <0x0A> xaxis_label | yaxis label <0x0A> Purple | 72 <0x0A> Red | 60
+xaxis_label,yaxis label
+,72
+,60

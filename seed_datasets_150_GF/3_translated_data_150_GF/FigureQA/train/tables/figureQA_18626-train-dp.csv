@@ -1,1 +1,4 @@
-TITLE | title <0x0A> xaxis_label | yaxis label <0x0A> Red | 0 <0x0A> Turquoise | 12.7 <0x0A> Medium Aqua | 25.4
+xaxis_label,yaxis label
+,0.0
+,12.7
+,25.4

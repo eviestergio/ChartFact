@@ -1,1 +1,5 @@
-TITLE | title <0x0A> xaxis_label | yaxis label <0x0A> Tomato | 44.70 <0x0A> Crimson | 56.75 <0x0A> Peru | 74.00 <0x0A> Dark Gold | 80.78
+xaxis_label,yaxis label
+,44.7
+,56.75
+,74.0
+,80.78
