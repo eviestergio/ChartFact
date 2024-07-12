@@ -239,14 +239,16 @@ pip-selfcheck.json
 
 # End of https://www.toptal.com/developers/gitignore/api/venv,python,visualstudiocode,macos
 
-### Do not ignore empty folders
+### Do not ignore test and val folders witin FigureQA
 !seed_datasets_150_GF/1_extracted_data_150_GF/FigureQA/test
 !seed_datasets_150_GF/1_extracted_data_150_GF/FigureQA/test/png-1
 !seed_datasets_150_GF/1_extracted_data_150_GF/FigureQA/test/png-2
 !seed_datasets_150_GF/1_extracted_data_150_GF/FigureQA/test/qa_pairs-1.json
 !seed_datasets_150_GF/1_extracted_data_150_GF/FigureQA/test/qa_pairs-2.json
+
 !seed_datasets_150_GF/1_extracted_data_150_GF/FigureQA/val
 !seed_datasets_150_GF/1_extracted_data_150_GF/FigureQA/val/png-1
 !seed_datasets_150_GF/1_extracted_data_150_GF/FigureQA/val/png-2
 !seed_datasets_150_GF/1_extracted_data_150_GF/FigureQA/val/qa_pairs-1.json
 !seed_datasets_150_GF/1_extracted_data_150_GF/FigureQA/val/qa_pairs-2.json
+
