@@ -1,4 +1,4 @@
-# ChartFact: Explainable Fact-Checking over Chart Images
+# ChartFact: And Explainable Three-Way Labeled Fact-Checking over Chart Images
 - Authors: Paraskevi Stergiopoulou, Angeline Wang, Mubashara Akhtar
 - Paper Link: [ChartFact]()
 
@@ -7,23 +7,23 @@ ChartFact is a chart fact-checking dataset with 100K fact-checking data entries 
 
 The dataset includes chart images, tables (translated through Deplot for FigureQA and PlotQA), 'supports', 'refutes' and 'not enough information' claims, along with explanations. 
 
-ChartFact is thus a mixture of synthetic and real-world chart images, and contains a diverse range of chart types including: Bar charts, line graphs, dot-line plots, pie charts, and scatter plots. The real-world data within the dataset is extracted from sources such as Pew, the World Bank and Statista [(Masry et al., 2022)](https://arxiv.org/pdf/2203.10244).
+ChartFact is thus a mixture of synthetic and real-world chart images, and contains a diverse range of chart types including: Bar charts, line graphs, dot-line plots, pie charts, and scatter plots. The real-world data within the dataset is extracted from sources such as Pew, the World Bank, Statista [(Masry et al., 2022](https://arxiv.org/pdf/2203.10244);[ Methani et al., 2020)](https://arxiv.org/pdf/1909.00997).
 
 To download the dataset, click [here](https://github.com/eviestergio/ChartFC).
 
 Code for baselines available here: []()
 
 The dataset has the following structure:
-
+```
 ├── ChartFact Dataset                   
 │   ├── train   
-│   │   ├── fc_entries.json # ChartFact machine generated claims and explanations. 
-│   │   ├── png                   # Chart Images Folder
+│   │   ├── fc_entries.json # Contains generated claims with corresponding labels and explanations.
+│   │   ├── png                   # Folder containing chart images
 │   │   │   ├── chartQA_id-train.png
 │   │   │   ├── figureQA_id-train.png
 │   │   │   ├── plotQA_id-train.png
 │   │   │   ├── ...
-│   │   ├── tables                # Underlying Data Tables Folder
+│   │   ├── tables                # Folder containing underlying data tables
 │   │   │   ├── chartQA_id-train.csv
 │   │   │   ├── figureQA_id-train.csv
 │   │   │   ├── plotQA_id-train.csv
@@ -35,6 +35,7 @@ The dataset has the following structure:
 │   │   │   ...
 │   │   │   ...
 │   │   |   ...
+```
 
 ### Models
 _Proprietary_
@@ -62,7 +63,7 @@ If you have any questions about this work, please contact *Paraskevi Stergiopoul
 
 ## Reference 
 If you use our dataset or code, please cite our paper: [ChartFact: An Evidence-Based Fact-Checking Dataset over Chart Images](). 
-
+```
 @article{,
   author       = {Paraskevi Stergiopoulou and
                   Angeline Wang and
@@ -79,3 +80,4 @@ If you use our dataset or code, please cite our paper: [ChartFact: An Evidence-B
   biburl       = {},
   bibsource    = {}
 }
+```
