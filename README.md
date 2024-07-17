@@ -7,7 +7,7 @@ ChartFact is a chart fact-checking dataset with 100K fact-checking data entries 
 
 The dataset includes chart images, their underlying tables (translated through DePlot for FigureQA and PlotQA charts), and JSON files containing claims, labels ('supports', 'refutes', and 'not enough information'), and explanations.
 
-ChartFact is thus a mixture of synthetic and real-world chart images, and contains a diverse range of chart types including: vertical and horizontal bar charts, line graphs, dot-line plots, pie charts, and scatter plots. The real-world data within the dataset is extracted from sources such as Pew, the World Bank, and Statista ([Masry et al., 2022](https://arxiv.org/pdf/2203.10244);[ Methani et al., 2020](https://arxiv.org/pdf/1909.00997)).
+ChartFact is thus a mixture of synthetic and real-world chart images, and contains a diverse range of chart types including: vertical and horizontal bar charts, line graphs, dot-line plots, pie charts, and scatter plots. The real-world data within the dataset is extracted from sources such as Pew, the World Bank, and Statista ([Masry et al., 2022](https://arxiv.org/pdf/2203.10244); [Methani et al., 2020](https://arxiv.org/pdf/1909.00997)).
 
 To download the dataset, click [here](https://github.com/eviestergio/ChartFC).
 
@@ -32,27 +32,25 @@ All pipeline-related source code lives in the root directory `ChartFact`:
 - `final_dataset_creation/combine_datasets.py`: Script for combining all processed data into the final dataset. 
 
 ####  Prerequisites 
-1. Install the necessary packages: 
-  ``` pip install -r requirements.txt ```
-2. Ensure you have enough space. The full 100K dataset needs {_ GB} when uncompressed and additional space is needed for intermediate data during processing.
+1. Install the necessary packages: ``` pip install -r requirements.txt ```
+2. Ensure you have enough space. The full 100K dataset needs {#} GB when uncompressed and additional space is needed for intermediate data during processing.
 
-#### Generate a Whole Dataset
+#### Generating the Entire Dataset
 
 ##### Using the pipeline script
-1. Run the main_pipeline.py script: 
-  ``` python main_pipeline.py ```
+1. Run the main_pipeline.py script: ``` python main_pipeline.py ```
 2. The script will prompt you to enter the base folder name (e.g., seed_datasets) and the number of entries (e.g., 100K) for the dataset. Note that this number is used for naming the folders but does not automatically set the number of entries in the extraction file. The number of entries to be extracted from data_extraction/random_extraction.py need to be manually specified in the script.
 3. You can choose to use a default source folder path (e.g., ChartFact/QA_datasets) or specify a custom one to extract the data from. 
 4. Follow the prompts to complete each step of the pipeline.
 
-##### With individual scripts
-cd ChartFact
-python data_extraction/random_extraction.py QA_datasets 1_extracted_data_100K
-python data_preprocessing/file-data_standardization.py 1_extracted_data_100K 2_preprocessed_data_100K
-python data_translation/deplot.py 2_preprocessed_data_100K 3_translated_data_100K
-python data_translation/deplot_CSV_format.py 3_translated_data_100K 3_translated_data_100K
-python data_prompting/main.py 3_translated_data_100K 4_prompted_data_100K 
-python final_dataset_creation/combine_datasets.py 4_prompted_data_100K  5_final_dataset_100K
+##### Using individual scripts
+1. ```cd ChartFact```
+2. ```python data_extraction/random_extraction.py QA_datasets 1_extracted_data_100K```
+3. ```python data_preprocessing/file-data_standardization.py 1_extracted_data_100K 2_preprocessed_data_100K```
+4. ```python data_translation/deplot.py 2_preprocessed_data_100K 3_translated_data_100K```
+5. ```python data_translation/deplot_CSV_format.py 3_translated_data_100K 3_translated_data_100K```
+6. ```python data_prompting/main.py 3_translated_data_100K 4_prompted_data_100K ```
+7. ```python final_dataset_creation/combine_datasets.py 4_prompted_data_100K  5_final_dataset_100K```
 
 
 ## Dataset Structure
@@ -79,6 +77,7 @@ The dataset has the following structure:
 │   │   │   ...
 │   │   |   ...
 ```
+
 ## Models
 
 #### Proprietary
