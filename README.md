@@ -1,9 +1,9 @@
-# ChartFact: And Explainable Three-Way Labeled Fact-Checking over Chart Images
+# ChartFact: An Explainable Three-Way Labeled Fact-Checking over Chart Images
 - Authors: Paraskevi Stergiopoulou, Angeline Wang, Mubashara Akhtar
 - Paper Link: [ChartFact]()
 
 ## ChartFact Dataset
-ChartFact is a chart fact-checking dataset with 100K fact-checking data entries and ___ charts created using ChartQA [(Masry et al., 2022)](https://arxiv.org/pdf/2203.10244), FigureQA [Kahou et al., 2017](https://arxiv.org/pdf/1710.07300), and PlotQA [Methani et al., 2020](https://arxiv.org/pdf/1909.00997) as seed datasets. 
+ChartFact is a chart fact-checking dataset with 100K fact-checking data entries and ___ charts created using ChartQA [(Masry et al., 2022)](https://arxiv.org/pdf/2203.10244), FigureQA [(Kahou et al., 2017)](https://arxiv.org/pdf/1710.07300), and PlotQA [(Methani et al., 2020)](https://arxiv.org/pdf/1909.00997) as seed datasets. 
 
 The dataset includes chart images, tables (translated through Deplot for FigureQA and PlotQA), 'supports', 'refutes' and 'not enough information' claims, along with explanations. 
 
