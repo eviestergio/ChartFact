@@ -11,8 +11,6 @@ ChartFact is thus a mixture of synthetic and real-world chart images, and contai
 
 To download the dataset, click [here](https://github.com/eviestergio/ChartFC).
 
-Code for baselines available here: []()
-
 The dataset has the following structure:
 ```
 ├── ChartFact Dataset                   
@@ -62,7 +60,7 @@ Please refer to [MatCha]()
 If you have any questions about this work, please contact *Paraskevi Stergiopoulou* at [paraskevi.stergiopoulou@kcl.ac.uk](mailto:paraskevi.stergiopoulou@kcl.ac.uk) or *Angeline Wang* at [angeline.wang@kcl.ac.uk](mailto:angeline.wang@kcl.ac.uk).
 
 ## Reference 
-If you use our dataset or code, please cite our paper: [ChartFact: An Evidence-Based Fact-Checking Dataset over Chart Images](). 
+If you use our dataset or code, please cite our paper: [ChartFact: An Explainable Three-Way Labeled Fact-Checking over Chart Images](). 
 ```
 @article{,
   author       = {Paraskevi Stergiopoulou and
