@@ -34,7 +34,7 @@ def main():
     #user inputs
     base_folder = input("Enter the base folder name (e.g., 'seed_datasets'): ")
     num_entries = input("Enter the number of entries (e.g., '100K' or '100_000'): ")
-    default_source_folder = '~/Desktop/ChartFC/QA_datasets' # default source folder path --> change to ChartFact once renamed
+    default_source_folder = '~/Desktop/ChartFact/QA_datasets' # default source folder path 
 
     # ask user if they want to use default source folder path
     use_default = input(f"Do you want to use the default source folder path ({default_source_folder})? (yes/no): ").strip().lower()
