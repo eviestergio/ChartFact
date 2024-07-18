@@ -1,0 +1,12 @@
+[
+  {
+    "image": "figureQA_43249-train.png",
+    "question": "Is Hot Pink less than Teal?",
+    "answer": "No"
+  },
+  {
+    "image": "figureQA_99722-train.png",
+    "question": "Does Dark Gold intersect Turquoise?",
+    "answer": "No"
+  }
+]

@@ -1,0 +1,8 @@
+[
+    {
+        "image": "plotQA_4212-val.png",
+        "claim": "The total grants received by the government in Cote d'Ivoire is 548650000.",
+        "label": "Supports",
+        "explanation": "The data entry provides a table with specific values for the grants received by the government in Cote d'Ivoire each year. By summing up the values for all years listed in the table, the total amounts to 548650000, which matches the answer provided. Therefore, it is evident that the claim stating the total grants received by the government in Cote d'Ivoire is 548650000 is supported by the data in the chart."
+    }
+]

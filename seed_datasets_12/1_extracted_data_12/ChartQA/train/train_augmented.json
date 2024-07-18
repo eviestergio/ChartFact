@@ -1,0 +1,12 @@
+[
+    {
+        "imgname": "multi_col_20204.png",
+        "query": "How many people committed suicide in 2009?",
+        "label": "517"
+    },
+    {
+        "imgname": "two_col_42313.png",
+        "query": "What was the amount of British pounds spent on alcoholic drinks in 2020?",
+        "label": "25964"
+    }
+]

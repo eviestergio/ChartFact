@@ -1,0 +1,20 @@
+[
+    {
+        "image": "plotQA_4212-val.png",
+        "claim": "The total grants received by the government in Cote d'Ivoire is 548650000.",
+        "label": "Supports",
+        "explanation": "The data entry provides a table with specific values for the grants received by the government in Cote d'Ivoire each year. By summing up the values for all years listed in the table, the total amounts to 548650000, which matches the answer provided. Therefore, it is evident that the claim stating the total grants received by the government in Cote d'Ivoire is 548650000 is supported by the data in the chart."
+    },
+    {
+        "image": "chartQA_multi_col_40930-val.png",
+        "claim": "The year 2020 is the only year in which the blue bar is above 5.",
+        "label": "Supports",
+        "explanation": "By examining the data in the chart, it can be seen that the values in the 'Online' column represent the blue bars. In 2020, the value for the 'Online' column is 5.76, which is the only instance where the blue bar is above 5. This directly supports the claim that in 2020, the blue bar is above 5."
+    },
+    {
+        "image": "chartQA_two_col_43627-val.png",
+        "claim": "The expenses in million U.S. dollars in 2018 amounted to 299.3, which is the lowest among the years shown in the chart.",
+        "label": "Refutes",
+        "explanation": "This refutes claim contradicts the data in the chart as it inaccurately states that the expenses in 2018 were the lowest among the years provided. However, according to the chart, the expenses were actually highest in 2018 with a value of 420.9 million U.S. dollars. Therefore, the refutes claim misinterprets the actual data presented in the chart, making it incorrect based on the reported numbers."
+    }
+]

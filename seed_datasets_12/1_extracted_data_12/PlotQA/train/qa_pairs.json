@@ -1,0 +1,43 @@
+[
+    {
+        "image_index": 37698,
+        "qid": "S13",
+        "question_string": "How many bars are there on the 2nd tick from the top ?",
+        "answer_bbox": [
+            {
+                "y": 521,
+                "x": 236,
+                "w": 645,
+                "h": 54
+            },
+            {
+                "y": 467,
+                "x": 236,
+                "w": 327,
+                "h": 54
+            },
+            {
+                "y": 414,
+                "x": 236,
+                "w": 758,
+                "h": 54
+            }
+        ],
+        "template": "structural",
+        "answer": 3,
+        "answer_id": 38,
+        "type": "hbar",
+        "question_id": 95192
+    },
+    {
+        "image_index": 98527,
+        "qid": "S1",
+        "question_string": "Does the graph contain grids ?",
+        "answer_bbox": [],
+        "template": "structural",
+        "answer": "No",
+        "answer_id": 17,
+        "type": "line",
+        "question_id": 28
+    }
+]

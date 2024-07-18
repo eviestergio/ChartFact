@@ -1,0 +1,38 @@
+[
+    {
+        "image": "chartQA_multi_col_20204-train.png",
+        "claim": "517 people committed suicide in 2009.",
+        "label": "Supports",
+        "explanation": "The data in the table shows the number of suicide cases per year, with 517 people recorded in 2009. The 'answer' provided confirms this specific information from the chart, supporting the claim that 517 people committed suicide in 2009."
+    },
+    {
+        "image": "plotQA_37698-train.png",
+        "claim": "There are 3 bars on the 2nd tick from the top.",
+        "label": "Supports",
+        "explanation": "Referring to the chart, it can be observed that on the 2nd tick from the top, there are indeed 3 bars represented, confirming that the data aligns with the claim made."
+    },
+    {
+        "image": "figureQA_99722-train.png",
+        "claim": "Orange intersects Turquoise.",
+        "label": "Refutes",
+        "explanation": "The refutes claim contradicts the chart as it inaccurately states that Orange intersects Turquoise. However, based on the data presented in the chart, there is no intersection between Orange and Turquoise. Therefore, the claim directly contradicts the actual data provided in the chart."
+    },
+    {
+        "image": "plotQA_98527-train.png",
+        "claim": "Sub-Saharan Africa had the highest change in value from 2006 to 2007 compared to the other regions in the chart.",
+        "label": "Refutes",
+        "explanation": "This claim refutes the chart as it inaccurately states that Sub-Saharan Africa had the highest change in value from 2006 to 2007. However, based on the data provided in the table, Sub-Saharan Africa's value changed from 2.06 in 2006 to 2.06 in 2007, resulting in no change. On the other hand, Europe had a change from -0.06 in 2006 to -0.08 in 2007, indicating a decrease, which is higher than the change in Sub-Saharan Africa. Therefore, the claim contradicts the actual data presented in the chart."
+    },
+    {
+        "image": "chartQA_two_col_42313-train.png",
+        "claim": "The amount of British pounds spent on alcoholic drinks in 2010 was 14879, which was the highest among the years shown in the chart.",
+        "label": "Refutes",
+        "explanation": "This claim refutes the chart by inaccurately stating that the highest amount spent on alcoholic drinks was in 2010. However, based on the chart data, the highest amount spent was in 2020, with a value of 25964 GBP. In 2010, the expenditure was 14879 GBP, which contradicts the claim made, showing a misinterpretation of the actual data in the chart."
+    },
+    {
+        "image": "figureQA_43249-train.png",
+        "claim": "Hot Pink has a higher value than Teal.",
+        "label": "Supports",
+        "explanation": "Looking at the chart, the value for Hot Pink is 94.7, which is greater than the value for Teal at 60.4. This clearly supports the claim that Hot Pink has a higher value than Teal in the given data."
+    }
+]

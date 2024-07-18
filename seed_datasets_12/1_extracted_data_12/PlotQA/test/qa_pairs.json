@@ -1,0 +1,18 @@
+[
+    {
+        "image_index": 1467,
+        "qid": "D11",
+        "question_string": "What is the label or title of the X-axis ?",
+        "answer_bbox": {
+            "y": 589.8075,
+            "x": 533,
+            "w": 32.890625,
+            "h": 18
+        },
+        "template": "data_retrieval",
+        "answer": "Year",
+        "answer_id": 22,
+        "type": "dot",
+        "question_id": 34
+    }
+]

@@ -1,0 +1,14 @@
+[
+    {
+        "image": "plotQA_37698-train.png",
+        "claim": "There are 3 bars on the 2nd tick from the top.",
+        "label": "Supports",
+        "explanation": "Referring to the chart, it can be observed that on the 2nd tick from the top, there are indeed 3 bars represented, confirming that the data aligns with the claim made."
+    },
+    {
+        "image": "plotQA_98527-train.png",
+        "claim": "Sub-Saharan Africa had the highest change in value from 2006 to 2007 compared to the other regions in the chart.",
+        "label": "Refutes",
+        "explanation": "This claim refutes the chart as it inaccurately states that Sub-Saharan Africa had the highest change in value from 2006 to 2007. However, based on the data provided in the table, Sub-Saharan Africa's value changed from 2.06 in 2006 to 2.06 in 2007, resulting in no change. On the other hand, Europe had a change from -0.06 in 2006 to -0.08 in 2007, indicating a decrease, which is higher than the change in Sub-Saharan Africa. Therefore, the claim contradicts the actual data presented in the chart."
+    }
+]

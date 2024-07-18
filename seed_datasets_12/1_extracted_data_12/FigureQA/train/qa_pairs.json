@@ -1,0 +1,42 @@
+[
+    {
+        "image_index": 43249,
+        "color2_name": "Teal",
+        "color1_name": "Hot Pink",
+        "color1_rgb": [
+            255,
+            105,
+            180
+        ],
+        "question_string": "Is Hot Pink less than Teal?",
+        "color2_id": 94,
+        "color1_id": 43,
+        "answer": 0,
+        "color2_rgb": [
+            0,
+            128,
+            128
+        ],
+        "question_id": 2
+    },
+    {
+        "image_index": 99722,
+        "color2_name": "Turquoise",
+        "color1_name": "Dark Gold",
+        "color1_rgb": [
+            184,
+            134,
+            11
+        ],
+        "question_string": "Does Dark Gold intersect Turquoise?",
+        "color2_id": 96,
+        "color1_id": 15,
+        "answer": 0,
+        "color2_rgb": [
+            64,
+            224,
+            208
+        ],
+        "question_id": 14
+    }
+]
