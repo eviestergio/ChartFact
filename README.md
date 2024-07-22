@@ -2,10 +2,10 @@
 - Authors: Evie Stergiopoulou, Angeline Wang, Mubashara Akhtar
 - Paper Link: [ChartFact]()
 
-## The ChartFact Dataset
+## ChartFact Dataset
 ChartFact is a chart fact-checking dataset with 100K fact-checking data entries and ___ charts created using ChartQA ([Masry et al., 2022](https://arxiv.org/pdf/2203.10244)), FigureQA ([Kahou et al., 2017](https://arxiv.org/pdf/1710.07300)), and PlotQA ([Methani et al., 2020](https://arxiv.org/pdf/1909.00997)) as seed datasets. 
 
-The dataset includes chart images, their underlying tables (translated through DePlot for FigureQA and PlotQA charts), and JSON files containing claims, labels ('supports', 'refutes', and 'not enough information'), and explanations.
+The dataset includes chart images, their underlying tables and titles (translated through DePlot for FigureQA and PlotQA charts), and JSON files containing claims, labels ('supports', 'refutes', and 'not enough information'), and explanations.
 
 ChartFact is thus a mixture of synthetic and real-world chart images, and contains a diverse range of chart types including: vertical and horizontal bar charts, line graphs, dot-line plots, pie charts, and scatter plots. The real-world data within the dataset is extracted from sources such as Pew, the World Bank, and Statista ([Masry et al., 2022](https://arxiv.org/pdf/2203.10244); [Methani et al., 2020](https://arxiv.org/pdf/1909.00997)).
 
@@ -16,8 +16,8 @@ To download the dataset, click [here](https://github.com/eviestergio/ChartFC).
 The pipeline for creating the ChartFact dataset includes the following steps: 
 1. **Data Extraction:** Extract a subset of data entries from a source folder of QA datasets. 
 2. **Data Preprocessing:** Standardise the extracted data into a consistent format. 
-3. **Data Translation:** Generate underlying tables for charts that don’t have any. 
-4. **Data Formatting:** Convert the translated data tables into properly formatted CSV files. 
+3. **Data Translation:** Generate underlying tables and titles (if available) for charts that don’t have any. 
+4. **Data Formatting:** Convert the translated data tables into properly formatted CSV files and move titles (if available) to separate TXT files. 
 5. **Data Prompting:** Generate claims and explanations for each class of labels.
 6. **Final Dataset Creation:** Combine all processed data into a final dataset, shuffling and organizing it into relevant JSON files and folders for images and tables. 
 
@@ -26,8 +26,8 @@ The pipeline for creating the ChartFact dataset includes the following steps:
 All pipeline-related source code lives in the root directory `ChartFact`: 
 - `data_extraction/random_extraction.py`: Script for extracting a subset of data entries. 
 - `data_preprocessing/file-data_standardisation.py`: Script for standardising the extracted data. 
-- `data_translation/deplot.py`: Script for generating underlying tables using the DePlot model. 
-- `data_translation/deplot_CSV_format.py`: Script for formatting the translated data tables into CSV files. 
+- `data_translation/deplot.py`: Script for generating underlying tables and titles (if available) using the DePlot model. 
+- `data_translation/deplot_CSV_format.py`: Script for formatting the translated data tables into CSV files and titles (if available) into TXT files. 
 - `data_prompting/main.py`: Script for generating claims and explanations using OpenAI's GPT-3.5-turbo.
 - `final_dataset_creation/combine_datasets.py`: Script for combining all processed data into the final dataset. 
 
@@ -63,7 +63,7 @@ Make sure to manually adjust the path to the folder of the downloaded QA dataset
 
 ##### Using individual scripts
 1. ```cd ChartFact```
-2. ```python data_extraction/random_extraction.py /path/to/QA_datasets seed_datasets_{#}}/1_extracted_data_{#}``
+2. ```python data_extraction/random_extraction.py /path/to/QA_datasets seed_datasets_{#}/1_extracted_data_{#}``
 3. ```python data_preprocessing/file-data_standardisation.py seed_datasets_{#}/1_extracted_data_{#} seed_datasets_{#}/2_preprocessed_data_{#}```
 4. ```python data_translation/deplot.py seed_datasets_{#}/2_preprocessed_data_{#} seed_datasets_{#}/3_translated_data_{#}```
 5. ```python data_translation/deplot_CSV_format.py seed_datasets_{#}/3_translated_data_{#} seed_datasets_{#}/3_translated_data_{#}```
@@ -77,15 +77,16 @@ The ChartFact dataset has the following structure:
 ├── ChartFact                   
 │   ├── train   
 │   │   ├── fc_entries.json       # Contains generated claims with corresponding labels and explanations
-│   │   ├── png                   # Folder containing chart images
+│   │   ├── png                   # Folder containing chart images 
 │   │   │   ├── chartQA_{ID}-train.png
 │   │   │   ├── figureQA_{ID}-train.png
 │   │   │   ├── plotQA_{ID}-train.png
 │   │   │   ├── ...
-│   │   ├── tables                # Folder containing underlying data tables
+│   │   ├── tables                # Folder containing underlying data tables and titles (if available)
 │   │   │   ├── chartQA_{ID}-train.csv
 │   │   │   ├── figureQA_{ID}-train.csv
 │   │   │   ├── plotQA_{ID}-train.csv
+│   │   │   ├── plotQA_{ID}-train.txt    # Title file (if available)
 │   │   │   ├── ...
 │   └── val  
 │   │   │   ...
