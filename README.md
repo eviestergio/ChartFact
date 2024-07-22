@@ -63,12 +63,12 @@ Make sure to manually adjust the path to the folder of the downloaded QA dataset
 
 ##### Using individual scripts
 1. ```cd ChartFact```
-2. ```python data_extraction/random_extraction.py QA_datasets seed_datasets_100K/1_extracted_data_100K```
-3. ```python data_preprocessing/file-data_standardisation.py seed_datasets_100K/1_extracted_data_100K seed_datasets_100K/2_preprocessed_data_100K```
-4. ```python data_translation/deplot.py seed_datasets_100K/2_preprocessed_data_100K seed_datasets_100K/3_translated_data_100K```
-5. ```python data_translation/deplot_CSV_format.py seed_datasets_100K/3_translated_data_100K seed_datasets_100K/3_translated_data_100K```
-6. ```python data_prompting/main.py seed_datasets_100K/3_translated_data_100K seed_datasets_100K/4_prompted_data_100K ```
-7. ```python final_dataset_creation/combine_datasets.py seed_datasets_100K/4_prompted_data_100K  seed_datasets_100K/5_final_dataset_100K```
+2. ```python data_extraction/random_extraction.py /path/to/QA_datasets seed_datasets_{#}}/1_extracted_data_{#}``
+3. ```python data_preprocessing/file-data_standardisation.py seed_datasets_{#}/1_extracted_data_{#} seed_datasets_{#}/2_preprocessed_data_{#}```
+4. ```python data_translation/deplot.py seed_datasets_{#}/2_preprocessed_data_{#} seed_datasets_{#}/3_translated_data_{#}```
+5. ```python data_translation/deplot_CSV_format.py seed_datasets_{#}/3_translated_data_{#} seed_datasets_{#}/3_translated_data_{#}```
+6. ```python data_prompting/main.py seed_datasets_{#}/3_translated_data_{#} seed_datasets_{#}/4_prompted_data_{#} ```
+7. ```python final_dataset_creation/combine_datasets.py seed_datasets_{#}/4_prompted_data_{#}  seed_datasets_{#}/5_final_dataset_{#}```
 
 
 ## Dataset Structure
