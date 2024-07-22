@@ -130,6 +130,18 @@ def copy_folder_structure_and_files(src, dst):
     shutil.copytree(src, dst)
     print(f"Copied {src} to {dst}")
 
+def remove_unnecessary_files_and_folders(folder_path):
+    ''' Remove unnecessary files and folders from each dataset. '''
+    for root, dirs, files in os.walk(folder_path):
+        for dir in dirs:
+            if dir == 'annotations':
+                shutil.rmtree(os.path.join(root, dir))
+                print(f"Removed folder: {os.path.join(root, dir)}")
+        for filename in files:
+            if filename in ['annotations.json', 'annotations_format.txt'] or 'license' in filename.lower():
+                os.remove(os.path.join(root, filename))
+                print(f"Removed file: {os.path.join(root, filename)}")
+
 def process_dataset_in_folder(folder_path, preprocess_func, postfix):
     ''' Process a dataset in the given folder using the specified preprocessing function. '''
     json_file_path = os.path.join(folder_path, "qa_pairs.json")
@@ -189,6 +201,9 @@ def remove_old_json_files(base_path):
 def main(src, dst):
     # Copy entire source directory to destination directory
     copy_folder_structure_and_files(src, dst)
+
+    # Remove unnecessary files and folders
+    remove_unnecessary_files_and_folders(dst)
 
     # Base path for all datasets
     base_path = dst
