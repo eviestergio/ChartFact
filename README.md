@@ -2,7 +2,7 @@
 - Authors: Evie Stergiopoulou, Angeline Wang, Mubashara Akhtar
 - Paper Link: [ChartFact]()
 
-## ChartFact Dataset
+## The ChartFact Dataset
 ChartFact is a chart fact-checking dataset with 100K fact-checking data entries and ___ charts created using ChartQA ([Masry et al., 2022](https://arxiv.org/pdf/2203.10244)), FigureQA ([Kahou et al., 2017](https://arxiv.org/pdf/1710.07300)), and PlotQA ([Methani et al., 2020](https://arxiv.org/pdf/1909.00997)) as seed datasets. 
 
 The dataset includes chart images, their underlying tables (translated through DePlot for FigureQA and PlotQA charts), and JSON files containing claims, labels ('supports', 'refutes', and 'not enough information'), and explanations.
@@ -34,8 +34,26 @@ All pipeline-related source code lives in the root directory `ChartFact`:
 ####  Prerequisites 
 1. Install the necessary packages: ``` pip install -r requirements.txt ```
 2. Ensure you have enough space. The full 100K dataset needs {#} GB when uncompressed and additional space is needed for intermediate data during processing.
+3. Download all the required datasets ([ChartQA](https://huggingface.co/datasets/ahmed-masry/ChartQA/blob/main/ChartQA%20Dataset.zip); [FigureQA](https://www.microsoft.com/en-hk/download/details.aspx?id=100635); [PlotQA](https://github.com/NiteshMethani/PlotQA/blob/master/PlotQA_Dataset.md)) and place them under one folder (e.g., named 'QA_datasets') with each dataset named strictly as ChartQA, FigureQA, and PlotQA.
 
-#### Generating the Entire Dataset
+```
+QA_datasets
+├── ChartQA
+│   ├── train
+│   ├── val
+│   └── test
+├── FigureQA
+│   ├── train
+│   ├── val
+│   └── test
+└── PlotQA
+    ├── train
+    ├── val
+    └── test
+```
+Make sure to manually adjust the path to the folder of the downloaded QA datasets in the first step of the pipeline (data extraction).
+
+#### Generating the ChartFact Dataset
 
 ##### Using the pipeline script
 1. Run the main_pipeline.py script: ``` python main_pipeline.py ```
@@ -54,9 +72,9 @@ All pipeline-related source code lives in the root directory `ChartFact`:
 
 
 ## Dataset Structure
-The dataset has the following structure:
+The ChartFact dataset has the following structure:
 ```
-├── ChartFact Dataset                   
+├── ChartFact                   
 │   ├── train   
 │   │   ├── fc_entries.json       # Contains generated claims with corresponding labels and explanations
 │   │   ├── png                   # Folder containing chart images
