@@ -52,7 +52,7 @@ def main():
 
     #paths to scripts
     extraction_script = 'data_extraction/random_extraction.py'
-    preprocessing_script = 'data_preprocessing/file-data_standardization.py'
+    preprocessing_script = 'data_preprocessing/file-data_standardisation.py'
     translation_script = 'data_translation/deplot.py' #default translation model: DePlot, not Chart-to-Table
     formatting_script = 'data_translation/deplot_CSV_format.py'
     prompting_script = 'data_prompting/main.py'

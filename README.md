@@ -15,7 +15,7 @@ To download the dataset, click [here](https://github.com/eviestergio/ChartFC).
 
 The pipeline for creating the ChartFact dataset includes the following steps: 
 1. **Data Extraction:** Extract a subset of data entries from a source folder of QA datasets. 
-2. **Data Preprocessing:** Standardize the extracted data into a consistent format. 
+2. **Data Preprocessing:** Standardise the extracted data into a consistent format. 
 3. **Data Translation:** Generate underlying tables for charts that don’t have any. 
 4. **Data Formatting:** Convert the translated data tables into properly formatted CSV files. 
 5. **Data Prompting:** Generate claims and explanations for each class of labels.
@@ -25,7 +25,7 @@ The pipeline for creating the ChartFact dataset includes the following steps:
 
 All pipeline-related source code lives in the root directory `ChartFact`: 
 - `data_extraction/random_extraction.py`: Script for extracting a subset of data entries. 
-- `data_preprocessing/file-data_standardization.py`: Script for standardizing the extracted data. 
+- `data_preprocessing/file-data_standardisation.py`: Script for standardising the extracted data. 
 - `data_translation/deplot.py`: Script for generating underlying tables using the DePlot model. 
 - `data_translation/deplot_CSV_format.py`: Script for formatting the translated data tables into CSV files. 
 - `data_prompting/main.py`: Script for generating claims and explanations using OpenAI's GPT-3.5-turbo.
@@ -46,7 +46,7 @@ All pipeline-related source code lives in the root directory `ChartFact`:
 ##### Using individual scripts
 1. ```cd ChartFact```
 2. ```python data_extraction/random_extraction.py QA_datasets seed_datasets_100K/1_extracted_data_100K```
-3. ```python data_preprocessing/file-data_standardization.py seed_datasets_100K/1_extracted_data_100K seed_datasets_100K/2_preprocessed_data_100K```
+3. ```python data_preprocessing/file-data_standardisation.py seed_datasets_100K/1_extracted_data_100K seed_datasets_100K/2_preprocessed_data_100K```
 4. ```python data_translation/deplot.py seed_datasets_100K/2_preprocessed_data_100K seed_datasets_100K/3_translated_data_100K```
 5. ```python data_translation/deplot_CSV_format.py seed_datasets_100K/3_translated_data_100K seed_datasets_100K/3_translated_data_100K```
 6. ```python data_prompting/main.py seed_datasets_100K/3_translated_data_100K seed_datasets_100K/4_prompted_data_100K ```
