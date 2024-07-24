@@ -63,7 +63,7 @@ Make sure to manually adjust the path to the folder of the downloaded QA dataset
 
 ##### Using individual scripts
 1. ```cd ChartFact```
-2. ```python data_extraction/random_extraction.py /path/to/QA_datasets seed_datasets_{#}/1_extracted_data_{#}``
+2. ```python data_extraction/random_extraction.py /path/to/QA_datasets seed_datasets_{#}/1_extracted_data_{#}```
 3. ```python data_preprocessing/file-data_standardisation.py seed_datasets_{#}/1_extracted_data_{#} seed_datasets_{#}/2_preprocessed_data_{#}```
 4. ```python data_translation/deplot.py seed_datasets_{#}/2_preprocessed_data_{#} seed_datasets_{#}/3_translated_data_{#}```
 5. ```python data_translation/deplot_CSV_format.py seed_datasets_{#}/3_translated_data_{#} seed_datasets_{#}/3_translated_data_{#}```
@@ -85,8 +85,8 @@ The ChartFact dataset has the following structure:
 │   │   ├── tables                # Folder containing underlying data tables and titles (if available)
 │   │   │   ├── chartQA_{ID}-train.csv
 │   │   │   ├── figureQA_{ID}-train.csv
-│   │   │   ├── plotQA_{ID}-train.csv
-│   │   │   ├── plotQA_{ID}-train.txt    # Title file (if available)
+│   │   │   ├── plotQA_{ID}-train.csv    # Table file
+│   │   │   ├── plotQA_{ID}-train.txt    # Title file 
 │   │   │   ├── ...
 │   └── val  
 │   │   │   ...
