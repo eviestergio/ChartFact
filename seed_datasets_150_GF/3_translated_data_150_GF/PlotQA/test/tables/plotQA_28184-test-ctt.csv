@@ -1,0 +1,13 @@
+Group,Country,Rent(as % of GDP)
+Coal,Europe(developing only),0.576002263246199
+Coal,High income,0.023348520878475
+Coal,High income: nonOECD,0.173422522018694
+Coal,High income: OECD,0.0003830715683262
+Natural Gas,Europe(developing only),1.3125632460267
+Natural Gas,High income,0.266482856791033
+Natural Gas,High income: nonOECD,2.16198498799783
+Natural Gas,High income: OECD,0.131777285222355
+Oil,Europe(developing only),1.97023561421426
+Oil,High income,0.899452887484507
+Oil,High income: nonOECD,9.35845252522389
+Oil,High income: OECD,0.303176988694801
