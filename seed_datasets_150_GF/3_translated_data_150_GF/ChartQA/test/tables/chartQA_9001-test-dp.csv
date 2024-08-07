@@ -1,6 +1,6 @@
 Entity,Mexican,Central American,South American,Caribbean,Spanish/ Other
-,52.0,6,8,26.0,
-,57.0,8,20,0.0,0.0
-,63.0,10,7,16.0,0.0
-,65.0,10,6,16.0,
-,69.0,8,18,,0.0
+Silent/Grea test (69 and older),52.0,6,8,26.0,nan
+Boomer (50-68),57.0,8,20,0.0,0.0
+Gen X (34-49),63.0,10,7,16.0,0.0
+Millennial adults (18-33),65.0,10,6,16.0,nan
+Younger than 18,69.0,8,18,nan,0.0

@@ -1,9 +1,9 @@
 Entity,Disapprove,Approve
-,45,49.0
-,40,55.0
-,35,57.0
-,28,60.0
-,29,
-,26,0.0
-,22,73.0
-,16,78.0
+Corruption 45,45,49.0
+Economy,40,55.0
+Civil society,35,57.0
+Energy policy,28,60.0
+Relations Ukraine with,29,nan
+Relations EU with,26,0.0
+Relations with USS,22,73.0
+Relations China with,16,78.0
