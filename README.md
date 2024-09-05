@@ -110,7 +110,7 @@ The ChartFact dataset has the following structure:
 - **MatCha:** Please refer to [MatCha]().
 
 ## Contact 
-If you have any questions about this work, please contact *Evie Stergiopoulou* at [paraskevi.stergiopoulou@kcl.ac.uk](mailto:paraskevi.stergiopoulou@kcl.ac.uk) or *Angeline Wang* at [angeline.wang@kcl.ac.uk](mailto:angeline.wang@kcl.ac.uk).
+If you have any questions about this work, please contact *Evie Stergiopoulou* at [paraskevi.stergiopoulou@kcl.ac.uk](mailto:paraskevi.stergiopoulou@kcl.ac.uk) or *Angeline Wang* at [02angelinewang@gmail.com](mailto:02angelinewang@gmail.com).
 
 ## Reference 
 If you use our dataset or code, please cite our paper: [ChartFact: An Explainable Three-Way Labelled Fact-Checking Dataset for Chart Images](). 
