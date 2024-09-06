@@ -39,3 +39,5 @@ transformers==4.38.1
 typing_extensions==4.9.0
 tzdata==2024.1
 urllib3==2.2.1
+nbconvert==7.16.4
+ipykernel==6.28.0
