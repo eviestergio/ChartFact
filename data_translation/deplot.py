@@ -25,16 +25,22 @@ def copy_folder_structure_and_files(src, dst):
     shutil.copytree(src, dst)
     print(f"Copied {src} to {dst}")
 
-def process_images_in_folder(folder_path):
+def process_images_in_folder(folder_path, filter_by_name_length=False):
     ''' Process images in specified folder and generate CSV files with extracted tables. '''
     for file_path in glob.glob(f"{folder_path}/**/*.png", recursive=True):
+        file_name = os.path.basename(file_path)
+        base_name = os.path.splitext(file_name)[0]
+
+        # Check name length to filter out non Pew Research ChartQA images
+        if filter_by_name_length and len(base_name) > 9:
+            print(f"Skipping {file_name} as it's not a Pew Research image.")
+            continue
+
         parent_dir = os.path.dirname(file_path)
         grandparent_dir = os.path.dirname(parent_dir)  # Parent dir of PNG folder
-        file_name = os.path.basename(file_path)
 
         csv_directory = os.path.join(grandparent_dir, 'tables')
-        base_name = os.path.splitext(file_name)[0]
-        csv_file_path = os.path.join(csv_directory, f"{base_name}-dp.csv")
+        csv_file_path = os.path.join(csv_directory, f"{base_name}.csv")
 
         # Skip if CSV already exists for image
         if os.path.exists(csv_file_path):
@@ -64,10 +70,12 @@ def main(src, dst):
     
     figureqa_folder = os.path.join(dst, 'FigureQA')
     plotqa_folder = os.path.join(dst, 'PlotQA')
+    chartqa_folder = os.path.join(dst, 'ChartQA')
 
     # Process images in given FigureQA and PlotQA folders
     process_images_in_folder(figureqa_folder)
     process_images_in_folder(plotqa_folder)
+    process_images_in_folder(chartqa_folder, filter_by_name_length=True)
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
