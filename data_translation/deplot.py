@@ -31,9 +31,15 @@ def process_images_in_folder(folder_path, filter_by_name_length=False):
         file_name = os.path.basename(file_path)
         base_name = os.path.splitext(file_name)[0]
 
+        # Extract image name between "chartQA_" and the data split postfix
+        if base_name.startswith("chartQA_") and "-" in base_name:
+            image_name = base_name.split("chartQA_")[1].split("-")[0]
+        else:
+            continue # in case name is not as expected
+
         # Check name length to filter out non Pew Research ChartQA images
-        if filter_by_name_length and len(base_name) > 9:
-            print(f"Skipping {file_name} as it's not a Pew Research image.")
+        if filter_by_name_length and len(image_name) > 9:
+            print(f"Skipping {file_name} because {image_name} is not a Pew Research image.")
             continue
 
         parent_dir = os.path.dirname(file_path)
