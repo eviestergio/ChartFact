@@ -3,7 +3,6 @@ import subprocess
 
 def create_pipeline_folders(base_folder, num_entries):
     main_folder = f'{base_folder}_{num_entries}'
-    # subfolders = [f'1_extracted_data_{num_entries}', f'2_preprocessed_data_{num_entries}', f'3_translated_data_{num_entries}', f'4_prompted_data_{num_entries}', f'5_final_dataset_{num_entries}']
     subfolders = {
         '1': f'1_extracted_data_{num_entries}',
         '2': f'2_preprocessed_data_{num_entries}',
@@ -18,8 +17,23 @@ def create_pipeline_folders(base_folder, num_entries):
     
     return main_folder, subfolders
 
-def run_scripts(script_path, from_, to):
-    command = ['python', script_path, from_, to]
+def run_scripts(script_path, args):
+    if script_path.endswith('.ipynb'):
+        # Set environment variables with full paths
+        main_script_dir = os.path.dirname(os.path.abspath(__file__))
+        src_full_path = os.path.abspath(os.path.join(main_script_dir, args[0]))
+        dst_full_path = os.path.abspath(os.path.join(main_script_dir, args[1]))
+
+        os.environ['SRC_PATH'] = src_full_path
+        os.environ['DST_PATH'] = dst_full_path
+
+        command = [
+            'jupyter', 'nbconvert', '--to', 'notebook', '--execute', '--inplace', 
+            '--ExecutePreprocessor.timeout=600', script_path
+        ]
+    else:
+        command = ['python', script_path] + args
+
     result = subprocess.run(command, capture_output=True, text=True)
     print(result.stdout)
     if result.stderr:
@@ -54,18 +68,18 @@ def main():
     extraction_script = 'data_extraction/random_extraction.py'
     preprocessing_script = 'data_preprocessing/file-data_standardisation.py'
     translation_script = 'data_translation/deplot.py' #default translation model: DePlot, not Chart-to-Table
-    formatting_script = 'data_translation/deplot_CSV_format.py'
+    formatting_script = 'data_translation/deplot_CSV_format.ipynb'
     prompting_script = 'data_prompting/main.py'
     final_script = 'final_dataset_creation/combine_datasets.py'
 
     # define steps
     steps = {
-        '1': (extraction_script, source_folder, os.path.join(main_folder, subfolders['1'])),
-        '2': (preprocessing_script, os.path.join(main_folder, subfolders['1']), os.path.join(main_folder, subfolders['2'])),
-        '3': (translation_script, os.path.join(main_folder, subfolders['2']), os.path.join(main_folder, subfolders['3'])),
-        '4': (formatting_script, os.path.join(main_folder, subfolders['3']), os.path.join(main_folder, subfolders['4'])),
-        '5': (prompting_script, os.path.join(main_folder, subfolders['4']), os.path.join(main_folder, subfolders['5'])),
-        '6': (final_script, os.path.join(main_folder, subfolders['5']), os.path.join(main_folder, subfolders['6']))
+        '1': ('Data Extraction', extraction_script, [source_folder, os.path.join(main_folder, subfolders['1'])]),
+        '2': ('Data Preprocessing', preprocessing_script, [os.path.join(main_folder, subfolders['1']), os.path.join(main_folder, subfolders['2'])]),
+        '3': ('Data Translation', translation_script, [os.path.join(main_folder, subfolders['2']), os.path.join(main_folder, subfolders['3'])]),
+        '4': ('Data Formatting', formatting_script, [os.path.join(main_folder, subfolders['3']), os.path.join(main_folder, subfolders['4'])]),
+        '5': ('Data Prompting', prompting_script, [os.path.join(main_folder, subfolders['4']), os.path.join(main_folder, subfolders['5'])]),
+        '6': ('Final Dataset Creation', final_script, [os.path.join(main_folder, subfolders['5']), os.path.join(main_folder, subfolders['6'])])
     }
 
     # explain steps
@@ -78,12 +92,13 @@ def main():
     print("6: Final Dataset Creation")
 
     current_step = 1
-    while current_step <= 6:
-        next_step = input(f"Do you want to run step {current_step}? (yes/no): ").strip().lower()
+    while current_step <= 7:
+        step_name, script, args = steps[str(current_step)]
+        next_step = input(f"Do you want to run step {current_step}: {step_name}? (yes/no): ").strip().lower()
         
         if next_step in ['yes', 'y']:
-            script, from_, to = steps[str(current_step)]
-            run_scripts(script, from_, to)
+            # script, args = steps[str(current_step)]
+            run_scripts(script, args)
         else:
             input(f"Please complete step {current_step} manually and press Enter to continue...")
         
