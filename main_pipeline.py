@@ -92,7 +92,7 @@ def main():
     print("6: Final Dataset Creation")
 
     current_step = 1
-    while current_step <= 7:
+    while current_step <= 6:
         step_name, script, args = steps[str(current_step)]
         next_step = input(f"Do you want to run step {current_step}: {step_name}? (yes/no): ").strip().lower()
         

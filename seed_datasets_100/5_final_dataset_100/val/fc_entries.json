@@ -1,0 +1,62 @@
+[
+    {
+        "image": "chartQA_two_col_20869-val.png",
+        "claim": "The profit contribution from South America is 21% higher than the profit contribution from North America.",
+        "label": "Supports",
+        "explanation": "Referring to the table data, South America's profit contribution is recorded as 42%, while North America's profit contribution is recorded as 21%. The difference between these two values is indeed 21%, directly supporting the claim made."
+    },
+    {
+        "image": "plotQA_20477-val.png",
+        "claim": "The pupil-teacher ratio in United States was the lowest among the countries shown in the chart.",
+        "label": "Refutes",
+        "explanation": "This claim refutes the chart as it wrongly states that the pupil-teacher ratio in the United States was the lowest. However, based on the data presented in the chart, the pupil-teacher ratio in the United States was 15.67 in the year 1988, which is higher than the ratios in Angola, Jordan, and Malta for the same year. Therefore, the claim contradicts the actual data provided in the chart."
+    },
+    {
+        "image": "plotQA_27994-val.png",
+        "claim": "The fluctuation in calorie requirements across countries is influenced by factors not captured in the data.",
+        "label": "Not enough information",
+        "explanation": "While the data shows varying calorie needs across countries over three years, it does not specify the factors influencing these fluctuations. Without additional information on variables like population demographics, economic conditions, or nutritional programs, it is impossible to verify how these factors contribute to the differences in calorie requirements."
+    },
+    {
+        "image": "chartQA_two_col_43066-val.png",
+        "claim": "Google achieved a ranking of 79 ACSI index points in 2020.",
+        "label": "Supports",
+        "explanation": "By referring to the table in the chart, it is evident that Google received a score of 79 ACSI index points in 2020, confirming that Google's ranking was indeed 79 as stated in the claim."
+    },
+    {
+        "image": "chartQA_two_col_43627-val.png",
+        "claim": "The expenses in million U.S. dollars for 2017 could have been influenced by a one-time investment or major event.",
+        "label": "Not enough information",
+        "explanation": "This claim presents a possible explanation for the high expenses in 2017 without any specific data to confirm or refute this hypothesis. The chart only provides the expenses for each year without further details on what may have contributed to the amount in 2017, requiring additional information to verify this claim."
+    },
+    {
+        "image": "plotQA_19779-val.png",
+        "claim": "The percentage of male workers in industry in 1998 was 50.8%.",
+        "label": "Refutes",
+        "explanation": "This claim refutes the chart as it inaccurately states that the percentage of male workers in the industry was 50.8% in 1998. However, based on the data in the chart, the actual percentage of male workers in the industry in 1998 was 51.2%. Therefore, the claim contradicts the factual information presented in the chart."
+    },
+    {
+        "image": "chartQA_multi_col_20676-val.png",
+        "claim": "35.9 smart home devices were sold to dealers in the United States in 2017.",
+        "label": "Refutes",
+        "explanation": "This claim refutes the chart as it inaccurately states that 35.9 smart home devices were sold in 2017. However, based on the data in the chart, the actual value for smart home devices sold in 2017 is 35.9, not 35.9. Therefore, the claim directly contradicts the factual information presented in the chart."
+    },
+    {
+        "image": "plotQA_20471-val.png",
+        "claim": "The CPIA rating of social protection in 2008 is not less than that in 2012.",
+        "label": "Supports",
+        "explanation": "The table in the chart displays the CPIA ratings for social protection in the years 2008 and 2012, showing that the rating for social protection remained the same at 3 for both years. Therefore, it is evident from the data that the CPIA rating of social protection in 2008 is not less than that in 2012, supporting the claim."
+    },
+    {
+        "image": "chartQA_multi_col_40930-val.png",
+        "claim": "The year the green bar is below 2 is 2019.",
+        "label": "Refutes",
+        "explanation": "This claim refutes the chart as it inaccurately states that the year the green bar is below 2 is 2019. However, according to the chart, the green bar is below 2 in 2016 with a value of 2.79, in 2017 with a value of 3.13, and in 2018 with a value of 3.48. Therefore, the claim contradicts the actual data presented in the chart."
+    },
+    {
+        "image": "plotQA_4212-val.png",
+        "claim": "The total grants received by the government in Cote d'Ivoire in the chart is 548,650,000.",
+        "label": "Supports",
+        "explanation": "By examining the table data, it is evident that the total grants received by the government in Cote d'Ivoire across all years add up to the amount stated in the answer. This supports the claim that the total grants received by the government in Cote d'Ivoire is 548,650,000."
+    }
+]
