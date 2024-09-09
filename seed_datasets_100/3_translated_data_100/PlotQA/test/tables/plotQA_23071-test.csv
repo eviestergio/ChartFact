@@ -1,1 +1,7 @@
-TITLE | Enrollment rate recorded in primary and secondary education in year 2010<0x0A>Country | Primary | Secondary<0x0A>Guatemala | 95.88 | 78.76<0x0A>Guinea | 70.37 | 38.00<0x0A>Guinea-Bissau | 69.84 | 86.61<0x0A>Guyana | 78.53 | 68.18<0x0A>Indonesia | 95.66 | 32.43<0x0A>Hong Kong | 90.56 | 91.13
+Country,Primary,Secondary
+Guatemala,95.88,78.76
+Guinea,70.37,38.0
+Guinea-Bissau,69.84,86.61
+Guyana,78.53,68.18
+Indonesia,95.66,32.43
+Hong Kong,90.56,91.13

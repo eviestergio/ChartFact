@@ -1,1 +1,10 @@
-TITLE | title <0x0A> xaxis label | xaxis label <0x0A> Light Green | 77 <0x0A> Crimson | 51 <0x0A> Bubblegum | 29 <0x0A> Cornflower | 95 <0x0A> Dark Turquoise | 77 <0x0A> Orange Red | 56 <0x0A> Steel Blue | 5 <0x0A> Tomato | 74 <0x0A> Royal Blue | 53
+xaxis label,xaxis label
+Light Green,77
+Crimson,51
+Bubblegum,29
+Cornflower,95
+Dark Turquoise,77
+Orange Red,56
+Steel Blue,5
+Tomato,74
+Royal Blue,53
