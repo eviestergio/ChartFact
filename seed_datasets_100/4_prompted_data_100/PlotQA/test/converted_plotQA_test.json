@@ -1,0 +1,32 @@
+[
+    {
+        "image": "plotQA_1178-test.png",
+        "claim": "The highest and lowest total amounts earned by exporting goods and services in the specified years have a difference of 34564811.277677.",
+        "label": "Supports",
+        "explanation": "By comparing the data in the chart provided, it is evident that the difference between the highest and lowest total amounts earned in the given years equates to 34564811.277677. This calculation directly matches the information presented in the 'answer' section, thereby supporting the claim."
+    },
+    {
+        "image": "plotQA_23071-test.png",
+        "claim": "The primary enrollment rates in Indonesia were higher than the secondary enrollment rates in 2010.",
+        "label": "Refutes",
+        "explanation": "This claim refutes the chart as it incorrectly states that primary enrollment rates in Indonesia were higher than secondary enrollment rates in 2010. However, based on the data in the chart, the primary enrollment rate in Indonesia was 95.66, while the secondary enrollment rate was 32.43. Therefore, the claim contradicts the actual data presented in the chart, where the secondary enrollment rate is lower than the primary enrollment rate."
+    },
+    {
+        "image": "plotQA_1467-test.png",
+        "claim": "The trend of rural population growth in Indonesia is influenced by economic factors.",
+        "label": "Not enough information",
+        "explanation": "This claim is based on the assumption that the growth of rural population in Indonesia may be impacted by economic factors, such as employment opportunities or GDP growth. However, the chart does not provide any data on economic indicators or trends to confirm or refute this claim, making it unverifiable with the information at hand."
+    },
+    {
+        "image": "plotQA_29479-test.png",
+        "claim": "The number of bars on each tick of the X-axis are equal.",
+        "label": "Supports",
+        "explanation": "The table shows data for different years with corresponding values for each country. By observing the table, it can be seen that each year has the same number of values recorded for each country, ensuring that the number of bars on each tick of the X-axis is equal. This is confirmed by the data presented in the chart."
+    },
+    {
+        "image": "plotQA_21579-test.png",
+        "claim": "The time spent in dealing with the requirements of government regulations decreased from 2007 to 2013.",
+        "label": "Refutes",
+        "explanation": "This claim refutes the chart as it inaccurately states that the time spent dealing with government regulations decreased over time. However, according to the chart, the time spent increased from 1.9 in 2007 to 3.5 in 2013. Therefore, the claim contradicts the actual data presented in the chart."
+    }
+]

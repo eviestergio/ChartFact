@@ -313,18 +313,18 @@ def generate_claims_from_file(input_file, model):
         answer = entry.get("answer")
         image = entry.get("image")
 
-        base_csv_file_path = os.path.join(os.path.dirname(input_file), "tables", f"{entry['image'].split('.')[0]}")
-        csv_file_path = base_csv_file_path + "-dp.csv"
-        regular_csv_file_path = base_csv_file_path + ".csv"
-        title_file_path = base_csv_file_path + "-title.txt"
+        base_file_path = os.path.join(os.path.dirname(input_file), "tables", f"{entry['image'].split('.')[0]}")
+        csv_file_path = base_file_path + ".csv"
+        # regular_csv_file_path = base_csv_file_path + ".csv"
+        title_file_path = base_file_path + ".txt"
 
         # Read CSV file (prioritize '-dp' file)
         if os.path.exists(csv_file_path):
             with open(csv_file_path, 'r') as csv_file:
                 table = csv_file.read()
-        elif os.path.exists(regular_csv_file_path):
-            with open(regular_csv_file_path, 'r') as csv_file:
-                table = csv_file.read()
+        # elif os.path.exists(regular_csv_file_path):
+        #     with open(regular_csv_file_path, 'r') as csv_file:
+        #         table = csv_file.read()
         else:
             table = None
 

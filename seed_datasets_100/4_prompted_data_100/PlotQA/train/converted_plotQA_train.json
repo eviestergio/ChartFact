@@ -1,0 +1,182 @@
+[
+    {
+        "image": "plotQA_40066-train.png",
+        "claim": "The label of the 2nd group of bars from the top is Female entrants.",
+        "label": "Supports",
+        "explanation": "The chart displays the percentage of new entrants in the last grade of primary education in different countries, with Female entrants listed as the 2nd group of bars from the top. By examining the data presented in the table, it is evident that the values corresponding to Female entrants are associated with the 2nd group of bars, confirming that Female entrants are indeed the label of this group."
+    },
+    {
+        "image": "plotQA_133988-train.png",
+        "claim": "Across all countries, the minimum ppp conversion factor for private consumption is 0.35.",
+        "label": "Refutes",
+        "explanation": "This claim refutes the chart as it inaccurately states that the minimum ppp conversion factor for private consumption is 0.35. However, according to the chart, the minimum ppp conversion factor for private consumption is 0.32, as observed in the data for one of the countries listed. Therefore, the claim contradicts the actual data presented in the chart."
+    },
+    {
+        "image": "plotQA_140860-train.png",
+        "claim": "The data trends indicate a potential shift in values for one entity compared to others.",
+        "label": "Not enough information",
+        "explanation": "This claim suggests a possible trend based on the data provided, but lacks specific information to confirm or refute the claim. The chart does not offer details on the factors influencing the shifts in values over time, making it impossible to validate the claim with the current data alone."
+    },
+    {
+        "image": "plotQA_103743-train.png",
+        "claim": "The total water productivity was greater than 0.30000000000000004 US$ in 1 year.",
+        "label": "Supports",
+        "explanation": "The chart displays the total water productivity values for different years. By inspecting the data, it is evident that in one specific year, the total water productivity exceeded the threshold of 0.30000000000000004 US$, supporting the claim that it was greater than this amount in 1 year."
+    },
+    {
+        "image": "plotQA_41193-train.png",
+        "claim": "Across all years, the minimum net official aid received in St. Kitts and Nevis is 5000000.0.",
+        "label": "Refutes",
+        "explanation": "This claim refutes the chart as it falsely states that the minimum net official aid received in St. Kitts and Nevis is 5000000.0. However, based on the data presented in the chart, the actual minimum net official aid received in St. Kitts and Nevis across all years is 300000. Therefore, the claim contradicts the accurate information displayed in the chart."
+    },
+    {
+        "image": "plotQA_86304-train.png",
+        "claim": "The trend in new business registration is driven by economic factors.",
+        "label": "Not enough information",
+        "explanation": "This claim implies that the fluctuation in new business registration numbers is solely influenced by economic factors. However, the chart does not provide any specific data or analysis on the economic context or factors affecting the registration numbers. Without this additional information, it is impossible to confirm or disprove the claim."
+    },
+    {
+        "image": "plotQA_148613-train.png",
+        "claim": "The value lost due to electrical outages was 0.6 units higher in 2006 compared to 2009.",
+        "label": "Supports",
+        "explanation": "By referring to the table in the chart, it can be seen that the value lost due to electrical outages in 2006 was 2.5 units and in 2009 it was 1.9 units. The answer provided states that the difference between these values is 0.6 units, which is accurate and supported by the data presented in the table."
+    },
+    {
+        "image": "plotQA_26296-train.png",
+        "claim": "Iran recorded the lowest government consumption in 1971 compared to the other countries in the chart.",
+        "label": "Refutes",
+        "explanation": "This claim refutes the chart as it inaccurately states that Iran had the lowest government consumption in 1971. However, based on the data provided in the chart, Iran is shown to have recorded a substantial government consumption compared to other countries, with Constant 2005 US$ of 10,049,070,499.59 and Current US$ of 2,204,228,184.82. This refutes claim contradicts the actual data presented in the chart, where Iran's government consumption is one of the highest among the listed countries."
+    },
+    {
+        "image": "plotQA_92173-train.png",
+        "claim": "The trend in value-added percentages for the countries may be influenced by economic policies enacted during the time periods.",
+        "label": "Not enough information",
+        "explanation": "This claim speculates on potential reasons for the fluctuation in value-added percentages without concrete evidence from the chart to support or refute it. The data only presents the percentages without specific details on the economic policies or factors affecting the manufacturing industries in each country during the mentioned years. Therefore, additional information on economic policies or factors would be necessary to verify this claim."
+    },
+    {
+        "image": "plotQA_13192-train.png",
+        "claim": "There are 3 different coloured dotlines represented in the chart.",
+        "label": "Supports",
+        "explanation": "By analyzing the data in the chart, we can see that there are three distinct sets of data represented by different coloured dotlines. Each country is represented by a different coloured dotline throughout the years listed in the table, confirming that there are indeed 3 different coloured dotlines in the chart."
+    },
+    {
+        "image": "plotQA_37698-train.png",
+        "claim": "In Tonga, the percentage of firms competing against unregistered firms is 40.0, which is the lowest among the countries listed in the chart.",
+        "label": "Refutes",
+        "explanation": "This claim refutes the chart as it inaccurately states that Tonga has the lowest percentage of firms competing against unregistered firms. According to the chart, Tonga actually has a percentage of 86.8, which is the highest among the countries listed. Therefore, the claim contradicts the actual data presented in the chart."
+    },
+    {
+        "image": "plotQA_101809-train.png",
+        "claim": "In 2009, the merchandise exports could have been influenced by external economic factors.",
+        "label": "Not enough information",
+        "explanation": "This claim speculates on potential external factors that could have impacted the merchandise exports in 2009. However, without any specific data or context provided in the chart, such as trade agreements, global economic conditions, or governmental policies, it is impossible to verify this claim solely based on the given information."
+    },
+    {
+        "image": "plotQA_99631-train.png",
+        "claim": "The difference between two consecutive major ticks on the Y-axis is 5000000.0",
+        "label": "Supports",
+        "explanation": "By examining the data in the table, it can be observed that the total population in Ethiopia increases by 5000000 from one year to the next. This constant increment between consecutive years directly supports the claim that the difference between two consecutive major ticks on the Y-axis is 5000000.0."
+    },
+    {
+        "image": "plotQA_28366-train.png",
+        "claim": "Germany provided the highest bilateral aid flow in 1986 among the donors listed in the chart.",
+        "label": "Refutes",
+        "explanation": "This claim refutes the chart as it inaccurately states that Germany provided the highest bilateral aid flow in 1986. However, based on the data in the chart, France provided the highest aid flow of 88,550,000, whereas Germany provided a significantly lower aid flow of 5,270,000. Therefore, the claim contradicts the actual data presented in the chart."
+    },
+    {
+        "image": "plotQA_123057-train.png",
+        "claim": "Countries with lower percentages may actually have better infrastructure for providing access to drinking water.",
+        "label": "Not enough information",
+        "explanation": "This claim suggests a possible scenario where countries with lower percentages may have invested more in infrastructure or technology for providing access to drinking water. However, the chart only provides data on the percentages of urban population having access to drinking water in different countries over three years, not indicating any specifics on infrastructure or investment levels, making it impossible to confirm or deny this claim based solely on the chart data."
+    },
+    {
+        "image": "plotQA_8347-train.png",
+        "claim": "The difference between the highest and lowest percentage of total merchandise exports in Uruguay is 1.9291992575408452.",
+        "label": "Supports",
+        "explanation": "By examining the table data, we can see that the highest percentage of total merchandise exports in Uruguay is 2.57 and the lowest is 0.64. Calculating the difference between these two values gives us the exact answer provided, 1.9291992575408452. Therefore, the claim is directly supported by the data in the chart."
+    },
+    {
+        "image": "plotQA_145467-train.png",
+        "claim": "Among the countries listed in the chart, Private consumption in Costa Rica is the lowest compared to the other countries.",
+        "label": "Refutes",
+        "explanation": "This claim refutes the chart as it inaccurately states that Private consumption in Costa Rica is the lowest among the listed countries. However, based on the chart data, the Private consumption in Costa Rica is actually 338.7, which is higher than the values of the other countries. Therefore, the claim contradicts the actual data presented in the chart."
+    },
+    {
+        "image": "plotQA_139568-train.png",
+        "claim": "The relationship between the labor force participation rates in North America and Kazakhstan from 2001 to 2005 is impacted by external economic factors.",
+        "label": "Not enough information",
+        "explanation": "This claim suggests that external economic factors may have influenced the labor force participation rates in North America and Kazakhstan over the specified time period, but the chart data does not provide any specific information on these external factors. Without additional data on economic conditions or policies during those years, it is not possible to verify or refute this claim."
+    },
+    {
+        "image": "plotQA_47197-train.png",
+        "claim": "The label or title of the X-axis is 'Educated males (% of male labor force)'.",
+        "label": "Supports",
+        "explanation": "Looking at the data in the chart, it presents the distribution of the educated male labor force in different countries in the year 1991 across different levels of education. The X-axis represents the different levels of education, with the title indicating that the data displayed is specifically for educated males as a percentage of the male labor force, confirming the claim."
+    },
+    {
+        "image": "plotQA_49754-train.png",
+        "claim": "The data from 2012 showed a decrease in earnings compared to 2011.",
+        "label": "Refutes",
+        "explanation": "This claim refutes the chart as it incorrectly states that the earnings in 2012 decreased from 2011. However, according to the chart, the earnings in 2012 increased to a positive value while in 2011, the earnings were negative. Therefore, the claim contradicts the actual data presented in the chart."
+    },
+    {
+        "image": "plotQA_36612-train.png",
+        "claim": "The percentage of labor force with tertiary education could be influenced by external factors not captured in the chart.",
+        "label": "Not enough information",
+        "explanation": "This claim implies that factors beyond the data in the chart could affect the percentage of labor force with tertiary education. Without additional information on these external influences, such as economic conditions or government policies, the claim lacks enough information to be supported or refuted solely based on the given chart."
+    },
+    {
+        "image": "plotQA_41979-train.png",
+        "claim": "The number of bars on each tick of the Y-axis is equal.",
+        "label": "Supports",
+        "explanation": "The table provided shows the data for three different countries over the years 1980, 1981, and 1982. Each year has a consistent number of values or 'bars' listed for each country in the table. This consistency confirms that the number of bars on each tick of the Y-axis is indeed equal, supporting the claim."
+    },
+    {
+        "image": "plotQA_98527-train.png",
+        "claim": "The table shows a consistent negative trend in rural population growth over the years for all regions mentioned.",
+        "label": "Refutes",
+        "explanation": "This claim refutes the chart as it inaccurately states a negative trend in rural population growth for all regions mentioned. However, according to the data in the chart, there are fluctuations in population growth rates across the years and regions, with some years and regions showing positive growth rates. Therefore, the claim contradicts the actual data presented in the chart."
+    },
+    {
+        "image": "plotQA_126784-train.png",
+        "claim": "The difference between the percentage of HIV infected female population in 1990 in Spain and the percentage in 1991 in Suriname is less than the difference between the percentage in 1992 in Suriname and the percentage in 1990 in Spain.",
+        "label": "Not enough information",
+        "explanation": "This claim is based on comparisons between different years and countries in the chart. However, the claim lacks enough information as it does not consider all possible comparisons within the data provided. Without additional data or specific values for each comparison, it is impossible to verify the accuracy of this claim."
+    },
+    {
+        "image": "plotQA_131728-train.png",
+        "claim": "The difference between two consecutive major ticks on the Y-axis is 5.0.",
+        "label": "Supports",
+        "explanation": "By examining the data in the chart, it can be observed that the values for the Y-axis increase by 5.0 units from one major tick to the next. This is consistent with the answer provided, indicating a direct correlation between the consecutive major ticks on the Y-axis being 5.0 units apart."
+    },
+    {
+        "image": "plotQA_58019-train.png",
+        "claim": "The average percentage of rural population growth in Congo (Democratic) is greater than the average percentage of rural population growth in Lower middle income taken over all years.",
+        "label": "Refutes",
+        "explanation": "This claim refutes the chart as it inaccurately states that the average percentage of rural population growth in Congo (Democratic) is greater than the average percentage of rural population growth in Lower middle income taken over all years. However, based on the data presented in the chart, the average percentage of rural population growth in Congo (Democratic) across all years is lower than the average percentage of rural population growth in Lower middle income. Therefore, the claim contradicts the actual data provided in the chart."
+    },
+    {
+        "image": "plotQA_29819-train.png",
+        "claim": "The total earnings trend may be influenced by external economic factors not reflected in the data.",
+        "label": "Not enough information",
+        "explanation": "This claim suggests that external economic factors could play a role in the trend of total earnings shown in the chart. However, the chart only displays the earnings of Bahamas by trading goods and services without detailing the external economic factors or their impact, making it impossible to verify this claim with the given data alone."
+    },
+    {
+        "image": "plotQA_156791-train.png",
+        "claim": "The amount of fertilizer consumption was at its minimum in 2008.",
+        "label": "Supports",
+        "explanation": "By examining the table in the chart, we can see that in the year 2008, the fertilizer consumption was 8.59, which is the lowest among all the recorded years. This directly supports the claim that the amount of fertilizer consumption was minimum in 2008."
+    },
+    {
+        "image": "plotQA_154195-train.png",
+        "claim": "The agriculture value added per worker in 2010 was lower than in 2007.",
+        "label": "Refutes",
+        "explanation": "This claim refutes the chart as it inaccurately states that the agriculture value added per worker decreased from 2007 to 2010. However, based on the data shown in the chart, the agriculture value added per worker increased over the years, with the highest value recorded in 2012. Therefore, the claim contradicts the actual data presented in the chart."
+    },
+    {
+        "image": "plotQA_127221-train.png",
+        "claim": "Child employment in Manufacturing could potentially increase in the future.",
+        "label": "Not enough information",
+        "explanation": "This claim speculates on a future trend based on the data provided in the chart. While the data shows a slight increase in Manufacturing employment from 0.2% to 2.1%, it is not sufficient to confirm a definite upward trend. Without additional data points or context, such as governmental policies or economic factors, it is impossible to verify if Manufacturing employment will continue to rise."
+    }
+]
