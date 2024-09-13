@@ -1,15 +1,3 @@
-# # With pipeline, just specify the task and the model id from the Hub.
-# from transformers import pipeline
-# pipe = pipeline("text-generation", model="distilbert/distilgpt2", device=0)
-
-# import torch
-# print(torch.cuda.is_available())
-
-# # If you want more control, you will need to define the tokenizer and model.
-# from transformers import AutoTokenizer, AutoModelForCausalLM
-# tokenizer = AutoTokenizer.from_pretrained("distilbert/distilgpt2")
-# model = AutoModelForCausalLM.from_pretrained("distilbert/distilgpt2")
-
 from PIL import Image
 import requests
 from transformers import AutoProcessor, PaliGemmaForConditionalGeneration
@@ -22,20 +10,22 @@ processor = AutoProcessor.from_pretrained("ahmed-masry/chartgemma")
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = model.to(device)
 
-chart = "5_final_dataset_12/train/png/plotQA_37698-train.png"
+chart = "5_final_dataset_12/train/png/plotQA_37698-train.png" 
 claim = "There are 3 bars on the 2nd tick from the top."
+
 input_text_variations = [
     # Prompt (1)
     f"""
-    Given the chart: {chart} in the image input, what is the appropriate label (\'supports\', \'refutes\', or \'not enough information\') for the following claim: {claim}? Why? 
+        * Given the chart, what is the correct label ('supports', 'refutes', or 'not enough information') for the claim: {claim}? Why?
+    
     Output the result as a JSON object with the following keys: "explanation" and "label". The format should strictly follow this structure: 
         {{
-            "explanation": "your explanation for the label selected", 
-            "label": "your label for the claim"
+            "label": "your label for the claim", 
+            "explanation": "your explanation for the label selected" 
         }}
 
     Examples: 
-    < 
+    
     1. Input: 
         {{ 
             “claim”: “The merchandise exports in 2010 were the highest among the years shown in the chart.”
@@ -63,20 +53,21 @@ input_text_variations = [
             “label”: “not enough information”, 
             “explanation”: “This claim speculates on information not provided in the table, as there is no data regarding international relations, making the connection to the perception of being 'Dangerous' unverifiable.” 
        }}
-    >
-    """
+    
+    """,
     # Prompt (2)
     f"""
-    Given the chart: {chart} in the image input, what is the appropriate label (\'supports\', \'refutes\', or \'not enough information\') for the following claim: {claim}? 
-    Provide an explanation on why this claim is classified the way it is. Use specific references to the chart, show the data or lack of data to support or refute the claim. 
+    Task: Given the chart, determine the correct label ('supports', 'refutes', or 'not enough information') for the following claim. 
+    Provide an explanation for your classification using specific references from the chart to support your reasoning.
+    
     Output the result as a JSON object with the following keys: "explanation" and "label". The format should strictly follow this structure: 
         {{
-            "explanation": "your explanation for the label selected", 
-            "label": "your label for the claim"
+            "label": "your label for the claim", 
+            "explanation": "your explanation for the label selected" 
         }}
 
     Examples: 
-    < 
+    
     1. Input: 
         {{ 
             “claim”: “The merchandise exports in 2010 were the highest among the years shown in the chart.”
@@ -104,20 +95,24 @@ input_text_variations = [
             “label”: “not enough information”, 
             “explanation”: “This claim speculates on information not provided in the table, as there is no data regarding international relations, making the connection to the perception of being 'Dangerous' unverifiable.” 
         }}
-    >
-    """
+
+    Based on the given chart, assess the following claim:
+        Input: {claim}
+        Output:
+    """,
     # Prompt (3)
     f"""
-    Given the chart: {chart}, is it enough to support or refute the following claim: {claim}? Please provide a label accordingly: \’supports\’, \’refutes\’, \’not enough information\’
-    Provide an explanation on why this claim is classified the way it is. Use specific references to the chart, show the data or lack of data to support or refute the claim. 
+    Given the chart, analyse whether the following claim: '{claim}' is supported, refuted, or if there is insufficient information to make a judgment. 
+    First, provide an explanation using specific references from the chart to support your reasoning. After completing your explanation, classify the claim as’ supports', 'refutes', or 'not enough information'.
+
     Output the result as a JSON object with the following keys: "explanation" and "label". The format should strictly follow this structure: 
         {{
-            "explanation": "your explanation for the label selected", 
-            "label": "your label for the claim"
+            "label": "your label for the claim", 
+            "explanation": "your explanation for the label selected" 
         }}
 
     Examples: 
-    < 
+    
     1. Input: 
         {{ 
             “claim”: “The merchandise exports in 2010 were the highest among the years shown in the chart.”
@@ -145,12 +140,8 @@ input_text_variations = [
             “label”: “not enough information”, 
             “explanation”: “This claim speculates on information not provided in the table, as there is no data regarding international relations, making the connection to the perception of being 'Dangerous' unverifiable.” 
         }}
-    >
+
     """
-    # f"Given the chart in the image input, what is the appropriate label ('supports', 'refutes', or 'not enough information') for the following claim: {claim}? Why?",
-    # f"Based on the chart, determine the label ('supports', 'refutes', 'not enough information') for the claim: {claim}",
-    # f"Analyze the chart in the image and determine whether the claim {claim} is supported, refuted, or not enough information.",
-    # f"Does the chart in the image support, refute, or provide not enough information for the claim {claim}?"
 ]
 
 def run_experiment(input_text):
