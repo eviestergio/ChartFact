@@ -19,12 +19,61 @@ def encode_image(image_path):
     return base64.b64encode(image_file.read()).decode('utf-8')
 
 # Path to your image, manually added
-image_path = "seed_datasets_12/5_final_dataset_12/train/png/chartQA_multi_col_20204-train.png"
+image_path = "seed_datasets_12/5_final_dataset_12/test/png/plotQA_1467-test.png"
+image_path1 = "seed_datasets/FigureQA/test/png/figureQA_2-3-test.png"
+image_path2 = "seed_datasets/PlotQA/test/png/plotQA_39-test.png"
+image_path3 = "seed_datasets/ChartQA/test/png/chartQA_166.png"
 
 # Getting the base64 string
 chart = encode_image(image_path)
-claim = '517 people committed suicide in 2009.'
-prompt = 'Given the chart: {chart} in the image input, please explain the reasoning and then answer: What is the appropriate label (\'supports\', \'refutes\', or \'not enough information\') for the following claim: {claim}? Output the result as a JSON object with the following keys: "explanation" and "label". The format should strictly follow this structure: {{"explanation": "your explanation for the label selected", "label": "your label for the claim"}}'
+chart1 = encode_image(image_path1)
+chart2 = encode_image(image_path2)
+chart3 = encode_image(image_path3)
+# Manually input the claim 
+claim = 'The label of the X-axis in the chart is \'Year\'.'
+
+# Prompt is dynamically filled by the encoded image and the claiim 
+# prompt = 'Given the chart: {chart} in the image input, please explain the reasoning and then answer: What is the appropriate label (\'supports\', \'refutes\', or \'not enough information\') for the following claim: The label of the X-axis in the chart is \'Year\'.? Output the result as a JSON object with the following keys: "explanation" and "label". The format should strictly follow this structure: {{"explanation": "your explanation for the label selected", "label": "your label for the claim"}}'
+prompt = '''Given the chart {{chart}}, what is the correct label ('supports', 'refutes', or 'not enough information') for the claim: 'The label of the X-axis in the chart is \'Year\'.'? Why? 
+Output the result as a JSON object with the following keys: "label" and "explanation". The format should strictly follow this structure:
+{{
+"label": "your label for the claim",
+"explanation": "your explanation for the label selected"
+}}
+
+Examples of how this task is done:
+<
+1. Input:
+{{
+"chart": {chart1}
+“claim”: “Crimson is the maximum.”
+}}
+Output:
+{{
+"label": "refutes",
+"explanation": "The claim directly contradicts the chart, which clearly shows that Gold has the maximum value at 59.05. By asserting that Crimson is the maximum, it directly opposes the factual information provided, refuting the chart."
+}}
+2. Input:
+{{
+"chart": {chart2}
+“claim": "The income share held by the highest 10% of the population was greater than the average income share held by the highest 10% of the population in 1 year."
+}}
+Output:
+{{
+"label": "supports",
+"explanation": "The chart shows data over several years where the income shares of the highest 10% are listed. Comparing these figures reveals that in one specific year, the income share of the top 10% exceeded the average income share held by the top 10% across all years.."
+}}
+3. Input:
+{{
+"chart": {chart3}
+“claim”: “President Donald Trump's approach to international relations contributes to their perception as Dangerous.”
+}}
+Output:
+{{
+“label”: “not enough information”,
+“explanation”: “This claim speculates on information not provided in the chart, as there is no data regarding international relations, making the connection to the perception of being 'Dangerous' unverifiable.”
+}}
+>'''
 
 headers = {
   "Content-Type": "application/json",
@@ -46,11 +95,29 @@ payload = {
           "image_url": {
             "url": f"data:image/jpeg;base64,{chart}"
           }
+        },
+        {
+          "type": "image_url",
+          "image_url": {
+            "url": f"data:image/jpeg;base64,{chart1}"
+          }
+        },
+        {
+          "type": "image_url",
+          "image_url": {
+            "url": f"data:image/jpeg;base64,{chart2}"
+          }
+        },
+        {
+          "type": "image_url",
+          "image_url": {
+            "url": f"data:image/jpeg;base64,{chart3}"
+          }
         }
       ]
     }
   ],
-  "max_tokens": 300
+  "max_tokens": 1000
 }
 
 response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, json=payload)
