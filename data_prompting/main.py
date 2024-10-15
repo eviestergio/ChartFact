@@ -3,8 +3,395 @@ import json
 import os
 import shutil
 import sys
+import base64
 
-def create_supports_prompt(title, table,  question, answer): # 783 tokens, 3349 characters 
+# --- Image input prompts ---
+
+## Supports prompts
+def create_zero_shot_supports_prompt(image, question, answer):
+    """ Creates a zero-shot prompt to generate a 'supports' claim with an explanation using image input based on a Q&A pair. """
+
+    prompt = f"""
+    You are a helpful assistant designed to output JSON.
+
+    You will be provided with an image of a chart along with a question and its corresponding answer, delimited by triple single quotes.
+
+    Data input: '''
+        "image": {image},
+        "question": "{question}",
+        "answer": "{answer}"
+    '''
+
+    Task: Convert the 'question' and 'answer' pair to a claim that supports the information in the chart and provide an explanation.
+
+    Process for generating a 'supports' claim and explanation:
+        1. Using only the "question" and "answer", develop a claim that is supported by the data in the chart. 
+        2. Validate that your claim supports the information in the chart by carefully analyzing the image. 
+        3. Explain why the claim refutes the chart by referencing specific visual aspects and data points visible in the image. For example, reference specific values, lines, or categories shown in the chart.
+
+    Output the result as a JSON object with the following keys: "supports claim" and "explanation". The format should strictly follow this structure:
+    {{
+        "supports claim": "your generated supports claim",
+        "explanation": "your explanation for why the claim supports the chart"
+    }}
+    """
+
+    return prompt
+
+def create_few_shot_supports_prompt(image_path, question, answer): # 504 tokens, 2318 characters
+    """ Creates a few-shot prompt to generate a 'supports' claim with an explanation using image input based on a Q&A pair. """
+
+    image1 = encode_image("plotQA_39-test.png", "seed_datasets/PlotQA/test/png") #change
+    image2 = encode_image("figureQA_2-3-test.png", "seed_datasets/FigureQA/test/png") #change
+
+    prompt = f"""
+    You are a helpful assistant designed to output JSON.
+
+    You will be provided with an image of a chart along with a question and its corresponding answer, delimited by triple single quotes.
+
+    Data input: '''
+        "image": {image},
+        "question": "{question}",
+        "answer": "{answer}"
+    '''
+
+    Task: Using the two input-output examples below delimited by angle brackets, convert each 'question' and 'answer' pair to a claim that supports the information in the chart, and provide an explanation.
+
+    Process for generating a 'supports' claim and explanation:
+        1. Using only the "question" and "answer", develop a claim that is supported by the data in the chart. 
+        2. Validate that your claim supports the information in the chart by carefully analyzing the image. 
+        3. Explain why the claim refutes the chart by referencing specific visual aspects and data points visible in the image. For example, reference specific values, lines, or categories shown in the chart.
+
+    Output the result as a JSON object with the following keys: "supports claim" and "explanation". The format should strictly follow this structure:
+    {{
+        "supports claim": "your generated supports claim",
+        "explanation": "your explanation for why the claim supports the chart"
+    }}
+
+    Examples: < 
+     1. Input: 
+        image: {image1}
+        question: "In how many years is the income share held by highest 10% of the population greater than the average income share held by highest 10% of the population taken over all years?"
+        answer: "1"
+        Output: {{
+        "supports claim": "The income share held by the highest 10% of the population was greater than the average income share held by the highest 10% of the population in 1 year.", 
+        "explanation": "The chart shows data over several years where the income shares of the highest 10% are listed. Comparing these figures reveals that in one specific year, the income share of the top 10% exceeded the average income share held by the top 10% across all years."
+        }}
+     2. Input: 
+        Image: {image2}
+        Question: "Is Deep Sky Blue greater than Magenta?"
+        Answer: "Yes"
+        Output: {{
+        "supports claim": "Deep Sky Blue has a higher value than Magenta.",
+        "explanation": "The chart shows that the bar representing Deep Sky Blue has a visibly higher height than the one for Magenta, supporting the claim that Deep Sky Blue's value is indeed greater."
+        }}
+    >
+    """
+
+    return prompt
+
+def create_zero_shot_supports_prompt_wo_QA(image, question, answer):
+    """ Creates a zero-shot prompt to generate a 'supports' claim with an explanation using image input without a Q&A pair. """
+
+    prompt = f"""
+    You are a helpful assistant designed to output JSON.
+
+    You will be provided with an image of a chart delimited by triple single quotes.
+
+    Data input: '''
+        "image": {image}
+    '''
+
+    Task: Generate a claim that supports the information in the chart and provide an explanation.
+
+    Process for generating a 'supports' claim and explanation:
+        1. Using the image, develop a claim that is supported by the data in the chart.
+        2. Validate that your claim supports the information in the chart by carefully analyzing the image. 
+        3. Explain why the claim refutes the chart by referencing specific visual aspects and data points visible in the image. For example, reference specific values, lines, or categories shown in the chart.
+
+    Output the result as a JSON object with the following keys: "supports claim" and "explanation". The format should strictly follow this structure:
+    {{
+        "supports claim": "your generated supports claim",
+        "explanation": "your explanation for why the claim supports the chart"
+    }}
+    """
+
+    return prompt
+
+def create_few_shot_supports_prompt_wo_QA(image_path, question, answer):
+    """ Creates a few-shot prompt to generate a 'supports' claim with an explanation using image input without a Q&A pair. """
+
+    image1 = encode_image("plotQA_39-test.png", "seed_datasets/PlotQA/test/png") #change
+    image2 = encode_image("figureQA_2-3-test.png", "seed_datasets/FigureQA/test/png") #change
+
+    prompt = f"""
+    You are a helpful assistant designed to output JSON.
+
+    You will be provided with an image of a chart delimited by triple single quotes.
+
+    Data input: '''
+        "image": {image}
+    '''
+
+    Task: Using the two input-output examples below delimited by angle brackets, generate a claim that supports the information in the chart, and provide an explanation.
+
+    Process for generating a 'supports' claim and explanation:
+        1. Using the image, develop a claim that is supported by the data in the chart.
+        2. Validate that your claim supports the information in the chart by carefully analyzing the image. 
+        3. Explain why the claim refutes the chart by referencing specific visual aspects and data points visible in the image. For example, reference specific values, lines, or categories shown in the chart.
+
+    Output the result as a JSON object with the following keys: "supports claim" and "explanation". The format should strictly follow this structure:
+    {{
+        "supports claim": "your generated supports claim",
+        "explanation": "your explanation for why the claim supports the chart"
+    }}
+
+    Examples: <
+        1. Input: {{
+            “image”: {image1}
+            }}
+            Output: {{
+            "supports claim": "The income share held by the highest 10% of the population was greater than the average income share held by the highest 10% of the population in 1 year.",
+            "explanation": "The chart shows data over several years where the income shares of the highest 10% are listed. Comparing these figures reveals that in one specific year, the income share of the top 10% exceeded the average income share held by the top 10% across all years."
+        }}
+        2. Input: {{
+            “image”: {image2}
+            }}
+            Output: {{
+            "supports claim": "Deep Sky Blue has a higher value than Magenta.",
+            "explanation": "The chart shows that the bar representing Deep Sky Blue has a visibly higher height than the one for Magenta, supporting the claim that Deep Sky Blue's value is indeed greater."
+        }}
+    >
+    """
+    
+    return prompt
+
+### Simple supports prompt
+def create_supports_prompt_simple(question, answer): # 254 tokens, 1221 characters
+    ''' Creates a simplified prompt to generate a 'supports' claim without an explanation. '''
+    prompt = f"""
+    You are a helpful assistant designed to output JSON.
+
+    You will be provided with a question and its corresponding answer delimited by triple single quotes.
+
+    Data entry: '''
+        question: "{question}",
+        answer: "{answer}"
+    '''
+
+    Task: Using the two input-output examples delimited by angle brackets, convert each 'question' and 'answer' pair to a claim that supports the information.
+
+    Output the result as a JSON object with the key "supports claim". The format should strictly follow this structure:
+    {{
+        "supports claim": "your generated supports claim"
+    }}
+
+    Examples: < 
+     1. Input: {{
+            "question": "How many stores did Saint Laurent operate in Western Europe in 2020?",
+            "answer": "47"
+        }}
+        Output: {{
+            "supports claim": "Saint Laurent operated 47 stores in Western Europe in 2020."
+        }},
+     2. Input: {{
+            "question": "What is the title of the graph?",
+            "answer": "Net disbursements of loans from International Monetary Fund"
+        }} 
+        Output: {{
+            "supports claim": "The title of the graph is Net disbursements of loans from International Monetary Fund."
+        }},
+    >
+    """
+    
+    return prompt
+
+## Refutes prompts
+def create_zero_shot_refutes_prompt(image, question, answer):
+    ''' Creates a zero-shot prompt to generate a 'refutes' claim with an explanation using image input based on a Q&A pair. '''
+    
+    prompt = f"""
+    You are a helpful assistant designed to output JSON.
+
+    You will be provided with an image of a chart along with a claim that supports the information in the chart, delimited by triple single quotes.
+
+    Data input: '''
+        "image": {image},
+        "supports claim": "{supports_claim}"
+    '''
+
+    Task: Generate a 'refutes' claim that contradicts the information in the chart and provide an explanation. 
+
+    Process for generating a 'refutes' claim and explanation:
+        1. Develop a refutes claim based on the given supports claim without adding unverifiable information. This can be done by changing reported numbers, trends, or other factual elements in a plausible but incorrect way.
+        2. Validate that your claim refutes the information in the chart by carefully analyzing the image. 
+        3. Explain why the claim refutes the chart by referencing specific visual aspects and data points visible in the image. For example, reference specific values, lines, or categories shown in the chart. In the explanation, do not refer to the supports claim.
+
+    Output the result as a JSON object with the following keys: "refutes claim" and "explanation". The format should strictly follow this structure:
+    {{
+        "refutes claim": "your generated refutes claim",
+        "explanation": "your explanation for why the claim refutes the chart"
+    }}
+    """
+    
+    return prompt
+
+def create_few_shot_refutes_prompt(image, question, answer):
+    ''' Creates a few-shot prompt to generate a 'refutes' claim with an explanation using image input based on a Q&A pair. '''
+    
+    image1 = encode_image("plotQA_39-test.png", "seed_datasets/PlotQA/test/png") #change
+    image2 = encode_image("figureQA_2-3-test.png", "seed_datasets/FigureQA/test/png") #change
+
+    prompt = f"""
+    You are a helpful assistant designed to output JSON.
+
+    You will be provided with an image of a chart along with a claim that supports the information in the chart, delimited by triple single quotes.
+
+    Data input: '''
+        "image": {image},
+        "supports claim": "{supports_claim}"
+    '''
+
+    Task: Using the two input-output examples below delimited by angle brackets, generate a 'refutes' claim that contradicts the information in the chart and provide an explanation. 
+
+    Process for generating a 'refutes' claim and explanation:
+        1. Develop a refutes claim based on the given supports claim without adding unverifiable information. This can be done by changing reported numbers, trends, or other factual elements in a plausible but incorrect way.
+        2. Validate that your claim refutes the information in the chart by carefully analyzing the image. 
+        3. Explain why the claim refutes the chart by referencing specific visual aspects and data points visible in the image. For example, reference specific values, lines, or categories shown in the chart. In the explanation, do not refer to the supports claim.
+
+    Output the result as a JSON object with the following keys: "refutes claim" and "explanation". The format should strictly follow this structure:
+    {{
+        "refutes claim": "your generated refutes claim",
+        "explanation": "your explanation for why the claim refutes the chart"
+    }}
+
+    Examples: <
+     1. Input: {{
+        "image": {image1},
+        "supports claim": "The merchandise exports in 2007 were the minimum among the years shown in the chart."
+        }}
+        Output: {{
+        "refutes claim": "The merchandise exports in 2010 were the highest among the years shown in the chart.",
+        "explanation": "This claim refutes the chart as it inaccurately states that merchandise exports peaked in 2010. However, according to the chart, merchandise exports were highest in 2008 with a value of 1.22, and in 2010, the exports decreased to 1.05. Therefore, the claim contradicts the actual data presented in the chart."
+        }}
+     2. Input: {{
+        "image": "{image2}",
+        "supports claim": "Chartreuse has a value of 55, which is the maximum in the chart."
+        }}
+        Output: {{
+        "refutes claim": "Medium Mint has a value of 0, which is the minimum in the chart.",
+        "explanation": "The refutes claim incorrectly states that Medium Mint has a value of 0, indicating it is the minimum in the chart. However, according to the chart data, Medium Mint actually has a value of 18. This misstatement contradicts the factual information present in the chart, where 0 is associated with a different color. Therefore, the refutes claim directly contradicts the actual data provided in the chart."
+        }}
+    >
+    """
+    
+    return prompt
+
+def create_zero_shot_refutes_prompt_wo_QA(image, question, answer):
+    ''' Creates a zero-shot prompt to generate a 'refutes' claim with an explanation using image input. '''
+    
+    prompt = f"""
+    You are a helpful assistant designed to output JSON.
+
+    You will be provided with an image of a chart delimited by triple single quotes.
+
+    Data input: '''
+        "image": {image},
+    '''
+
+    Task: Generate a 'refutes' claim that contradicts the information in the chart and provide an explanation. 
+
+    Process for generating a 'refutes' claim and explanation:
+        1. Develop a refutes claim without adding unverifiable information. This can be done by changing reported numbers, trends, or other factual elements in a plausible but incorrect way.
+        2. Validate that your claim refutes the information in the chart by carefully analyzing the image. 
+        3. Explain why the claim refutes the chart by referencing specific visual aspects and data points visible in the image. For example, reference specific values, lines, or categories shown in the chart.
+
+    Process for generating 'refutes' claim and explanation:
+        1. Develop a claim that refutes the data without adding unverifiable information. This can be done by:
+            - Wrongly stating factual data, such as changing reported numbers or trends.
+            - Misinterpreting or changing one or more factual elements in a way that is plausible but incorrect based on the data.
+        2. Explain why the claim refutes the data. Use specific references form the chart. Valid justifications include:
+            - The claim directly states information that refutes the chart. 
+            - The claim states information that is antonymous with information in the chart.
+
+    Output the result as a JSON object with the following keys: "refutes claim" and "explanation". The format should strictly follow this structure:
+    {{
+        "refutes claim": "your generated refutes claim",
+        "explanation": "your explanation for why the claim refutes the chart"
+    }}
+    """
+
+    return prompt
+
+def create_few_shot_refutes_prompt_wo_QA(image, question, answer):
+    ''' Creates a few-shot prompt to generate a 'refutes' claim with an explanation using image input. '''
+    
+    image1 = encode_image("plotQA_39-test.png", "seed_datasets/PlotQA/test/png") #change
+    image2 = encode_image("figureQA_2-3-test.png", "seed_datasets/FigureQA/test/png") #change
+
+    prompt = f"""
+    You are a helpful assistant designed to output JSON.
+
+    You will be provided with an image of a chart delimited by triple single quotes.
+
+    Data input: '''
+        "image": {image},
+    '''
+
+    Task: Using the two input-output examples below delimited by angle brackets, generate a 'refutes' claim that contradicts the information in the chart and provide an explanation. 
+
+    Process for generating a 'refutes' claim and explanation:
+        1. Develop a refutes claim without adding unverifiable information. This can be done by changing reported numbers, trends, or other factual elements in a plausible but incorrect way.
+        2. Validate that your claim refutes the information in the chart by carefully analyzing the image. 
+        3. Explain why the claim refutes the chart by referencing specific visual aspects and data points visible in the image. For example, reference specific values, lines, or categories shown in the chart.
+
+    Process for generating 'refutes' claim and explanation:
+        1. Develop a claim that refutes the data without adding unverifiable information. This can be done by:
+            - Wrongly stating factual data, such as changing reported numbers or trends.
+            - Misinterpreting or changing one or more factual elements in a way that is plausible but incorrect based on the data.
+        2. Explain why the claim refutes the data. Use specific references form the chart. Valid justifications include:
+            - The claim directly states information that refutes the chart. 
+            - The claim states information that is antonymous with information in the chart.
+
+    Output the result as a JSON object with the following keys: "refutes claim" and "explanation". The format should strictly follow this structure:
+    {{
+        "refutes claim": "your generated refutes claim",
+        "explanation": "your explanation for why the claim refutes the chart"
+    }}
+
+    Examples: <
+     1. Input: {{
+        "image": {image1},
+        "supports claim": "The merchandise exports in 2007 were the minimum among the years shown in the chart."
+        }}
+        Output: {{
+        "refutes claim": "The merchandise exports in 2010 were the highest among the years shown in the chart.",
+        "explanation": "This claim refutes the chart as it inaccurately states that merchandise exports peaked in 2010. However, according to the chart, merchandise exports were highest in 2008 with a value of 1.22, and in 2010, the exports decreased to 1.05. Therefore, the claim contradicts the actual data presented in the chart."
+        }}
+     2. Input: {{
+        "image": "{image2}",
+        "supports claim": "Chartreuse has a value of 55, which is the maximum in the chart."
+        }}
+        Output: {{
+        "refutes claim": "Medium Mint has a value of 0, which is the minimum in the chart.",
+        "explanation": "The refutes claim incorrectly states that Medium Mint has a value of 0, indicating it is the minimum in the chart. However, according to the chart data, Medium Mint actually has a value of 18. This misstatement contradicts the factual information present in the chart, where 0 is associated with a different color. Therefore, the refutes claim directly contradicts the actual data provided in the chart."
+        }}
+    >
+    """
+
+    return prompt
+
+## Not enough information prompts
+def create_zero_shot_nei_prompt(image, question, answer):
+
+def create_few_shot_nei_prompt(image, question, answer):
+
+def create_zero_shot_nei_prompt_wo_QA(image, question, answer):
+
+def create_few_shot_nei_prompt_wo_QA(image, question, answer):
+
+# --- Table input prompts ---
+def create_supports_prompt_w_table(title, table,  question, answer): # 783 tokens, 3349 characters 
     ''' Creates a prompt to generate a 'supports' claim with an explanation. '''
     title_ = f'"title": "{title}",' if title else ''
     prompt = f"""
@@ -70,47 +457,9 @@ def create_supports_prompt(title, table,  question, answer): # 783 tokens, 3349 
 
     return prompt
 
-def create_supports_prompt_simple(question, answer): # 272 tokens, 1278 characters
-    ''' Creates a simplified prompt to generate a 'supports' claim without an explanation. '''
-    prompt = f"""
-    You are a helpful assistant designed to output JSON.
-
-    You will be provided with a data entry in JSON format delimited by triple single quotes. Each data entry contains the keys "question", and "answer".
-
-    Data entry: '''{{
-        "question": "{question}",
-        "answer": "{answer}"
-    }}'''
-
-    Task: Using the two input-output examples delimited by angle brackets, convert each 'question' and 'answer' pair to a claim that supports the information.
-
-    Output the result as a JSON object with the key "supports claim". The format should strictly follow this structure:
-    {{
-        "supports claim": "your generated supports claim"
-    }}
-
-    Examples: < 
-     1. Input: {{
-            "question": "How many stores did Saint Laurent operate in Western Europe in 2020?",
-            "answer": "47"
-        }}
-        Output: {{
-            "supports claim": "Saint Laurent operated 47 stores in Western Europe in 2020."
-        }},
-     2. Input: {{
-            "question": "What is the title of the graph?",
-            "answer": "Net disbursements of loans from International Monetary Fund"
-        }} 
-        Output: {{
-            "supports claim": "The title of the graph is Net disbursements of loans from International Monetary Fund."
-        }},
-    >
-    """
-    
-    return prompt
-
-def create_refutes_prompt(title, table, supports_claim): # 771 tokens, 3433 characters
+def create_refutes_prompt_w_table(title, table, supports_claim): # 771 tokens, 3433 characters
     ''' Creates a prompt to generate a 'refutes' claim with an explanation. '''
+
     title_ = f'"title": "{title}",' if title else ''    
     prompt = f"""
     You are a helpful assistant designed to output JSON.
@@ -166,7 +515,7 @@ def create_refutes_prompt(title, table, supports_claim): # 771 tokens, 3433 char
     
     return prompt
 
-def create_nei_prompt(title, table, supports_claim): # 733 tokens, 3531 characters
+def create_nei_prompt_w_table(title, table, supports_claim): # 733 tokens, 3531 characters
     ''' Creates a prompt to generate a 'not enough information' claim with an explanation. '''
     title_ = f'"title": "{title}",' if title else ''  
     prompt = f"""
@@ -227,19 +576,38 @@ def create_nei_prompt(title, table, supports_claim): # 733 tokens, 3531 characte
     
     return prompt
 
+# --- Other functions ---
+def encode_image(image_path, base_dir):
+    ''' Encode image from a given path. '''
+    for root, dirs, files in os.walk(base_dir):
+        if image_path in files:
+            full_path = os.path.join(root, image_path)
+            with open(full_path, "rb") as image_file:
+                image = base64.b64encode(image_file.read()).decode('utf-8')
+                return image
+    
+    raise FileNotFoundError(f"Image: '{image_path}' not found in '{base_dir}' or its subdirectories")
+
 def parse_json_response(response):
     ''' Parse JSON object response to extract claim and explanation. '''
     try:
+        # strip gpt-4o-mini leading/trailing syntax 
+        if response.startswith("```json"):
+            response = response[len("```json"):].strip()
+        if response.endswith("```"):
+            response = response[:-len("```")].strip()
+
         response_json = json.loads(response)
         return response_json
     except json.JSONDecodeError:
         print("Failed to parse JSON response.")
         return {}
 
-def generate_supports_claim(title, table, question, answer, model):
+def generate_supports_claim(image_path, question, answer, model, base_dir):
     ''' Generate a 'supports' claim with an explanation. '''
-    prompt = create_supports_prompt(title, table, question, answer)
-    response = model(model_name='gpt-3.5-turbo', query=prompt)
+    image = encode_image(image_path, base_dir)
+    prompt = create_zero_shot_supports_prompt(image, question, answer) # change prompt
+    response = model(model_name='gpt-4o-mini', query=prompt) # change model
     response_json = parse_json_response(response)
 
     # If failed, add empty entries to filter out from final dataset
@@ -254,8 +622,8 @@ def generate_supports_claim(title, table, question, answer, model):
 
 def generate_supports_claim_simple(question, answer, model):
     ''' Generate a simplified 'supports' claim without an explanation. '''
-    prompt = create_supports_prompt_simple(question, answer)
-    response = model(model_name='gpt-3.5-turbo', query=prompt)
+    prompt = create_supports_prompt_simple(question, answer) # leave prompt as is
+    response = model(model_name='gpt-3.5-turbo', query=prompt) # leave model as is
     response_json = parse_json_response(response)
 
     # If failed, add empty entries to filter out from final dataset
@@ -266,10 +634,11 @@ def generate_supports_claim_simple(question, answer, model):
     claim = response_json['supports claim']
     return claim
 
-def generate_refutes_claim(title, table, supports_claim, model):
+def generate_refutes_claim(image_path, supports_claim, model, base_dir):
     ''' Generate a 'refutes' claim with an explanation. '''
-    prompt = create_refutes_prompt(title, table, supports_claim)
-    response = model(model_name='gpt-3.5-turbo', query=prompt)
+    image = encode_image(image_path, base_dir)
+    prompt = create_zero_shot_refutes_prompt(image, supports_claim) # change prompt
+    response = model(model_name='gpt-4o-mini', query=prompt) # change model
     response_json = parse_json_response(response)
 
     # If failed, add empty entries to filter out from final dataset
@@ -282,10 +651,11 @@ def generate_refutes_claim(title, table, supports_claim, model):
 
     return claim, explanation
 
-def generate_nei_claim(title, table, supports_claim, model):
+def generate_nei_claim(image_path, supports_claim, model, base_dir):
     ''' Generate a 'not enough information' claim with an explanation. '''
-    prompt = create_nei_prompt(title, table, supports_claim)
-    response = model(model_name='gpt-3.5-turbo', query=prompt)
+    image = encode_image(image_path, base_dir)
+    prompt = create_zero_shot_nei_prompt(image, supports_claim) # change prompt
+    response = model(model_name='gpt-4o-mini', query=prompt) # change model
     response_json = parse_json_response(response)
 
     # If failed, add empty entries to filter out from final dataset
@@ -298,7 +668,7 @@ def generate_nei_claim(title, table, supports_claim, model):
 
     return claim, explanation
 
-def generate_claims_from_file(input_file, model):
+def generate_claims_from_file(input_file, model, base_dir):
     ''' Process an input file to generate one claim for each Q&A pair entry. '''
     with open(input_file, 'r') as file:
         entries = json.load(file)
@@ -313,38 +683,17 @@ def generate_claims_from_file(input_file, model):
         answer = entry.get("answer")
         image = entry.get("image")
 
-        base_file_path = os.path.join(os.path.dirname(input_file), "tables", f"{entry['image'].split('.')[0]}")
-        csv_file_path = base_file_path + ".csv"
-        # regular_csv_file_path = base_csv_file_path + ".csv"
-        title_file_path = base_file_path + ".txt"
-
-        # Read CSV file (prioritize '-dp' file)
-        if os.path.exists(csv_file_path):
-            with open(csv_file_path, 'r') as csv_file:
-                table = csv_file.read()
-        # elif os.path.exists(regular_csv_file_path):
-        #     with open(regular_csv_file_path, 'r') as csv_file:
-        #         table = csv_file.read()
-        else:
-            table = None
-
-        # Read title file if it exists
-        if os.path.exists(title_file_path):
-            with open(title_file_path, 'r') as title_file:
-                title = title_file.read().strip()
-        else:
-            title = None
-
-        # Check for missing data (excluding optional title)
-        if not question or not answer or not image or (table is None):
+        # Check for missing data 
+        if not question or not answer or not image:
             print(f"Skipping entry due to missing data: {entry}")
             continue
 
+        results = []
         claim_type = claim_types[claim_index % 3]
 
         # Generate 'supports' claim
         if claim_type == 'Supports':
-            supports_claim, explanation = generate_supports_claim(title, table, question, answer, model)
+            supports_claim, explanation = generate_supports_claim(image, question, answer, model, base_dir)
             results.append({
                 "image": image,
                 "claim": supports_claim,
@@ -357,7 +706,7 @@ def generate_claims_from_file(input_file, model):
         # Generate 'refutes' claim using 'supports' claim from simplified function
         if claim_type == 'Refutes':
             simple_supports_claim = generate_supports_claim_simple(question, answer, model)
-            refutes_claim, explanation = generate_refutes_claim(title, table, simple_supports_claim, model)
+            refutes_claim, explanation = generate_refutes_claim(image, simple_supports_claim, model, base_dir)
             results.append({
                 "image": image,
                 "claim": refutes_claim,
@@ -370,7 +719,7 @@ def generate_claims_from_file(input_file, model):
         # Generate 'not enough information' claim using 'supports' claim from simplified function
         if claim_type == 'Not enough information':
             simple_supports_claim = generate_supports_claim_simple(question, answer, model)
-            nei_claim, explanation = generate_nei_claim(title, table, simple_supports_claim, model)
+            nei_claim, explanation = generate_nei_claim(image, simple_supports_claim, model, base_dir)
             results.append({
                 "image": image,
                 "claim": nei_claim,
@@ -398,11 +747,6 @@ def save_results(input_file, results):
     os.remove(input_file)
     print(f"Removed old preprocessed file: {input_file}")
 
-# def copy_entire_folder(src, dst):
-#     if os.path.exists(dst):
-#         shutil.rmtree(dst)
-#     shutil.copytree(src, dst)
-
 def copy_folder_structure_and_files(src, dst):
     ''' Copy entire folder structure and contents of source folder to destination folder. '''
     if os.path.exists(dst):
@@ -422,7 +766,7 @@ def main(src, dst):
         for filename in files:
             if filename.startswith('preprocessed_') and filename.endswith('.json'):
                 input_file = os.path.join(root, filename)
-                generate_claims_from_file(input_file, model)
+                generate_claims_from_file(input_file, model, dst)
 
 if __name__ == '__main__':
     if len(sys.argv) != 3:
