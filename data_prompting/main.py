@@ -38,7 +38,7 @@ def create_zero_shot_supports_prompt(image, question, answer):
 
     return prompt
 
-def create_few_shot_supports_prompt(image_path, question, answer): # 504 tokens, 2318 characters
+def create_few_shot_supports_prompt(image, question, answer): # 504 tokens, 2318 characters
     """ Creates a few-shot prompt to generate a 'supports' claim with an explanation using image input based on a Q&A pair. """
 
     image1 = encode_image("plotQA_39-test.png", "seed_datasets/PlotQA/test/png") #change
@@ -90,7 +90,7 @@ def create_few_shot_supports_prompt(image_path, question, answer): # 504 tokens,
 
     return prompt
 
-def create_zero_shot_supports_prompt_wo_QA(image, question, answer):
+def create_zero_shot_supports_prompt_wo_QA(image):
     """ Creates a zero-shot prompt to generate a 'supports' claim with an explanation using image input without a Q&A pair. """
 
     prompt = f"""
@@ -118,7 +118,7 @@ def create_zero_shot_supports_prompt_wo_QA(image, question, answer):
 
     return prompt
 
-def create_few_shot_supports_prompt_wo_QA(image_path, question, answer):
+def create_few_shot_supports_prompt_wo_QA(image):
     """ Creates a few-shot prompt to generate a 'supports' claim with an explanation using image input without a Q&A pair. """
 
     image1 = encode_image("plotQA_39-test.png", "seed_datasets/PlotQA/test/png") #change
@@ -207,7 +207,7 @@ def create_supports_prompt_simple(question, answer): # 254 tokens, 1221 characte
     return prompt
 
 ## Refutes prompts
-def create_zero_shot_refutes_prompt(image, question, answer):
+def create_zero_shot_refutes_prompt(image, supports_claim):
     ''' Creates a zero-shot prompt to generate a 'refutes' claim with an explanation using image input based on a Q&A pair. '''
     
     prompt = f"""
@@ -236,7 +236,7 @@ def create_zero_shot_refutes_prompt(image, question, answer):
     
     return prompt
 
-def create_few_shot_refutes_prompt(image, question, answer):
+def create_few_shot_refutes_prompt(image, supports_claim):
     ''' Creates a few-shot prompt to generate a 'refutes' claim with an explanation using image input based on a Q&A pair. '''
     
     image1 = encode_image("plotQA_39-test.png", "seed_datasets/PlotQA/test/png") #change
@@ -287,7 +287,7 @@ def create_few_shot_refutes_prompt(image, question, answer):
     
     return prompt
 
-def create_zero_shot_refutes_prompt_wo_QA(image, question, answer):
+def create_zero_shot_refutes_prompt_wo_QA(image):
     ''' Creates a zero-shot prompt to generate a 'refutes' claim with an explanation using image input. '''
     
     prompt = f"""
@@ -323,7 +323,7 @@ def create_zero_shot_refutes_prompt_wo_QA(image, question, answer):
 
     return prompt
 
-def create_few_shot_refutes_prompt_wo_QA(image, question, answer):
+def create_few_shot_refutes_prompt_wo_QA(image):
     ''' Creates a few-shot prompt to generate a 'refutes' claim with an explanation using image input. '''
     
     image1 = encode_image("plotQA_39-test.png", "seed_datasets/PlotQA/test/png") #change
@@ -382,13 +382,163 @@ def create_few_shot_refutes_prompt_wo_QA(image, question, answer):
     return prompt
 
 ## Not enough information prompts
-def create_zero_shot_nei_prompt(image, question, answer):
+def create_zero_shot_nei_prompt(image, supports_claim): 
+    ''' Creates a zero-shot prompt to generate a 'not enough information' claim with an explanation. '''
 
-def create_few_shot_nei_prompt(image, question, answer):
+    prompt = f"""
+    You are a helpful assistant designed to output JSON.
 
-def create_zero_shot_nei_prompt_wo_QA(image, question, answer):
+    You will be provided with an image of a chart along with a claim that supports the information in the chart, delimited by triple single quotes.
 
-def create_few_shot_nei_prompt_wo_QA(image, question, answer):
+    Data input: '''
+        "image": {image},
+        "supports claim": "{supports_claim}"
+    '''
+
+    Task: Generate a 'not enough information' claim that neither fully supports or refutes the information in the chart and provide an explanation. 
+
+    Process for generating a 'not enough information' claim and explanation:
+        1. Analyze the chart data and the provided supports claim for gaps or missing details that prevent fully supporting or refuting the claim.
+        2. Develop a claim based on these gaps, suggesting plausible scenarios or causes that neither directly support nor refute the original claim but is related to it.
+        3. Provide an explanation for why the claim cannot be verified with the available information, referencing specific aspects of the chart. In the explanation, do not refer to the original supports claim.
+
+    Output the result as a JSON object with the following keys: "not enough information claim" and "explanation". The format should strictly follow this structure:
+    {{
+        "not enough information claim": "your generated not enough information claim",
+        "explanation": "your explanation for why the claim lacks enough information"
+    }}
+    """
+
+    return prompt
+
+def create_few_shot_nei_prompt(image, supports_claim):
+    ''' Creates a few-shot prompt to generate a 'not enough information' claim with an explanation. '''
+    
+    image1 = encode_image("chartQA_166.png", "seed_datasets/ChartQA/test/png") #OK
+    image2 = encode_image("figureQA_2-3-test.png", "seed_datasets/FigureQA/test/png") #change
+
+    prompt = f"""
+    You are a helpful assistant designed to output JSON.
+
+    You will be provided with an image of a chart along with a claim that supports the information in the chart, delimited by triple single quotes.
+
+    Data input: '''
+        "image": {image},
+        "supports claim": "{supports_claim}"
+    '''
+
+    Task: Using the two input-output examples delimited by angle brackets, generate a 'not enough information' claim that neither fully supports or refutes the information in the chart and provide an explanation. 
+
+    Process for generating a 'not enough information' claim and explanation:
+        1. Analyze the chart data and the provided supports claim for gaps or missing details that prevent fully supporting or refuting the claim.
+        2. Develop a claim based on these gaps, suggesting plausible scenarios or causes that neither directly support nor refute the original claim but is related to it.
+        3. Provide an explanation for why the claim cannot be verified with the available information, referencing specific aspects of the chart. In the explanation, do not refer to the original supports claim.
+
+    Output the result as a JSON object with the following keys: "not enough information claim" and "explanation". The format should strictly follow this structure:
+    {{
+        "not enough information claim": "your generated not enough information claim",
+        "explanation": "your explanation for why the claim lacks enough information"
+    }}
+
+    Example: <
+     1. Input: {{
+        "image": "{image1}",
+        "supports claim": "62 percent view President Donald Trump as Dangerous."
+        }}
+        Output: {{
+        "not enough information claim": "President Donald Trump's approach to international relations contributes to their perception as Dangerous.",
+        "explanation": "This claim speculates on information not provided in the table, as there is no data regarding international relations, making the connection to the perception of being 'Dangerous' unverifiable."
+        }}
+     2. Input: {{
+        "image": "{image2}",
+        "supports claim": "Dark Cyan is not the low median."
+        }}
+        Output: {{
+        "not enough information claim": "Dark Cyan would be the median if the dataset included more color values.",
+        "explanation": "This claim suggests that adding more color values could shift the median to Dark Cyan. However, the current dataset does not provide information on potential additional values or their distribution, making it impossible to verify this claim."
+        }}
+    >
+    """
+
+    return prompt
+
+def create_zero_shot_nei_prompt_wo_QA(image):  
+    ''' Creates a zero-shot prompt to generate a 'not enough information' claim with an explanation without a support claim based on the Q&A pair. '''
+
+    prompt = f"""
+    You are a helpful assistant designed to output JSON.
+
+    You will be provided with an image of a chart along with a claim that supports the information in the chart, delimited by triple single quotes.
+
+    Data input: '''
+        "image": {image}
+    '''
+
+    Task: Generate a 'not enough information' claim that neither fully supports or refutes the information in the chart and provide an explanation. 
+
+    Process for generating a 'not enough information' claim and explanation:
+        1. Identify gaps or unspecified details that make it difficult to fully support or refute the information in the chart.
+        2. Develop a claim based on these gaps, suggesting plausible scenarios or causes not directly confirmed or denied by the chart.
+        3. Provide an explanation for why the claim cannot be verified with the available information, using specific references from the chart. 
+
+    Output the result as a JSON object with the following keys: "not enough information claim" and "explanation". The format should strictly follow this structure:
+    {{
+        "not enough information claim": "your generated not enough information claim",
+        "explanation": "your explanation for why the claim lacks enough information"
+    }}
+    """
+
+    return prompt
+
+def create_few_shot_nei_prompt_wo_QA(image):
+    ''' Creates a few -shot prompt to generate a 'not enough information' claim with an explanation without a support claim based on the Q&A pair. '''
+
+    image1 = encode_image("chartQA_166.png", "seed_datasets/ChartQA/test/png") #OK
+    image2 = encode_image("figureQA_2-3-test.png", "seed_datasets/FigureQA/test/png") #change
+
+    prompt = f"""
+    You are a helpful assistant designed to output JSON.
+
+    You will be provided with an image of a chart along with a claim that supports the information in the chart, delimited by triple single quotes.
+
+    Data input: '''
+        "image": {image}
+    '''
+
+    Task: Using the two input-output examples delimited by angle brackets, generate a 'not enough information' claim that neither fully supports or refutes the information in the chart and provide an explanation. 
+
+    Process for generating a 'not enough information' claim and explanation:
+        1. Identify gaps or unspecified details that make it difficult to fully support or refute the information in the chart.
+        2. Develop a claim based on these gaps, suggesting plausible scenarios or causes not directly confirmed or denied by the chart.
+        3. Provide an explanation for why the claim cannot be verified with the available information, using specific references from the chart. 
+
+    Output the result as a JSON object with the following keys: "not enough information claim" and "explanation". The format should strictly follow this structure:
+    {{
+        "not enough information claim": "your generated not enough information claim",
+        "explanation": "your explanation for why the claim lacks enough information"
+    }}
+
+    Example: <
+     1. Input: {{
+        "image": "{image1}",
+        "supports claim": "62 percent view President Donald Trump as Dangerous."
+        }}
+        Output: {{
+        "not enough information claim": "President Donald Trump's approach to international relations contributes to their perception as Dangerous.",
+        "explanation": "This claim speculates on information not provided in the table, as there is no data regarding international relations, making the connection to the perception of being 'Dangerous' unverifiable."
+        }}
+     2. Input: {{
+        "image": "{image2}",
+        "supports claim": "Dark Cyan is not the low median."
+        }}
+        Output: {{
+        "not enough information claim": "Dark Cyan would be the median if the dataset included more color values.",
+        "explanation": "This claim suggests that adding more color values could shift the median to Dark Cyan. However, the current dataset does not provide information on potential additional values or their distribution, making it impossible to verify this claim."
+        }}
+    >
+    """
+
+    return prompt
 
 # --- Table input prompts ---
 def create_supports_prompt_w_table(title, table,  question, answer): # 783 tokens, 3349 characters 
@@ -606,7 +756,10 @@ def parse_json_response(response):
 def generate_supports_claim(image_path, question, answer, model, base_dir):
     ''' Generate a 'supports' claim with an explanation. '''
     image = encode_image(image_path, base_dir)
-    prompt = create_zero_shot_supports_prompt(image, question, answer) # change prompt
+    prompt = create_zero_shot_supports_prompt(image, question, answer) # V1 
+    # prompt = create_few_shot_supports_prompt(image, question, answer) # V2
+    # prompt = create_zero_shot_supports_prompt_wo_QA(image) # V3
+    # prompt = create_few_shot_supports_prompt_wo_QA(image) # V4
     response = model(model_name='gpt-4o-mini', query=prompt) # change model
     response_json = parse_json_response(response)
 
@@ -620,7 +773,7 @@ def generate_supports_claim(image_path, question, answer, model, base_dir):
 
     return claim, explanation
 
-def generate_supports_claim_simple(question, answer, model):
+def generate_supports_claim_simple(question, answer, model): # leave as is
     ''' Generate a simplified 'supports' claim without an explanation. '''
     prompt = create_supports_prompt_simple(question, answer) # leave prompt as is
     response = model(model_name='gpt-3.5-turbo', query=prompt) # leave model as is
@@ -637,7 +790,10 @@ def generate_supports_claim_simple(question, answer, model):
 def generate_refutes_claim(image_path, supports_claim, model, base_dir):
     ''' Generate a 'refutes' claim with an explanation. '''
     image = encode_image(image_path, base_dir)
-    prompt = create_zero_shot_refutes_prompt(image, supports_claim) # change prompt
+    prompt = create_zero_shot_refutes_prompt(image, supports_claim) # V1
+    # prompt = create_few_shot_refutes_prompt(image, supports_claim) # V2
+    # prompt = create_zero_shot_refutes_prompt_wo_QA(image) # V3
+    # prompt = create_few_shot_refutes_prompt_wo_QA(image) # V4
     response = model(model_name='gpt-4o-mini', query=prompt) # change model
     response_json = parse_json_response(response)
 
@@ -654,7 +810,10 @@ def generate_refutes_claim(image_path, supports_claim, model, base_dir):
 def generate_nei_claim(image_path, supports_claim, model, base_dir):
     ''' Generate a 'not enough information' claim with an explanation. '''
     image = encode_image(image_path, base_dir)
-    prompt = create_zero_shot_nei_prompt(image, supports_claim) # change prompt
+    prompt = create_zero_shot_nei_prompt(image, supports_claim) # V1
+    # prompt = create_few_shot_nei_prompt(image, supports_claim) # V2
+    # prompt = create_zero_shot_nei_prompt_wo_QA(image) # V3
+    # prompt = create_few_shot_nei_prompt_wo_QA(image) # V4
     response = model(model_name='gpt-4o-mini', query=prompt) # change model
     response_json = parse_json_response(response)
 
