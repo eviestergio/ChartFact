@@ -1,9 +1,9 @@
 [
     {
         "image": "figureQA_43249-train.png",
-        "claim": "Deep Sky Blue has a higher value than Magenta.",
+        "claim": "",
         "label": "Supports",
-        "explanation": "The chart shows that the bar representing Deep Sky Blue has a visibly higher height than the one for Magenta, supporting the claim that Deep Sky Blue's value is indeed greater."
+        "explanation": ""
     },
     {
         "image": "figureQA_99722-train.png",
