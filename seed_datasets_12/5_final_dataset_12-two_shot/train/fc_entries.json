@@ -1,0 +1,38 @@
+[
+    {
+        "image": "figureQA_43249-train.png",
+        "claim": "",
+        "label": "Supports",
+        "explanation": ""
+    },
+    {
+        "image": "figureQA_99722-train.png",
+        "claim": "Dark Gold does not intersect with Turquoise.",
+        "label": "Supports",
+        "explanation": "The chart shows that the lines representing Dark Gold and Turquoise remain separate and do not overlap at any point. This visual evidence confirms that the claim is correct, as there are no points where these two categories converge."
+    },
+    {
+        "image": "chartQA_two_col_42313-train.png",
+        "claim": "The expenditure on alcoholic drinks in 2020 was \u00a325,964.",
+        "label": "Supports",
+        "explanation": "The chart explicitly indicates that in 2020, the total expenditure on alcoholic drinks reached \u00a325,964. This supporting data directly confirms the amount stated in the answer to the question, illustrating the financial allocation for alcoholic drinks during that year."
+    },
+    {
+        "image": "plotQA_37698-train.png",
+        "claim": "The domestic liabilities increased significantly from 2005 to 2009.",
+        "label": "Supports",
+        "explanation": "The chart clearly shows a trend of increasing domestic liabilities over the years, with the value rising from 102600000 in 2005 to 184518000000 in 2009. This suggests a substantial growth in liabilities during this period, which directly supports the claim."
+    },
+    {
+        "image": "chartQA_multi_col_20204-train.png",
+        "claim": "The number of people who committed suicide in 2009 was 517.",
+        "label": "Supports",
+        "explanation": "The chart provides a specific data point highlighting the number of suicides in 2009, indicated clearly at the corresponding year on the x-axis. This data confirms that 517 people committed suicide that year, supporting the claim."
+    },
+    {
+        "image": "plotQA_98527-train.png",
+        "claim": "The domestic liabilities increased significantly from 2005 to 2009.",
+        "label": "Supports",
+        "explanation": "The chart shows a clear trend where domestic liabilities grew substantially over the years, starting from 102600000 in 2005 to 184518000000 in 2009. This increase is directly supported by the numerical values provided in the chart."
+    }
+]

@@ -1,0 +1,14 @@
+[
+    {
+        "image": "chartQA_multi_col_20204-train.png",
+        "claim": "The data from the chart supports the claim that there were 517 suicides recorded in the year 2009.",
+        "label": "Supports",
+        "explanation": "Upon analyzing the chart, it is evident that the bar representing the year 2009 reaches the value of 517 on the vertical scale, confirming the reported number of suicides. This visual representation is aligned with the answer provided, which directly states that in 2009, 517 people committed suicide. The height of the bar distinctly illustrates this data point, making it clear and verifiable."
+    },
+    {
+        "image": "chartQA_two_col_42313-train.png",
+        "claim": "In 2020, a total of 25,964 British pounds was spent on alcoholic drinks.",
+        "label": "Supports",
+        "explanation": "This claim directly reflects the data presented in the chart, which indicates that the expenditure on alcoholic drinks in 2020 was indeed 25,964 British pounds. The chart likely includes a specific bar or point that marks this financial figure clearly, allowing for a straightforward visual confirmation of the stated amount."
+    }
+]

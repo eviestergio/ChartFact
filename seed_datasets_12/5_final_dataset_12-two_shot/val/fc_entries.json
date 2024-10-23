@@ -1,0 +1,20 @@
+[
+    {
+        "image": "plotQA_4212-val.png",
+        "claim": "The total grants received by the government in Cote d'Ivoire is 548,650,000.",
+        "label": "Supports",
+        "explanation": "The chart clearly displays the total grants received by the government, with the numerical value of 548,650,000 highlighted, directly supporting the claim regarding the government's total grants."
+    },
+    {
+        "image": "chartQA_two_col_43627-val.png",
+        "claim": "The Green Bay Packers' expenses in 2017 were significant at 376.1 million.",
+        "label": "Supports",
+        "explanation": "The chart depicts financial data concerning various teams, including the Green Bay Packers. The data point corresponding to the Packers clearly indicates that their expenses for the year 2017 were 376.1 million, which is visually represented. This confirms the claim that their expenses were substantial during that year."
+    },
+    {
+        "image": "chartQA_multi_col_40930-val.png",
+        "claim": "The blue bar representing the year 2020 is above 5.",
+        "label": "Supports",
+        "explanation": "The chart indicates that the value represented by the blue bar for the year 2020 exceeds the height of 5, confirming the truth of the claim."
+    }
+]

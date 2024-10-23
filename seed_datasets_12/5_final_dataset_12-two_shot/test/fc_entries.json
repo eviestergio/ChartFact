@@ -1,0 +1,20 @@
+[
+    {
+        "image": "chartQA_multi_col_60912-test.png",
+        "claim": "The male population of Tunisia in 2019 was 5.8 million.",
+        "label": "Supports",
+        "explanation": "The chart indicates the population figures for Tunisia, specifically highlighting the male population section for the year 2019. The numerical value of 5.8 million is clearly visualized in the chart, confirming the accuracy of the claim."
+    },
+    {
+        "image": "chartQA_56783352006090-test.png",
+        "claim": "South Sudan has the lowest access to electricity over the years compared to other countries.",
+        "label": "Supports",
+        "explanation": "The chart clearly illustrates that South Sudan consistently shows the lowest percentage of access to electricity among the countries listed, indicating its significant challenges in electricity accessibility compared to other nations."
+    },
+    {
+        "image": "plotQA_1467-test.png",
+        "claim": "The label of the X-axis is 'Year'.",
+        "label": "Supports",
+        "explanation": "The chart clearly indicates that the X-axis is labeled 'Year', which means that the data being analyzed or represented corresponds to different years, supporting the claim regarding the label of the X-axis."
+    }
+]

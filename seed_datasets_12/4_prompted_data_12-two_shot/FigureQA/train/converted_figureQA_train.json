@@ -1,0 +1,14 @@
+[
+    {
+        "image": "figureQA_43249-train.png",
+        "claim": "",
+        "label": "Supports",
+        "explanation": ""
+    },
+    {
+        "image": "figureQA_99722-train.png",
+        "claim": "Dark Gold does not intersect with Turquoise.",
+        "label": "Supports",
+        "explanation": "The chart shows that the lines representing Dark Gold and Turquoise remain separate and do not overlap at any point. This visual evidence confirms that the claim is correct, as there are no points where these two categories converge."
+    }
+]

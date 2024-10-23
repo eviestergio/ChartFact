@@ -1,0 +1,14 @@
+[
+    {
+        "image": "chartQA_multi_col_40930-val.png",
+        "claim": "In the year 2020, the metric represented by the blue bar reaches above 5.",
+        "label": "Supports",
+        "explanation": "The claim directly corresponds to the data presented in the chart, where the blue bar representing the specified metric is observed to cross the value of 5 in the year 2020. This is visually confirmed by the height of the blue bar for that year, which is clearly above the 5 mark, indicating that the claim accurately reflects the data shown in the chart."
+    },
+    {
+        "image": "chartQA_two_col_43627-val.png",
+        "claim": "The Green Bay Packers had expenses of $376.1 million in 2017.",
+        "label": "Supports",
+        "explanation": "This claim directly corresponds to the information presented in the chart, which indicates the expenses of various NFL teams. The bar representing the Green Bay Packers shows a value of 376.1 million, visually affirming that the expenses were indeed this amount for the year 2017. This specific value aligns perfectly with the data point referenced in the question and answer pair, thereby affirming the accuracy of the claim as supported by the chart."
+    }
+]

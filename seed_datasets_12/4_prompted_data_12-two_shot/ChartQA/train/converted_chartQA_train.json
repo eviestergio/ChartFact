@@ -1,0 +1,14 @@
+[
+    {
+        "image": "chartQA_multi_col_20204-train.png",
+        "claim": "The number of people who committed suicide in 2009 was 517.",
+        "label": "Supports",
+        "explanation": "The chart provides a specific data point highlighting the number of suicides in 2009, indicated clearly at the corresponding year on the x-axis. This data confirms that 517 people committed suicide that year, supporting the claim."
+    },
+    {
+        "image": "chartQA_two_col_42313-train.png",
+        "claim": "The expenditure on alcoholic drinks in 2020 was \u00a325,964.",
+        "label": "Supports",
+        "explanation": "The chart explicitly indicates that in 2020, the total expenditure on alcoholic drinks reached \u00a325,964. This supporting data directly confirms the amount stated in the answer to the question, illustrating the financial allocation for alcoholic drinks during that year."
+    }
+]

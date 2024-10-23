@@ -1,0 +1,14 @@
+[
+    {
+        "image": "plotQA_37698-train.png",
+        "claim": "The domestic liabilities increased significantly from 2005 to 2009.",
+        "label": "Supports",
+        "explanation": "The chart clearly shows a trend of increasing domestic liabilities over the years, with the value rising from 102600000 in 2005 to 184518000000 in 2009. This suggests a substantial growth in liabilities during this period, which directly supports the claim."
+    },
+    {
+        "image": "plotQA_98527-train.png",
+        "claim": "The domestic liabilities increased significantly from 2005 to 2009.",
+        "label": "Supports",
+        "explanation": "The chart shows a clear trend where domestic liabilities grew substantially over the years, starting from 102600000 in 2005 to 184518000000 in 2009. This increase is directly supported by the numerical values provided in the chart."
+    }
+]
