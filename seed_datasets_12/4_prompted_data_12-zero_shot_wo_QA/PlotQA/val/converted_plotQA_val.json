@@ -1,0 +1,8 @@
+[
+    {
+        "image": "plotQA_4212-val.png",
+        "claim": "The chart indicates a significant upward trend in sales over the past five years.",
+        "label": "Supports",
+        "explanation": "The chart clearly illustrates a consistent increase in sales figures, as represented by the rising line graph. It shows specific data points that highlight noticeable growth year after year, particularly in the last two years where the increase is more pronounced. For instance, the values at the end of the chart are considerably higher than those at the beginning, demonstrating strong performance and a positive trajectory in sales."
+    }
+]

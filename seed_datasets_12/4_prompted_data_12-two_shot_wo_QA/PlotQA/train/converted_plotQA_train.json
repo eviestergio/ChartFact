@@ -1,0 +1,14 @@
+[
+    {
+        "image": "plotQA_37698-train.png",
+        "claim": "The chart indicates a significant increase in the number of active users from 2020 to 2023.",
+        "label": "Supports",
+        "explanation": "The image clearly depicts a rising trend in user numbers, escalating from 5,000 active users in 2020 to approximately 25,000 in 2023. This visual representation of data supports the claim of substantial growth in active user engagement over the specified timeframe."
+    },
+    {
+        "image": "plotQA_98527-train.png",
+        "claim": "The data shows a significant increase in domestic debts from 2005 to 2009.",
+        "label": "Supports",
+        "explanation": "The chart utilizes bars to represent domestic liabilities in different years, with the bar for 2009 being substantially taller than that for 2005. Specifically, the value rises from approximately 102,600,000 in 2005 to nearly 184,518,000, indicating a clear upward trend in domestic debts over this period."
+    }
+]

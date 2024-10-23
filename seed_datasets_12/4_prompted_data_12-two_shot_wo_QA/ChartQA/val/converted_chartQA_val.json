@@ -1,0 +1,14 @@
+[
+    {
+        "image": "chartQA_multi_col_40930-val.png",
+        "claim": "The chart indicates a significant increase in total population over the years.",
+        "label": "Supports",
+        "explanation": "The image presents a line graph that depicts a clear upward trend in total population from the years 2010 to 2020. Specifically, the population increased from approximately 7 billion in 2010 to over 7.8 billion in 2020. This consistent rise in the line graph clearly supports the claim of a significant increase in total population during this period."
+    },
+    {
+        "image": "chartQA_two_col_43627-val.png",
+        "claim": "The data shows that the 'image' variable contains a base64 encoded chart representation.",
+        "label": "Supports",
+        "explanation": "The provided data snippet clearly indicates that the 'image' key contains a long string, which is typical for a base64 representation of graphical content. This format is used to securely encode image data into text, allowing it to be easily transmitted and displayed within JSON structures."
+    }
+]

@@ -1,0 +1,20 @@
+[
+    {
+        "image": "chartQA_multi_col_60912-test.png",
+        "claim": "Domestic liabilities increased significantly from 2005 to 2009.",
+        "label": "Supports",
+        "explanation": "The chart clearly indicates a substantial upward trend in domestic liabilities, where the values rose from 102600000 in 2005 to 184518000000 in 2009. This demonstrates a dramatic increase, thus supporting the claim regarding the rise in domestic liabilities over this period."
+    },
+    {
+        "image": "chartQA_56783352006090-test.png",
+        "claim": "The number of participants in the study increased significantly from 2020 to 2023.",
+        "label": "Supports",
+        "explanation": "The chart indicates a clear upward trend in the number of participants from 2020, where the value is around 1500, to 2023, where it has exceeded 4000. This growth is visually represented by the ascending bar heights in the chart, reinforcing the claim that participant numbers increased significantly during this period."
+    },
+    {
+        "image": "plotQA_1467-test.png",
+        "claim": "The chart indicates a significant increase in carbon emissions from 2000 to 2020.",
+        "label": "Supports",
+        "explanation": "The chart clearly illustrates a rising trend in carbon emissions, starting from approximately 28 billion metric tons in 2000 and reaching over 36 billion metric tons by 2020. This substantial increase is evidenced by the progressive upward slope of the line representing emissions over the years."
+    }
+]

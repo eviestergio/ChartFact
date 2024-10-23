@@ -1,0 +1,8 @@
+[
+    {
+        "image": "plotQA_1467-test.png",
+        "claim": "The chart indicates a significant increase in carbon emissions from 2000 to 2020.",
+        "label": "Supports",
+        "explanation": "The chart clearly illustrates a rising trend in carbon emissions, starting from approximately 28 billion metric tons in 2000 and reaching over 36 billion metric tons by 2020. This substantial increase is evidenced by the progressive upward slope of the line representing emissions over the years."
+    }
+]

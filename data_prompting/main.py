@@ -755,9 +755,9 @@ def generate_supports_claim(image_path, question, answer, model, base_dir):
     ''' Generate a 'supports' claim with an explanation. '''
     image = encode_image(image_path, base_dir)
     # prompt = create_zero_shot_supports_prompt(image, question, answer) # V1 
-    prompt = create_few_shot_supports_prompt(image, question, answer) # V2
+    # prompt = create_few_shot_supports_prompt(image, question, answer) # V2
     # prompt = create_zero_shot_supports_prompt_wo_QA(image) # V3
-    # prompt = create_few_shot_supports_prompt_wo_QA(image) # V4
+    prompt = create_few_shot_supports_prompt_wo_QA(image) # V4
     response = model(model_name='gpt-4o-mini', query=prompt) # change model
     response_json = parse_json_response(response)
 

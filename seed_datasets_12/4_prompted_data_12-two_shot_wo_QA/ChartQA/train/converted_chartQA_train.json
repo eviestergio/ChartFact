@@ -1,0 +1,14 @@
+[
+    {
+        "image": "chartQA_multi_col_20204-train.png",
+        "claim": "The domestic liabilities increased significantly from 2005 to 2009.",
+        "label": "Supports",
+        "explanation": "The chart shows a clear trend where domestic liabilities grew substantially over the years, starting from 102600000 in 2005 to 184518000000 in 2009. This increase is directly supported by the numerical values provided in the chart."
+    },
+    {
+        "image": "chartQA_two_col_42313-train.png",
+        "claim": "The chart illustrates a significant upward trend in the data values from 2015 to 2020.",
+        "label": "Supports",
+        "explanation": "The image of the chart demonstrates that the values continue to rise sharply over the specified years, indicating a clear upward trajectory in the data, which supports the notion of significant growth during that time period. Specific data points can be observed where the values move from lower levels in 2015 to much higher levels by 2020."
+    }
+]

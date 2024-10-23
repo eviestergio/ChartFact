@@ -1,0 +1,8 @@
+[
+    {
+        "image": "plotQA_4212-val.png",
+        "claim": "The growth rate of domestic liabilities increased significantly from 2005 to 2009.",
+        "label": "Supports",
+        "explanation": "The chart illustrates a consistent upward trend in domestic liabilities, with values increasing from 102,600,000 in 2005 to a staggering 184,518,000 in 2009. This indicates that the growth rate accelerated sharply during this period, as highlighted by the green bar segments showing growth year over year."
+    }
+]

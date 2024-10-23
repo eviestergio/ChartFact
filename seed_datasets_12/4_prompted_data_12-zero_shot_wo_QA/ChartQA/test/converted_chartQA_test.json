@@ -1,0 +1,14 @@
+[
+    {
+        "image": "chartQA_56783352006090-test.png",
+        "claim": "The data shows a significant increase in sales from Q1 to Q4, indicating a positive growth trend throughout the year.",
+        "label": "Supports",
+        "explanation": "The chart clearly illustrates a progressive upward trend in sales figures for each quarter, with values increasing from Q1 to Q4. Specifically, Q1 starts at a low value, while Q4 reaches the highest point, showcasing a consistent growth pattern. The steepness of the line connecting these points emphasizes the accelerated growth as the year progresses, confirming that there is substantial positive momentum in the company's sales performance."
+    },
+    {
+        "image": "chartQA_multi_col_60912-test.png",
+        "claim": "The data reflects a significant upward trend in sales over the past year, indicating successful market strategies.",
+        "label": "Supports",
+        "explanation": "The chart clearly shows a rising line graph that illustrates sales growth over a twelve-month period. Specific data points indicate monthly increases, particularly noticeable in the latter half of the year, suggesting that the company's strategies have effectively captured consumer interest and contributed to sales growth. The increasing slope of the graph further supports the claim of an upward trend in sales, making it evident that the company's efforts have had a positive impact on performance."
+    }
+]

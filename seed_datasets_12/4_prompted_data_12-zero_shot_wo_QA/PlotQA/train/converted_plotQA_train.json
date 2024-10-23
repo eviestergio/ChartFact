@@ -1,0 +1,14 @@
+[
+    {
+        "image": "plotQA_37698-train.png",
+        "claim": "The chart demonstrates a significant increase in sales over the last quarter, indicating a positive trend in consumer demand.",
+        "label": "Supports",
+        "explanation": "The chart shows a clear upward trajectory in the sales data, with values plotted on the y-axis rising significantly over the time period represented on the x-axis. Specifically, the lines illustrating sales metrics trend upwards, ending at a high value that is markedly greater than the values at the beginning of the quarter. Furthermore, various data points are plotted that confirm a consistent increase across multiple months, indicating a sustained growth in consumer demand for the products represented."
+    },
+    {
+        "image": "plotQA_98527-train.png",
+        "claim": "The data in the chart indicates a consistent increase in sales over the past five years, demonstrating strong growth for the company.",
+        "label": "Supports",
+        "explanation": "The chart clearly shows a positive trend line for sales figures, indicating a steady increase each year. For instance, the values displayed increase from the left to the right side of the chart, illustrating that year-over-year sales are rising. Additionally, the chart may depict specific numeric values at the end of each year that reinforce this claim, as they would clearly show higher sales totals than the previous years. This upward trajectory supports the assertion that the company is experiencing significant growth in sales."
+    }
+]

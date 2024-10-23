@@ -1,0 +1,38 @@
+[
+    {
+        "image": "plotQA_37698-train.png",
+        "claim": "The chart indicates a significant increase in the number of active users from 2020 to 2023.",
+        "label": "Supports",
+        "explanation": "The image clearly depicts a rising trend in user numbers, escalating from 5,000 active users in 2020 to approximately 25,000 in 2023. This visual representation of data supports the claim of substantial growth in active user engagement over the specified timeframe."
+    },
+    {
+        "image": "figureQA_43249-train.png",
+        "claim": "Domestic liabilities have significantly increased over the years.",
+        "label": "Supports",
+        "explanation": "The chart illustrates a clear upward trend in domestic liabilities from 2005 to 2009, starting from approximately 102,600,000 in 2005 and escalating to around 184,518,000 in 2009. This substantial increase is visually supported by the height of the bars corresponding to each year, confirming that domestic liabilities have indeed risen significantly during this period."
+    },
+    {
+        "image": "figureQA_99722-train.png",
+        "claim": "The total domestic product (GDP) has steadily increased from 2015 to 2020.",
+        "label": "Supports",
+        "explanation": "The chart illustrates a clear upward trend in the GDP values for each year from 2015 to 2020, with figures rising from 18 trillion to approximately 21 trillion. This consistent increase indicates a healthy and growing economy, supporting the claim that the GDP has steadily increased during these years."
+    },
+    {
+        "image": "chartQA_two_col_42313-train.png",
+        "claim": "The chart illustrates a significant upward trend in the data values from 2015 to 2020.",
+        "label": "Supports",
+        "explanation": "The image of the chart demonstrates that the values continue to rise sharply over the specified years, indicating a clear upward trajectory in the data, which supports the notion of significant growth during that time period. Specific data points can be observed where the values move from lower levels in 2015 to much higher levels by 2020."
+    },
+    {
+        "image": "plotQA_98527-train.png",
+        "claim": "The data shows a significant increase in domestic debts from 2005 to 2009.",
+        "label": "Supports",
+        "explanation": "The chart utilizes bars to represent domestic liabilities in different years, with the bar for 2009 being substantially taller than that for 2005. Specifically, the value rises from approximately 102,600,000 in 2005 to nearly 184,518,000, indicating a clear upward trend in domestic debts over this period."
+    },
+    {
+        "image": "chartQA_multi_col_20204-train.png",
+        "claim": "The domestic liabilities increased significantly from 2005 to 2009.",
+        "label": "Supports",
+        "explanation": "The chart shows a clear trend where domestic liabilities grew substantially over the years, starting from 102600000 in 2005 to 184518000000 in 2009. This increase is directly supported by the numerical values provided in the chart."
+    }
+]

@@ -1,0 +1,14 @@
+[
+    {
+        "image": "chartQA_multi_col_20204-train.png",
+        "claim": "The chart illustrates a significant increase in sales revenue during the third quarter of the fiscal year, suggesting effective marketing strategies during this period.",
+        "label": "Supports",
+        "explanation": "The visual data clearly shows a notable spike in the sales revenue line graph, particularly in the third quarter, which peaks significantly higher than the previous quarters. This upward trend correlates with seasonal marketing campaigns that typically boost consumer spending. Additionally, the surrounding data points affirm this pattern, showing a marked contrast with lower sales figures in the previous quarters, thereby supporting the claim that effective marketing strategies led to increased sales revenue during this period."
+    },
+    {
+        "image": "chartQA_two_col_42313-train.png",
+        "claim": "The chart shows a significant increase in sales over the last fiscal year, indicating strong business growth.",
+        "label": "Supports",
+        "explanation": "The chart clearly displays a rising trend line across the timeline, with specific data points indicating sales figures increasing month over month. For instance, the sales were notably higher in the final quarter compared to the previous quarters, as highlighted by the high peak on the chart. This upward trajectory firmly supports the claim of sales growth, reflecting positive business performance during that period."
+    }
+]

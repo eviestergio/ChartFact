@@ -1,0 +1,14 @@
+[
+    {
+        "image": "figureQA_43249-train.png",
+        "claim": "Domestic liabilities have significantly increased over the years.",
+        "label": "Supports",
+        "explanation": "The chart illustrates a clear upward trend in domestic liabilities from 2005 to 2009, starting from approximately 102,600,000 in 2005 and escalating to around 184,518,000 in 2009. This substantial increase is visually supported by the height of the bars corresponding to each year, confirming that domestic liabilities have indeed risen significantly during this period."
+    },
+    {
+        "image": "figureQA_99722-train.png",
+        "claim": "The total domestic product (GDP) has steadily increased from 2015 to 2020.",
+        "label": "Supports",
+        "explanation": "The chart illustrates a clear upward trend in the GDP values for each year from 2015 to 2020, with figures rising from 18 trillion to approximately 21 trillion. This consistent increase indicates a healthy and growing economy, supporting the claim that the GDP has steadily increased during these years."
+    }
+]
