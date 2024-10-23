@@ -41,8 +41,8 @@ def create_zero_shot_supports_prompt(image, question, answer):
 def create_few_shot_supports_prompt(image, question, answer): # 504 tokens, 2318 characters
     """ Creates a few-shot prompt to generate a 'supports' claim with an explanation using image input based on a Q&A pair. """
 
-    image1 = encode_image("plotQA_39-test.png", "seed_datasets/PlotQA/test/png") #change
-    image2 = encode_image("figureQA_2-3-test.png", "seed_datasets/FigureQA/test/png") #change
+    image1 = encode_image("plotQA_39-test.png", "seed_datasets/PlotQA/test/png")
+    image2 = encode_image("figureQA_1-1-test.png", "seed_datasets/FigureQA/test/png") 
 
     prompt = f"""
     You are a helpful assistant designed to output JSON.
@@ -70,20 +70,20 @@ def create_few_shot_supports_prompt(image, question, answer): # 504 tokens, 2318
 
     Examples: < 
      1. Input: 
-        image: {image1}
-        question: "In how many years is the income share held by highest 10% of the population greater than the average income share held by highest 10% of the population taken over all years?"
-        answer: "1"
+            "image": {image1}
+            "question": "Did the domestic liabilities increase from 2005 to 2009?"
+            "answer": "Yes"
         Output: {{
-        "supports claim": "The income share held by the highest 10% of the population was greater than the average income share held by the highest 10% of the population in 1 year.", 
-        "explanation": "The chart shows data over several years where the income shares of the highest 10% are listed. Comparing these figures reveals that in one specific year, the income share of the top 10% exceeded the average income share held by the top 10% across all years."
+            "supports claim": "The domestic liabilities increased significantly from 2005 to 2009.", 
+            "explanation": "The chart shows a clear trend where domestic liabilities grew substantially over the years, starting from 102600000 in 2005 to 184518000000 in 2009. This increase is directly supported by the numerical values provided in the chart."
         }}
      2. Input: 
-        Image: {image2}
-        Question: "Is Deep Sky Blue greater than Magenta?"
-        Answer: "Yes"
+            "image": {image2}
+            "question": "Is Deep Sky Blue greater than Magenta?"
+            "answer": "Yes"
         Output: {{
-        "supports claim": "Deep Sky Blue has a higher value than Magenta.",
-        "explanation": "The chart shows that the bar representing Deep Sky Blue has a visibly higher height than the one for Magenta, supporting the claim that Deep Sky Blue's value is indeed greater."
+            "supports claim": "Deep Sky Blue has a higher value than Magenta.",
+            "explanation": "The chart shows that the bar representing Deep Sky Blue has a visibly higher height than the one for Magenta, supporting the claim that Deep Sky Blue's value is indeed greater."
         }}
     >
     """
@@ -121,8 +121,8 @@ def create_zero_shot_supports_prompt_wo_QA(image):
 def create_few_shot_supports_prompt_wo_QA(image):
     """ Creates a few-shot prompt to generate a 'supports' claim with an explanation using image input without a Q&A pair. """
 
-    image1 = encode_image("plotQA_39-test.png", "seed_datasets/PlotQA/test/png") #change
-    image2 = encode_image("figureQA_2-3-test.png", "seed_datasets/FigureQA/test/png") #change
+    image1 = encode_image("plotQA_39-test.png", "seed_datasets/PlotQA/test/png")
+    image2 = encode_image("figureQA_1-1-test.png", "seed_datasets/FigureQA/test/png") 
 
     prompt = f"""
     You are a helpful assistant designed to output JSON.
@@ -146,18 +146,16 @@ def create_few_shot_supports_prompt_wo_QA(image):
         "explanation": "your explanation for why the claim supports the chart"
     }}
 
-    Examples: <
-        1. Input: {{
-            “image”: {image1}
-            }}
-            Output: {{
-            "supports claim": "The income share held by the highest 10% of the population was greater than the average income share held by the highest 10% of the population in 1 year.",
-            "explanation": "The chart shows data over several years where the income shares of the highest 10% are listed. Comparing these figures reveals that in one specific year, the income share of the top 10% exceeded the average income share held by the top 10% across all years."
+    Examples: < 
+     1. Input: 
+            "image": {image1}
+        Output: {{
+            "supports claim": "The domestic liabilities increased significantly from 2005 to 2009.", 
+            "explanation": "The chart shows a clear trend where domestic liabilities grew substantially over the years, starting from 102600000 in 2005 to 184518000000 in 2009. This increase is directly supported by the numerical values provided in the chart."
         }}
-        2. Input: {{
-            “image”: {image2}
-            }}
-            Output: {{
+     2. Input: 
+            "image": {image2}
+        Output: {{
             "supports claim": "Deep Sky Blue has a higher value than Magenta.",
             "explanation": "The chart shows that the bar representing Deep Sky Blue has a visibly higher height than the one for Magenta, supporting the claim that Deep Sky Blue's value is indeed greater."
         }}
