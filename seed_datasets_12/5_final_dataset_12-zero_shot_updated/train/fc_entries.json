@@ -1,0 +1,38 @@
+[
+    {
+        "image": "chartQA_two_col_42313-train.png",
+        "claim": "In 2020, a total of 25,964 British pounds was spent on alcoholic drinks.",
+        "label": "Supports",
+        "explanation": "The chart illustrates the expenditures on various categories, with the section dedicated to alcoholic drinks specifically showing an expenditure of 25,964 British pounds for the year 2020. This data point is clearly marked and easily identifiable, confirming the claim presented."
+    },
+    {
+        "image": "plotQA_98527-train.png",
+        "claim": "The graph does not contain grids.",
+        "label": "Supports",
+        "explanation": "The chart image shows a graphical representation without any visible grid lines in the background. This is evident as there are no horizontal or vertical lines that typically denote the grid structure in graphs. Instead, the background is clear, allowing the focus to remain on the data points or other visual elements without the distraction of a grid."
+    },
+    {
+        "image": "chartQA_multi_col_20204-train.png",
+        "claim": "In 2009, 517 people committed suicide.",
+        "label": "Supports",
+        "explanation": "The data from the chart clearly indicates the number of people who committed suicide each year, with a specific value of 517 for the year 2009. This number is visually represented in the chart through a corresponding data point or bar, making it evident that in that year, the recorded instances of suicide reached that exact figure."
+    },
+    {
+        "image": "figureQA_43249-train.png",
+        "claim": "Hot Pink is not less than Teal.",
+        "label": "Supports",
+        "explanation": "The chart visually represents the values for different colors, indicating that Hot Pink has a value that is equal to or greater than that of Teal. Therefore, the statement that Hot Pink is less than Teal is false, confirming the answer 'No'."
+    },
+    {
+        "image": "figureQA_99722-train.png",
+        "claim": "Dark Gold does not intersect Turquoise.",
+        "label": "Supports",
+        "explanation": "In the chart, the lines representing Dark Gold and Turquoise are drawn in separate paths without touching each other at any point. This indicates that there is no intersection between the two, confirming that Dark Gold does not intersect Turquoise."
+    },
+    {
+        "image": "plotQA_37698-train.png",
+        "claim": "There are 3 bars on the 2nd tick from the top.",
+        "label": "Supports",
+        "explanation": "This claim is supported by the visual data in the chart, which depicts a histogram with various ticks along the vertical axis indicating the corresponding value intervals. Observing the second tick from the top, it is evident that there are three bars aligned vertically at this tick, representing the data points that fall within this range. The bars are distinctly visible, confirming their count as three."
+    }
+]

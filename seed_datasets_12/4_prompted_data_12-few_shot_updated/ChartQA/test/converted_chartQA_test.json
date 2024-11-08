@@ -1,0 +1,14 @@
+[
+    {
+        "image": "chartQA_56783352006090-test.png",
+        "claim": "South Sudan has the lowest access to electricity among the given countries over the years.",
+        "label": "Supports",
+        "explanation": "The chart displays data on electricity access rates across various countries. The values for South Sudan consistently show significantly lower percentages compared to other countries, confirming it has the lowest access to electricity over the years."
+    },
+    {
+        "image": "chartQA_multi_col_60912-test.png",
+        "claim": "The male population of Tunisia in 2019 was 5.8 million.",
+        "label": "Supports",
+        "explanation": "The chart provides specific demographic data indicating the male population figures for Tunisia by year, and for 2019, it clearly states that the value is 5.8 million, thus supporting this claim."
+    }
+]

@@ -1,0 +1,14 @@
+[
+    {
+        "image": "figureQA_43249-train.png",
+        "claim": "Hot Pink is not less than Teal.",
+        "label": "Supports",
+        "explanation": "The chart visually represents the values for different colors, indicating that Hot Pink has a value that is equal to or greater than that of Teal. Therefore, the statement that Hot Pink is less than Teal is false, confirming the answer 'No'."
+    },
+    {
+        "image": "figureQA_99722-train.png",
+        "claim": "Dark Gold does not intersect Turquoise.",
+        "label": "Supports",
+        "explanation": "In the chart, the lines representing Dark Gold and Turquoise are drawn in separate paths without touching each other at any point. This indicates that there is no intersection between the two, confirming that Dark Gold does not intersect Turquoise."
+    }
+]

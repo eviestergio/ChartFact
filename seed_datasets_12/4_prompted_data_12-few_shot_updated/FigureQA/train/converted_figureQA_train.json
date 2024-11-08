@@ -1,0 +1,14 @@
+[
+    {
+        "image": "figureQA_43249-train.png",
+        "claim": "Hot Pink is not less than Teal.",
+        "label": "Supports",
+        "explanation": "The data shown in the chart indicates that the value for Hot Pink is equal to or greater than the value for Teal. Since the question asks if Hot Pink is less than Teal and the answer is 'No', it implies that Hot Pink is either greater than or equal to Teal."
+    },
+    {
+        "image": "figureQA_99722-train.png",
+        "claim": "Dark Gold does not intersect with Turquoise.",
+        "label": "Supports",
+        "explanation": "The chart indicates that the paths or lines representing Dark Gold and Turquoise maintain separate trajectories without crossing each other, confirming that Dark Gold and Turquoise do not intersect."
+    }
+]

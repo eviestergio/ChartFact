@@ -1,0 +1,14 @@
+[
+    {
+        "image": "plotQA_37698-train.png",
+        "claim": "There are 3 bars on the 2nd tick from the top.",
+        "label": "Supports",
+        "explanation": "This claim is supported by the visual data in the chart, which depicts a histogram with various ticks along the vertical axis indicating the corresponding value intervals. Observing the second tick from the top, it is evident that there are three bars aligned vertically at this tick, representing the data points that fall within this range. The bars are distinctly visible, confirming their count as three."
+    },
+    {
+        "image": "plotQA_98527-train.png",
+        "claim": "The graph does not contain grids.",
+        "label": "Supports",
+        "explanation": "The chart image shows a graphical representation without any visible grid lines in the background. This is evident as there are no horizontal or vertical lines that typically denote the grid structure in graphs. Instead, the background is clear, allowing the focus to remain on the data points or other visual elements without the distraction of a grid."
+    }
+]

@@ -1,0 +1,14 @@
+[
+    {
+        "image": "plotQA_37698-train.png",
+        "claim": "There are 3 bars on the 2nd tick from the top.",
+        "label": "Supports",
+        "explanation": "Upon analyzing the chart, the second tick from the top corresponds to a category that displays 3 bars. This is visually confirmed by observing the heights of the bars at that specific tick, which clearly indicate three distinct entries."
+    },
+    {
+        "image": "plotQA_98527-train.png",
+        "claim": "The graph does not contain grids.",
+        "label": "Supports",
+        "explanation": "The chart presents data in a visual format without the presence of grid lines. The absence of grid lines can be identified by the clear space between the data points and the lack of intersecting horizontal and vertical lines, which typically characterize grid structures."
+    }
+]

@@ -1,0 +1,14 @@
+[
+    {
+        "image": "chartQA_multi_col_40930-val.png",
+        "claim": "In 2020, the blue bar was above 5.",
+        "label": "Supports",
+        "explanation": "The data provided indicates that the blue bar's value reached above 5 in the year 2020, as represented in the chart. The visual representation of the bar chart clearly shows a height exceeding the 5 mark specifically in the year 2020."
+    },
+    {
+        "image": "chartQA_two_col_43627-val.png",
+        "claim": "The expenses of the Green Bay Packers in 2017 were 376.1 million.",
+        "label": "Supports",
+        "explanation": "The chart provides a clear indication of the financial data for the Green Bay Packers, with a specific value noted for their expenses in 2017, which is recorded as 376.1 million. This verification confirms the accuracy of the claim made regarding their expenses."
+    }
+]

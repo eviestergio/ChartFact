@@ -1,0 +1,20 @@
+[
+    {
+        "image": "chartQA_56783352006090-test.png",
+        "claim": "South Sudan has the lowest access to electricity over the years among the given countries.",
+        "label": "Supports",
+        "explanation": "The chart illustrates the percentage of the population with access to electricity in various countries over a range of years. Upon examining the data presented, it is evident that South Sudan consistently displays the lowest percentage of access to electricity compared to other countries listed in the chart. This indicates that, throughout the years represented, South Sudan has struggled significantly more than its counterparts in providing electricity access to its population, which supports the claim that it has the lowest access to electricity."
+    },
+    {
+        "image": "plotQA_1467-test.png",
+        "claim": "The label or title of the X-axis of the chart is 'Year'.",
+        "label": "Supports",
+        "explanation": "This statement is supported by the visual representation in the chart where the horizontal axis (X-axis) is clearly labeled with 'Year'. This indicates that the data being presented corresponds to different years, which is a common practice in time-series analysis or trend representation. The chart's labeling helps viewers understand that the values plotted are tracked over specific years."
+    },
+    {
+        "image": "chartQA_multi_col_60912-test.png",
+        "claim": "The male population of Tunisia in 2019 was 5.8 million.",
+        "label": "Supports",
+        "explanation": "The chart provides demographic data for Tunisia, and it clearly indicates that in 2019, the male population was represented as 5.8 million, which can be verified by observing the corresponding data point on the graph."
+    }
+]
