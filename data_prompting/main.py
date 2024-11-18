@@ -8,16 +8,15 @@ import base64
 # --- Image input prompts ---
 
 ## Supports prompts
-def create_zero_shot_supports_prompt(image, question, answer): # 254 tokens, 1228 character w/o image and Q&A
+def create_zero_shot_supports_prompt(question, answer): # 254 tokens, 1228 character w/o image and Q&A
     """ Creates a zero-shot prompt to generate a 'supports' claim with an explanation using image input based on a Q&A pair. """
 
     prompt = f"""
-    You are a helpful assistant designed to convert question-answering pairs into claims and output the result as a JSON.
+    You are a helpful assistant designed to convert question-answering pairs into claims and output the result in JSON.
 
     You will receive as input a chart image along with a question about the chart and its corresponding answer, delimited by triple single quotes (see data input below).
 
     Data input: '''
-        "image": {image},
         "question": "{question}",
         "answer": "{answer}"
     '''
@@ -38,14 +37,14 @@ def create_zero_shot_supports_prompt(image, question, answer): # 254 tokens, 122
 
     return prompt
 
-def create_few_shot_supports_prompt(image, question, answer): # 504 tokens, 2318 characters
+def create_few_shot_supports_prompt(question, answer): # 504 tokens, 2318 characters
     """ Creates a few-shot prompt to generate a 'supports' claim with an explanation using image input based on a Q&A pair. """
 
     image1 = encode_image("plotQA_39-test.png", "seed_datasets/PlotQA/test/png")
     image2 = encode_image("figureQA_1-1-test.png", "seed_datasets/FigureQA/test/png") 
 
     prompt = f"""
-    You are a helpful assistant designed to convert question-answering pairs into claims and output the result as a JSON.
+    You are a helpful assistant designed to convert question-answering pairs into claims and output the result in JSON.
 
     You will receive as input a chart image along with a question about the chart and its corresponding answer, delimited by triple single quotes (see data input below).
 
@@ -90,19 +89,13 @@ def create_few_shot_supports_prompt(image, question, answer): # 504 tokens, 2318
 
     return prompt
 
-def create_zero_shot_supports_prompt_wo_QA(image):
+def create_zero_shot_supports_prompt_wo_QA():
     """ Creates a zero-shot prompt to generate a 'supports' claim with an explanation using image input without a Q&A pair. """
 
     prompt = f"""
-    You are a helpful assistant designed to output JSON.
+    You are a helpful assistant designed to generate claims based on the given chart and output the result in JSON.
 
-    You will be provided with an image of a chart delimited by triple single quotes.
-
-    Data input: '''
-        "image": {image}
-    '''
-
-    Task: Generate a claim that supports the information in the chart and provide an explanation.
+    Task: Generate a claim that supports the information in the given chart and provide an explanation.
 
     Process for generating a 'supports' claim and explanation:
         1. Using the image, develop a claim that is supported by the data in the chart.
@@ -118,20 +111,14 @@ def create_zero_shot_supports_prompt_wo_QA(image):
 
     return prompt
 
-def create_few_shot_supports_prompt_wo_QA(image):
+def create_few_shot_supports_prompt_wo_QA():
     """ Creates a few-shot prompt to generate a 'supports' claim with an explanation using image input without a Q&A pair. """
 
     image1 = encode_image("plotQA_39-test.png", "seed_datasets/PlotQA/test/png")
     image2 = encode_image("figureQA_1-1-test.png", "seed_datasets/FigureQA/test/png") 
 
     prompt = f"""
-    You are a helpful assistant designed to output JSON.
-
-    You will be provided with an image of a chart delimited by triple single quotes.
-
-    Data input: '''
-        "image": {image}
-    '''
+    You are a helpful assistant designed to generate claims based on the given chart and output the result in JSON.
 
     Task: Using the two input-output examples below delimited by angle brackets, generate a claim that supports the information in the chart, and provide an explanation.
 
@@ -731,8 +718,8 @@ def encode_image(image_path, base_dir):
         if image_path in files:
             full_path = os.path.join(root, image_path)
             with open(full_path, "rb") as image_file:
-                image = base64.b64encode(image_file.read()).decode('utf-8')
-                return image
+                base64_image = base64.b64encode(image_file.read()).decode('utf-8')
+                return base64_image
     
     raise FileNotFoundError(f"Image: '{image_path}' not found in '{base_dir}' or its subdirectories")
 
@@ -753,12 +740,12 @@ def parse_json_response(response):
 
 def generate_supports_claim(image_path, question, answer, model, base_dir):
     ''' Generate a 'supports' claim with an explanation. '''
-    image = encode_image(image_path, base_dir)
+    base64_image = encode_image(image_path, base_dir)
     # prompt = create_zero_shot_supports_prompt(image, question, answer) # V1 
-    prompt = create_few_shot_supports_prompt(image, question, answer) # V2
-    # prompt = create_zero_shot_supports_prompt_wo_QA(image) # V3
+    # prompt = create_few_shot_supports_prompt(image, question, answer) # V2
+    prompt = create_zero_shot_supports_prompt_wo_QA() # V3
     # prompt = create_few_shot_supports_prompt_wo_QA(image) # V4
-    response = model(model_name='gpt-4o-mini', query=prompt) # change model
+    response = model(model_name='gpt-4o-mini', query=prompt, image_base64=base64_image) # change model
     response_json = parse_json_response(response)
 
     # If failed, add empty entries to filter out from final dataset
@@ -913,7 +900,7 @@ def copy_folder_structure_and_files(src, dst):
 
 def main(src, dst):
     ''' Main function to process all JSON files in specified directory. '''
-    model = QueryModel(query_type='json_object')
+    model = QueryModel()
 
     # Copy entire source directory to destination directory
     copy_folder_structure_and_files(src, dst)

@@ -3,46 +3,60 @@ from dotenv import load_dotenv
 import os
 
 load_dotenv()
-
 client = OpenAI(api_key=os.getenv('API_KEY'))
 
 class QueryModel:
     """
-    The class that handles model queries and responses.
+    The class that handles GPT-4 model queries and responses.
     """
 
-    def __init__(self, query_type=None, params_dict=None):
+    def __init__(self, params = None):
         """
-        The constructor.
+        Constructor to initialise model parameters.
         Args:
-            query_type (string): The type of response expected ('completion' or 'chat').
-            params_dict (dict): The parameters of the model in dict format.
+            params (dict): The parameters of the model in dict format.
         """
-        self.type = query_type if query_type is not None else 'chat'
-        self.params = params_dict if params_dict is not None else {
+        self.params = params or {
             'temperature': 0,
-            'max_tokens': 50,
+            'max_tokens': 1000,
             'top_p': 1,
             'frequency_penalty': 0,
             'presence_penalty': 0
         }
 
-    def __call__(self, model_name, query, *args, **kwargs):
+    def __call__(self, model_name, query, image_base64, *args, **kwargs):
         """
-        A function that returns the response of an OpenAI model to a query.
-        Args:
-            model_name (string): The name of the model - note: GPT-3.5 and up only work on 'chat' query_type, whereas text-davinci-003 and below only work in completion mode.
-            query (string): The query string.
-        Return:
-            response_text (string): The response from the model.
+        Query the GPT-4 model with text and image input.
+            model_name (str): The name of the model
+            query (str): The text prompt for the model.
+            image_base64 (str): Base64-encoded image string. 
+        Returns:
+            response_text (str): The response from the model.
         """
-        if self.type == 'completion':
-            response = client.completions.create(model=model_name, prompt=query, **self.params)
-            response_text = response.choices[0].text.strip()
-            print("Answer is: " + response_text)
-            return response_text
-        else:
-            response = client.chat.completions.create(model=model_name, messages=[{"role": "user", "content": query}])
-            response_text = response.choices[0].message.content.strip()
-            print("Answer is: " + response_text)
-            return response_text
+
+        response = client.chat.completions.create(
+            model=model_name,
+            messages=[
+                {
+                "role": "user",
+                "content": [
+                    {
+                    "type": "text",
+                    "text": query,
+                    },
+                    {
+                    "type": "image_url",
+                    "image_url": {
+                        "url":  f"data:image/jpeg;base64,{image_base64}"
+                    },
+                    },
+                ],
+                }
+            ],
+            **self.params
+            )
+        
+        response_text = response.choices[0].message.content
+        
+        print(response_text)
+        return response_text
