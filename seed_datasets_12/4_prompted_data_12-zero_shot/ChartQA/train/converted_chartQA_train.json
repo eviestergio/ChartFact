@@ -1,14 +1,14 @@
 [
     {
         "image": "chartQA_multi_col_20204-train.png",
-        "claim": "The data from the chart supports the claim that there were 517 suicides recorded in the year 2009.",
+        "claim": "In 2009, 517 people committed suicide.",
         "label": "Supports",
-        "explanation": "Upon analyzing the chart, it is evident that the bar representing the year 2009 reaches the value of 517 on the vertical scale, confirming the reported number of suicides. This visual representation is aligned with the answer provided, which directly states that in 2009, 517 people committed suicide. The height of the bar distinctly illustrates this data point, making it clear and verifiable."
+        "explanation": "The chart clearly shows that the total number of suicides in 2009 is represented by the height of the bar for that year, which reaches 517. This value is confirmed by the data points for each age group, with the combined total matching the stated figure."
     },
     {
         "image": "chartQA_two_col_42313-train.png",
-        "claim": "In 2020, a total of 25,964 British pounds was spent on alcoholic drinks.",
+        "claim": "In 2020, the amount of British pounds spent on alcoholic drinks was 25,964 million GBP.",
         "label": "Supports",
-        "explanation": "This claim directly reflects the data presented in the chart, which indicates that the expenditure on alcoholic drinks in 2020 was indeed 25,964 British pounds. The chart likely includes a specific bar or point that marks this financial figure clearly, allowing for a straightforward visual confirmation of the stated amount."
+        "explanation": "The chart shows the expenditure on alcoholic drinks in millions of GBP from 2005 to 2020. The bar for 2020 reaches approximately 26,000 million GBP, which supports the claim that 25,964 million GBP was spent in that year."
     }
 ]

@@ -1,14 +1,14 @@
 [
     {
         "image": "plotQA_37698-train.png",
-        "claim": "The chart demonstrates a significant increase in sales over the last quarter, indicating a positive trend in consumer demand.",
+        "claim": "In Macedonia, a higher percentage of firms are formally registered compared to those in the Philippines and Tonga.",
         "label": "Supports",
-        "explanation": "The chart shows a clear upward trajectory in the sales data, with values plotted on the y-axis rising significantly over the time period represented on the x-axis. Specifically, the lines illustrating sales metrics trend upwards, ending at a high value that is markedly greater than the values at the beginning of the quarter. Furthermore, various data points are plotted that confirm a consistent increase across multiple months, indicating a sustained growth in consumer demand for the products represented."
+        "explanation": "The chart shows that the percentage of formally registered firms in Macedonia is greater than that in both the Philippines and Tonga, indicating that more firms in Macedonia are operating within the formal economy."
     },
     {
         "image": "plotQA_98527-train.png",
-        "claim": "The data in the chart indicates a consistent increase in sales over the past five years, demonstrating strong growth for the company.",
+        "claim": "Sub-Saharan Africa has the highest annual rural population growth rate among the regions shown in the chart.",
         "label": "Supports",
-        "explanation": "The chart clearly shows a positive trend line for sales figures, indicating a steady increase each year. For instance, the values displayed increase from the left to the right side of the chart, illustrating that year-over-year sales are rising. Additionally, the chart may depict specific numeric values at the end of each year that reinforce this claim, as they would clearly show higher sales totals than the previous years. This upward trajectory supports the assertion that the company is experiencing significant growth in sales."
+        "explanation": "The chart indicates that Sub-Saharan Africa (represented by the yellow line) consistently maintains a higher percentage of rural population growth compared to the other regions, particularly Europe (blue line), Guatemala (orange line), and Myanmar (red line), which all show lower growth rates over the years."
     }
 ]

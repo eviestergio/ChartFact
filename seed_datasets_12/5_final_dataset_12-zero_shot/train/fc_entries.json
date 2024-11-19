@@ -1,38 +1,38 @@
 [
     {
-        "image": "plotQA_37698-train.png",
-        "claim": "The chart indicates that there are 3 bars present on the 2nd tick from the top.",
-        "label": "Supports",
-        "explanation": "This claim is validated by directly observing the chart, where the second tick mark up from the bottom clearly shows 3 distinct bars representing data points. The visual representation of these bars reinforces the assertion made in the claim, as they correspond directly to the specific tick mark in question."
-    },
-    {
         "image": "chartQA_multi_col_20204-train.png",
-        "claim": "The data from the chart supports the claim that there were 517 suicides recorded in the year 2009.",
+        "claim": "In 2009, 517 people committed suicide.",
         "label": "Supports",
-        "explanation": "Upon analyzing the chart, it is evident that the bar representing the year 2009 reaches the value of 517 on the vertical scale, confirming the reported number of suicides. This visual representation is aligned with the answer provided, which directly states that in 2009, 517 people committed suicide. The height of the bar distinctly illustrates this data point, making it clear and verifiable."
-    },
-    {
-        "image": "chartQA_two_col_42313-train.png",
-        "claim": "In 2020, a total of 25,964 British pounds was spent on alcoholic drinks.",
-        "label": "Supports",
-        "explanation": "This claim directly reflects the data presented in the chart, which indicates that the expenditure on alcoholic drinks in 2020 was indeed 25,964 British pounds. The chart likely includes a specific bar or point that marks this financial figure clearly, allowing for a straightforward visual confirmation of the stated amount."
-    },
-    {
-        "image": "plotQA_98527-train.png",
-        "claim": "The chart effectively presents data without using grid lines.",
-        "label": "Supports",
-        "explanation": "The absence of grid lines in the chart enhances the clarity of the data presentation. By not including grids, the focus remains solely on the data points and trends, allowing for a more direct interpretation of the information displayed. This visual aspect helps to reduce potential distractions that grid lines might introduce, providing a cleaner and more streamlined look at the data trends and comparisons."
-    },
-    {
-        "image": "figureQA_43249-train.png",
-        "claim": "Hot Pink is greater than Teal in terms of value.",
-        "label": "Supports",
-        "explanation": "The data in the chart clearly shows that the value associated with Hot Pink is notably higher than that of Teal. Analyzing the values on the vertical axis where different colors are represented, Hot Pink has a significant data point that exceeds the data point for Teal. This visual information supports the claim that Hot Pink is greater than Teal, confirming that the assertion 'Hot Pink is less than Teal' is incorrect."
+        "explanation": "The chart clearly shows that the total number of suicides in 2009 is represented by the height of the bar for that year, which reaches 517. This value is confirmed by the data points for each age group, with the combined total matching the stated figure."
     },
     {
         "image": "figureQA_99722-train.png",
-        "claim": "Dark Gold does not intersect with Turquoise in the chart.",
+        "claim": "Dark Gold does not intersect with Turquoise.",
         "label": "Supports",
-        "explanation": "The chart visually displays the data for various categories and their corresponding values. By observing the lines or areas representing Dark Gold and Turquoise, it is clear that the two do not cross or overlap at any point. Dark Gold remains distinctly separate from Turquoise, indicating that they do not share any intersecting values. This separation effectively supports the claim that Dark Gold does not intersect with Turquoise."
+        "explanation": "The chart shows the trends of various colors over the x-axis. The line representing Dark Gold remains consistently below the line for Turquoise, indicating that they do not intersect at any point."
+    },
+    {
+        "image": "chartQA_two_col_42313-train.png",
+        "claim": "In 2020, the amount of British pounds spent on alcoholic drinks was 25,964 million GBP.",
+        "label": "Supports",
+        "explanation": "The chart shows the expenditure on alcoholic drinks in millions of GBP from 2005 to 2020. The bar for 2020 reaches approximately 26,000 million GBP, which supports the claim that 25,964 million GBP was spent in that year."
+    },
+    {
+        "image": "plotQA_37698-train.png",
+        "claim": "There are 3 bars on the 2nd tick from the top.",
+        "label": "Supports",
+        "explanation": "The chart displays the percentage of firms either registered or unregistered in different countries, with each category represented by a bar. The second tick from the top corresponds to the category 'Competing against unregistered firms,' which has three bars representing the data for Macedonia, Philippines, and Tonga."
+    },
+    {
+        "image": "figureQA_43249-train.png",
+        "claim": "Hot Pink is not less than Teal.",
+        "label": "Supports",
+        "explanation": "The chart shows that Hot Pink has a value greater than Teal. Specifically, Hot Pink's bar extends further along the x-axis than Teal's, indicating that its value is higher."
+    },
+    {
+        "image": "plotQA_98527-train.png",
+        "claim": "The graph does not contain grids.",
+        "label": "Supports",
+        "explanation": "The chart displays annual rural population growth over several years without any grid lines in the background, making it clear that the graph is grid-free."
     }
 ]

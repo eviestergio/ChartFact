@@ -1,14 +1,14 @@
 [
     {
         "image": "figureQA_43249-train.png",
-        "claim": "Hot Pink is greater than Teal in terms of value.",
+        "claim": "Hot Pink is not less than Teal.",
         "label": "Supports",
-        "explanation": "The data in the chart clearly shows that the value associated with Hot Pink is notably higher than that of Teal. Analyzing the values on the vertical axis where different colors are represented, Hot Pink has a significant data point that exceeds the data point for Teal. This visual information supports the claim that Hot Pink is greater than Teal, confirming that the assertion 'Hot Pink is less than Teal' is incorrect."
+        "explanation": "The chart shows that Hot Pink has a value greater than Teal. Specifically, Hot Pink's bar extends further along the x-axis than Teal's, indicating that its value is higher."
     },
     {
         "image": "figureQA_99722-train.png",
-        "claim": "Dark Gold does not intersect with Turquoise in the chart.",
+        "claim": "Dark Gold does not intersect with Turquoise.",
         "label": "Supports",
-        "explanation": "The chart visually displays the data for various categories and their corresponding values. By observing the lines or areas representing Dark Gold and Turquoise, it is clear that the two do not cross or overlap at any point. Dark Gold remains distinctly separate from Turquoise, indicating that they do not share any intersecting values. This separation effectively supports the claim that Dark Gold does not intersect with Turquoise."
+        "explanation": "The chart shows the trends of various colors over the x-axis. The line representing Dark Gold remains consistently below the line for Turquoise, indicating that they do not intersect at any point."
     }
 ]

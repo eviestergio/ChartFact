@@ -1,20 +1,20 @@
 [
     {
         "image": "plotQA_4212-val.png",
-        "claim": "The chart indicates a significant upward trend in sales over the past five years.",
+        "claim": "French Polynesia received the highest grants in 2010 compared to other regions.",
         "label": "Supports",
-        "explanation": "The chart clearly illustrates a consistent increase in sales figures, as represented by the rising line graph. It shows specific data points that highlight noticeable growth year after year, particularly in the last two years where the increase is more pronounced. For instance, the values at the end of the chart are considerably higher than those at the beginning, demonstrating strong performance and a positive trajectory in sales."
-    },
-    {
-        "image": "chartQA_two_col_43627-val.png",
-        "claim": "The data shows a significant increase in customer satisfaction over the last quarter.",
-        "label": "Supports",
-        "explanation": "The chart indicates a positive trend line representing customer satisfaction ratings, with values rising sharply from the beginning to the end of the quarter. The highest point on the line clearly shows a peak in customer satisfaction, which corresponds to a specific marketing campaign launched during this period that aimed to enhance customer service. This upward trajectory in the data visually supports the claim of increased satisfaction."
+        "explanation": "The chart shows that in 2010, the data point for French Polynesia is significantly higher than those for Cayman Islands, Cote d'Ivoire, and Swaziland, indicating that it received the most grants that year."
     },
     {
         "image": "chartQA_multi_col_40930-val.png",
-        "claim": "The chart indicates a significant upward trend in sales over the past year.",
+        "claim": "The total expected spend in 2020 was 7.5 billion GBP.",
         "label": "Supports",
-        "explanation": "The data shown in the chart clearly demonstrates a steady increase in sales figures each quarter, with a particularly sharp rise in the last quarter. The y-axis, which denotes sales values, shows consistent growth from the beginning of the year to the end. Each data point plotted on the graph trends upward, highlighting that sales have not only increased but have done so at an accelerating pace, confirming the claim of an upward trend."
+        "explanation": "This sentence is supported by the chart, which shows the total expected spend for 2020 as indicated by the gray bar reaching the value of 7.5 billion GBP. The chart clearly illustrates the total spending trend over the years, confirming this specific data point."
+    },
+    {
+        "image": "chartQA_two_col_43627-val.png",
+        "claim": "The expenses in million U.S. dollars increased from 299.3 million in 2014 to 420.9 million in 2018.",
+        "label": "Supports",
+        "explanation": "This sentence is supported by the chart, which shows a clear upward trend in expenses over the years. The bar for 2014 is at 299.3 million, and by 2018, the bar reaches 420.9 million, indicating a significant increase in expenses over this period."
     }
 ]

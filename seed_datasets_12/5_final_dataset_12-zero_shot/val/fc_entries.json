@@ -1,20 +1,20 @@
 [
     {
         "image": "chartQA_multi_col_40930-val.png",
-        "claim": "In the year 2020, the metric represented by the blue bar reaches above 5.",
+        "claim": "In 2020, the expected online spend was above 5 billion GBP.",
         "label": "Supports",
-        "explanation": "The claim directly corresponds to the data presented in the chart, where the blue bar representing the specified metric is observed to cross the value of 5 in the year 2020. This is visually confirmed by the height of the blue bar for that year, which is clearly above the 5 mark, indicating that the claim accurately reflects the data shown in the chart."
-    },
-    {
-        "image": "chartQA_two_col_43627-val.png",
-        "claim": "The Green Bay Packers had expenses of $376.1 million in 2017.",
-        "label": "Supports",
-        "explanation": "This claim directly corresponds to the information presented in the chart, which indicates the expenses of various NFL teams. The bar representing the Green Bay Packers shows a value of 376.1 million, visually affirming that the expenses were indeed this amount for the year 2017. This specific value aligns perfectly with the data point referenced in the question and answer pair, thereby affirming the accuracy of the claim as supported by the chart."
+        "explanation": "The blue bar representing online spending in 2020 reaches approximately 5.76 billion GBP, which is clearly above the 5 billion GBP mark. This is supported by the visual representation of the data in the chart."
     },
     {
         "image": "plotQA_4212-val.png",
-        "claim": "The total grants received by the government in Cote d'Ivoire amounts to 548,650,000.",
+        "claim": "The total grants received by the government in Cote d'Ivoire is 548650000.",
         "label": "Supports",
-        "explanation": "This claim supports the information in the chart as it states an exact figure for total grants received. The chart visually represents the grant amounts over specific periods, and one can observe a total summation reflected in the data labels, confirming that the total grants are indeed 548,650,000. By referencing these specific data points in the chart, it validates the claimed amount."
+        "explanation": "The chart shows the grants received by various governments over the years, with Cote d'Ivoire represented by the purple dots. The data point for Cote d'Ivoire indicates a total of 548650000 in grants, which is clearly marked on the vertical axis corresponding to the year indicated."
+    },
+    {
+        "image": "chartQA_two_col_43627-val.png",
+        "claim": "The expenses of the Green Bay Packers in 2017 were 376.1 million U.S. dollars.",
+        "label": "Supports",
+        "explanation": "This statement is supported by the chart, which clearly shows the expenses for each year from 2014 to 2018. The bar for 2017 is labeled at 376.1 million U.S. dollars, confirming the accuracy of the claim."
     }
 ]

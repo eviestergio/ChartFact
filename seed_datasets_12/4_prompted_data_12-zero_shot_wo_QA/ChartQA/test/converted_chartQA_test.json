@@ -1,14 +1,14 @@
 [
     {
         "image": "chartQA_56783352006090-test.png",
-        "claim": "The data shows a significant increase in sales from Q1 to Q4, indicating a positive growth trend throughout the year.",
+        "claim": "Jamaica had over 80% of its population with access to electricity by 1999.",
         "label": "Supports",
-        "explanation": "The chart clearly illustrates a progressive upward trend in sales figures for each quarter, with values increasing from Q1 to Q4. Specifically, Q1 starts at a low value, while Q4 reaches the highest point, showcasing a consistent growth pattern. The steepness of the line connecting these points emphasizes the accelerated growth as the year progresses, confirming that there is substantial positive momentum in the company's sales performance."
+        "explanation": "The chart shows that Jamaica's electricity access consistently remained above 80% from the mid-1990s to 1999, indicating a high level of access to electricity for its population during that time."
     },
     {
         "image": "chartQA_multi_col_60912-test.png",
-        "claim": "The data reflects a significant upward trend in sales over the past year, indicating successful market strategies.",
+        "claim": "The population of females increased from 5.27 million in 2009 to 5.9 million in 2019.",
         "label": "Supports",
-        "explanation": "The chart clearly shows a rising line graph that illustrates sales growth over a twelve-month period. Specific data points indicate monthly increases, particularly noticeable in the latter half of the year, suggesting that the company's strategies have effectively captured consumer interest and contributed to sales growth. The increasing slope of the graph further supports the claim of an upward trend in sales, making it evident that the company's efforts have had a positive impact on performance."
+        "explanation": "This sentence is supported by the chart, which shows a steady upward trend in the female population from 5.27 million in 2009 to 5.9 million in 2019, as indicated by the blue line representing females."
     }
 ]
