@@ -18,7 +18,7 @@ class QueryModel:
         """
         self.params = params or {
             'temperature': 0,
-            'max_tokens': 1000,
+            'max_tokens': 2000,
             'top_p': 1,
             'frequency_penalty': 0,
             'presence_penalty': 0
@@ -57,6 +57,6 @@ class QueryModel:
             )
         
         response_text = response.choices[0].message.content
-        
+
         print(response_text)
         return response_text

@@ -8,7 +8,7 @@ import base64
 # --- Image input prompts ---
 
 ## Supports prompts
-def create_zero_shot_supports_prompt(question, answer): # 254 tokens, 1228 character w/o image and Q&A
+def create_zero_shot_supports_prompt(question, answer): #(!) 254 tokens, 1228 character w/o image and Q&A
     """ Creates a zero-shot prompt to generate a 'supports' claim with an explanation using image input based on a Q&A pair. """
 
     prompt = f"""
@@ -21,17 +21,18 @@ def create_zero_shot_supports_prompt(question, answer): # 254 tokens, 1228 chara
         "answer": "{answer}"
     '''
 
-    Task: Convert the 'question' and 'answer' pair to a declarative sentence and generate an explanation of why the sentence is true given the information in the chart.
+    Task: Convert the 'question' and 'answer' pair to a declarative sentence and generate an explanation of why the sentence is true based on the information in the chart.
 
     Process for generating a declarative sentence and an explanation:
-        1. Using only the "question" and "answer", convert them into a sentence such that the resulting sentence is supported by the data in the chart. 
-        2. Validate that the generated sentence is correct by carefully analyzing the chart image. 
-        3. Explain why the sentence is correct by referencing information extracted from the chart. Note: information in charts can be expressed through visual elements, data points, categorical labels, etc. 
+        1. Validate whether the "question" and "answer" pair can be reliably supported by analyzing the chart image. Ensure the information is accurate and that any numerical values are not overly specific or difficult to clearly observe in the chart.
+        2. If the Q&A pair is reliably supported, generate a declarative sentence directly based on the "question" and "answer."
+        3. If the Q&A pair is not reliably supported (e.g., due to incorrect information or overly specific values), generate a new sentence that is clearly supported by observable information in the chart.
+        4. Explain why the final sentence (whether derived from the Q&A pair or newly generated) is correct by referencing specific information extracted from the chart. Note: information in charts can be expressed through visual elements, data points, trends, categorical labels, etc.
 
     Output the result as a JSON object strictly following this structure:
     {{
-        "supports claim": "your generated supports claim",
-        "explanation": "your explanation for why the claim supports the chart"
+        "supports claim": "your generated sentence",
+        "explanation": "your explanation for why the sentence supports the chart"
     }}
     """
 
@@ -89,23 +90,23 @@ def create_few_shot_supports_prompt(question, answer): # 504 tokens, 2318 charac
 
     return prompt
 
-def create_zero_shot_supports_prompt_wo_QA():
+def create_zero_shot_supports_prompt_wo_QA(): #(!)
     """ Creates a zero-shot prompt to generate a 'supports' claim with an explanation using image input without a Q&A pair. """
 
     prompt = f"""
-    You are a helpful assistant designed to generate claims based on the given chart and output the result in JSON.
+    You are a helpful assistant designed to convert question-answering pairs into claims and output the result in JSON.
 
-    Task: Generate a claim that supports the information in the given chart and provide an explanation.
+    Task: Generate a declarative sentence that supports the information in the chart and provide an explanation of why this sentence is false.
 
     Process for generating a 'supports' claim and explanation:
-        1. Using the image, develop a claim that is supported by the data in the chart.
-        2. Validate that your claim supports the information in the chart by carefully analyzing the image. 
-        3. Explain why the claim refutes the chart by referencing specific visual aspects and data points visible in the image. For example, reference specific values, lines, or categories shown in the chart.
+        1. Using the chart image, develop a declarative sentence that is supported by the information in the chart.
+        2. Validate that the generated sentence is correct by carefully analyzing the chart image. 
+        3. Explain why the generated sentence is correct by referencing information extracted from the chart. Note: information in charts can be expressed through visual elements, data points, trends, categorical labels, etc.
 
-    Output the result as a JSON object with the following keys: "supports claim" and "explanation". The format should strictly follow this structure:
+    Output the result as a JSON object strictly following this structure:
     {{
-        "supports claim": "your generated supports claim",
-        "explanation": "your explanation for why the claim supports the chart"
+        "supports claim": "your generated sentence",
+        "explanation": "your explanation for why the sentence supports the chart"
     }}
     """
 
@@ -741,10 +742,10 @@ def parse_json_response(response):
 def generate_supports_claim(image_path, question, answer, model, base_dir):
     ''' Generate a 'supports' claim with an explanation. '''
     base64_image = encode_image(image_path, base_dir)
-    # prompt = create_zero_shot_supports_prompt(image, question, answer) # V1 
-    # prompt = create_few_shot_supports_prompt(image, question, answer) # V2
-    prompt = create_zero_shot_supports_prompt_wo_QA() # V3
-    # prompt = create_few_shot_supports_prompt_wo_QA(image) # V4
+    prompt = create_zero_shot_supports_prompt(question, answer) # V1 
+    # prompt = create_few_shot_supports_prompt(question, answer) # V2
+    # prompt = create_zero_shot_supports_prompt_wo_QA() # V3
+    # prompt = create_few_shot_supports_prompt_wo_QA() # V4
     response = model(model_name='gpt-4o-mini', query=prompt, image_base64=base64_image) # change model
     response_json = parse_json_response(response)
 
