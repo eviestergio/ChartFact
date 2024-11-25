@@ -90,23 +90,25 @@ def create_few_shot_supports_prompt(image, question, answer): # 504 tokens, 2318
 
     return prompt
 
-def create_zero_shot_supports_prompt_wo_QA(image):
-    """ Creates a zero-shot prompt to generate a 'supports' claim with an explanation using image input without a Q&A pair. """
-
+# Test first for with annotations to see if the claim, label and explanation now match the correct content
+def create_zero_shot_supports_prompt_wo_QA(image, annotations):
+    """ Creates a zero-shot prompt to generate a 'supports' claim with an explanation using image input and annotations (if it exists) without a Q&A pair. """
+    image = encode_image(image)
     prompt = f"""
     You are a helpful assistant designed to output JSON.
 
-    You will be provided with an image of a chart delimited by triple single quotes.
+    You will be provided with an image of a chart and json file with annotations (if it exists) related to the chart delimited by triple single quotes.
 
     Data input: '''
-        "image": {image}
+        "image": {image},
+        "annotations": {annotations}
     '''
 
     Task: Generate a claim that supports the information in the chart and provide an explanation.
 
     Process for generating a 'supports' claim and explanation:
-        1. Using the image, develop a claim that is supported by the data in the chart.
-        2. Validate that your claim supports the information in the chart by carefully analyzing the image. 
+        1. Using the image and its associated annotations (if it exists), develop a claim that is supported by the data in the chart.
+        2. Validate that your claim supports the information in the chart by carefully analyzing the image and the annotations (if it exists). 
         3. Explain why the claim refutes the chart by referencing specific visual aspects and data points visible in the image. For example, reference specific values, lines, or categories shown in the chart.
 
     Output the result as a JSON object with the following keys: "supports claim" and "explanation". The format should strictly follow this structure:

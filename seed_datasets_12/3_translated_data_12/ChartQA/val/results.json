@@ -1,0 +1,10 @@
+[
+    {
+        "supports claim": "Overall expenses have steadily increased from 2014 to 2018, reaching a peak in 2018.",
+        "explanation": "The chart depicts the expenses in million U.S. dollars across the years 2014 to 2018, with the specific values listed as 299.3, 337.8, 333.7, 376.1, and 420.9 respectively. Each bar in the bar chart clearly illustrates a progressive rise in expenses each year, culminating in the highest bar for 2018 at 420.9 million U.S. dollars. This visual representation, combined with the precise data points from the annotations, confirms the claim that overall expenses increased continuously during this period."
+    },
+    {
+        "supports claim": "In the years 2016 to 2020, the total expected spending in billion GBP shows a steadily increasing trend, with online spending experiencing significant growth relative to offline spending.",
+        "explanation": "The chart illustrates the expected spending across online and offline categories from 2016 to 2020. The data points indicate that online spending shows a consistent rise each year, culminating in a peak in 2020 at 5.76 billion GBP. In contrast, offline spending peaked in 2018 but saw a dramatic decrease by 2020, dropping to only 1.74 billion GBP. This trend is visually reinforced by the height of the bars representing each year for the online model, which are consistently taller than those for offline, particularly evident towards the end of the chart where the total spending combines positive growth in online while offline declines significantly."
+    }
+]

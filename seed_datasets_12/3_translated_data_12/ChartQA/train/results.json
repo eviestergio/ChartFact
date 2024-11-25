@@ -1,0 +1,10 @@
+[
+    {
+        "supports claim": "The number of suicides has increased significantly over the years among individuals aged 20-39, peaking in 2019.",
+        "explanation": "This claim is supported by the chart which shows a clear upward trend in the number of suicides for the age group of 20-39 years from 2009 to 2019. The specific data points indicate that the number of suicides in this category reached its highest value of 309 in 2019. The visual representation of the bar heights corresponding to this age group further emphasizes the increase, as each subsequent year displays taller bars, particularly notable in the final years of the range. This trend contrasts with the other age groups, which also show fluctuations but do not exhibit the same steep increase."
+    },
+    {
+        "supports claim": "The chart indicates a steady increase in expenditure from 2005 to 2020, with expenditures reaching a notable peak in 2020.",
+        "explanation": "The data from the chart reveals a consistent upward trend in expenditures over the years, as reflected in the bar heights corresponding to each year on the x-axis. For instance, the expenditure jumped from approximately 12,614 million GBP in 2005 to 25,964 million GBP in 2020. This is visually represented by the increasing height of the bars for each respective year, with the final bar clearly showing the highest expenditure peak. The color consistency across the bars, all being blue (#2876dd), reinforces the representation of a single category of expenditure throughout the timeline."
+    }
+]
