@@ -1,0 +1,14 @@
+[
+    {
+        "image": "chartQA_multi_col_40930-val.png",
+        "claim": "In 2020, the blue bar representing online spending is above 5 billion GBP.",
+        "label": "Supports",
+        "explanation": "The chart shows that in 2020, the value of the blue bar, which indicates expected online spending, is approximately 5.76 billion GBP. This value is clearly above 5 billion GBP, confirming that the statement is accurate."
+    },
+    {
+        "image": "chartQA_two_col_43627-val.png",
+        "claim": "The expenses of the Green Bay Packers in 2017 were only 350.0 million U.S. dollars.",
+        "label": "Refutes",
+        "explanation": "This sentence contradicts the chart, which clearly shows that the expenses for 2017 were recorded at 376.1 million U.S. dollars. By stating a lower figure of 350.0 million, it misrepresents the actual data presented in the chart."
+    }
+]

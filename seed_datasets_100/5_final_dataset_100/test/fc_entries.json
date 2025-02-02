@@ -1,62 +1,62 @@
 [
     {
-        "image": "chartQA_56783352006090-test.png",
-        "claim": "South Sudan has the lowest access to electricity over the years.",
-        "label": "Supports",
-        "explanation": "By analyzing the data in the chart, it is evident that South Sudan consistently has the lowest values for access to electricity compared to the other countries listed. The values for South Sudan across all years are significantly lower than those of Jamaica and Eritrea, supporting the claim that South Sudan has the lowest access to electricity."
-    },
-    {
-        "image": "plotQA_29479-test.png",
-        "claim": "The number of bars on each tick of the X-axis are equal.",
-        "label": "Supports",
-        "explanation": "The table shows data for different years with corresponding values for each country. By observing the table, it can be seen that each year has the same number of values recorded for each country, ensuring that the number of bars on each tick of the X-axis is equal. This is confirmed by the data presented in the chart."
-    },
-    {
-        "image": "plotQA_21579-test.png",
-        "claim": "The time spent in dealing with the requirements of government regulations decreased from 2007 to 2013.",
-        "label": "Refutes",
-        "explanation": "This claim refutes the chart as it inaccurately states that the time spent dealing with government regulations decreased over time. However, according to the chart, the time spent increased from 1.9 in 2007 to 3.5 in 2013. Therefore, the claim contradicts the actual data presented in the chart."
-    },
-    {
         "image": "plotQA_1178-test.png",
-        "claim": "The highest and lowest total amounts earned by exporting goods and services in the specified years have a difference of 34564811.277677.",
+        "claim": "The difference between the highest and the lowest total amount earned by exporting goods and services in Uganda is 34,564,811.28.",
         "label": "Supports",
-        "explanation": "By comparing the data in the chart provided, it is evident that the difference between the highest and lowest total amounts earned in the given years equates to 34564811.277677. This calculation directly matches the information presented in the 'answer' section, thereby supporting the claim."
+        "explanation": "This sentence is supported by the chart data, which indicates the total amounts earned from exports over a specified period. The highest value recorded is significantly greater than the lowest, resulting in a difference of 34,564,811.28, as calculated from the respective data points."
     },
     {
-        "image": "chartQA_two_col_83203-test.png",
-        "claim": "Apple customers reported being very satisfied at a rate of 30%.",
-        "label": "Refutes",
-        "explanation": "This claim refutes the chart as it incorrectly states that Apple customers were very satisfied at a rate of 30%. However, according to the chart, the actual percentage of Apple customers reporting very satisfied was 84%. Therefore, the claim contradicts the factual data presented in the chart."
+        "image": "chartQA_56783352006090-test.png",
+        "claim": "South Sudan has the lowest access to electricity over the years compared to the other countries shown in the chart.",
+        "label": "Supports",
+        "explanation": "The chart illustrates the share of the population with access to electricity from 1990 to 1999 for various countries. South Sudan's line remains consistently at the lowest percentage, indicating that it has the least access to electricity compared to other countries like Jamaica and Eritrea, which show higher percentages of access."
     },
     {
         "image": "plotQA_1467-test.png",
-        "claim": "The trend of rural population growth in Indonesia is influenced by economic factors.",
+        "claim": "The chart does not specify the total population for each year, making it unclear how the rural population percentage is calculated.",
         "label": "Not enough information",
-        "explanation": "This claim is based on the assumption that the growth of rural population in Indonesia may be impacted by economic factors, such as employment opportunities or GDP growth. However, the chart does not provide any data on economic indicators or trends to confirm or refute this claim, making it unverifiable with the information at hand."
+        "explanation": "Without knowing the total population for each year, we cannot determine the significance of the rural population figures presented. This lack of context prevents us from fully understanding the implications of the data shown in the chart."
     },
     {
         "image": "chartQA_multi_col_60912-test.png",
-        "claim": "The male population of Tunisia was 5.8 in 2019.",
+        "claim": "The male population of Tunisia in 2019 was 5.8 million.",
         "label": "Supports",
-        "explanation": "Based on the data provided in the chart, the male population for the year 2019 is indeed recorded as 5.8. This information directly aligns with the answer provided in the question, confirming that the male population of Tunisia in 2019 was 5.8."
+        "explanation": "This statement is supported by the chart, which shows the male population in Tunisia increasing over the years, with a specific data point indicating that in 2019, the male population reached 5.8 million, as marked on the black line representing males."
     },
     {
-        "image": "chartQA_two_col_102898-test.png",
-        "claim": "Michael Kors' market share could be influenced by unique seasonal sales patterns.",
-        "label": "Not enough information",
-        "explanation": "This claim speculates on factors not present in the chart data, such as seasonal sales variations. The chart only provides the current share of revenue without any reference to seasonal trends or specific influencing factors, making it impossible to confirm or deny the impact of unique seasonal sales patterns on Michael Kors' market share."
-    },
-    {
-        "image": "chartQA_65934022004372-test.png",
-        "claim": "The total population in Asia, Europe, and South America is more than Northern America and Africa combined.",
-        "label": "Refutes",
-        "explanation": "This claim refutes the chart as it inaccurately states that the population in Asia, Europe, and South America combined exceeds the total population of Northern America and Africa. However, according to the data in the table, the population of Asia, Europe, and South America is 664.51, whereas the total population of Northern America and Africa is 400.39. Therefore, the claim contradicts the actual data presented in the chart."
+        "image": "plotQA_29479-test.png",
+        "claim": "The number of bars on each tick of the X-axis is equal.",
+        "label": "Supports",
+        "explanation": "The chart displays the neonatal mortality rates for four countries (Azerbaijan, Haiti, Israel, and Panama) across several years. Each year on the X-axis has the same number of bars representing the countries, indicating that the number of bars is consistent across all ticks."
     },
     {
         "image": "plotQA_23071-test.png",
-        "claim": "The primary enrollment rates in Indonesia were higher than the secondary enrollment rates in 2010.",
+        "claim": "The difference between the highest and the second highest net bilateral aid flow in 1997 is 15000000.0.",
         "label": "Refutes",
-        "explanation": "This claim refutes the chart as it incorrectly states that primary enrollment rates in Indonesia were higher than secondary enrollment rates in 2010. However, based on the data in the chart, the primary enrollment rate in Indonesia was 95.66, while the secondary enrollment rate was 32.43. Therefore, the claim contradicts the actual data presented in the chart, where the secondary enrollment rate is lower than the primary enrollment rate."
+        "explanation": "This claim contradicts the chart's data by significantly underreporting the difference between the highest and second highest values. The chart clearly shows that the difference is much larger, indicating that the refuted claim misrepresents the actual figures presented."
+    },
+    {
+        "image": "chartQA_65934022004372-test.png",
+        "claim": "The total population in Africa, North America, and South America exceeds that of Europe.",
+        "label": "Refutes",
+        "explanation": "According to the chart, the combined population of Africa (227.79 million), Northern America (172.6 million), and South America (113.77 million) totals approximately 514.16 million, which is less than Europe's population of 549.33 million. Therefore, the claim that the total population in these regions exceeds that of Europe is incorrect."
+    },
+    {
+        "image": "chartQA_two_col_102898-test.png",
+        "claim": "The revenue share of Michael Kors may be influenced by factors not represented in the chart.",
+        "label": "Not enough information",
+        "explanation": "The chart provides specific revenue share percentages for Michael Kors, Versace, and Jimmy Choo, but it does not include information on other potential competitors, market conditions, or timeframes that could affect these figures. Without this context, it is unclear whether Michael Kors's revenue share is stable, increasing, or influenced by external factors."
+    },
+    {
+        "image": "chartQA_two_col_83203-test.png",
+        "claim": "Only 50% of Apple customers reported being very satisfied.",
+        "label": "Refutes",
+        "explanation": "This sentence contradicts the chart, which clearly shows that 84% of Apple customers reported being very satisfied. By stating that only 50% are satisfied, it misrepresents the data presented in the chart."
+    },
+    {
+        "image": "plotQA_21579-test.png",
+        "claim": "The graph shows a decline in the time spent dealing with government regulations over the years.",
+        "label": "Refutes",
+        "explanation": "This sentence contradicts the chart because the graph clearly illustrates an upward trend in the time spent, indicating that the percentage of senior management time dedicated to dealing with government regulations has increased rather than decreased."
     }
 ]

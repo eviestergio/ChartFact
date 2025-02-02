@@ -1,182 +1,182 @@
 [
     {
         "image": "chartQA_multi_col_20204-train.png",
-        "claim": "There were 517 people who committed suicide in 2009.",
+        "claim": "In 2009, 517 people committed suicide.",
         "label": "Supports",
-        "explanation": "By looking at the data in the chart, we can see that in the row corresponding to 2009, the value under the '65 years and older' column is 171. This aligns with the answer provided, which confirms that there were 517 people who committed suicide in that year, as this value is the sum of all age groups in the same row."
+        "explanation": "The chart clearly shows that the total number of suicides in 2009 is represented by the height of the bar for that year, which reaches 517. This value is derived from the sum of suicides across different age groups, confirming the accuracy of the claim."
     },
     {
         "image": "chartQA_two_col_40805-train.png",
-        "claim": "C.H.I. Overhead Doors was the brand of garage doors that 17.6 percent of respondents used the most.",
+        "claim": "Wayne-Dalton was the brand of garage doors used the most by only 8.4 percent of respondents.",
         "label": "Refutes",
-        "explanation": "This claim refutes the chart as it inaccurately states that C.H.I. Overhead Doors was the brand used the most by 17.6% of respondents. However, based on the data presented in the chart, it is actually Wayne-Dalton that was the brand used by 17.6% of respondents, not C.H.I. Overhead Doors. Therefore, the claim contradicts the factual information provided in the chart."
+        "explanation": "This sentence contradicts the chart, which shows that Wayne-Dalton was used by 17.6 percent of respondents. By stating that only 8.4 percent used Wayne-Dalton, it misrepresents the data and suggests a lower preference for this brand than what is indicated in the chart."
     },
     {
         "image": "chartQA_two_col_103445-train.png",
-        "claim": "The loan value in 2018 could have been influenced by economic factors not evident in the chart.",
+        "claim": "The total loan value in 2020 may have been influenced by external economic factors that are not detailed in the chart.",
         "label": "Not enough information",
-        "explanation": "This claim posits that the loan value in 2018 might have been impacted by external economic factors not explicitly mentioned in the chart. Without additional data or context on these potential influences, it is impossible to confirm or refute this claim with the existing information provided."
+        "explanation": "The chart provides data on loan values for specific years but does not include information on economic conditions, policy changes, or other factors that could have affected the total loan value in 2020. Without this context, it is unclear whether the figure of 367499 is a result of consistent growth, a response to specific events, or other influences."
     },
     {
         "image": "chartQA_two_col_103922-train.png",
-        "claim": "The number of Yellow Pages Canada customers in 2020 was 125400.",
+        "claim": "The number of Yellow Pages Canada customers in 2020 was 125,400.",
         "label": "Supports",
-        "explanation": "The chart provided in the data entry lists the characteristic '2020' along with the corresponding number of customers '125400'. Therefore, the claim that the number of Yellow Pages Canada customers in 2020 was 125400 directly aligns with the data recorded in the chart."
+        "explanation": "This statement is supported by the chart, which clearly shows a bar for the year 2020 labeled with the value 125,400. The chart illustrates the decline in the number of customers over the years, with 2020 being the lowest point recorded."
     },
     {
         "image": "chartQA_two_col_82289-train.png",
-        "claim": "The exchange rate in 2019 was 10771, which was the highest among the years shown in the chart.",
+        "claim": "The average exchange rate from Indonesian rupiah to Australian dollars in 2020 was 10,500.",
         "label": "Refutes",
-        "explanation": "This claim refutes the chart as it inaccurately states that the exchange rate peaked in 2019. However, according to the chart, the exchange rate in 2019 was reported as 9739, not 10771. In fact, the highest exchange rate was in 2013 with a value of 10876. Therefore, the claim contradicts the actual data presented in the chart."
+        "explanation": "This claim contradicts the chart, which shows that the exchange rate in 2020 was 10,771. The refuted claim suggests a higher average exchange rate than what is visually represented in the data, thereby misrepresenting the actual trend."
     },
     {
         "image": "chartQA_two_col_22311-train.png",
-        "claim": "The youth unemployment rate may have been influenced by external economic factors beyond the data shown.",
+        "claim": "The youth unemployment rate in Swaziland may have fluctuated due to various economic factors, but specific reasons for the rate in 2019 are not detailed.",
         "label": "Not enough information",
-        "explanation": "This claim speculates on potential external economic factors that could have impacted the youth unemployment rate but is unverifiable due to the lack of specific details or data in the chart supporting or refuting this claim."
+        "explanation": "The chart shows a general trend of youth unemployment rates over the years, but it does not provide information on the specific economic conditions or policies that may have influenced the rate in 2019. Without additional context or data, it is unclear what factors contributed to the unemployment rate at that time."
     },
     {
         "image": "chartQA_two_col_104074-train.png",
-        "claim": "355 individuals were on the liver transplant waiting list in England in March 2020.",
+        "claim": "In March 2020, there were 355 people on the liver transplant waiting list in England.",
         "label": "Supports",
-        "explanation": "The table in the chart provides data on the number of individuals on the waiting list in different countries, including England with 355 individuals. Thus, the claim directly corresponds to the information shown in the chart."
+        "explanation": "The chart clearly shows that the number of individuals on the waiting list for liver transplants in England is represented by a bar reaching the value of 355, which is significantly higher than the numbers for Wales, Scotland, and Northern Ireland."
     },
     {
         "image": "chartQA_two_col_791-train.png",
-        "claim": "The average player salary in Atlanta United in 2019 was 200.00 dollars.",
+        "claim": "The average player salary in Toronto FC in 2019 was 500 dollars.",
         "label": "Refutes",
-        "explanation": "This claim refutes the chart as it inaccurately states the average player salary for Atlanta United in 2019 was 200.00 dollars. According to the chart, the average player salary for Atlanta United was actually 404.91 dollars, which is significantly higher than the claim. Therefore, the refutes claim contradicts the actual data presented in the chart."
+        "explanation": "This claim contradicts the chart, which clearly shows that the average player salary for Toronto FC was significantly higher at 758.35 dollars. By stating a much lower figure of 500 dollars, it misrepresents the actual data presented."
     },
     {
         "image": "chartQA_two_col_4043-train.png",
-        "claim": "Florida's GDP in dollars in the previous year was likely influenced by external economic factors not included in the chart.",
+        "claim": "The GDP figures for Florida may have been influenced by various economic factors that are not detailed in the chart.",
         "label": "Not enough information",
-        "explanation": "This claim assumes that external economic factors could have impacted Florida's GDP without specifying the nature of these factors or providing data to support this assertion. The chart solely presents historical GDP values without detailing the specific drivers behind each year's figures, making it impossible to verify the claim without additional context or information."
+        "explanation": "The chart provides GDP values over several years but does not include information on external economic conditions, policy changes, or other factors that could have impacted these figures. Without this context, it is unclear whether the GDP value of 963.26 is a result of positive growth, economic recovery, or other influences."
     },
     {
         "image": "chartQA_two_col_61763-train.png",
-        "claim": "France imported 121.6 million GBP worth of spirits into the UK in 2020.",
+        "claim": "In 2020, France imported 121.6 million GBP worth of spirits into the UK.",
         "label": "Supports",
-        "explanation": "Looking at the table in the chart, we can see that France's import value is precisely 121.6 million GBP. Therefore, the claim that France imported that exact amount of spirits is directly supported by the data provided in the chart."
+        "explanation": "This statement is supported by the chart, which shows that France's import value for spirits in 2020 is represented by a bar reaching 121.6 million GBP. The chart clearly indicates the import values for various countries, with France being one of the highest at this amount."
     },
     {
         "image": "chartQA_two_col_4713-train.png",
-        "claim": "ArcelorMittal generated 116.94 in revenue in the fiscal year of 2020.",
+        "claim": "ArcelorMittal generated 60.00 in revenue in the fiscal year of 2020.",
         "label": "Refutes",
-        "explanation": "This claim refutes the chart as it incorrectly states that the revenue generated in 2020 was 116.94. However, based on the chart, the correct revenue generated by ArcelorMittal in 2020 was 53.27 billion U.S. dollars. Therefore, the claim contradicts the factual data shown in the chart."
+        "explanation": "This statement contradicts the chart, which clearly shows that the revenue for ArcelorMittal in 2020 was 53.27 billion U.S. dollars. The refuted claim inaccurately states a higher revenue figure, which does not align with the data presented in the chart."
     },
     {
         "image": "chartQA_two_col_100130-train.png",
-        "claim": "The global orthopedic orthotics market's growth rate is directly proportional to the increase in market size in million U.S. dollars.",
+        "claim": "The growth rate of the orthopedic orthotics market from 2016 to 2023 is unclear.",
         "label": "Not enough information",
-        "explanation": "This claim attempts to draw a correlation between the growth rate of the orthopedic orthotics market and the increase in market size based on the provided data. However, the data in the chart only shows the market size for two specific years and does not include any growth rate information, making it impossible to confirm or refute this claim."
+        "explanation": "While the chart provides market sizes for 2016 and 2023, it does not specify the annual growth rate or any factors influencing this growth. Without additional data on yearly trends or external market influences, it is impossible to determine the exact nature of the market's growth during this period."
     },
     {
         "image": "chartQA_two_col_104070-train.png",
-        "claim": "Saskatchewan's CAPEX in dollars in 2018 was 4536.",
+        "claim": "Saskatchewan's CAPEX in dollars in 2018 was 4,536 million Canadian dollars.",
         "label": "Supports",
-        "explanation": "The data entry's table lists the CAPEX values in million Canadian dollars for various regions, including Saskatchewan with a value of 4536. By directly matching the given value in the question to the table entry for Saskatchewan, it is verified that Saskatchewan's CAPEX in 2018 was 4536, thus supporting the claim."
+        "explanation": "The chart clearly shows that Saskatchewan's capital expenditure (CAPEX) is represented by the bar labeled 'Saskatchewan,' which reaches the value of 4,536 million Canadian dollars. This confirms the accuracy of the claim regarding Saskatchewan's CAPEX for the year 2018."
     },
     {
         "image": "chartQA_two_col_4965-train.png",
-        "claim": "The revenue in 2020 was the highest among the years shown in the chart.",
+        "claim": "Nike stopped providing uniforms and apparel to NFL teams in 2012.",
         "label": "Refutes",
-        "explanation": "This claim refutes the chart as it inaccurately states that revenue peaked in 2020. However, according to the chart, the revenue was highest in 2021 with a value of 1620 million U.S. dollars, while in 2020, the revenue was lower at 1470 million U.S. dollars. Therefore, the claim contradicts the actual data presented in the chart."
+        "explanation": "This sentence contradicts the chart, which shows a consistent increase in revenue from 2010 to 2021, indicating that Nike's involvement with NFL teams likely contributed to this growth. If Nike had stopped providing uniforms in 2012, one would expect a decline or stagnation in revenue, which is not reflected in the data."
     },
     {
         "image": "chartQA_two_col_61921-train.png",
-        "claim": "Cineplex's revenue trend in the first quarter of 2021 could have been influenced by external economic factors.",
+        "claim": "The revenue figures for Cineplex in the first quarter of 2021 may have been influenced by external factors such as changes in consumer behavior or restrictions due to the pandemic.",
         "label": "Not enough information",
-        "explanation": "The claim speculates on potential external economic factors that could have affected Cineplex's revenue in Q1 '21. However, the chart lacks data on specific external economic factors or their impact on the revenue, making it unverifiable without additional information."
+        "explanation": "The chart shows revenue data over several quarters, but it does not provide context regarding external factors that could have impacted revenue in Q1 2021. Without additional information on market conditions or events during that period, it is unclear whether the revenue figure of 41.41 million Canadian dollars is typical or affected by unusual circumstances."
     },
     {
         "image": "chartQA_two_col_40908-train.png",
-        "claim": "The CPI in April 2021 was 105.26.",
+        "claim": "The Consumer Price Index (CPI) in April 2021 was 105.26.",
         "label": "Supports",
-        "explanation": "The data entry in the chart includes the Consumer Price Index (CPI) values for each month, with April 2021 listed as 105.26. The 'question' specifically asks for the CPI in April 2021, and the 'answer' confirms it as 105.26, which directly aligns with the data provided in the chart."
+        "explanation": "This statement is supported by the chart, which shows a data point for April 2021 marked at 105.26 on the y-axis. The chart tracks the Consumer Price Index over time, and the specific value for April 2021 is clearly indicated, confirming the accuracy of the claim."
     },
     {
         "image": "chartQA_two_col_42887-train.png",
-        "claim": "Samsung made 125 in the United States in 2013.",
+        "claim": "Samsung made only 120 million dollars in the United States in 2013.",
         "label": "Refutes",
-        "explanation": "This claim refutes the chart as it inaccurately states that Samsung made 125 in the United States in 2013. However, according to the chart, Samsung actually made 240 in the United States in that year. Therefore, the claim contradicts the actual data presented in the chart."
+        "explanation": "This sentence contradicts the chart, which clearly shows that Samsung's market volume was 240 million dollars, the highest among the listed companies. By stating that Samsung made only 120 million dollars, it misrepresents the actual data presented in the chart."
     },
     {
         "image": "chartQA_two_col_24638-train.png",
-        "claim": "China's inclusion in the top textile yarn exporters is influenced by its domestic textile industry's advancements.",
+        "claim": "The chart does not specify the total global textile yarn exports for 2019, making it unclear how China's exports compare to the overall market.",
         "label": "Not enough information",
-        "explanation": "This claim speculates on the potential influence of China's domestic textile industry on its significant export volume, which is not directly supported by the provided data in the chart. The chart only lists the trade values of various countries without detailing the specific factors contributing to their export quantities, making it impossible to confirm or refute this claim with the given information."
+        "explanation": "Without knowing the total global textile yarn exports, we cannot determine the significance of China's export figure in relation to the entire market. The chart only provides individual country export values, which limits our ability to assess China's position in a broader context."
     },
     {
         "image": "chartQA_two_col_100696-train.png",
-        "claim": "There were 612 enterprises manufacturing domestic appliances in the Czech Republic in 2017.",
+        "claim": "In 2017, there were 612 enterprises manufacturing domestic appliances in the Czech Republic.",
         "label": "Supports",
-        "explanation": "The table in the chart lists the number of enterprises in different years. Specifically, in 2017, the data shows that there were 612 enterprises, which directly corresponds to the information provided in the 'question'. Therefore, the claim is supported by the data presented in the chart."
+        "explanation": "This statement is supported by the chart, which shows the number of enterprises manufacturing domestic appliances in the Czech Republic from 2008 to 2017. The bar for 2017 clearly indicates a value of 612, confirming the number of enterprises for that year."
     },
     {
         "image": "chartQA_two_col_2248-train.png",
-        "claim": "The number of housing transactions in 2021 was 1.2, which was higher than in 2020.",
+        "claim": "Housing transactions forecasted to occur in 2025 are estimated to be only 1.2.",
         "label": "Refutes",
-        "explanation": "This refutes claim contradicts the chart data as it inaccurately states that the number of housing transactions in 2021 was 1.2, which is higher than in 2020. However, based on the table provided, the number of housing transactions in 2021 was 1.0, which is actually lower than the reported 1.2 in the claim. Therefore, the refutes claim misinterprets the data presented in the chart, leading to a contradiction with the actual data provided."
+        "explanation": "This sentence contradicts the chart, which clearly shows that the forecast for housing transactions in 2025 is 1.4 million. By stating that the estimate is only 1.2 million, it misrepresents the upward trend indicated in the chart, where the values for previous years are consistently increasing, culminating in the 1.4 million forecast for 2025."
     },
     {
         "image": "chartQA_two_col_103205-train.png",
-        "claim": "The amount spent on federal and international policing for the Royal Canadian Mounted Police in 2018/19 was influenced by factors not presented in the chart.",
+        "claim": "The total expenditures on policing services in Canada may have varied significantly in other years, affecting the context of the 2018/19 spending.",
         "label": "Not enough information",
-        "explanation": "The claim implies a direct correlation between the amount spent on federal and international policing and a singular cause, which is not supported by the data in the chart. The chart only provides the expenditure values without detailing the specific factors or breakdown that influenced these expenditures, making it impossible to determine the exact reasons behind the amount spent on federal and international policing."
+        "explanation": "The chart provides a snapshot of expenditures for a specific year but does not include historical data or trends over time. Without this context, it is unclear how the 2018/19 spending compares to other years, making it impossible to fully assess the significance of the amount spent on contract policing."
     },
     {
         "image": "chartQA_two_col_42313-train.png",
-        "claim": "The amount of British pounds spent on alcoholic drinks in 2020 was 25964.",
+        "claim": "In 2020, the amount of British pounds spent on alcoholic drinks was 25,964 million GBP.",
         "label": "Supports",
-        "explanation": "The data from the table in the chart clearly shows that in 2020, the expenditure for alcoholic drinks was recorded at 25964 million GBP. This aligns perfectly with the answer provided, solidifying the claim that the amount spent in British pounds on alcoholic drinks in 2020 was indeed 25964."
+        "explanation": "This sentence is supported by the chart, which shows the expenditure on alcoholic drinks in million GBP from 2005 to 2020. The bar for 2020 reaches the value of 25,964 million GBP, confirming the amount spent in that year."
     },
     {
         "image": "chartQA_two_col_2031-train.png",
-        "claim": "The value of China in dollars in 2020 was 15000.",
+        "claim": "The value of the United States in dollars in 2020 was 15,000.",
         "label": "Refutes",
-        "explanation": "This claim refutes the chart as it falsely states that the value of China in 2020 was 15000. However, based on the data in the chart, the actual value for China in 2020 was 18764. By inaccurately reducing the reported value, the claim directly contradicts the factual data presented in the chart."
+        "explanation": "This sentence contradicts the chart, which clearly shows that the brand value of the United States is significantly higher at 23,738 billion U.S. dollars. The stated value of 15,000 is much lower and does not align with the visual data presented."
     },
     {
         "image": "chartQA_two_col_22614-train.png",
-        "claim": "The monthly market share of Citroen in the UK between January 2017 and December 2020 could have been influenced by factors not reflected in the chart.",
+        "claim": "The chart does not provide information on the overall market size or the performance of other brands during the same period.",
         "label": "Not enough information",
-        "explanation": "This claim suggests that external factors beyond those presented in the chart may have impacted Citroen's market share during the specified period. Without additional data or context on these external influences, the claim lacks enough information to be confirmed or disproven solely based on the chart provided."
+        "explanation": "Without data on the total market size or the market shares of competing brands, it is impossible to determine the significance of Citroen's market share of 2.64%. This lack of context prevents a full understanding of Citroen's performance relative to the overall market."
     },
     {
         "image": "chartQA_two_col_43103-train.png",
-        "claim": "The managed security services market generated a revenue of 2986.6 million U.S. dollars in 2014.",
+        "claim": "The managed security services market generated 2986.6 million U.S. dollars in revenue in 2014.",
         "label": "Supports",
-        "explanation": "The data entry chart displays the revenue generated each year, with 2014 specifically showing a revenue of 2986.6 million U.S. dollars. Therefore, the claim directly aligns with the recorded information in the chart, confirming the revenue amount for that specific year."
+        "explanation": "This statement is supported by the chart, which clearly shows a bar for the year 2014 reaching the value of 2986.6 million U.S. dollars. The height of the bar corresponds directly to the revenue figure, confirming the accuracy of the claim."
     },
     {
         "image": "chartQA_two_col_41382-train.png",
-        "claim": "The train station with the lowest annual number of passengers as of 2020 was Napoli Centrale.",
+        "claim": "Roma Termini had fewer passengers than Milano Centrale in 2020.",
         "label": "Refutes",
-        "explanation": "This claim refutes the chart as it incorrectly states that Napoli Centrale had the lowest annual number of passengers. However, based on the data in the chart, Napoli Centrale had 50 million passengers, making it the sixth highest station in terms of annual passengers. The lowest annual number of passengers in the chart is reported as 50 million for Roma Tiburtina, not Napoli Centrale. Therefore, the refutes claim directly contradicts the actual data presented in the chart."
+        "explanation": "This statement contradicts the chart, which clearly shows that Roma Termini had the highest number of passengers at 160 million, significantly more than Milano Centrale's 120 million."
     },
     {
         "image": "chartQA_two_col_100763-train.png",
-        "claim": "Mexico's fossil CO emissions in 2015 could have been higher than reported.",
+        "claim": "The data does not clarify the factors contributing to the fluctuations in fossil CO emissions per person in Mexico from 2015 to 2018.",
         "label": "Not enough information",
-        "explanation": "This claim suggests a possibility of higher emissions in 2015 based on the lack of specific data points in the table. The chart only shows emissions for 2015, 2017, and 2018, leaving gaps in the data that prevent confirmation or refutation of this claim."
+        "explanation": "While the chart provides specific emissions values for each year, it does not include information on potential causes for the changes in emissions, such as economic activity, population growth, or changes in energy sources. Without this context, it is impossible to determine the reasons behind the emissions figures."
     },
     {
         "image": "chartQA_two_col_21874-train.png",
-        "claim": "There were 51,089 teenage conceptions in England and Wales in 2018.",
+        "claim": "In 2018, there were 51,089 teenage conceptions in England and Wales.",
         "label": "Supports",
-        "explanation": "By referencing the data provided in the chart, which shows the number of pregnancies resulting in maternity for each year, we can see that in 2018 there were indeed 51,089 pregnancies recorded. This directly supports the claim that there were 51,089 teenage conceptions in that specific year."
+        "explanation": "The chart displays the number of pregnancies resulting in maternity from 1990 to 2018, with a specific data point for 2018 indicating 51,089 teenage conceptions. This number is clearly marked on the chart, confirming the accuracy of the claim."
     },
     {
         "image": "chartQA_two_col_2514-train.png",
-        "claim": "Based on the chart, Western Australia has the highest population share at 31.8%.",
+        "claim": "In what state did 31.8 percent of the Australian population live? Victoria.",
         "label": "Refutes",
-        "explanation": "This claim refutes the chart as it inaccurately states that Western Australia has the highest population share at 31.8%. However, in the data presented in the chart, New South Wales actually has the highest population share at 31.8%, while Western Australia's population share is 10.4%. Therefore, the claim contradicts the actual data presented in the chart."
+        "explanation": "This sentence contradicts the chart, which clearly shows that New South Wales has the highest population share at approximately 31.8 percent, while Victoria has a lower percentage, indicating that the majority of the population does not reside there."
     },
     {
         "image": "chartQA_two_col_61350-train.png",
-        "claim": "China's import value being lower than Japan could be due to seasonal fluctuations.",
+        "claim": "The chart does not provide information on the specific categories of goods that contributed to Switzerland's import value in 2019.",
         "label": "Not enough information",
-        "explanation": "This claim speculates on possible reasons for the difference in import values between China and Japan, as the chart does not provide information on the specific factors influencing their import values. Without additional data on seasonal trends or other external factors, the claim remains unverifiable based solely on the chart."
+        "explanation": "Without knowing the types of goods imported, it is unclear whether the high import value is due to a few high-value items or a diverse range of products. This lack of detail prevents a full understanding of the factors influencing the import value."
     }
 ]

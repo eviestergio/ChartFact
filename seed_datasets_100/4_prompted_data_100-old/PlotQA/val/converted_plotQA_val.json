@@ -1,0 +1,32 @@
+[
+    {
+        "image": "plotQA_4212-val.png",
+        "claim": "The total grants received by the government in Cote d'Ivoire in the chart is 548,650,000.",
+        "label": "Supports",
+        "explanation": "By examining the table data, it is evident that the total grants received by the government in Cote d'Ivoire across all years add up to the amount stated in the answer. This supports the claim that the total grants received by the government in Cote d'Ivoire is 548,650,000."
+    },
+    {
+        "image": "plotQA_20477-val.png",
+        "claim": "The pupil-teacher ratio in United States was the lowest among the countries shown in the chart.",
+        "label": "Refutes",
+        "explanation": "This claim refutes the chart as it wrongly states that the pupil-teacher ratio in the United States was the lowest. However, based on the data presented in the chart, the pupil-teacher ratio in the United States was 15.67 in the year 1988, which is higher than the ratios in Angola, Jordan, and Malta for the same year. Therefore, the claim contradicts the actual data provided in the chart."
+    },
+    {
+        "image": "plotQA_27994-val.png",
+        "claim": "The fluctuation in calorie requirements across countries is influenced by factors not captured in the data.",
+        "label": "Not enough information",
+        "explanation": "While the data shows varying calorie needs across countries over three years, it does not specify the factors influencing these fluctuations. Without additional information on variables like population demographics, economic conditions, or nutritional programs, it is impossible to verify how these factors contribute to the differences in calorie requirements."
+    },
+    {
+        "image": "plotQA_20471-val.png",
+        "claim": "The CPIA rating of social protection in 2008 is not less than that in 2012.",
+        "label": "Supports",
+        "explanation": "The table in the chart displays the CPIA ratings for social protection in the years 2008 and 2012, showing that the rating for social protection remained the same at 3 for both years. Therefore, it is evident from the data that the CPIA rating of social protection in 2008 is not less than that in 2012, supporting the claim."
+    },
+    {
+        "image": "plotQA_19779-val.png",
+        "claim": "The percentage of male workers in industry in 1998 was 50.8%.",
+        "label": "Refutes",
+        "explanation": "This claim refutes the chart as it inaccurately states that the percentage of male workers in the industry was 50.8% in 1998. However, based on the data in the chart, the actual percentage of male workers in the industry in 1998 was 51.2%. Therefore, the claim contradicts the factual information presented in the chart."
+    }
+]

@@ -1,0 +1,38 @@
+[
+    {
+        "image": "figureQA_43249-train.png",
+        "claim": "Hot Pink is not less than Teal.",
+        "label": "Supports",
+        "explanation": "The chart shows that Hot Pink has a value greater than Teal. Specifically, Hot Pink's value is approximately 90, while Teal's value is around 70. This indicates that Hot Pink is greater than Teal, supporting the claim that Hot Pink is not less than Teal."
+    },
+    {
+        "image": "plotQA_37698-train.png",
+        "claim": "There are 3 bars on the 2nd tick from the top.",
+        "label": "Supports",
+        "explanation": "The chart displays the percentage of firms either registered or unregistered in different countries, with each category represented by a bar. The second tick from the top corresponds to the category 'Competing against unregistered firms,' which has three distinct bars representing the data for Macedonia, the Philippines, and Tonga."
+    },
+    {
+        "image": "plotQA_98527-train.png",
+        "claim": "The graph shows that the rural population growth in Sub-Saharan Africa is consistently increasing over the years.",
+        "label": "Refutes",
+        "explanation": "This sentence contradicts the chart because the graph clearly illustrates a downward trend in rural population growth for Sub-Saharan Africa, indicating a decline rather than an increase over the years."
+    },
+    {
+        "image": "chartQA_two_col_42313-train.png",
+        "claim": "The amount of British pounds spent on alcoholic drinks in 2020 was only 20000.",
+        "label": "Refutes",
+        "explanation": "This sentence contradicts the chart, which shows a clear increase in expenditure on alcoholic drinks over the years, culminating in a figure that exceeds 25000 in 2020. The visual data indicates that the spending trend has been consistently upward, making the claim of only 20000 implausible."
+    },
+    {
+        "image": "figureQA_99722-train.png",
+        "claim": "Dark Gold intersects Turquoise at multiple points throughout the chart.",
+        "label": "Refutes",
+        "explanation": "This sentence contradicts the chart because the visual representation shows that the lines for Dark Gold and Turquoise do not cross at any point, indicating that they remain separate throughout the data range."
+    },
+    {
+        "image": "chartQA_multi_col_20204-train.png",
+        "claim": "In 2009, 517 people committed suicide.",
+        "label": "Supports",
+        "explanation": "The chart clearly shows that the total number of suicides in 2009 is represented by the height of the bar for that year, which reaches 517. This value is derived from the sum of suicides across different age groups, confirming the accuracy of the claim."
+    }
+]

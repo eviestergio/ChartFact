@@ -1,32 +1,32 @@
 [
     {
         "image": "chartQA_56783352006090-test.png",
-        "claim": "South Sudan has the lowest access to electricity over the years.",
+        "claim": "South Sudan has the lowest access to electricity over the years compared to the other countries shown in the chart.",
         "label": "Supports",
-        "explanation": "By analyzing the data in the chart, it is evident that South Sudan consistently has the lowest values for access to electricity compared to the other countries listed. The values for South Sudan across all years are significantly lower than those of Jamaica and Eritrea, supporting the claim that South Sudan has the lowest access to electricity."
+        "explanation": "The chart illustrates the share of the population with access to electricity from 1990 to 1999 for various countries. South Sudan's line remains consistently at the lowest percentage, indicating that it has the least access to electricity compared to other countries like Jamaica and Eritrea, which show higher percentages of access."
     },
     {
         "image": "chartQA_65934022004372-test.png",
-        "claim": "The total population in Asia, Europe, and South America is more than Northern America and Africa combined.",
+        "claim": "The total population in Africa, North America, and South America exceeds that of Europe.",
         "label": "Refutes",
-        "explanation": "This claim refutes the chart as it inaccurately states that the population in Asia, Europe, and South America combined exceeds the total population of Northern America and Africa. However, according to the data in the table, the population of Asia, Europe, and South America is 664.51, whereas the total population of Northern America and Africa is 400.39. Therefore, the claim contradicts the actual data presented in the chart."
+        "explanation": "According to the chart, the combined population of Africa (227.79 million), Northern America (172.6 million), and South America (113.77 million) totals approximately 514.16 million, which is less than Europe's population of 549.33 million. Therefore, the claim that the total population in these regions exceeds that of Europe is incorrect."
     },
     {
         "image": "chartQA_two_col_102898-test.png",
-        "claim": "Michael Kors' market share could be influenced by unique seasonal sales patterns.",
+        "claim": "The revenue share of Michael Kors may be influenced by factors not represented in the chart.",
         "label": "Not enough information",
-        "explanation": "This claim speculates on factors not present in the chart data, such as seasonal sales variations. The chart only provides the current share of revenue without any reference to seasonal trends or specific influencing factors, making it impossible to confirm or deny the impact of unique seasonal sales patterns on Michael Kors' market share."
+        "explanation": "The chart provides specific revenue share percentages for Michael Kors, Versace, and Jimmy Choo, but it does not include information on other potential competitors, market conditions, or timeframes that could affect these figures. Without this context, it is unclear whether Michael Kors's revenue share is stable, increasing, or influenced by external factors."
     },
     {
         "image": "chartQA_multi_col_60912-test.png",
-        "claim": "The male population of Tunisia was 5.8 in 2019.",
+        "claim": "The male population of Tunisia in 2019 was 5.8 million.",
         "label": "Supports",
-        "explanation": "Based on the data provided in the chart, the male population for the year 2019 is indeed recorded as 5.8. This information directly aligns with the answer provided in the question, confirming that the male population of Tunisia in 2019 was 5.8."
+        "explanation": "This statement is supported by the chart, which shows the male population in Tunisia increasing over the years, with a specific data point indicating that in 2019, the male population reached 5.8 million, as marked on the black line representing males."
     },
     {
         "image": "chartQA_two_col_83203-test.png",
-        "claim": "Apple customers reported being very satisfied at a rate of 30%.",
+        "claim": "Only 50% of Apple customers reported being very satisfied.",
         "label": "Refutes",
-        "explanation": "This claim refutes the chart as it incorrectly states that Apple customers were very satisfied at a rate of 30%. However, according to the chart, the actual percentage of Apple customers reporting very satisfied was 84%. Therefore, the claim contradicts the factual data presented in the chart."
+        "explanation": "This sentence contradicts the chart, which clearly shows that 84% of Apple customers reported being very satisfied. By stating that only 50% are satisfied, it misrepresents the data presented in the chart."
     }
 ]

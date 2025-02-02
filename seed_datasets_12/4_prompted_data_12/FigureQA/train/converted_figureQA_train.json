@@ -1,0 +1,14 @@
+[
+    {
+        "image": "figureQA_43249-train.png",
+        "claim": "Hot Pink is not less than Teal.",
+        "label": "Supports",
+        "explanation": "The chart shows that Hot Pink has a value greater than Teal. Specifically, Hot Pink's value is approximately 90, while Teal's value is around 70. This indicates that Hot Pink is greater than Teal, supporting the claim that Hot Pink is not less than Teal."
+    },
+    {
+        "image": "figureQA_99722-train.png",
+        "claim": "Dark Gold intersects Turquoise at multiple points throughout the chart.",
+        "label": "Refutes",
+        "explanation": "This sentence contradicts the chart because the visual representation shows that the lines for Dark Gold and Turquoise do not cross at any point, indicating that they remain separate throughout the data range."
+    }
+]

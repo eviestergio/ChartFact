@@ -1,32 +1,32 @@
 [
     {
         "image": "plotQA_4212-val.png",
-        "claim": "The total grants received by the government in Cote d'Ivoire in the chart is 548,650,000.",
+        "claim": "The total grants received by the government in Cote d'Ivoire is 548650000 US dollars.",
         "label": "Supports",
-        "explanation": "By examining the table data, it is evident that the total grants received by the government in Cote d'Ivoire across all years add up to the amount stated in the answer. This supports the claim that the total grants received by the government in Cote d'Ivoire is 548,650,000."
+        "explanation": "This statement is supported by the chart, which shows the grants received by Cote d'Ivoire over the years. The data point corresponding to Cote d'Ivoire indicates a total of 548650000 US dollars, clearly marked on the vertical axis of the graph."
     },
     {
         "image": "plotQA_20477-val.png",
-        "claim": "The pupil-teacher ratio in United States was the lowest among the countries shown in the chart.",
+        "claim": "The values on the major ticks of the Y-axis are displayed in scientific E-notation.",
         "label": "Refutes",
-        "explanation": "This claim refutes the chart as it wrongly states that the pupil-teacher ratio in the United States was the lowest. However, based on the data presented in the chart, the pupil-teacher ratio in the United States was 15.67 in the year 1988, which is higher than the ratios in Angola, Jordan, and Malta for the same year. Therefore, the claim contradicts the actual data provided in the chart."
+        "explanation": "This statement contradicts the chart because the Y-axis clearly shows numerical values in standard decimal format, not in scientific notation. The absence of E-notation indicates that the values are presented in a straightforward manner, which is visually evident in the chart."
     },
     {
         "image": "plotQA_27994-val.png",
-        "claim": "The fluctuation in calorie requirements across countries is influenced by factors not captured in the data.",
+        "claim": "The chart does not specify the total population of the undernourished individuals in each country for 1992, which is necessary to determine the overall caloric needs.",
         "label": "Not enough information",
-        "explanation": "While the data shows varying calorie needs across countries over three years, it does not specify the factors influencing these fluctuations. Without additional information on variables like population demographics, economic conditions, or nutritional programs, it is impossible to verify how these factors contribute to the differences in calorie requirements."
+        "explanation": "Without knowing the population size of the undernourished in each country, we cannot assess whether the stated minimum total calories of 89.0 is sufficient or accurate. The chart only provides calorie needs per person, but not the total number of individuals affected."
     },
     {
         "image": "plotQA_20471-val.png",
         "claim": "The CPIA rating of social protection in 2008 is not less than that in 2012.",
         "label": "Supports",
-        "explanation": "The table in the chart displays the CPIA ratings for social protection in the years 2008 and 2012, showing that the rating for social protection remained the same at 3 for both years. Therefore, it is evident from the data that the CPIA rating of social protection in 2008 is not less than that in 2012, supporting the claim."
+        "explanation": "The chart shows that the CPIA rating for social protection remained constant at approximately 2.5 from 2008 to 2012. Since the rating did not decrease during this period, it confirms that the rating in 2008 is not less than that in 2012."
     },
     {
         "image": "plotQA_19779-val.png",
-        "claim": "The percentage of male workers in industry in 1998 was 50.8%.",
+        "claim": "The percentage of male workers in industry in 1986 was only 30.5%.",
         "label": "Refutes",
-        "explanation": "This claim refutes the chart as it inaccurately states that the percentage of male workers in the industry was 50.8% in 1998. However, based on the data in the chart, the actual percentage of male workers in the industry in 1998 was 51.2%. Therefore, the claim contradicts the factual information presented in the chart."
+        "explanation": "This sentence contradicts the chart, which clearly shows that the percentage of male workers in the industry sector in 1986 was significantly higher, at approximately 51.2%. The visual data indicates a stable trend around this percentage, making the claim of 30.5% inaccurate."
     }
 ]

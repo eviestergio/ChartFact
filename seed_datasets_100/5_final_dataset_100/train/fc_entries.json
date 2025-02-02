@@ -1,482 +1,482 @@
 [
     {
-        "image": "chartQA_two_col_2248-train.png",
-        "claim": "The number of housing transactions in 2021 was 1.2, which was higher than in 2020.",
-        "label": "Refutes",
-        "explanation": "This refutes claim contradicts the chart data as it inaccurately states that the number of housing transactions in 2021 was 1.2, which is higher than in 2020. However, based on the table provided, the number of housing transactions in 2021 was 1.0, which is actually lower than the reported 1.2 in the claim. Therefore, the refutes claim misinterprets the data presented in the chart, leading to a contradiction with the actual data provided."
+        "image": "chartQA_two_col_61921-train.png",
+        "claim": "The revenue figures for Cineplex in the first quarter of 2021 may have been influenced by external factors such as changes in consumer behavior or restrictions due to the pandemic.",
+        "label": "Not enough information",
+        "explanation": "The chart shows revenue data over several quarters, but it does not provide context regarding external factors that could have impacted revenue in Q1 2021. Without additional information on market conditions or events during that period, it is unclear whether the revenue figure of 41.41 million Canadian dollars is typical or affected by unusual circumstances."
     },
     {
-        "image": "figureQA_43249-train.png",
-        "claim": "Hot Pink might have a higher value than Teal if additional colors were included in the chart.",
+        "image": "chartQA_two_col_21874-train.png",
+        "claim": "In 2018, there were 51,089 teenage conceptions in England and Wales.",
+        "label": "Supports",
+        "explanation": "The chart displays the number of pregnancies resulting in maternity from 1990 to 2018, with a specific data point for 2018 indicating 51,089 teenage conceptions. This number is clearly marked on the chart, confirming the accuracy of the claim."
+    },
+    {
+        "image": "figureQA_37961-train.png",
+        "claim": "Olive is not the maximum; Dark Turquoise has a larger portion.",
+        "label": "Refutes",
+        "explanation": "The chart visually represents the proportions of different colors, and Dark Turquoise occupies a larger segment compared to Olive. This indicates that Dark Turquoise has a greater value or representation than Olive, directly contradicting the claim that Olive is the maximum."
+    },
+    {
+        "image": "plotQA_98527-train.png",
+        "claim": "The graph shows that the rural population growth in Sub-Saharan Africa is increasing steadily over the years.",
+        "label": "Refutes",
+        "explanation": "This sentence contradicts the chart, which clearly indicates a downward trend in rural population growth for Sub-Saharan Africa, as evidenced by the declining line representing this region. The data points show a consistent decrease rather than an increase."
+    },
+    {
+        "image": "plotQA_148613-train.png",
+        "claim": "The value lost due to electrical outages in 2006 was 0.6% less than in 2009.",
+        "label": "Supports",
+        "explanation": "The chart shows that the value lost due to electrical outages in 2006 was approximately 2.5%, while in 2009 it was around 1.9%. The difference between these two values is 0.6%, confirming that the value lost in 2006 was indeed 0.6% higher than in 2009."
+    },
+    {
+        "image": "chartQA_two_col_103445-train.png",
+        "claim": "The total loan value in 2020 may have been influenced by external economic factors that are not detailed in the chart.",
         "label": "Not enough information",
-        "explanation": "This claim speculates on the possibility of Hot Pink having a higher value than Teal if the dataset included more colors. However, the current chart only provides data for a limited number of colors, making it impossible to confirm or refute this claim with the information given."
+        "explanation": "The chart provides data on loan values for specific years but does not include information on economic conditions, policy changes, or other factors that could have affected the total loan value in 2020. Without this context, it is unclear whether the figure of 367499 is a result of consistent growth, a response to specific events, or other influences."
+    },
+    {
+        "image": "plotQA_29819-train.png",
+        "claim": "The chart does not provide details on whether the discrepancies in the number of bars and legend labels are due to missing data or a different categorization of trade.",
+        "label": "Not enough information",
+        "explanation": "Without additional context or data regarding the categorization of trade or potential missing entries, it is unclear why there is a mismatch between the number of bars and legend labels. The chart only displays the total trade values without specifying the reasons for any discrepancies."
     },
     {
         "image": "chartQA_two_col_100763-train.png",
-        "claim": "Mexico's fossil CO emissions in 2015 could have been higher than reported.",
+        "claim": "The data does not clarify the factors contributing to the fluctuations in fossil CO emissions per person in Mexico from 2015 to 2018.",
         "label": "Not enough information",
-        "explanation": "This claim suggests a possibility of higher emissions in 2015 based on the lack of specific data points in the table. The chart only shows emissions for 2015, 2017, and 2018, leaving gaps in the data that prevent confirmation or refutation of this claim."
+        "explanation": "While the chart provides specific emissions values for each year, it does not include information on potential causes for the changes in emissions, such as economic activity, population growth, or changes in energy sources. Without this context, it is impossible to determine the reasons behind the emissions figures."
+    },
+    {
+        "image": "figureQA_99722-train.png",
+        "claim": "Dark Gold does not intersect with Turquoise.",
+        "label": "Supports",
+        "explanation": "The chart shows the trends of various colors over the x-axis. The line representing Dark Gold remains consistently below the line for Turquoise throughout the range of the x-axis, indicating that they do not intersect at any point."
     },
     {
         "image": "chartQA_two_col_104070-train.png",
-        "claim": "Saskatchewan's CAPEX in dollars in 2018 was 4536.",
+        "claim": "Saskatchewan's CAPEX in dollars in 2018 was 4,536 million Canadian dollars.",
         "label": "Supports",
-        "explanation": "The data entry's table lists the CAPEX values in million Canadian dollars for various regions, including Saskatchewan with a value of 4536. By directly matching the given value in the question to the table entry for Saskatchewan, it is verified that Saskatchewan's CAPEX in 2018 was 4536, thus supporting the claim."
-    },
-    {
-        "image": "plotQA_41979-train.png",
-        "claim": "The number of bars on each tick of the Y-axis is equal.",
-        "label": "Supports",
-        "explanation": "The table provided shows the data for three different countries over the years 1980, 1981, and 1982. Each year has a consistent number of values or 'bars' listed for each country in the table. This consistency confirms that the number of bars on each tick of the Y-axis is indeed equal, supporting the claim."
-    },
-    {
-        "image": "plotQA_36612-train.png",
-        "claim": "The percentage of labor force with tertiary education could be influenced by external factors not captured in the chart.",
-        "label": "Not enough information",
-        "explanation": "This claim implies that factors beyond the data in the chart could affect the percentage of labor force with tertiary education. Without additional information on these external influences, such as economic conditions or government policies, the claim lacks enough information to be supported or refuted solely based on the given chart."
-    },
-    {
-        "image": "chartQA_two_col_24638-train.png",
-        "claim": "China's inclusion in the top textile yarn exporters is influenced by its domestic textile industry's advancements.",
-        "label": "Not enough information",
-        "explanation": "This claim speculates on the potential influence of China's domestic textile industry on its significant export volume, which is not directly supported by the provided data in the chart. The chart only lists the trade values of various countries without detailing the specific factors contributing to their export quantities, making it impossible to confirm or refute this claim with the given information."
-    },
-    {
-        "image": "chartQA_two_col_100696-train.png",
-        "claim": "There were 612 enterprises manufacturing domestic appliances in the Czech Republic in 2017.",
-        "label": "Supports",
-        "explanation": "The table in the chart lists the number of enterprises in different years. Specifically, in 2017, the data shows that there were 612 enterprises, which directly corresponds to the information provided in the 'question'. Therefore, the claim is supported by the data presented in the chart."
-    },
-    {
-        "image": "plotQA_49754-train.png",
-        "claim": "The data from 2012 showed a decrease in earnings compared to 2011.",
-        "label": "Refutes",
-        "explanation": "This claim refutes the chart as it incorrectly states that the earnings in 2012 decreased from 2011. However, according to the chart, the earnings in 2012 increased to a positive value while in 2011, the earnings were negative. Therefore, the claim contradicts the actual data presented in the chart."
-    },
-    {
-        "image": "plotQA_99631-train.png",
-        "claim": "The difference between two consecutive major ticks on the Y-axis is 5000000.0",
-        "label": "Supports",
-        "explanation": "By examining the data in the table, it can be observed that the total population in Ethiopia increases by 5000000 from one year to the next. This constant increment between consecutive years directly supports the claim that the difference between two consecutive major ticks on the Y-axis is 5000000.0."
-    },
-    {
-        "image": "chartQA_two_col_82289-train.png",
-        "claim": "The exchange rate in 2019 was 10771, which was the highest among the years shown in the chart.",
-        "label": "Refutes",
-        "explanation": "This claim refutes the chart as it inaccurately states that the exchange rate peaked in 2019. However, according to the chart, the exchange rate in 2019 was reported as 9739, not 10771. In fact, the highest exchange rate was in 2013 with a value of 10876. Therefore, the claim contradicts the actual data presented in the chart."
-    },
-    {
-        "image": "figureQA_42962-train.png",
-        "claim": "Brown is greater than Orchid.",
-        "label": "Refutes",
-        "explanation": "This claim refutes the chart as it inaccurately states that Brown has a higher value than Orchid. However, based on the data in the chart, Orchid has a value of 72, which is higher than Brown with a value of 35. Therefore, the claim contradicts the actual data presented in the chart, making it a refutable statement."
-    },
-    {
-        "image": "chartQA_two_col_43103-train.png",
-        "claim": "The managed security services market generated a revenue of 2986.6 million U.S. dollars in 2014.",
-        "label": "Supports",
-        "explanation": "The data entry chart displays the revenue generated each year, with 2014 specifically showing a revenue of 2986.6 million U.S. dollars. Therefore, the claim directly aligns with the recorded information in the chart, confirming the revenue amount for that specific year."
-    },
-    {
-        "image": "chartQA_two_col_104074-train.png",
-        "claim": "355 individuals were on the liver transplant waiting list in England in March 2020.",
-        "label": "Supports",
-        "explanation": "The table in the chart provides data on the number of individuals on the waiting list in different countries, including England with 355 individuals. Thus, the claim directly corresponds to the information shown in the chart."
-    },
-    {
-        "image": "figureQA_34683-train.png",
-        "claim": "Rosy Brown is the highest.",
-        "label": "Refutes",
-        "explanation": "The refutes claim contradicts the chart data as it inaccurately states that Rosy Brown is the highest value. However, according to the chart, Web Purple holds the highest value at 87.1. Therefore, the claim directly contradicts the factual information presented in the chart."
-    },
-    {
-        "image": "chartQA_multi_col_20204-train.png",
-        "claim": "There were 517 people who committed suicide in 2009.",
-        "label": "Supports",
-        "explanation": "By looking at the data in the chart, we can see that in the row corresponding to 2009, the value under the '65 years and older' column is 171. This aligns with the answer provided, which confirms that there were 517 people who committed suicide in that year, as this value is the sum of all age groups in the same row."
-    },
-    {
-        "image": "chartQA_two_col_22614-train.png",
-        "claim": "The monthly market share of Citroen in the UK between January 2017 and December 2020 could have been influenced by factors not reflected in the chart.",
-        "label": "Not enough information",
-        "explanation": "This claim suggests that external factors beyond those presented in the chart may have impacted Citroen's market share during the specified period. Without additional data or context on these external influences, the claim lacks enough information to be confirmed or disproven solely based on the chart provided."
-    },
-    {
-        "image": "chartQA_two_col_42887-train.png",
-        "claim": "Samsung made 125 in the United States in 2013.",
-        "label": "Refutes",
-        "explanation": "This claim refutes the chart as it inaccurately states that Samsung made 125 in the United States in 2013. However, according to the chart, Samsung actually made 240 in the United States in that year. Therefore, the claim contradicts the actual data presented in the chart."
-    },
-    {
-        "image": "plotQA_40066-train.png",
-        "claim": "The label of the 2nd group of bars from the top is Female entrants.",
-        "label": "Supports",
-        "explanation": "The chart displays the percentage of new entrants in the last grade of primary education in different countries, with Female entrants listed as the 2nd group of bars from the top. By examining the data presented in the table, it is evident that the values corresponding to Female entrants are associated with the 2nd group of bars, confirming that Female entrants are indeed the label of this group."
+        "explanation": "The chart clearly shows that Saskatchewan's capital expenditure (CAPEX) is represented by the bar labeled 'Saskatchewan,' which reaches the value of 4,536 million Canadian dollars. This confirms the accuracy of the claim regarding Saskatchewan's CAPEX for the year 2018."
     },
     {
         "image": "plotQA_131728-train.png",
         "claim": "The difference between two consecutive major ticks on the Y-axis is 5.0.",
         "label": "Supports",
-        "explanation": "By examining the data in the chart, it can be observed that the values for the Y-axis increase by 5.0 units from one major tick to the next. This is consistent with the answer provided, indicating a direct correlation between the consecutive major ticks on the Y-axis being 5.0 units apart."
-    },
-    {
-        "image": "figureQA_20856-train.png",
-        "claim": "Cornflower has a lower value than Light Slate.",
-        "label": "Supports",
-        "explanation": "Based on the data in the chart, Cornflower is recorded with a value of 22, while Light Slate is recorded with a value of 97. Therefore, it is evident that Cornflower has a lower value compared to Light Slate, supporting the claim."
-    },
-    {
-        "image": "chartQA_two_col_61763-train.png",
-        "claim": "France imported 121.6 million GBP worth of spirits into the UK in 2020.",
-        "label": "Supports",
-        "explanation": "Looking at the table in the chart, we can see that France's import value is precisely 121.6 million GBP. Therefore, the claim that France imported that exact amount of spirits is directly supported by the data provided in the chart."
-    },
-    {
-        "image": "figureQA_90769-train.png",
-        "claim": "The Dodger Blue has the minimum area under the curve.",
-        "label": "Refutes",
-        "explanation": "This claim refutes the chart as it inaccurately states that Dodger Blue has the minimum value. However, based on the data in the chart, Dodger Blue does not have the minimum value under the curve. In fact, other colors like Teal and Web Gray have lower values for the x-axis labels. Therefore, the claim contradicts the actual data presented in the chart."
-    },
-    {
-        "image": "figureQA_80487-train.png",
-        "claim": "Olive Drab intersects Cadet Blue in the chart.",
-        "label": "Refutes",
-        "explanation": "This claim refutes the chart as it inaccurately states that Olive Drab intersects Cadet Blue. However, based on the data in the chart, the value for Olive Drab is consistently higher than that of Cadet Blue across all x-axis labels. Therefore, the claim contradicts the actual relationship between Olive Drab and Cadet Blue presented in the chart."
-    },
-    {
-        "image": "plotQA_92173-train.png",
-        "claim": "The trend in value-added percentages for the countries may be influenced by economic policies enacted during the time periods.",
-        "label": "Not enough information",
-        "explanation": "This claim speculates on potential reasons for the fluctuation in value-added percentages without concrete evidence from the chart to support or refute it. The data only presents the percentages without specific details on the economic policies or factors affecting the manufacturing industries in each country during the mentioned years. Therefore, additional information on economic policies or factors would be necessary to verify this claim."
-    },
-    {
-        "image": "plotQA_126784-train.png",
-        "claim": "The difference between the percentage of HIV infected female population in 1990 in Spain and the percentage in 1991 in Suriname is less than the difference between the percentage in 1992 in Suriname and the percentage in 1990 in Spain.",
-        "label": "Not enough information",
-        "explanation": "This claim is based on comparisons between different years and countries in the chart. However, the claim lacks enough information as it does not consider all possible comparisons within the data provided. Without additional data or specific values for each comparison, it is impossible to verify the accuracy of this claim."
-    },
-    {
-        "image": "plotQA_8347-train.png",
-        "claim": "The difference between the highest and lowest percentage of total merchandise exports in Uruguay is 1.9291992575408452.",
-        "label": "Supports",
-        "explanation": "By examining the table data, we can see that the highest percentage of total merchandise exports in Uruguay is 2.57 and the lowest is 0.64. Calculating the difference between these two values gives us the exact answer provided, 1.9291992575408452. Therefore, the claim is directly supported by the data in the chart."
-    },
-    {
-        "image": "figureQA_96310-train.png",
-        "claim": "Web Maroon's position could change if additional colors were included in the chart.",
-        "label": "Not enough information",
-        "explanation": "This claim proposes that the positioning of Web Maroon may shift with the inclusion of more colors in the dataset. However, as the current data only includes a limited set of colors and their corresponding values, the claim lacks enough information to verify its accuracy."
-    },
-    {
-        "image": "figureQA_51171-train.png",
-        "claim": "Steel Blue could be the highest value in the dataset.",
-        "label": "Not enough information",
-        "explanation": "This claim speculates on the possibility of Steel Blue being the highest value in the dataset. However, without additional data points or context provided in the chart, it is impossible to verify this claim based solely on the given information."
-    },
-    {
-        "image": "plotQA_28366-train.png",
-        "claim": "Germany provided the highest bilateral aid flow in 1986 among the donors listed in the chart.",
-        "label": "Refutes",
-        "explanation": "This claim refutes the chart as it inaccurately states that Germany provided the highest bilateral aid flow in 1986. However, based on the data in the chart, France provided the highest aid flow of 88,550,000, whereas Germany provided a significantly lower aid flow of 5,270,000. Therefore, the claim contradicts the actual data presented in the chart."
-    },
-    {
-        "image": "figureQA_19952-train.png",
-        "claim": "Dark Cyan is the low median in the chart.",
-        "label": "Refutes",
-        "explanation": "This claim inaccurately states that Dark Cyan is the low median in the chart. However, based on the table provided, Dark Cyan has a value of 22, which is not the lowest value. Indigo has the lowest value of 5, making it the low median in the chart. Therefore, the claim contradicts the actual data presented in the chart."
-    },
-    {
-        "image": "chartQA_two_col_42313-train.png",
-        "claim": "The amount of British pounds spent on alcoholic drinks in 2020 was 25964.",
-        "label": "Supports",
-        "explanation": "The data from the table in the chart clearly shows that in 2020, the expenditure for alcoholic drinks was recorded at 25964 million GBP. This aligns perfectly with the answer provided, solidifying the claim that the amount spent in British pounds on alcoholic drinks in 2020 was indeed 25964."
-    },
-    {
-        "image": "figureQA_63032-train.png",
-        "claim": "Dark Khaki does have the highest value among the colors shown in the chart.",
-        "label": "Refutes",
-        "explanation": "This claim refutes the chart by incorrectly stating that Dark Khaki does have the highest value. In reality, based on the data presented in the chart, Dark Khaki has a value of 72.5, which is lower than the values of Dark Slate (84.6) and Dark Seafoam (87.8). Therefore, the claim contradicts the factual information as displayed in the chart."
-    },
-    {
-        "image": "chartQA_two_col_4713-train.png",
-        "claim": "ArcelorMittal generated 116.94 in revenue in the fiscal year of 2020.",
-        "label": "Refutes",
-        "explanation": "This claim refutes the chart as it incorrectly states that the revenue generated in 2020 was 116.94. However, based on the chart, the correct revenue generated by ArcelorMittal in 2020 was 53.27 billion U.S. dollars. Therefore, the claim contradicts the factual data shown in the chart."
-    },
-    {
-        "image": "chartQA_two_col_61921-train.png",
-        "claim": "Cineplex's revenue trend in the first quarter of 2021 could have been influenced by external economic factors.",
-        "label": "Not enough information",
-        "explanation": "The claim speculates on potential external economic factors that could have affected Cineplex's revenue in Q1 '21. However, the chart lacks data on specific external economic factors or their impact on the revenue, making it unverifiable without additional information."
-    },
-    {
-        "image": "figureQA_66119-train.png",
-        "claim": "Blue Violet could have similar values to Crimson if more data points were included.",
-        "label": "Not enough information",
-        "explanation": "This claim speculates on the possibility that Blue Violet and Crimson could have similar values if more data points were present in the chart. Since the provided chart does not contain additional data points beyond the given ones, it is impossible to verify this claim."
-    },
-    {
-        "image": "plotQA_140860-train.png",
-        "claim": "The data trends indicate a potential shift in values for one entity compared to others.",
-        "label": "Not enough information",
-        "explanation": "This claim suggests a possible trend based on the data provided, but lacks specific information to confirm or refute the claim. The chart does not offer details on the factors influencing the shifts in values over time, making it impossible to validate the claim with the current data alone."
-    },
-    {
-        "image": "figureQA_37961-train.png",
-        "claim": "Aqua is the maximum.",
-        "label": "Refutes",
-        "explanation": "This claim refutes the chart as it inaccurately states that Aqua is the maximum value. However, according to the chart, Aqua has a value of 0, which is not the maximum. The maximum value in the chart is represented by Olive with a value of 1. Therefore, the claim contradicts the actual data presented in the chart."
-    },
-    {
-        "image": "chartQA_two_col_100130-train.png",
-        "claim": "The global orthopedic orthotics market's growth rate is directly proportional to the increase in market size in million U.S. dollars.",
-        "label": "Not enough information",
-        "explanation": "This claim attempts to draw a correlation between the growth rate of the orthopedic orthotics market and the increase in market size based on the provided data. However, the data in the chart only shows the market size for two specific years and does not include any growth rate information, making it impossible to confirm or refute this claim."
-    },
-    {
-        "image": "plotQA_127221-train.png",
-        "claim": "Child employment in Manufacturing could potentially increase in the future.",
-        "label": "Not enough information",
-        "explanation": "This claim speculates on a future trend based on the data provided in the chart. While the data shows a slight increase in Manufacturing employment from 0.2% to 2.1%, it is not sufficient to confirm a definite upward trend. Without additional data points or context, such as governmental policies or economic factors, it is impossible to verify if Manufacturing employment will continue to rise."
-    },
-    {
-        "image": "chartQA_two_col_4965-train.png",
-        "claim": "The revenue in 2020 was the highest among the years shown in the chart.",
-        "label": "Refutes",
-        "explanation": "This claim refutes the chart as it inaccurately states that revenue peaked in 2020. However, according to the chart, the revenue was highest in 2021 with a value of 1620 million U.S. dollars, while in 2020, the revenue was lower at 1470 million U.S. dollars. Therefore, the claim contradicts the actual data presented in the chart."
-    },
-    {
-        "image": "plotQA_26296-train.png",
-        "claim": "Iran recorded the lowest government consumption in 1971 compared to the other countries in the chart.",
-        "label": "Refutes",
-        "explanation": "This claim refutes the chart as it inaccurately states that Iran had the lowest government consumption in 1971. However, based on the data provided in the chart, Iran is shown to have recorded a substantial government consumption compared to other countries, with Constant 2005 US$ of 10,049,070,499.59 and Current US$ of 2,204,228,184.82. This refutes claim contradicts the actual data presented in the chart, where Iran's government consumption is one of the highest among the listed countries."
-    },
-    {
-        "image": "plotQA_154195-train.png",
-        "claim": "The agriculture value added per worker in 2010 was lower than in 2007.",
-        "label": "Refutes",
-        "explanation": "This claim refutes the chart as it inaccurately states that the agriculture value added per worker decreased from 2007 to 2010. However, based on the data shown in the chart, the agriculture value added per worker increased over the years, with the highest value recorded in 2012. Therefore, the claim contradicts the actual data presented in the chart."
-    },
-    {
-        "image": "plotQA_101809-train.png",
-        "claim": "In 2009, the merchandise exports could have been influenced by external economic factors.",
-        "label": "Not enough information",
-        "explanation": "This claim speculates on potential external factors that could have impacted the merchandise exports in 2009. However, without any specific data or context provided in the chart, such as trade agreements, global economic conditions, or governmental policies, it is impossible to verify this claim solely based on the given information."
-    },
-    {
-        "image": "figureQA_55737-train.png",
-        "claim": "Chartreuse has the maximum value among the given data points.",
-        "label": "Supports",
-        "explanation": "By examining the data in the chart, it can be observed that Chartreuse is represented with the highest value of 55, which is greater than all other values listed. As a result, it is clear that Chartreuse holds the maximum position within the dataset, confirming the claim."
-    },
-    {
-        "image": "chartQA_two_col_40805-train.png",
-        "claim": "C.H.I. Overhead Doors was the brand of garage doors that 17.6 percent of respondents used the most.",
-        "label": "Refutes",
-        "explanation": "This claim refutes the chart as it inaccurately states that C.H.I. Overhead Doors was the brand used the most by 17.6% of respondents. However, based on the data presented in the chart, it is actually Wayne-Dalton that was the brand used by 17.6% of respondents, not C.H.I. Overhead Doors. Therefore, the claim contradicts the factual information provided in the chart."
-    },
-    {
-        "image": "figureQA_82199-train.png",
-        "claim": "Light Gold has the highest value in the chart.",
-        "label": "Supports",
-        "explanation": "By analyzing the data in the chart, it is evident that Light Gold has the highest values compared to all other elements listed. This is supported by the numerical values present in the table, where Light Gold consistently has the highest recorded values among all the elements."
-    },
-    {
-        "image": "plotQA_145467-train.png",
-        "claim": "Among the countries listed in the chart, Private consumption in Costa Rica is the lowest compared to the other countries.",
-        "label": "Refutes",
-        "explanation": "This claim refutes the chart as it inaccurately states that Private consumption in Costa Rica is the lowest among the listed countries. However, based on the chart data, the Private consumption in Costa Rica is actually 338.7, which is higher than the values of the other countries. Therefore, the claim contradicts the actual data presented in the chart."
-    },
-    {
-        "image": "plotQA_86304-train.png",
-        "claim": "The trend in new business registration is driven by economic factors.",
-        "label": "Not enough information",
-        "explanation": "This claim implies that the fluctuation in new business registration numbers is solely influenced by economic factors. However, the chart does not provide any specific data or analysis on the economic context or factors affecting the registration numbers. Without this additional information, it is impossible to confirm or disprove the claim."
-    },
-    {
-        "image": "chartQA_two_col_40908-train.png",
-        "claim": "The CPI in April 2021 was 105.26.",
-        "label": "Supports",
-        "explanation": "The data entry in the chart includes the Consumer Price Index (CPI) values for each month, with April 2021 listed as 105.26. The 'question' specifically asks for the CPI in April 2021, and the 'answer' confirms it as 105.26, which directly aligns with the data provided in the chart."
-    },
-    {
-        "image": "figureQA_63892-train.png",
-        "claim": "Dark Violet could potentially have a higher rating in a different context.",
-        "label": "Not enough information",
-        "explanation": "The chart does not provide any context or criteria for determining 'roughness', leaving room for interpretation. Without additional details on how 'roughness' is defined or measured, it is impossible to determine whether Dark Violet is actually not the roughest based on the data provided."
-    },
-    {
-        "image": "chartQA_two_col_103922-train.png",
-        "claim": "The number of Yellow Pages Canada customers in 2020 was 125400.",
-        "label": "Supports",
-        "explanation": "The chart provided in the data entry lists the characteristic '2020' along with the corresponding number of customers '125400'. Therefore, the claim that the number of Yellow Pages Canada customers in 2020 was 125400 directly aligns with the data recorded in the chart."
-    },
-    {
-        "image": "chartQA_two_col_103445-train.png",
-        "claim": "The loan value in 2018 could have been influenced by economic factors not evident in the chart.",
-        "label": "Not enough information",
-        "explanation": "This claim posits that the loan value in 2018 might have been impacted by external economic factors not explicitly mentioned in the chart. Without additional data or context on these potential influences, it is impossible to confirm or refute this claim with the existing information provided."
-    },
-    {
-        "image": "figureQA_99722-train.png",
-        "claim": "Dark Gold does not intersect Turquoise.",
-        "label": "Supports",
-        "explanation": "By analyzing the data in the chart, it can be observed that the values for Dark Gold and Turquoise do not intersect at any point. This is evident as the values for Dark Gold are consistently higher than those for Turquoise across all instances. Therefore, it is supported that Dark Gold does not intersect Turquoise based on the data provided in the chart."
-    },
-    {
-        "image": "chartQA_two_col_61350-train.png",
-        "claim": "China's import value being lower than Japan could be due to seasonal fluctuations.",
-        "label": "Not enough information",
-        "explanation": "This claim speculates on possible reasons for the difference in import values between China and Japan, as the chart does not provide information on the specific factors influencing their import values. Without additional data on seasonal trends or other external factors, the claim remains unverifiable based solely on the chart."
-    },
-    {
-        "image": "plotQA_148613-train.png",
-        "claim": "The value lost due to electrical outages was 0.6 units higher in 2006 compared to 2009.",
-        "label": "Supports",
-        "explanation": "By referring to the table in the chart, it can be seen that the value lost due to electrical outages in 2006 was 2.5 units and in 2009 it was 1.9 units. The answer provided states that the difference between these values is 0.6 units, which is accurate and supported by the data presented in the table."
-    },
-    {
-        "image": "plotQA_47197-train.png",
-        "claim": "The label or title of the X-axis is 'Educated males (% of male labor force)'.",
-        "label": "Supports",
-        "explanation": "Looking at the data in the chart, it presents the distribution of the educated male labor force in different countries in the year 1991 across different levels of education. The X-axis represents the different levels of education, with the title indicating that the data displayed is specifically for educated males as a percentage of the male labor force, confirming the claim."
-    },
-    {
-        "image": "plotQA_29819-train.png",
-        "claim": "The total earnings trend may be influenced by external economic factors not reflected in the data.",
-        "label": "Not enough information",
-        "explanation": "This claim suggests that external economic factors could play a role in the trend of total earnings shown in the chart. However, the chart only displays the earnings of Bahamas by trading goods and services without detailing the external economic factors or their impact, making it impossible to verify this claim with the given data alone."
-    },
-    {
-        "image": "plotQA_98527-train.png",
-        "claim": "The table shows a consistent negative trend in rural population growth over the years for all regions mentioned.",
-        "label": "Refutes",
-        "explanation": "This claim refutes the chart as it inaccurately states a negative trend in rural population growth for all regions mentioned. However, according to the data in the chart, there are fluctuations in population growth rates across the years and regions, with some years and regions showing positive growth rates. Therefore, the claim contradicts the actual data presented in the chart."
-    },
-    {
-        "image": "chartQA_two_col_2031-train.png",
-        "claim": "The value of China in dollars in 2020 was 15000.",
-        "label": "Refutes",
-        "explanation": "This claim refutes the chart as it falsely states that the value of China in 2020 was 15000. However, based on the data in the chart, the actual value for China in 2020 was 18764. By inaccurately reducing the reported value, the claim directly contradicts the factual data presented in the chart."
-    },
-    {
-        "image": "chartQA_two_col_41382-train.png",
-        "claim": "The train station with the lowest annual number of passengers as of 2020 was Napoli Centrale.",
-        "label": "Refutes",
-        "explanation": "This claim refutes the chart as it incorrectly states that Napoli Centrale had the lowest annual number of passengers. However, based on the data in the chart, Napoli Centrale had 50 million passengers, making it the sixth highest station in terms of annual passengers. The lowest annual number of passengers in the chart is reported as 50 million for Roma Tiburtina, not Napoli Centrale. Therefore, the refutes claim directly contradicts the actual data presented in the chart."
-    },
-    {
-        "image": "plotQA_58019-train.png",
-        "claim": "The average percentage of rural population growth in Congo (Democratic) is greater than the average percentage of rural population growth in Lower middle income taken over all years.",
-        "label": "Refutes",
-        "explanation": "This claim refutes the chart as it inaccurately states that the average percentage of rural population growth in Congo (Democratic) is greater than the average percentage of rural population growth in Lower middle income taken over all years. However, based on the data presented in the chart, the average percentage of rural population growth in Congo (Democratic) across all years is lower than the average percentage of rural population growth in Lower middle income. Therefore, the claim contradicts the actual data provided in the chart."
-    },
-    {
-        "image": "figureQA_23322-train.png",
-        "claim": "Dark Orange has a higher value than Red.",
-        "label": "Supports",
-        "explanation": "Examining the data in the chart, it is evident that Dark Orange is recorded with higher values in each corresponding category compared to Red. This confirms that Dark Orange has a higher value than Red, supporting the claim made."
-    },
-    {
-        "image": "chartQA_two_col_791-train.png",
-        "claim": "The average player salary in Atlanta United in 2019 was 200.00 dollars.",
-        "label": "Refutes",
-        "explanation": "This claim refutes the chart as it inaccurately states the average player salary for Atlanta United in 2019 was 200.00 dollars. According to the chart, the average player salary for Atlanta United was actually 404.91 dollars, which is significantly higher than the claim. Therefore, the refutes claim contradicts the actual data presented in the chart."
-    },
-    {
-        "image": "chartQA_two_col_22311-train.png",
-        "claim": "The youth unemployment rate may have been influenced by external economic factors beyond the data shown.",
-        "label": "Not enough information",
-        "explanation": "This claim speculates on potential external economic factors that could have impacted the youth unemployment rate but is unverifiable due to the lack of specific details or data in the chart supporting or refuting this claim."
-    },
-    {
-        "image": "plotQA_156791-train.png",
-        "claim": "The amount of fertilizer consumption was at its minimum in 2008.",
-        "label": "Supports",
-        "explanation": "By examining the table in the chart, we can see that in the year 2008, the fertilizer consumption was 8.59, which is the lowest among all the recorded years. This directly supports the claim that the amount of fertilizer consumption was minimum in 2008."
-    },
-    {
-        "image": "plotQA_133988-train.png",
-        "claim": "Across all countries, the minimum ppp conversion factor for private consumption is 0.35.",
-        "label": "Refutes",
-        "explanation": "This claim refutes the chart as it inaccurately states that the minimum ppp conversion factor for private consumption is 0.35. However, according to the chart, the minimum ppp conversion factor for private consumption is 0.32, as observed in the data for one of the countries listed. Therefore, the claim contradicts the actual data presented in the chart."
-    },
-    {
-        "image": "chartQA_two_col_103205-train.png",
-        "claim": "The amount spent on federal and international policing for the Royal Canadian Mounted Police in 2018/19 was influenced by factors not presented in the chart.",
-        "label": "Not enough information",
-        "explanation": "The claim implies a direct correlation between the amount spent on federal and international policing and a singular cause, which is not supported by the data in the chart. The chart only provides the expenditure values without detailing the specific factors or breakdown that influenced these expenditures, making it impossible to determine the exact reasons behind the amount spent on federal and international policing."
+        "explanation": "The Y-axis of the chart represents the percentage of long-term male unemployment, and it is marked with major ticks at intervals of 5.0. This can be observed from the spacing between the tick marks, which clearly indicates that each major tick represents an increase of 5 percentage points."
     },
     {
         "image": "plotQA_37698-train.png",
-        "claim": "In Tonga, the percentage of firms competing against unregistered firms is 40.0, which is the lowest among the countries listed in the chart.",
+        "claim": "There are 2 bars on the 2nd tick from the top.",
         "label": "Refutes",
-        "explanation": "This claim refutes the chart as it inaccurately states that Tonga has the lowest percentage of firms competing against unregistered firms. According to the chart, Tonga actually has a percentage of 86.8, which is the highest among the countries listed. Therefore, the claim contradicts the actual data presented in the chart."
+        "explanation": "This statement contradicts the chart, which clearly shows 3 distinct bars at the 2nd tick from the top, representing the percentage of firms in different categories. The presence of 3 bars indicates that the claim about there being only 2 bars is incorrect."
+    },
+    {
+        "image": "figureQA_55737-train.png",
+        "claim": "Chartreuse is the maximum value in the chart.",
+        "label": "Supports",
+        "explanation": "The chart displays four color categories with their corresponding values on the x-axis. Chartreuse has the longest bar, indicating it has the highest value compared to Web Gray, Medium Mint, and Magenta. This visual representation confirms that Chartreuse is indeed the maximum."
+    },
+    {
+        "image": "chartQA_two_col_82289-train.png",
+        "claim": "The average exchange rate from Indonesian rupiah to Australian dollars in 2020 was 10,500.",
+        "label": "Refutes",
+        "explanation": "This claim contradicts the chart, which shows that the exchange rate in 2020 was 10,771. The refuted claim suggests a higher average exchange rate than what is visually represented in the data, thereby misrepresenting the actual trend."
+    },
+    {
+        "image": "chartQA_two_col_41382-train.png",
+        "claim": "Roma Termini had fewer passengers than Milano Centrale in 2020.",
+        "label": "Refutes",
+        "explanation": "This statement contradicts the chart, which clearly shows that Roma Termini had the highest number of passengers at 160 million, significantly more than Milano Centrale's 120 million."
+    },
+    {
+        "image": "chartQA_two_col_24638-train.png",
+        "claim": "The chart does not specify the total global textile yarn exports for 2019, making it unclear how China's exports compare to the overall market.",
+        "label": "Not enough information",
+        "explanation": "Without knowing the total global textile yarn exports, we cannot determine the significance of China's export figure in relation to the entire market. The chart only provides individual country export values, which limits our ability to assess China's position in a broader context."
+    },
+    {
+        "image": "chartQA_two_col_22311-train.png",
+        "claim": "The youth unemployment rate in Swaziland may have fluctuated due to various economic factors, but specific reasons for the rate in 2019 are not detailed.",
+        "label": "Not enough information",
+        "explanation": "The chart shows a general trend of youth unemployment rates over the years, but it does not provide information on the specific economic conditions or policies that may have influenced the rate in 2019. Without additional context or data, it is unclear what factors contributed to the unemployment rate at that time."
+    },
+    {
+        "image": "plotQA_28366-train.png",
+        "claim": "The graph clearly shows that low and middle income countries are represented as significant contributors in the aid flow data.",
+        "label": "Refutes",
+        "explanation": "This statement contradicts the chart because the visual representation indicates that only specific countries are labeled, and there is no indication of low and middle income countries being included in the aid flow data. The absence of these categories in the legend suggests they are not part of the analysis presented."
+    },
+    {
+        "image": "figureQA_63032-train.png",
+        "claim": "Dark Khaki has the highest value among all the colors.",
+        "label": "Refutes",
+        "explanation": "This sentence contradicts the chart because it suggests that Dark Khaki is the color with the highest value, while the chart visually indicates that other colors, such as Dark Slate and Light Salmon, have higher values than Dark Khaki."
+    },
+    {
+        "image": "chartQA_two_col_103922-train.png",
+        "claim": "The number of Yellow Pages Canada customers in 2020 was 125,400.",
+        "label": "Supports",
+        "explanation": "This statement is supported by the chart, which clearly shows a bar for the year 2020 labeled with the value 125,400. The chart illustrates the decline in the number of customers over the years, with 2020 being the lowest point recorded."
+    },
+    {
+        "image": "chartQA_two_col_2031-train.png",
+        "claim": "The value of the United States in dollars in 2020 was 15,000.",
+        "label": "Refutes",
+        "explanation": "This sentence contradicts the chart, which clearly shows that the brand value of the United States is significantly higher at 23,738 billion U.S. dollars. The stated value of 15,000 is much lower and does not align with the visual data presented."
+    },
+    {
+        "image": "figureQA_20856-train.png",
+        "claim": "Cornflower is less than Light Slate.",
+        "label": "Supports",
+        "explanation": "The chart shows that the value for Light Slate is significantly higher than that for Cornflower. Light Slate has a value close to 100, while Cornflower has a value of approximately 30. This clearly indicates that Cornflower is less than Light Slate."
+    },
+    {
+        "image": "chartQA_two_col_2514-train.png",
+        "claim": "In what state did 31.8 percent of the Australian population live? Victoria.",
+        "label": "Refutes",
+        "explanation": "This sentence contradicts the chart, which clearly shows that New South Wales has the highest population share at approximately 31.8 percent, while Victoria has a lower percentage, indicating that the majority of the population does not reside there."
+    },
+    {
+        "image": "plotQA_26296-train.png",
+        "claim": "There is only one color bar present in the chart.",
+        "label": "Refutes",
+        "explanation": "This statement contradicts the chart, which clearly displays two distinct colored bars: one representing 'Constant 2005 US$' in red and another representing 'Current US$' in cyan. The presence of both colors indicates that there are indeed two different colored bars."
+    },
+    {
+        "image": "figureQA_66119-train.png",
+        "claim": "The relationship between Blue Violet and Crimson cannot be determined without knowing the specific context or criteria for comparison.",
+        "label": "Not enough information",
+        "explanation": "The chart shows the values of Blue Violet and Crimson over a range of x-axis values, but it does not provide information on the specific conditions or metrics being measured. Without understanding the context or the significance of the values represented, it is impossible to definitively conclude the relationship between Blue Violet and Crimson."
+    },
+    {
+        "image": "figureQA_23322-train.png",
+        "claim": "Dark Orange is the maximum.",
+        "label": "Supports",
+        "explanation": "The chart shows a pie chart where the segment representing Dark Orange is the largest compared to the other segments. This indicates that Dark Orange has the highest value or proportion in the data being represented, confirming that it is indeed the maximum."
+    },
+    {
+        "image": "figureQA_51171-train.png",
+        "claim": "The chart does not provide context on the criteria used to determine the median values for each color.",
+        "label": "Not enough information",
+        "explanation": "Without knowing how the median values were calculated or what specific data points were considered, it is unclear whether Steel Blue's position relative to other colors is significant or if it is influenced by external factors not represented in the chart."
+    },
+    {
+        "image": "figureQA_56247-train.png",
+        "claim": "Olive is greater than Firebrick.",
+        "label": "Supports",
+        "explanation": "The chart shows that the value for Olive is higher than that for Firebrick. Specifically, Olive has a value of approximately 90, while Firebrick has a value of around 70. This indicates that Olive is indeed greater than Firebrick."
+    },
+    {
+        "image": "chartQA_two_col_43103-train.png",
+        "claim": "The managed security services market generated 2986.6 million U.S. dollars in revenue in 2014.",
+        "label": "Supports",
+        "explanation": "This statement is supported by the chart, which clearly shows a bar for the year 2014 reaching the value of 2986.6 million U.S. dollars. The height of the bar corresponds directly to the revenue figure, confirming the accuracy of the claim."
+    },
+    {
+        "image": "chartQA_two_col_42313-train.png",
+        "claim": "In 2020, the amount of British pounds spent on alcoholic drinks was 25,964 million GBP.",
+        "label": "Supports",
+        "explanation": "This sentence is supported by the chart, which shows the expenditure on alcoholic drinks in million GBP from 2005 to 2020. The bar for 2020 reaches the value of 25,964 million GBP, confirming the amount spent in that year."
+    },
+    {
+        "image": "plotQA_13192-train.png",
+        "claim": "There are 3 different coloured dotlines in the chart.",
+        "label": "Supports",
+        "explanation": "The chart displays three distinct colors representing different countries: Equatorial Guinea (green), Nicaragua (blue), and Norway (orange). Each color corresponds to a unique dotline, confirming that there are indeed three different coloured dotlines."
+    },
+    {
+        "image": "plotQA_156791-train.png",
+        "claim": "The amount of fertilizer consumption was minimum in 2008.",
+        "label": "Supports",
+        "explanation": "The chart shows that in 2008, the fertilizer consumption per hectare of arable land in Algeria was the lowest compared to other years, with a value significantly lower than those recorded in 2007, 2009, 2010, 2011, and 2012."
+    },
+    {
+        "image": "figureQA_90769-train.png",
+        "claim": "Dodger Blue has the highest area under the curve compared to other colors.",
+        "label": "Refutes",
+        "explanation": "This sentence contradicts the chart because the data points for Dodger Blue do not consistently reach the highest values on the y-axis compared to other colors. In fact, the chart shows that other colors, such as Web Gray and Teal, have higher values at various x-axis points, indicating that Dodger Blue does not dominate in area under the curve."
+    },
+    {
+        "image": "chartQA_two_col_4965-train.png",
+        "claim": "Nike stopped providing uniforms and apparel to NFL teams in 2012.",
+        "label": "Refutes",
+        "explanation": "This sentence contradicts the chart, which shows a consistent increase in revenue from 2010 to 2021, indicating that Nike's involvement with NFL teams likely contributed to this growth. If Nike had stopped providing uniforms in 2012, one would expect a decline or stagnation in revenue, which is not reflected in the data."
+    },
+    {
+        "image": "figureQA_82199-train.png",
+        "claim": "Light Gold does not have the highest value.",
+        "label": "Supports",
+        "explanation": "The chart shows various lines representing different categories, with Light Gold indicated by a dotted line. Upon examining the y-axis values, it is clear that Light Gold's value remains consistently lower than other categories, such as Dark Orchid and Firebrick, which reach higher y-axis values. Therefore, the claim that Light Gold has the highest value is incorrect."
+    },
+    {
+        "image": "chartQA_two_col_61350-train.png",
+        "claim": "The chart does not provide information on the specific categories of goods that contributed to Switzerland's import value in 2019.",
+        "label": "Not enough information",
+        "explanation": "Without knowing the types of goods imported, it is unclear whether the high import value is due to a few high-value items or a diverse range of products. This lack of detail prevents a full understanding of the factors influencing the import value."
+    },
+    {
+        "image": "figureQA_63892-train.png",
+        "claim": "The roughness levels of colors other than Dark Violet are not specified.",
+        "label": "Not enough information",
+        "explanation": "The chart provides data on various colors and their corresponding values, but it does not indicate the specific roughness levels for each color. Without this information, it is impossible to determine how Dark Violet compares to other colors in terms of roughness."
+    },
+    {
+        "image": "plotQA_86304-train.png",
+        "claim": "The absence of grids in the graph may affect the readability of the data presented.",
+        "label": "Not enough information",
+        "explanation": "While the graph does not contain grids, it is unclear how this absence impacts the interpretation of the data. The visual clarity and ease of reading the data points could vary based on individual preferences or the specific context in which the graph is used, which cannot be determined from the chart alone."
+    },
+    {
+        "image": "figureQA_34683-train.png",
+        "claim": "Saint Laurent operated only 25 stores in Western Europe in 2020.",
+        "label": "Refutes",
+        "explanation": "This sentence contradicts the information in the chart by significantly reducing the number of stores reported. The chart likely indicates a higher value, suggesting a more extensive presence in Western Europe, which is inconsistent with the claim of only 25 stores."
+    },
+    {
+        "image": "chartQA_two_col_2248-train.png",
+        "claim": "Housing transactions forecasted to occur in 2025 are estimated to be only 1.2.",
+        "label": "Refutes",
+        "explanation": "This sentence contradicts the chart, which clearly shows that the forecast for housing transactions in 2025 is 1.4 million. By stating that the estimate is only 1.2 million, it misrepresents the upward trend indicated in the chart, where the values for previous years are consistently increasing, culminating in the 1.4 million forecast for 2025."
+    },
+    {
+        "image": "figureQA_43249-train.png",
+        "claim": "The comparison between Hot Pink and Teal cannot be determined without knowing the exact values represented in the chart.",
+        "label": "Not enough information",
+        "explanation": "While the chart visually represents the lengths of the bars for Hot Pink and Teal, it does not provide specific numerical values. Therefore, it is unclear whether Hot Pink is indeed greater than, less than, or equal to Teal based solely on the visual representation."
+    },
+    {
+        "image": "chartQA_two_col_100696-train.png",
+        "claim": "In 2017, there were 612 enterprises manufacturing domestic appliances in the Czech Republic.",
+        "label": "Supports",
+        "explanation": "This statement is supported by the chart, which shows the number of enterprises manufacturing domestic appliances in the Czech Republic from 2008 to 2017. The bar for 2017 clearly indicates a value of 612, confirming the number of enterprises for that year."
+    },
+    {
+        "image": "plotQA_92173-train.png",
+        "claim": "The absence of Senegal in the graph could be due to a lack of available data for the country during the specified years.",
+        "label": "Not enough information",
+        "explanation": "The chart only includes data for Mauritius, New Zealand, Peru, and the United Kingdom, but does not provide any context or information regarding other countries, including Senegal. Without additional data or context, it is unclear whether Senegal was excluded due to a lack of data, or if it simply was not relevant to the analysis presented."
+    },
+    {
+        "image": "chartQA_two_col_40805-train.png",
+        "claim": "Wayne-Dalton was the brand of garage doors used the most by only 8.4 percent of respondents.",
+        "label": "Refutes",
+        "explanation": "This sentence contradicts the chart, which shows that Wayne-Dalton was used by 17.6 percent of respondents. By stating that only 8.4 percent used Wayne-Dalton, it misrepresents the data and suggests a lower preference for this brand than what is indicated in the chart."
+    },
+    {
+        "image": "plotQA_140860-train.png",
+        "claim": "The percentage of value added in manufacturing food and tobacco in Sri Lanka may fluctuate significantly over the years.",
+        "label": "Not enough information",
+        "explanation": "The chart shows the percentage of value added in manufacturing for Sri Lanka and other countries over several years, but it does not provide specific data points or trends for each year. Without detailed year-by-year data or context on factors influencing these percentages, it is unclear whether the value added in Sri Lanka consistently exceeds 28% or if it varies significantly, making it impossible to confirm the stability of the claim."
+    },
+    {
+        "image": "plotQA_103743-train.png",
+        "claim": "The total water productivity of Afghanistan is greater than 0.30000000000000004 US$ in 1 year.",
+        "label": "Supports",
+        "explanation": "The chart shows an increasing trend in total water productivity from 2002 to 2013. The data point for the year 2003 indicates that the productivity exceeds 0.30000000000000004 US$, confirming that there is indeed 1 year where the total water productivity is greater than this value."
+    },
+    {
+        "image": "plotQA_126784-train.png",
+        "claim": "The overall trend in HIV infection rates among females in Suriname and Swaziland over the years cannot be determined solely from the data for 1991 and 1992.",
+        "label": "Not enough information",
+        "explanation": "The chart provides specific percentages for the years 1991 and 1992, but it does not include data for other years or contextual information that could explain changes in infection rates. Without additional data points or trends, it is unclear whether the differences observed are part of a larger pattern or anomalies for those specific years."
+    },
+    {
+        "image": "chartQA_two_col_104074-train.png",
+        "claim": "In March 2020, there were 355 people on the liver transplant waiting list in England.",
+        "label": "Supports",
+        "explanation": "The chart clearly shows that the number of individuals on the waiting list for liver transplants in England is represented by a bar reaching the value of 355, which is significantly higher than the numbers for Wales, Scotland, and Northern Ireland."
+    },
+    {
+        "image": "plotQA_101809-train.png",
+        "claim": "The data does not clarify whether the decrease in merchandise exports in 2007 was influenced by external economic factors or domestic policies.",
+        "label": "Not enough information",
+        "explanation": "The chart shows a decline in merchandise exports in 2007, but it does not provide context regarding the reasons for this decline. Without additional information on external economic conditions or domestic policies during that year, it is impossible to determine the specific causes of the decrease."
+    },
+    {
+        "image": "plotQA_99631-train.png",
+        "claim": "The difference between two consecutive major ticks on the Y-axis is 5,000,000.",
+        "label": "Supports",
+        "explanation": "The Y-axis of the chart represents the total population in Ethiopia, and the major ticks are evenly spaced. Each tick represents an increase of 5,000,000 in population, as indicated by the numerical labels on the Y-axis."
+    },
+    {
+        "image": "chartQA_two_col_103205-train.png",
+        "claim": "The total expenditures on policing services in Canada may have varied significantly in other years, affecting the context of the 2018/19 spending.",
+        "label": "Not enough information",
+        "explanation": "The chart provides a snapshot of expenditures for a specific year but does not include historical data or trends over time. Without this context, it is unclear how the 2018/19 spending compares to other years, making it impossible to fully assess the significance of the amount spent on contract policing."
+    },
+    {
+        "image": "plotQA_123057-train.png",
+        "claim": "The chart does not provide information on the number of stores operated by Saint Laurent in other regions or the total number of stores globally.",
+        "label": "Not enough information",
+        "explanation": "The chart focuses solely on the percentage of urban populations having access to drinking water across various countries and does not include any data related to retail operations or store counts for specific brands like Saint Laurent."
+    },
+    {
+        "image": "figureQA_80487-train.png",
+        "claim": "Cadet Blue intersects Olive Drab at multiple points.",
+        "label": "Refutes",
+        "explanation": "The chart visually shows that the data points for Cadet Blue and Olive Drab overlap at certain x-axis values, indicating that they do intersect. This contradicts the claim that they do not intersect."
+    },
+    {
+        "image": "figureQA_19952-train.png",
+        "claim": "Dark Cyan has the lowest median value among the colors listed.",
+        "label": "Refutes",
+        "explanation": "This sentence contradicts the chart because Dark Cyan is represented by a bar that is significantly higher than several other colors, such as Indian Red and Dim Gray, indicating that it does not have the lowest median value."
+    },
+    {
+        "image": "chartQA_two_col_4713-train.png",
+        "claim": "ArcelorMittal generated 60.00 in revenue in the fiscal year of 2020.",
+        "label": "Refutes",
+        "explanation": "This statement contradicts the chart, which clearly shows that the revenue for ArcelorMittal in 2020 was 53.27 billion U.S. dollars. The refuted claim inaccurately states a higher revenue figure, which does not align with the data presented in the chart."
+    },
+    {
+        "image": "plotQA_58019-train.png",
+        "claim": "In 3 years, the percentage of rural population growth in Lower middle income is less than the average percentage of rural population growth in Lower middle income taken over all years.",
+        "label": "Refutes",
+        "explanation": "This statement contradicts the chart, which shows that the rural population growth for Lower middle income consistently remains higher in the last three years compared to the average growth across all years. The visual data indicates an upward trend in the recent years, suggesting that the growth rate is indeed greater than the historical average."
+    },
+    {
+        "image": "plotQA_127221-train.png",
+        "claim": "The chart does not provide specific data on the number of stores operated by Saint Laurent in Western Europe in 2020.",
+        "label": "Not enough information",
+        "explanation": "While the chart presents information about child employment in various industries in Mongolia, it does not include any details related to retail operations or the number of stores for any brand, including Saint Laurent. Therefore, it is impossible to verify the claim regarding the number of stores based on the provided chart."
+    },
+    {
+        "image": "figureQA_96216-train.png",
+        "claim": "The values of other colors may vary significantly at different points on the x-axis.",
+        "label": "Not enough information",
+        "explanation": "Without specific data points or a clear trend line for each color across the entire x-axis, it is impossible to determine how the values of other colors compare to Green at various intervals. This lack of detailed information prevents a definitive conclusion about the relative values."
+    },
+    {
+        "image": "plotQA_133988-train.png",
+        "claim": "In all countries, the minimum PPP conversion factor for private consumption is actually 0.1.",
+        "label": "Refutes",
+        "explanation": "This sentence contradicts the chart, which shows that the minimum PPP conversion factor for private consumption is significantly higher, with values approaching 100 for some countries. The chart visually indicates that the private consumption values are not close to 0.1, thus refuting the claim."
+    },
+    {
+        "image": "plotQA_145467-train.png",
+        "claim": "There are only 2 bars on the 2nd tick from the right.",
+        "label": "Refutes",
+        "explanation": "This sentence contradicts the chart because the visual representation clearly shows 4 distinct bars at the 2nd tick from the right, indicating the PPP conversion factors for different countries. The presence of 4 bars is essential to the data being presented, and stating there are only 2 bars misrepresents the information."
+    },
+    {
+        "image": "plotQA_36612-train.png",
+        "claim": "The percentage of the unemployed labor force with tertiary education may vary significantly based on economic conditions and job market demands each year.",
+        "label": "Not enough information",
+        "explanation": "The chart provides data on the percentage of the unemployed labor force with different levels of education over several years, but it does not include information on economic conditions or job market demands that could influence these percentages. Without this context, it is unclear how these factors may affect the average percentage of labor force receiving tertiary education."
+    },
+    {
+        "image": "plotQA_47197-train.png",
+        "claim": "The label of the X-axis is 'Educated males (% of male labor force)'.",
+        "label": "Supports",
+        "explanation": "This sentence is correct because the X-axis of the chart clearly indicates the percentage of educated males within the male labor force, as shown by the numerical scale and the accompanying label. The chart visually represents the data related to the education levels of males in different countries, making it evident that the X-axis is focused on the percentage of educated males."
+    },
+    {
+        "image": "plotQA_40066-train.png",
+        "claim": "The label of the 2nd group of bars from the top is 'Female entrants'.",
+        "label": "Supports",
+        "explanation": "In the chart, the groups of bars are organized by gender, with 'Male entrants' at the top and 'Female entrants' directly below it. The labeling clearly indicates that the second group corresponds to female entrants, as shown by the distinct color coding and the arrangement of the bars."
+    },
+    {
+        "image": "plotQA_154195-train.png",
+        "claim": "The graph shows data for only 4 years.",
+        "label": "Refutes",
+        "explanation": "This statement contradicts the chart because the visual representation clearly indicates data points for 6 distinct years, as evidenced by the labeled years on the x-axis."
+    },
+    {
+        "image": "chartQA_two_col_4043-train.png",
+        "claim": "The GDP figures for Florida may have been influenced by various economic factors that are not detailed in the chart.",
+        "label": "Not enough information",
+        "explanation": "The chart provides GDP values over several years but does not include information on external economic conditions, policy changes, or other factors that could have impacted these figures. Without this context, it is unclear whether the GDP value of 963.26 is a result of positive growth, economic recovery, or other influences."
+    },
+    {
+        "image": "plotQA_41979-train.png",
+        "claim": "The number of bars on each tick of the Y-axis is equal.",
+        "label": "Supports",
+        "explanation": "The Y-axis represents the percentage of female unemployment, and each tick mark corresponds to a specific value. The chart displays three bars for each country, representing the years 1980, 1981, and 1982. Since each country has the same number of bars (three) for each tick on the Y-axis, it confirms that the number of bars on each tick is indeed equal."
     },
     {
         "image": "figureQA_43461-train.png",
         "claim": "Medium Seafoam is not the high median.",
         "label": "Supports",
-        "explanation": "The data in the chart includes values for Medium Seafoam, which are not the highest among all the data points. Based on the recorded values, it is evident that Medium Seafoam does not represent the high median, supporting the claim that Medium Seafoam is not the high median."
+        "explanation": "The chart shows that Medium Seafoam occupies a smaller portion of the total compared to other segments, indicating that it does not represent the highest median value among the categories presented."
     },
     {
         "image": "plotQA_139568-train.png",
-        "claim": "The relationship between the labor force participation rates in North America and Kazakhstan from 2001 to 2005 is impacted by external economic factors.",
+        "claim": "The overall trends in labor force participation rates for North America and Kazakhstan from 2002 to 2005 cannot be determined without specific numerical values for each year.",
         "label": "Not enough information",
-        "explanation": "This claim suggests that external economic factors may have influenced the labor force participation rates in North America and Kazakhstan over the specified time period, but the chart data does not provide any specific information on these external factors. Without additional data on economic conditions or policies during those years, it is not possible to verify or refute this claim."
+        "explanation": "The chart visually represents the labor force participation rates for different regions, but it does not provide exact numerical values for the years 2002 and 2005. Without these specific values, it is impossible to accurately compare the differences in participation rates between North America and Kazakhstan."
     },
     {
-        "image": "figureQA_56247-train.png",
-        "claim": "Olive has a higher value than Firebrick.",
+        "image": "chartQA_two_col_61763-train.png",
+        "claim": "In 2020, France imported 121.6 million GBP worth of spirits into the UK.",
         "label": "Supports",
-        "explanation": "By examining the chart, it is evident that the value associated with Olive is 94, whereas the value associated with Firebrick is 80. Thus, it is clear that Olive's value is greater than that of Firebrick, aligning with the supports claim."
+        "explanation": "This statement is supported by the chart, which shows that France's import value for spirits in 2020 is represented by a bar reaching 121.6 million GBP. The chart clearly indicates the import values for various countries, with France being one of the highest at this amount."
     },
     {
-        "image": "chartQA_two_col_4043-train.png",
-        "claim": "Florida's GDP in dollars in the previous year was likely influenced by external economic factors not included in the chart.",
-        "label": "Not enough information",
-        "explanation": "This claim assumes that external economic factors could have impacted Florida's GDP without specifying the nature of these factors or providing data to support this assertion. The chart solely presents historical GDP values without detailing the specific drivers behind each year's figures, making it impossible to verify the claim without additional context or information."
-    },
-    {
-        "image": "plotQA_123057-train.png",
-        "claim": "Countries with lower percentages may actually have better infrastructure for providing access to drinking water.",
-        "label": "Not enough information",
-        "explanation": "This claim suggests a possible scenario where countries with lower percentages may have invested more in infrastructure or technology for providing access to drinking water. However, the chart only provides data on the percentages of urban population having access to drinking water in different countries over three years, not indicating any specifics on infrastructure or investment levels, making it impossible to confirm or deny this claim based solely on the chart data."
-    },
-    {
-        "image": "plotQA_13192-train.png",
-        "claim": "There are 3 different coloured dotlines represented in the chart.",
-        "label": "Supports",
-        "explanation": "By analyzing the data in the chart, we can see that there are three distinct sets of data represented by different coloured dotlines. Each country is represented by a different coloured dotline throughout the years listed in the table, confirming that there are indeed 3 different coloured dotlines in the chart."
+        "image": "chartQA_two_col_42887-train.png",
+        "claim": "Samsung made only 120 million dollars in the United States in 2013.",
+        "label": "Refutes",
+        "explanation": "This sentence contradicts the chart, which clearly shows that Samsung's market volume was 240 million dollars, the highest among the listed companies. By stating that Samsung made only 120 million dollars, it misrepresents the actual data presented in the chart."
     },
     {
         "image": "plotQA_41193-train.png",
-        "claim": "Across all years, the minimum net official aid received in St. Kitts and Nevis is 5000000.0.",
+        "claim": "The minimum net official aid received in St. Kitts and Nevis was actually 2500000.0 across all years.",
         "label": "Refutes",
-        "explanation": "This claim refutes the chart as it falsely states that the minimum net official aid received in St. Kitts and Nevis is 5000000.0. However, based on the data presented in the chart, the actual minimum net official aid received in St. Kitts and Nevis across all years is 300000. Therefore, the claim contradicts the accurate information displayed in the chart."
+        "explanation": "This sentence contradicts the chart's data, which shows that the aid received by St. Kitts and Nevis was consistently higher than 5000000.0 in all years. The visual representation indicates that the aid amounts were significantly above the stated figure, thus refuting the claim."
     },
     {
-        "image": "figureQA_96216-train.png",
-        "claim": "Green could potentially have the highest value in the next year's data.",
+        "image": "figureQA_42962-train.png",
+        "claim": "Green Yellow is less than Orchid.",
+        "label": "Refutes",
+        "explanation": "This sentence contradicts the chart, which clearly shows that the value for Green Yellow is higher than that for Orchid. The bar representing Green Yellow is significantly taller than the one for Orchid, indicating that Green Yellow has a greater value."
+    },
+    {
+        "image": "chartQA_two_col_22614-train.png",
+        "claim": "The chart does not provide information on the overall market size or the performance of other brands during the same period.",
         "label": "Not enough information",
-        "explanation": "The claim speculates on future data not present in the chart, as it does not provide information on future values for the colors. Without data on the upcoming year or beyond, it is impossible to verify if Green will have the highest value in the future."
+        "explanation": "Without data on the total market size or the market shares of competing brands, it is impossible to determine the significance of Citroen's market share of 2.64%. This lack of context prevents a full understanding of Citroen's performance relative to the overall market."
     },
     {
-        "image": "chartQA_two_col_2514-train.png",
-        "claim": "Based on the chart, Western Australia has the highest population share at 31.8%.",
+        "image": "chartQA_multi_col_20204-train.png",
+        "claim": "In 2009, 517 people committed suicide.",
+        "label": "Supports",
+        "explanation": "The chart clearly shows that the total number of suicides in 2009 is represented by the height of the bar for that year, which reaches 517. This value is derived from the sum of suicides across different age groups, confirming the accuracy of the claim."
+    },
+    {
+        "image": "figureQA_96310-train.png",
+        "claim": "The overall performance of Web Maroon compared to other colors cannot be determined without additional context on the criteria used for evaluation.",
+        "label": "Not enough information",
+        "explanation": "The chart displays various colors with their corresponding values, but it does not specify the criteria or metrics used to define 'roughness.' Without this context, it is unclear how Web Maroon's performance is assessed relative to the other colors, making it impossible to draw definitive conclusions."
+    },
+    {
+        "image": "plotQA_8347-train.png",
+        "claim": "The difference between the highest and the lowest percentage of total merchandise exports in Uruguay is 1.9291992575408452.",
+        "label": "Supports",
+        "explanation": "This claim is supported by the chart, which shows the percentage of total merchandise exports for Uruguay over the years. The highest point for Uruguay is approximately 2.5% and the lowest point is around 0.57%. The difference between these two values is calculated as 2.5% - 0.57% = 1.93%, which aligns with the provided answer."
+    },
+    {
+        "image": "plotQA_49754-train.png",
+        "claim": "Some of the bars in the graph are vertical.",
         "label": "Refutes",
-        "explanation": "This claim refutes the chart as it inaccurately states that Western Australia has the highest population share at 31.8%. However, in the data presented in the chart, New South Wales actually has the highest population share at 31.8%, while Western Australia's population share is 10.4%. Therefore, the claim contradicts the actual data presented in the chart."
+        "explanation": "The statement contradicts the visual representation in the chart, which clearly shows all bars oriented horizontally. If any bars were vertical, it would indicate a different graphical representation, which is not the case here."
     },
     {
-        "image": "plotQA_103743-train.png",
-        "claim": "The total water productivity was greater than 0.30000000000000004 US$ in 1 year.",
-        "label": "Supports",
-        "explanation": "The chart displays the total water productivity values for different years. By inspecting the data, it is evident that in one specific year, the total water productivity exceeded the threshold of 0.30000000000000004 US$, supporting the claim that it was greater than this amount in 1 year."
+        "image": "chartQA_two_col_791-train.png",
+        "claim": "The average player salary in Toronto FC in 2019 was 500 dollars.",
+        "label": "Refutes",
+        "explanation": "This claim contradicts the chart, which clearly shows that the average player salary for Toronto FC was significantly higher at 758.35 dollars. By stating a much lower figure of 500 dollars, it misrepresents the actual data presented."
     },
     {
-        "image": "chartQA_two_col_21874-train.png",
-        "claim": "There were 51,089 teenage conceptions in England and Wales in 2018.",
+        "image": "chartQA_two_col_100130-train.png",
+        "claim": "The growth rate of the orthopedic orthotics market from 2016 to 2023 is unclear.",
+        "label": "Not enough information",
+        "explanation": "While the chart provides market sizes for 2016 and 2023, it does not specify the annual growth rate or any factors influencing this growth. Without additional data on yearly trends or external market influences, it is impossible to determine the exact nature of the market's growth during this period."
+    },
+    {
+        "image": "chartQA_two_col_40908-train.png",
+        "claim": "The Consumer Price Index (CPI) in April 2021 was 105.26.",
         "label": "Supports",
-        "explanation": "By referencing the data provided in the chart, which shows the number of pregnancies resulting in maternity for each year, we can see that in 2018 there were indeed 51,089 pregnancies recorded. This directly supports the claim that there were 51,089 teenage conceptions in that specific year."
+        "explanation": "This statement is supported by the chart, which shows a data point for April 2021 marked at 105.26 on the y-axis. The chart tracks the Consumer Price Index over time, and the specific value for April 2021 is clearly indicated, confirming the accuracy of the claim."
     }
 ]

@@ -1,0 +1,122 @@
+[
+    {
+        "image": "figureQA_20856-train.png",
+        "claim": "Cornflower has a lower value than Light Slate.",
+        "label": "Supports",
+        "explanation": "Based on the data in the chart, Cornflower is recorded with a value of 22, while Light Slate is recorded with a value of 97. Therefore, it is evident that Cornflower has a lower value compared to Light Slate, supporting the claim."
+    },
+    {
+        "image": "figureQA_42962-train.png",
+        "claim": "Brown is greater than Orchid.",
+        "label": "Refutes",
+        "explanation": "This claim refutes the chart as it inaccurately states that Brown has a higher value than Orchid. However, based on the data in the chart, Orchid has a value of 72, which is higher than Brown with a value of 35. Therefore, the claim contradicts the actual data presented in the chart, making it a refutable statement."
+    },
+    {
+        "image": "figureQA_63892-train.png",
+        "claim": "Dark Violet could potentially have a higher rating in a different context.",
+        "label": "Not enough information",
+        "explanation": "The chart does not provide any context or criteria for determining 'roughness', leaving room for interpretation. Without additional details on how 'roughness' is defined or measured, it is impossible to determine whether Dark Violet is actually not the roughest based on the data provided."
+    },
+    {
+        "image": "figureQA_43461-train.png",
+        "claim": "Medium Seafoam is not the high median.",
+        "label": "Supports",
+        "explanation": "The data in the chart includes values for Medium Seafoam, which are not the highest among all the data points. Based on the recorded values, it is evident that Medium Seafoam does not represent the high median, supporting the claim that Medium Seafoam is not the high median."
+    },
+    {
+        "image": "figureQA_37961-train.png",
+        "claim": "Aqua is the maximum.",
+        "label": "Refutes",
+        "explanation": "This claim refutes the chart as it inaccurately states that Aqua is the maximum value. However, according to the chart, Aqua has a value of 0, which is not the maximum. The maximum value in the chart is represented by Olive with a value of 1. Therefore, the claim contradicts the actual data presented in the chart."
+    },
+    {
+        "image": "figureQA_51171-train.png",
+        "claim": "Steel Blue could be the highest value in the dataset.",
+        "label": "Not enough information",
+        "explanation": "This claim speculates on the possibility of Steel Blue being the highest value in the dataset. However, without additional data points or context provided in the chart, it is impossible to verify this claim based solely on the given information."
+    },
+    {
+        "image": "figureQA_55737-train.png",
+        "claim": "Chartreuse has the maximum value among the given data points.",
+        "label": "Supports",
+        "explanation": "By examining the data in the chart, it can be observed that Chartreuse is represented with the highest value of 55, which is greater than all other values listed. As a result, it is clear that Chartreuse holds the maximum position within the dataset, confirming the claim."
+    },
+    {
+        "image": "figureQA_19952-train.png",
+        "claim": "Dark Cyan is the low median in the chart.",
+        "label": "Refutes",
+        "explanation": "This claim inaccurately states that Dark Cyan is the low median in the chart. However, based on the table provided, Dark Cyan has a value of 22, which is not the lowest value. Indigo has the lowest value of 5, making it the low median in the chart. Therefore, the claim contradicts the actual data presented in the chart."
+    },
+    {
+        "image": "figureQA_96216-train.png",
+        "claim": "Green could potentially have the highest value in the next year's data.",
+        "label": "Not enough information",
+        "explanation": "The claim speculates on future data not present in the chart, as it does not provide information on future values for the colors. Without data on the upcoming year or beyond, it is impossible to verify if Green will have the highest value in the future."
+    },
+    {
+        "image": "figureQA_99722-train.png",
+        "claim": "Dark Gold does not intersect Turquoise.",
+        "label": "Supports",
+        "explanation": "By analyzing the data in the chart, it can be observed that the values for Dark Gold and Turquoise do not intersect at any point. This is evident as the values for Dark Gold are consistently higher than those for Turquoise across all instances. Therefore, it is supported that Dark Gold does not intersect Turquoise based on the data provided in the chart."
+    },
+    {
+        "image": "figureQA_80487-train.png",
+        "claim": "Olive Drab intersects Cadet Blue in the chart.",
+        "label": "Refutes",
+        "explanation": "This claim refutes the chart as it inaccurately states that Olive Drab intersects Cadet Blue. However, based on the data in the chart, the value for Olive Drab is consistently higher than that of Cadet Blue across all x-axis labels. Therefore, the claim contradicts the actual relationship between Olive Drab and Cadet Blue presented in the chart."
+    },
+    {
+        "image": "figureQA_96310-train.png",
+        "claim": "Web Maroon's position could change if additional colors were included in the chart.",
+        "label": "Not enough information",
+        "explanation": "This claim proposes that the positioning of Web Maroon may shift with the inclusion of more colors in the dataset. However, as the current data only includes a limited set of colors and their corresponding values, the claim lacks enough information to verify its accuracy."
+    },
+    {
+        "image": "figureQA_23322-train.png",
+        "claim": "Dark Orange has a higher value than Red.",
+        "label": "Supports",
+        "explanation": "Examining the data in the chart, it is evident that Dark Orange is recorded with higher values in each corresponding category compared to Red. This confirms that Dark Orange has a higher value than Red, supporting the claim made."
+    },
+    {
+        "image": "figureQA_90769-train.png",
+        "claim": "The Dodger Blue has the minimum area under the curve.",
+        "label": "Refutes",
+        "explanation": "This claim refutes the chart as it inaccurately states that Dodger Blue has the minimum value. However, based on the data in the chart, Dodger Blue does not have the minimum value under the curve. In fact, other colors like Teal and Web Gray have lower values for the x-axis labels. Therefore, the claim contradicts the actual data presented in the chart."
+    },
+    {
+        "image": "figureQA_43249-train.png",
+        "claim": "Hot Pink might have a higher value than Teal if additional colors were included in the chart.",
+        "label": "Not enough information",
+        "explanation": "This claim speculates on the possibility of Hot Pink having a higher value than Teal if the dataset included more colors. However, the current chart only provides data for a limited number of colors, making it impossible to confirm or refute this claim with the information given."
+    },
+    {
+        "image": "figureQA_82199-train.png",
+        "claim": "Light Gold has the highest value in the chart.",
+        "label": "Supports",
+        "explanation": "By analyzing the data in the chart, it is evident that Light Gold has the highest values compared to all other elements listed. This is supported by the numerical values present in the table, where Light Gold consistently has the highest recorded values among all the elements."
+    },
+    {
+        "image": "figureQA_63032-train.png",
+        "claim": "Dark Khaki does have the highest value among the colors shown in the chart.",
+        "label": "Refutes",
+        "explanation": "This claim refutes the chart by incorrectly stating that Dark Khaki does have the highest value. In reality, based on the data presented in the chart, Dark Khaki has a value of 72.5, which is lower than the values of Dark Slate (84.6) and Dark Seafoam (87.8). Therefore, the claim contradicts the factual information as displayed in the chart."
+    },
+    {
+        "image": "figureQA_66119-train.png",
+        "claim": "Blue Violet could have similar values to Crimson if more data points were included.",
+        "label": "Not enough information",
+        "explanation": "This claim speculates on the possibility that Blue Violet and Crimson could have similar values if more data points were present in the chart. Since the provided chart does not contain additional data points beyond the given ones, it is impossible to verify this claim."
+    },
+    {
+        "image": "figureQA_56247-train.png",
+        "claim": "Olive has a higher value than Firebrick.",
+        "label": "Supports",
+        "explanation": "By examining the chart, it is evident that the value associated with Olive is 94, whereas the value associated with Firebrick is 80. Thus, it is clear that Olive's value is greater than that of Firebrick, aligning with the supports claim."
+    },
+    {
+        "image": "figureQA_34683-train.png",
+        "claim": "Rosy Brown is the highest.",
+        "label": "Refutes",
+        "explanation": "The refutes claim contradicts the chart data as it inaccurately states that Rosy Brown is the highest value. However, according to the chart, Web Purple holds the highest value at 87.1. Therefore, the claim directly contradicts the factual information presented in the chart."
+    }
+]

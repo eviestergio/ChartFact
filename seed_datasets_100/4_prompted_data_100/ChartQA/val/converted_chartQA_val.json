@@ -1,32 +1,32 @@
 [
     {
         "image": "chartQA_two_col_20869-val.png",
-        "claim": "The profit contribution from South America is 21% higher than the profit contribution from North America.",
+        "claim": "The difference between maximum profit contribution and minimum profit contribution is 21.",
         "label": "Supports",
-        "explanation": "Referring to the table data, South America's profit contribution is recorded as 42%, while North America's profit contribution is recorded as 21%. The difference between these two values is indeed 21%, directly supporting the claim made."
+        "explanation": "The chart shows the profit contributions from different regions: South America (42%), Europe (37%), and North America (21%). The maximum profit contribution is from South America at 42%, while the minimum is from North America at 21%. The difference between these two values is 42 - 21 = 21, which supports the claim."
     },
     {
         "image": "chartQA_multi_col_40930-val.png",
-        "claim": "The year the green bar is below 2 is 2019.",
+        "claim": "The blue bar was below 5 in the year 2020.",
         "label": "Refutes",
-        "explanation": "This claim refutes the chart as it inaccurately states that the year the green bar is below 2 is 2019. However, according to the chart, the green bar is below 2 in 2016 with a value of 2.79, in 2017 with a value of 3.13, and in 2018 with a value of 3.48. Therefore, the claim contradicts the actual data presented in the chart."
+        "explanation": "This sentence contradicts the chart, which clearly shows that the value of the blue bar (representing online spending) in 2020 is approximately 5.76 billion GBP, indicating it is above 5."
     },
     {
         "image": "chartQA_two_col_43627-val.png",
-        "claim": "The expenses in million U.S. dollars for 2017 could have been influenced by a one-time investment or major event.",
+        "claim": "The increase in expenses for the Green Bay Packers in 2017 could be attributed to various factors, but the specific reasons are not detailed in the chart.",
         "label": "Not enough information",
-        "explanation": "This claim presents a possible explanation for the high expenses in 2017 without any specific data to confirm or refute this hypothesis. The chart only provides the expenses for each year without further details on what may have contributed to the amount in 2017, requiring additional information to verify this claim."
+        "explanation": "The chart provides the expenses for the Green Bay Packers from 2014 to 2018, showing a general upward trend. However, it does not specify the reasons behind the changes in expenses, such as player salaries, operational costs, or other financial factors, making it impossible to determine the exact cause of the increase in 2017."
     },
     {
         "image": "chartQA_two_col_43066-val.png",
-        "claim": "Google achieved a ranking of 79 ACSI index points in 2020.",
+        "claim": "In 2020, Google's ranking on the ACSI index was 79 out of 100 points.",
         "label": "Supports",
-        "explanation": "By referring to the table in the chart, it is evident that Google received a score of 79 ACSI index points in 2020, confirming that Google's ranking was indeed 79 as stated in the claim."
+        "explanation": "The chart clearly shows that Google received a score of 79 index points, which is represented by the height of the blue bar corresponding to Google. This score is the highest among the listed search engines, indicating its strong performance on the ACSI index in 2020."
     },
     {
         "image": "chartQA_multi_col_20676-val.png",
-        "claim": "35.9 smart home devices were sold to dealers in the United States in 2017.",
+        "claim": "Only 10.5 smart home devices were sold to dealers in the United States in 2014.",
         "label": "Refutes",
-        "explanation": "This claim refutes the chart as it inaccurately states that 35.9 smart home devices were sold in 2017. However, based on the data in the chart, the actual value for smart home devices sold in 2017 is 35.9, not 35.9. Therefore, the claim directly contradicts the factual information presented in the chart."
+        "explanation": "This sentence contradicts the chart, which clearly shows that 20.7 million smart home devices were sold in 2014. The number 10.5 is significantly lower than the reported figure, thus refuting the claim made by the chart."
     }
 ]

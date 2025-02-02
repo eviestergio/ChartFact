@@ -1,0 +1,14 @@
+[
+    {
+        "image": "plotQA_37698-train.png",
+        "claim": "There are 3 bars on the 2nd tick from the top.",
+        "label": "Supports",
+        "explanation": "The chart displays the percentage of firms either registered or unregistered in different countries, with each category represented by a bar. The second tick from the top corresponds to the category 'Competing against unregistered firms,' which has three distinct bars representing the data for Macedonia, the Philippines, and Tonga."
+    },
+    {
+        "image": "plotQA_98527-train.png",
+        "claim": "The graph shows that the rural population growth in Sub-Saharan Africa is consistently increasing over the years.",
+        "label": "Refutes",
+        "explanation": "This sentence contradicts the chart because the graph clearly illustrates a downward trend in rural population growth for Sub-Saharan Africa, indicating a decline rather than an increase over the years."
+    }
+]
