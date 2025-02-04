@@ -1,0 +1,14 @@
+[
+    {
+        "image": "chartQA_multi_col_20204-train.png",
+        "claim": "The total number of suicides may have been influenced by various social and economic factors in 2009.",
+        "label": "Not enough information",
+        "explanation": "The chart provides data on the number of suicides by age group for each year, but it does not include information on the social or economic conditions that could have affected these numbers. Without this context, it is impossible to determine the specific reasons behind the total of 517 suicides in 2009."
+    },
+    {
+        "image": "chartQA_two_col_42313-train.png",
+        "claim": "In 2020, the amount of British pounds spent on alcoholic drinks was 25964 million GBP.",
+        "label": "Supports",
+        "explanation": "The chart shows the expenditure on alcoholic drinks in the UK from 2005 to 2020, with the bar for 2020 reaching 25964 million GBP, confirming the accuracy of the claim."
+    }
+]
