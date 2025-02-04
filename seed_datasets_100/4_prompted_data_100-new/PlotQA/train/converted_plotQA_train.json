@@ -1,0 +1,182 @@
+[
+    {
+        "image": "plotQA_40066-train.png",
+        "claim": "The label of the 2nd group of bars from the top is Female entrants.",
+        "label": "Supports",
+        "explanation": "In the chart, the second group of bars from the top is clearly labeled as 'Female entrants', which corresponds to the data representing the percentage of new female entrants in the last grade of primary education across different countries."
+    },
+    {
+        "image": "plotQA_133988-train.png",
+        "claim": "Across all countries, the minimum ppp conversion factor for private consumption is 0.123456789.",
+        "label": "Refutes",
+        "explanation": "This statement contradicts the chart, which shows that the minimum PPP conversion factor for private consumption is significantly higher, as indicated by the values represented in the chart. The chart visually demonstrates that the conversion factors for private consumption are much greater than the stated figure of 0.123456789."
+    },
+    {
+        "image": "plotQA_140860-train.png",
+        "claim": "The percentage of value added in manufacturing food and tobacco in Sri Lanka may fluctuate significantly due to various economic factors over the years.",
+        "label": "Not enough information",
+        "explanation": "The chart shows the percentage of value added in manufacturing for Sri Lanka and other countries over several years, but it does not provide specific details on the economic factors that could influence these percentages, such as changes in market demand, production costs, or government policies. Therefore, while fluctuations are possible, the chart does not confirm or deny this scenario."
+    },
+    {
+        "image": "plotQA_103743-train.png",
+        "claim": "In 2013, the total water productivity of Afghanistan is greater than 0.30000000000000004 US$.",
+        "label": "Supports",
+        "explanation": "The chart shows a steady increase in total water productivity from 2002 to 2013. By 2013, the value exceeds 0.3 US$, confirming that the total water productivity is indeed greater than 0.30000000000000004 US$ in that year."
+    },
+    {
+        "image": "plotQA_41193-train.png",
+        "claim": "Throughout the years, the minimum net official aid received in St. Kitts and Nevis was 2000000.0.",
+        "label": "Refutes",
+        "explanation": "This statement contradicts the chart, which shows that the minimum net official aid received in St. Kitts and Nevis was consistently higher than 2000000.0 across all years, with the lowest recorded amount being 5010000.0."
+    },
+    {
+        "image": "plotQA_86304-train.png",
+        "claim": "The absence of grid lines in the graph may affect the clarity of the data representation.",
+        "label": "Not enough information",
+        "explanation": "While the graph does not include grid lines, it is unclear how this absence impacts the viewer's ability to interpret the data accurately. The visual representation of the number of new businesses registered over the years could still be understood without grids, but the specific effects on data interpretation cannot be determined from the chart alone."
+    },
+    {
+        "image": "plotQA_148613-train.png",
+        "claim": "The difference between the value lost due to electrical outages in 2006 and 2009 is 0.6.",
+        "label": "Supports",
+        "explanation": "In the chart, the value lost due to electrical outages in 2006 is approximately 2.5% of sales, while in 2009 it is about 1.9% of sales. The difference between these two values is calculated as 2.5% - 1.9% = 0.6%, confirming the accuracy of the claim."
+    },
+    {
+        "image": "plotQA_26296-train.png",
+        "claim": "There is only one color bar represented in the chart.",
+        "label": "Refutes",
+        "explanation": "The statement contradicts the chart, which clearly displays two distinct colored bars: one representing 'Constant 2005 US$' and the other representing 'Current US$'. This visual differentiation indicates that there are indeed two different colored bars present."
+    },
+    {
+        "image": "plotQA_92173-train.png",
+        "claim": "The absence of Senegal in the graph may indicate that it was not included in the dataset used for this analysis.",
+        "label": "Not enough information",
+        "explanation": "The chart only displays data for Mauritius, New Zealand, Peru, and the United Kingdom, but does not provide any context or information about the criteria for inclusion in the dataset. Therefore, it is unclear whether Senegal was excluded intentionally or if it simply did not have relevant data available."
+    },
+    {
+        "image": "plotQA_13192-train.png",
+        "claim": "There are 3 different coloured dotlines in the chart.",
+        "label": "Supports",
+        "explanation": "The chart displays three distinct colours representing different countries: Equatorial Guinea (green), Nicaragua (blue), and Norway (orange). Each colour corresponds to a specific country's total reserves, confirming that there are indeed three different coloured dotlines."
+    },
+    {
+        "image": "plotQA_37698-train.png",
+        "claim": "There are only 2 bars on the 2nd tick from the top.",
+        "label": "Refutes",
+        "explanation": "This statement contradicts the chart, which clearly shows 3 distinct bars on the 2nd tick from the top, representing the percentage of firms either registered or unregistered in different countries."
+    },
+    {
+        "image": "plotQA_101809-train.png",
+        "claim": "The data does not clarify whether the fluctuations in merchandise exports were influenced by external economic factors or domestic policies in 2007.",
+        "label": "Not enough information",
+        "explanation": "The chart shows the percentage of merchandise exports over several years, but it does not provide context regarding the reasons behind the changes in export levels, making it impossible to determine the specific causes of the minimum observed in 2007."
+    },
+    {
+        "image": "plotQA_99631-train.png",
+        "claim": "The difference between two consecutive major ticks on the Y-axis is 5000000.0.",
+        "label": "Supports",
+        "explanation": "The Y-axis of the chart represents the population in Ethiopia, and the major ticks are evenly spaced. Each major tick represents an increase of 5,000,000 in population, which is confirmed by the scale of the Y-axis."
+    },
+    {
+        "image": "plotQA_28366-train.png",
+        "claim": "The graph clearly indicates that low and middle-income countries are represented as significant contributors in the aid flow data.",
+        "label": "Refutes",
+        "explanation": "The statement contradicts the chart's visual representation, which shows that the aid flow is primarily directed towards specific countries, and does not include low and middle-income countries as significant contributors. The absence of these categories in the legend suggests they are not part of the data being presented."
+    },
+    {
+        "image": "plotQA_123057-train.png",
+        "claim": "The percentage of urban populations with access to drinking water may have varied significantly across different regions in the years shown.",
+        "label": "Not enough information",
+        "explanation": "The chart provides data on the percentage of urban populations having access to drinking water for specific countries over three years, but it does not indicate regional differences or trends within those countries. Therefore, it is unclear how access may have varied in different areas or how it compares to other regions not represented in the chart."
+    },
+    {
+        "image": "plotQA_8347-train.png",
+        "claim": "The difference between the highest and the lowest percentage of total merchandise exports in Uruguay is 1.9291992575408452.",
+        "label": "Supports",
+        "explanation": "This statement is supported by the chart, which shows the percentage of total merchandise exports for Uruguay over the years. By examining the data points, we can identify the highest and lowest values for Uruguay's exports, and the difference between these two values is calculated to be approximately 1.93."
+    },
+    {
+        "image": "plotQA_145467-train.png",
+        "claim": "There are only 2 bars on the 2nd tick from the right.",
+        "label": "Refutes",
+        "explanation": "This statement contradicts the chart, which clearly shows 4 distinct bars representing different countries at the 2nd tick from the right. The presence of 4 bars indicates that the claim about there being only 2 bars is incorrect."
+    },
+    {
+        "image": "plotQA_139568-train.png",
+        "claim": "The overall trends in labor force participation rates for different regions may vary significantly due to economic conditions that are not represented in the chart.",
+        "label": "Not enough information",
+        "explanation": "The chart provides specific data for labor force participation rates in North America and Kazakhstan for the years 2002 and 2005, but it does not include information on the economic conditions or other factors that could influence these rates. Without this context, it is impossible to determine the reasons behind any differences in participation rates."
+    },
+    {
+        "image": "plotQA_47197-train.png",
+        "claim": "The label of the X-axis is 'Educated males (% of male labor force)'.",
+        "label": "Supports",
+        "explanation": "The X-axis of the chart clearly indicates the percentage of educated males within the male labor force, which is represented by the label 'Educated males (% of male labor force)'. This label is essential for understanding the data presented in the chart, as it defines what the horizontal axis measures in relation to the levels of education for males in different countries."
+    },
+    {
+        "image": "plotQA_49754-train.png",
+        "claim": "All the bars in the graph are vertical.",
+        "label": "Refutes",
+        "explanation": "This statement contradicts the chart, which clearly displays horizontal bars representing the total earnings of different countries over the years. The orientation of the bars is a fundamental aspect of the chart's design, and stating that they are vertical misrepresents the visual data presented."
+    },
+    {
+        "image": "plotQA_36612-train.png",
+        "claim": "The percentage of the labor force with tertiary education may vary significantly based on economic conditions and job market demands each year.",
+        "label": "Not enough information",
+        "explanation": "The chart provides data on the percentage of the unemployed labor force with different levels of education but does not include information on the overall labor force or the specific economic conditions that could influence the percentage of individuals receiving tertiary education."
+    },
+    {
+        "image": "plotQA_41979-train.png",
+        "claim": "The number of bars on each tick of the Y-axis is equal.",
+        "label": "Supports",
+        "explanation": "The chart displays three bars for each country, representing the long-term female unemployment rates for the years 1980, 1981, and 1982. Each tick on the Y-axis corresponds to a specific percentage of unemployment, and since each country has the same number of bars (three), it confirms that the number of bars on each tick of the Y-axis is indeed equal."
+    },
+    {
+        "image": "plotQA_98527-train.png",
+        "claim": "The graph shows that the rural population growth in Sub-Saharan Africa has consistently increased over the years.",
+        "label": "Refutes",
+        "explanation": "This statement contradicts the chart, which indicates a declining trend in rural population growth for Sub-Saharan Africa, as evidenced by the downward slope of the line representing this region. The chart clearly illustrates a decrease in growth rates rather than an increase."
+    },
+    {
+        "image": "plotQA_126784-train.png",
+        "claim": "The trends in HIV infection rates for females in Suriname and Swaziland may be influenced by various external factors that are not represented in the chart.",
+        "label": "Not enough information",
+        "explanation": "The chart provides data only for specific years and does not account for potential external influences such as healthcare access, public health initiatives, or socio-economic conditions that could affect the HIV infection rates in these countries. Without this context, it is difficult to draw definitive conclusions about the differences in infection rates."
+    },
+    {
+        "image": "plotQA_131728-train.png",
+        "claim": "The difference between two consecutive major ticks on the Y-axis is 5.0.",
+        "label": "Supports",
+        "explanation": "The Y-axis of the chart represents the percentage of male unemployment, and the major ticks are marked at intervals of 5.0. This is evident as the ticks are labeled 0, 5, 10, 15, 20, indicating that each tick represents an increase of 5 percentage points."
+    },
+    {
+        "image": "plotQA_58019-train.png",
+        "claim": "In 3 years, the percentage of rural population growth in Lower middle income is less than the average percentage of rural population growth in Lower middle income taken over all years.",
+        "label": "Refutes",
+        "explanation": "This statement contradicts the chart, which shows that the percentage of rural population growth in Lower middle income over the specified years is consistently higher than the average growth rate across all years. The data indicates a positive trend in rural population growth for Lower middle income, making the claim that it is less than the average incorrect."
+    },
+    {
+        "image": "plotQA_29819-train.png",
+        "claim": "The chart may not provide a complete view of the trade dynamics, as it does not specify the categories of goods and services involved.",
+        "label": "Not enough information",
+        "explanation": "The chart presents total earnings from trading goods and services but lacks detailed information on the specific types of goods and services represented. Without this context, it is unclear how the variations in the number of bars relate to the categories in the legend."
+    },
+    {
+        "image": "plotQA_156791-train.png",
+        "claim": "The amount of fertilizer consumption per hectare of arable land in Algeria was minimum in 2008.",
+        "label": "Supports",
+        "explanation": "The chart clearly shows that the fertilizer consumption in 2008 is the lowest compared to other years, with a significant drop in the amount consumed. This is visually represented by the shorter bar for 2008, indicating that it had the least amount of fertilizer consumption in kilograms per hectare."
+    },
+    {
+        "image": "plotQA_154195-train.png",
+        "claim": "The graph shows data for only 4 years.",
+        "label": "Refutes",
+        "explanation": "The statement contradicts the chart, which clearly displays data points for the years 2007, 2008, 2009, 2010, 2011, and 2012, indicating that there are indeed 6 years represented in the graph."
+    },
+    {
+        "image": "plotQA_127221-train.png",
+        "claim": "The percentage of economically active children in Mongolia may have varied significantly across different regions in 2012.",
+        "label": "Not enough information",
+        "explanation": "The chart provides overall percentages of child employment in various industries but does not specify regional differences or variations within Mongolia, making it impossible to determine if the figures are consistent across all areas."
+    }
+]

@@ -1,0 +1,32 @@
+[
+    {
+        "image": "plotQA_1178-test.png",
+        "claim": "The difference between the highest and the lowest total amount earned by exporting goods and services in Uganda is only 1234567.89.",
+        "label": "Refutes",
+        "explanation": "This statement contradicts the chart's data, which indicates a significant difference of 34564811.277677 between the highest and lowest amounts earned. By drastically reducing the reported difference to 1234567.89, the claim misrepresents the financial data shown in the chart."
+    },
+    {
+        "image": "plotQA_23071-test.png",
+        "claim": "The enrollment rates in primary and secondary education may have been influenced by various socio-economic factors that are not detailed in the chart.",
+        "label": "Not enough information",
+        "explanation": "The chart provides enrollment rates for different countries but does not include information on socio-economic conditions, educational policies, or other factors that could affect these rates. Without this context, it is impossible to determine the reasons behind the differences in enrollment rates."
+    },
+    {
+        "image": "plotQA_1467-test.png",
+        "claim": "The label of the X-axis is 'Years'.",
+        "label": "Supports",
+        "explanation": "The chart clearly indicates that the X-axis represents different years, as labeled at the bottom of the graph. Each tick mark corresponds to a specific year, confirming that 'Years' is indeed the correct label for the X-axis."
+    },
+    {
+        "image": "plotQA_29479-test.png",
+        "claim": "The number of bars on each tick of the X-axis varies significantly.",
+        "label": "Refutes",
+        "explanation": "This statement contradicts the chart's visual representation, which shows that each tick on the X-axis has an equal number of bars representing different countries. The consistent grouping of bars indicates that the number of categories (countries) remains the same across all years, thus supporting the original claim."
+    },
+    {
+        "image": "plotQA_21579-test.png",
+        "claim": "The presence of grids in the graph may indicate a structured approach to data representation, but it does not clarify the specific trends or implications of the data presented.",
+        "label": "Not enough information",
+        "explanation": "The chart shows a trend over time regarding the percentage of senior management time spent on government regulations, but it does not provide details on the reasons for this trend or how the grid structure influences the interpretation of the data."
+    }
+]

@@ -1,0 +1,182 @@
+[
+    {
+        "image": "chartQA_multi_col_20204-train.png",
+        "claim": "The total number of suicides may have been influenced by various social and economic factors in 2009.",
+        "label": "Not enough information",
+        "explanation": "The chart provides data on the number of suicides across different age groups for the year 2009, but it does not include information on the social or economic conditions that could have contributed to the suicide rate. Without this context, it is impossible to determine the specific reasons behind the number of suicides reported."
+    },
+    {
+        "image": "chartQA_two_col_40805-train.png",
+        "claim": "17.6 percent of respondents used Wayne-Dalton garage doors the most.",
+        "label": "Supports",
+        "explanation": "The chart shows that Wayne-Dalton is used by 17.6 percent of respondents, which confirms that it is the correct answer to the question about the most used brand of garage doors."
+    },
+    {
+        "image": "chartQA_two_col_103445-train.png",
+        "claim": "The total loan value in 2020 was only 300,000.",
+        "label": "Refutes",
+        "explanation": "This statement contradicts the chart, which clearly shows that the total loan value for 2020 is 367,499. By stating a significantly lower figure, it misrepresents the actual data presented in the chart."
+    },
+    {
+        "image": "chartQA_two_col_103922-train.png",
+        "claim": "The decline in customers for Yellow Pages Canada may have been influenced by changes in market demand or competition in 2020.",
+        "label": "Not enough information",
+        "explanation": "The chart shows a decreasing trend in the number of customers from 2013 to 2020, but it does not provide specific reasons for this decline, such as market conditions or competitive factors. Therefore, while the statement about potential influences is plausible, it cannot be verified with the available data."
+    },
+    {
+        "image": "chartQA_two_col_82289-train.png",
+        "claim": "The average exchange rate from Indonesian rupiah to Australian dollars in 2020 was 10,771.",
+        "label": "Supports",
+        "explanation": "This statement is supported by the chart, which shows that the exchange rate for 2020 is marked at 10,771 Indonesian rupiah. The data point is clearly indicated on the graph, confirming the accuracy of the average exchange rate for that year."
+    },
+    {
+        "image": "chartQA_two_col_22311-train.png",
+        "claim": "The youth unemployment rate in Swaziland was 46.12% in 2019, indicating a significant decrease from previous years.",
+        "label": "Refutes",
+        "explanation": "This sentence contradicts the information in the chart by stating a different unemployment rate for 2019. The chart shows that the youth unemployment rate was actually 46.22% in 2019, which is higher than the claimed 46.12%. Additionally, the chart illustrates a trend of decreasing unemployment rates over the years leading up to 2019, which is not accurately reflected in the refuting claim."
+    },
+    {
+        "image": "chartQA_two_col_104074-train.png",
+        "claim": "The number of individuals on the liver transplant waiting list may fluctuate due to various factors such as changes in healthcare policies or population health trends.",
+        "label": "Not enough information",
+        "explanation": "The chart provides a snapshot of the waiting list numbers for a specific time but does not indicate whether these figures are typical or influenced by external factors, making it impossible to determine the stability or variability of the waiting list over time."
+    },
+    {
+        "image": "chartQA_two_col_791-train.png",
+        "claim": "The average player salary in Toronto FC in 2019 was 758.35 dollars.",
+        "label": "Supports",
+        "explanation": "This statement is supported by the chart, which clearly shows that the average player salary for Toronto FC in 2019 is listed as 758.35 thousand U.S. dollars."
+    },
+    {
+        "image": "chartQA_two_col_4043-train.png",
+        "claim": "Florida's GDP in the previous year was only 901.9 dollars.",
+        "label": "Refutes",
+        "explanation": "This statement contradicts the chart, which clearly shows that Florida's GDP for the previous year was 963.26 dollars. The refuted claim significantly underreports the GDP figure, misrepresenting the economic performance of Florida."
+    },
+    {
+        "image": "chartQA_two_col_61763-train.png",
+        "claim": "The total spirits imported into the UK from all countries in 2020 may have significantly influenced the import value from France.",
+        "label": "Not enough information",
+        "explanation": "The chart provides specific import values for France and other countries but does not include the total import value from all countries combined. Without this information, it is unclear how France's import value relates to the overall market, making it impossible to determine the impact of total imports on France's figures."
+    },
+    {
+        "image": "chartQA_two_col_4713-train.png",
+        "claim": "ArcelorMittal generated 53.27 billion U.S. dollars in revenue in the fiscal year of 2020.",
+        "label": "Supports",
+        "explanation": "The chart clearly shows that the revenue for ArcelorMittal in 2020 is marked at 53.27 billion U.S. dollars, confirming the accuracy of the statement."
+    },
+    {
+        "image": "chartQA_two_col_100130-train.png",
+        "claim": "The global orthopedic orthotics market is projected to decline to 2,500 million U.S. dollars by the year 2023.",
+        "label": "Refutes",
+        "explanation": "This statement contradicts the chart, which shows an increase in the market size from 3,130 million U.S. dollars in 2016 to 4,658 million U.S. dollars in 2023, indicating growth rather than a decline."
+    },
+    {
+        "image": "chartQA_two_col_104070-train.png",
+        "claim": "The capital expenditure in Saskatchewan may have been influenced by various economic factors in 2018.",
+        "label": "Not enough information",
+        "explanation": "The chart provides the capital expenditure figures for Saskatchewan but does not include information on the economic conditions, policies, or specific projects that could have affected these expenditures. Without this context, it is impossible to determine the reasons behind the reported figure."
+    },
+    {
+        "image": "chartQA_two_col_4965-train.png",
+        "claim": "Nike began providing uniforms and apparel to all 32 NFL teams in 2012.",
+        "label": "Supports",
+        "explanation": "The chart shows the revenue of Nike from 2010 to 2021, with a notable increase in 2012, which aligns with the year they began supplying uniforms to all NFL teams. This significant revenue growth indicates the impact of this partnership on Nike's business."
+    },
+    {
+        "image": "chartQA_two_col_61921-train.png",
+        "claim": "Cineplex's revenue for the first quarter of 2021 was only 25 million Canadian dollars.",
+        "label": "Refutes",
+        "explanation": "This statement contradicts the chart, which shows that Cineplex's revenue for the first quarter of 2021 was significantly higher, at 41.41 million Canadian dollars. The chart indicates a revenue drop in the previous quarters, but the figure for Q1 2021 is still above 25 million, making the refuted claim inaccurate."
+    },
+    {
+        "image": "chartQA_two_col_40908-train.png",
+        "claim": "The Consumer Price Index may have experienced fluctuations due to various economic factors leading up to April 2021.",
+        "label": "Not enough information",
+        "explanation": "The chart shows the Consumer Price Index over time, but it does not provide specific details about the economic factors that could have influenced the changes in the index. Without additional context on these factors, it is impossible to determine the reasons behind the fluctuations or the significance of the CPI value in April 2021."
+    },
+    {
+        "image": "chartQA_two_col_42887-train.png",
+        "claim": "Samsung made 240 million U.S. dollars in the United States in 2013.",
+        "label": "Supports",
+        "explanation": "The chart clearly shows that Samsung had a market volume of 240 million U.S. dollars, which directly answers the question about how much money Samsung made in the United States in 2013."
+    },
+    {
+        "image": "chartQA_two_col_24638-train.png",
+        "claim": "In 2019, China exported only 8,000 million U.S. dollars worth of textile yarn to the rest of the world.",
+        "label": "Refutes",
+        "explanation": "This statement contradicts the chart, which clearly shows that China exported 13,318.6 million U.S. dollars worth of textile yarn in 2019. By significantly underreporting the export value, the refutes claim misrepresents China's actual textile yarn exports."
+    },
+    {
+        "image": "chartQA_two_col_100696-train.png",
+        "claim": "The number of enterprises manufacturing domestic appliances in the Czech Republic may vary significantly based on economic conditions and market demand.",
+        "label": "Not enough information",
+        "explanation": "The chart provides a numerical representation of the number of enterprises over several years, but it does not include information about external factors such as economic conditions or market demand that could influence these numbers. Therefore, while the chart shows a trend, it does not clarify the reasons behind the fluctuations or stability in the number of enterprises."
+    },
+    {
+        "image": "chartQA_two_col_2248-train.png",
+        "claim": "In 2025, it is forecasted that 1.4 million housing transactions will occur.",
+        "label": "Supports",
+        "explanation": "The chart clearly indicates that the number of housing transactions is projected to reach 1.4 million in 2025, as shown by the labeled bar for that year."
+    },
+    {
+        "image": "chartQA_two_col_103205-train.png",
+        "claim": "The amount spent on contract policing for the Royal Canadian Mounted Police in 2018/19 was 3,500.00.",
+        "label": "Refutes",
+        "explanation": "This statement contradicts the chart, which clearly shows that the expenditure for RCMP contract policing was 2,740.54 million Canadian dollars. By stating a higher amount, it misrepresents the actual data presented in the chart."
+    },
+    {
+        "image": "chartQA_two_col_42313-train.png",
+        "claim": "The total expenditure on alcoholic drinks in 2020 may have been influenced by various factors such as changes in consumer behavior or economic conditions.",
+        "label": "Not enough information",
+        "explanation": "The chart shows the expenditure on alcoholic drinks over several years, but it does not provide context regarding the factors that could have influenced spending in 2020, such as economic conditions, public health policies, or shifts in consumer preferences. Without this context, it is impossible to determine the reasons behind the expenditure figure for that year."
+    },
+    {
+        "image": "chartQA_two_col_2031-train.png",
+        "claim": "The value of the United States in dollars in 2020 was 23,738 billion.",
+        "label": "Supports",
+        "explanation": "This statement is supported by the chart, which clearly shows that the brand value of the United States is represented by a bar reaching the value of 23,738 billion U.S. dollars, confirming the accuracy of the data."
+    },
+    {
+        "image": "chartQA_two_col_22614-train.png",
+        "claim": "Citroen had a monthly market share of 1.64 in the UK between January 2017 and December 2020.",
+        "label": "Refutes",
+        "explanation": "This statement contradicts the chart, which shows that Citroen's market share consistently fluctuated around 2.64%, with several peaks above this figure. The refuted claim suggests a significantly lower market share, which is not supported by the data presented in the chart."
+    },
+    {
+        "image": "chartQA_two_col_43103-train.png",
+        "claim": "The revenue figures for the managed security services market may have been influenced by external factors such as economic conditions or technological advancements during 2014.",
+        "label": "Not enough information",
+        "explanation": "The chart provides revenue data for the managed security services market from 2011 to 2019, but it does not include contextual information about external factors that could have impacted revenue in 2014. Without this context, it is unclear whether the revenue figure of 2986.6 million U.S. dollars was a result of specific market conditions or broader economic trends."
+    },
+    {
+        "image": "chartQA_two_col_41382-train.png",
+        "claim": "The train station with the highest annual number of passengers as of 2020 was Roma Termini.",
+        "label": "Supports",
+        "explanation": "According to the chart, Roma Termini had the highest annual number of passengers, totaling 160 million, which is greater than any other station listed, including Milano Centrale with 120 million passengers."
+    },
+    {
+        "image": "chartQA_two_col_100763-train.png",
+        "claim": "Mexico's fossil CO emissions were only 3.50 metric tons per person in 2017.",
+        "label": "Refutes",
+        "explanation": "This statement contradicts the chart, which shows that Mexico's fossil CO emissions reached 3.93 metric tons per person in 2017. The refuted claim presents a lower figure, misrepresenting the actual data depicted in the chart."
+    },
+    {
+        "image": "chartQA_two_col_21874-train.png",
+        "claim": "The decline in teenage conceptions may be influenced by various social and educational factors that are not detailed in the chart.",
+        "label": "Not enough information",
+        "explanation": "The chart shows the number of pregnancies resulting in maternity over the years, but it does not provide information on the reasons behind the fluctuations in these numbers, such as changes in education, access to contraception, or social attitudes towards teenage pregnancy."
+    },
+    {
+        "image": "chartQA_two_col_2514-train.png",
+        "claim": "31.8 percent of the Australian population lived in New South Wales.",
+        "label": "Supports",
+        "explanation": "The chart shows that New South Wales has the highest population share among Australian states, with a value of approximately 31.8 percent, confirming that this is the correct answer."
+    },
+    {
+        "image": "chartQA_two_col_61350-train.png",
+        "claim": "Switzerland's import value in U.S. dollars in 2019 was only 10,000.",
+        "label": "Refutes",
+        "explanation": "This statement contradicts the chart, which clearly shows that Switzerland's import value was significantly higher at 18,147.9 million U.S. dollars. By stating a much lower figure, it misrepresents the actual data presented in the chart."
+    }
+]

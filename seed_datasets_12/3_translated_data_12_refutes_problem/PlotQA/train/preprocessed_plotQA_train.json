@@ -1,0 +1,12 @@
+[
+  {
+    "image": "plotQA_37698-train.png",
+    "question": "How many bars are there on the 2nd tick from the top ?",
+    "answer": "3"
+  },
+  {
+    "image": "plotQA_98527-train.png",
+    "question": "Does the graph contain grids ?",
+    "answer": "No"
+  }
+]

@@ -1,0 +1,14 @@
+[
+    {
+        "image": "plotQA_37698-train.png",
+        "claim": "There are only 2 bars on the 2nd tick from the top.",
+        "label": "Refutes",
+        "explanation": "This statement contradicts the chart, which clearly shows 3 distinct bars on the 2nd tick from the top, representing the percentage of firms in different categories. The presence of 3 bars indicates that the claim about only 2 bars is incorrect."
+    },
+    {
+        "image": "plotQA_98527-train.png",
+        "claim": "The absence of grid lines may affect the readability of the data presented in the graph.",
+        "label": "Not enough information",
+        "explanation": "While the graph does not contain grid lines, it is unclear how this absence impacts the interpretation of the data. The visual clarity and ease of reading the trends could vary based on individual preferences and the specific context in which the graph is used."
+    }
+]

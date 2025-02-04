@@ -1,0 +1,122 @@
+[
+    {
+        "image": "figureQA_20856-train.png",
+        "claim": "The comparison between Cornflower and Light Slate may vary under different conditions or contexts.",
+        "label": "Not enough information",
+        "explanation": "The chart does not provide specific details about the conditions or contexts in which the values for Cornflower and Light Slate were measured, making it impossible to determine if the comparison holds true universally."
+    },
+    {
+        "image": "figureQA_42962-train.png",
+        "claim": "Green Yellow is greater than Orchid.",
+        "label": "Supports",
+        "explanation": "The chart shows that Green Yellow has a value of approximately 90, while Orchid has a value of around 80. This indicates that Green Yellow is indeed greater than Orchid."
+    },
+    {
+        "image": "figureQA_63892-train.png",
+        "claim": "Dark Violet is the roughest color in the chart.",
+        "label": "Refutes",
+        "explanation": "This statement contradicts the chart, which visually indicates that Dark Violet does not have the highest values compared to other colors, particularly Sienna and Hot Pink, which show higher values on the y-axis. Therefore, claiming that Dark Violet is the roughest misrepresents the data presented."
+    },
+    {
+        "image": "figureQA_43461-train.png",
+        "claim": "The overall distribution of colors in the chart does not clarify the relative standing of Medium Seafoam compared to other colors.",
+        "label": "Not enough information",
+        "explanation": "The chart presents a visual representation of color distribution, but it does not provide specific numerical values or context regarding the median or any other statistical measures. Without this data, it is impossible to determine how Medium Seafoam ranks relative to the other colors."
+    },
+    {
+        "image": "figureQA_37961-train.png",
+        "claim": "Olive is not the maximum.",
+        "label": "Supports",
+        "explanation": "The chart shows a pie chart with various color segments representing different categories. The segment for Olive is smaller compared to other segments, indicating that it does not represent the maximum value among the categories displayed."
+    },
+    {
+        "image": "figureQA_51171-train.png",
+        "claim": "Steel Blue has the highest median value among the colors.",
+        "label": "Refutes",
+        "explanation": "This statement contradicts the chart, which clearly shows that Steel Blue has a significantly lower value compared to other colors like Cornflower and Light Green, indicating it does not have the highest median."
+    },
+    {
+        "image": "figureQA_55737-train.png",
+        "claim": "The performance of Chartreuse may vary under different conditions or contexts.",
+        "label": "Not enough information",
+        "explanation": "The chart provides a comparison of color performance but does not specify the conditions or contexts in which these values were measured. Without this information, it is unclear whether the maximum value for Chartreuse is consistent across various scenarios."
+    },
+    {
+        "image": "figureQA_19952-train.png",
+        "claim": "Dark Cyan is not the low median.",
+        "label": "Supports",
+        "explanation": "The chart shows the values for various colors, with Dark Cyan having a value that is higher than several other colors, such as Indian Red and Dim Gray. Therefore, it cannot be considered the low median among the listed colors."
+    },
+    {
+        "image": "figureQA_96216-train.png",
+        "claim": "Green has the highest value among all categories.",
+        "label": "Refutes",
+        "explanation": "This statement contradicts the chart, which visually indicates that while Green has a significant value, it does not surpass the values of other categories, particularly Salmon, which shows a higher trend as the x-axis increases."
+    },
+    {
+        "image": "figureQA_99722-train.png",
+        "claim": "The trends of Dark Gold and Turquoise may vary significantly at different intervals.",
+        "label": "Not enough information",
+        "explanation": "The chart shows the trends of various colors over time, but it does not provide specific data points or intervals that indicate how Dark Gold and Turquoise interact at various stages. Without detailed information on their values at specific intervals, it is impossible to determine the nature of their relationship."
+    },
+    {
+        "image": "figureQA_80487-train.png",
+        "claim": "Cadet Blue does not intersect Olive Drab.",
+        "label": "Supports",
+        "explanation": "In the chart, the data points for Cadet Blue and Olive Drab are represented by different colors. The line for Cadet Blue is consistently above the line for Olive Drab, indicating that they do not intersect at any point. This confirms that the answer 'No' is correct."
+    },
+    {
+        "image": "figureQA_96310-train.png",
+        "claim": "Web Maroon is the roughest among the colors represented.",
+        "label": "Refutes",
+        "explanation": "This statement contradicts the chart, which shows that Web Maroon has one of the lowest values on the y-axis compared to other colors like Dark Gray and Green, indicating it is not the roughest."
+    },
+    {
+        "image": "figureQA_23322-train.png",
+        "claim": "The chart indicates that Dark Orange occupies a significant portion, but it is unclear how this compares to other categories over time.",
+        "label": "Not enough information",
+        "explanation": "The chart shows the distribution of colors, with Dark Orange appearing prominent. However, without additional context or data regarding trends, comparisons, or the significance of these proportions, it is impossible to determine the overall importance or maximum status of Dark Orange relative to other categories."
+    },
+    {
+        "image": "figureQA_90769-train.png",
+        "claim": "Dodger Blue does not have the minimum area under the curve.",
+        "label": "Supports",
+        "explanation": "The chart displays various colors plotted against their respective values on the y-axis. Upon examining the data points, it is evident that other colors, such as Web Gray and Light Salmon, have higher values than Dodger Blue, indicating that Dodger Blue does not represent the minimum area under the curve."
+    },
+    {
+        "image": "figureQA_43249-train.png",
+        "claim": "Hot Pink is less than Teal.",
+        "label": "Refutes",
+        "explanation": "This statement contradicts the chart, which visually shows that Hot Pink has a higher value than Teal. The length of the bar representing Hot Pink is significantly greater than that of Teal, indicating that Hot Pink is not less than Teal."
+    },
+    {
+        "image": "figureQA_82199-train.png",
+        "claim": "The overall trend of the values for Light Gold may be influenced by other factors not represented in the chart.",
+        "label": "Not enough information",
+        "explanation": "The chart displays various trends for different colors, but it does not provide context on external factors or the specific criteria used to determine the values. Without this information, it is unclear whether the trends are solely due to the inherent properties of Light Gold or if other variables are at play."
+    },
+    {
+        "image": "figureQA_63032-train.png",
+        "claim": "Dark Khaki does not have the highest value.",
+        "label": "Supports",
+        "explanation": "The chart shows various colors plotted against their respective values on the y-axis. Dark Khaki is represented by a point that is lower than several other colors, such as Dark Slate and Light Salmon, indicating that it does not have the highest value among the colors displayed."
+    },
+    {
+        "image": "figureQA_66119-train.png",
+        "claim": "Crimson is greater than Blue Violet.",
+        "label": "Refutes",
+        "explanation": "This statement contradicts the chart, which shows that Blue Violet has a higher value compared to Crimson across the x-axis. The visual representation indicates that as the x-axis increases, the value for Crimson decreases while Blue Violet remains higher, clearly demonstrating that Blue Violet is not less than Crimson."
+    },
+    {
+        "image": "figureQA_56247-train.png",
+        "claim": "The performance of Olive and Firebrick may vary under different conditions or metrics.",
+        "label": "Not enough information",
+        "explanation": "The chart provides a comparison of values for different categories, but it does not specify the context or criteria used to measure the performance of Olive and Firebrick. Without knowing the specific conditions or metrics, it is impossible to determine if one is definitively greater than the other."
+    },
+    {
+        "image": "figureQA_34683-train.png",
+        "claim": "Deep Pink is the minimum value in the chart.",
+        "label": "Supports",
+        "explanation": "The chart displays various colors along with their corresponding values on the x-axis. Deep Pink has the shortest bar, indicating it has the lowest value compared to the other colors listed. This visual representation confirms that Deep Pink is indeed the minimum."
+    }
+]

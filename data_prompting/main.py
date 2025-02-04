@@ -8,7 +8,7 @@ import base64
 # --- Image input prompts ---
 
 ## Supports prompts
-def create_zero_shot_supports_prompt(question, answer): # (final) 254 tokens, 1228 character w/o image and Q&A
+def create_zero_shot_supports_prompt(image, question, answer): # (final) 254 tokens, 1228 character w/o image and Q&A
     """ Creates a zero-shot prompt to generate a 'supports' claim with an explanation using image input based on a Q&A pair. """
 
     prompt = f"""
@@ -17,16 +17,18 @@ def create_zero_shot_supports_prompt(question, answer): # (final) 254 tokens, 12
     You will receive as input a chart image along with a question about the chart and its corresponding answer, delimited by triple single quotes (see data input below).
 
     Data input: '''
+        "chart": {image},
         "question": "{question}",
         "answer": "{answer}"
     '''
 
-    Task: Convert the 'question' and 'answer' pair to a declarative sentence and generate an explanation of why the sentence is true based on the information in the chart.
+    Task: Check the validity of the "answer" by referring to the "chart", change the "answer" if necessary, then convert the 'question' and 'answer' pair to a declarative sentence and generate an explanation of why the sentence is true based on the information in the chart.
 
     Process for generating a declarative sentence and an explanation:
-        1. Using only the "question" and "answer", convert them into a sentence such that the resulting sentence is supported by the data in the chart. 
-        2. Validate that the generated sentence is correct by carefully analyzing the chart image. 
-        3. Explain why the sentence is correct by referencing information extracted from the chart. Note: information in charts can be expressed through visual elements, data points, categorical labels, numbers, etc. 
+        1. Check that the "answer" to the "question" is precisely correct by examining the "chart". If the "answer" in correct, generate the correct answer and use this as the "answer" going forward.
+        2. Using only the "question" and "answer", convert them into a sentence such that the resulting sentence is supported by the data in the chart. 
+        3. Validate that the generated sentence is correct by carefully analyzing the chart image. 
+        4. Explain why the sentence is correct by referencing information extracted from the chart. Note: information in charts can be expressed through visual elements, data points, categorical labels, numbers, etc. 
 
     Output the result as a JSON object strictly following this structure:
     {{
@@ -221,7 +223,8 @@ def create_supports_prompt_simple(question, answer): # (final) 254 tokens, 1221 
     return prompt
 
 ## Refutes prompts
-def create_zero_shot_refutes_prompt(supports_claim): # (final) 279 tokens, 1355 characters w/o image and support claim
+def create_zero_shot_refutes_prompt(image, supports_claim): # (final) 279 tokens, 1355 characters w/o image and support claim
+    # Image must be included due to issue with figureQA_37961-train.png: When there are no numbers in the chart, the model struggles
     ''' Creates a zero-shot prompt to generate a 'refutes' claim with an explanation using image input based on a Q&A pair. '''
     
     prompt = f"""
@@ -230,13 +233,14 @@ def create_zero_shot_refutes_prompt(supports_claim): # (final) 279 tokens, 1355 
     You will receive as input a chart image along with a claim that supports the information in the chart, delimited by triple single quotes (see data input below).
 
     Data input: '''
+        "chart": {image},
         "supports claim": "{supports_claim}"
     '''
 
     Task: Generate a 'refutes' claim that contradicts the information in the chart and provide an explanation. 
 
     Process for generating a 'refutes' claim and explanation:
-        1. Develop a sentence that refutes the information in the chart based on the given claim that supports the information in the chart, without adding unverifiable information. This can be done by changing reported numbers, trends, or other factual elements in a plausible but incorrect way.
+        1. Develop a sentence that refutes the information in the chart based on the given claim that supports the information in the chart, without adding unverifiable information. This can be done by changing reported numbers, trends, or other factual elements in a plausible but incorrect way. Ensure that the statement does not reveal that it is refuted by the chart. 
         2. Validate that the generated sentences refutes the information in the chart by carefully analyzing the chart image. 
         3. Explain why the sentence refutes the chart image by referencing information extracted from the chart. Note: information in charts can be expressed through visual elements, data points, categorical labels, numbers, etc. In the explanation, do not refer to the given supports claim.
 
@@ -399,7 +403,7 @@ def create_zero_shot_nei_prompt(supports_claim): # (final) 269 tokens, 1390 char
     ''' Creates a zero-shot prompt to generate a 'not enough information' claim with an explanation. '''
 
     prompt = f"""
-    You are a helpful assistant designed to generate claims that neither fully support nor refute a given chart-based claim and output the result in JSON.
+    You are a helpful assistant designed to generate sentences that neither fully support nor refute a given chart-based claim and output the result in JSON.
 
     You will receive as input a chart image along with a claim that supports the information in the chart, delimited by triple single quotes (see data input below).
 
@@ -411,7 +415,7 @@ def create_zero_shot_nei_prompt(supports_claim): # (final) 269 tokens, 1390 char
 
     Process for generating a 'not enough information' claim and explanation:
         1. Analyze the chart data and the provided supports claim for gaps or missing details that prevent fully supporting or refuting the claim.
-        2. Develop a sentence based on these gaps, suggesting plausible scenarios or causes that neither directly support nor refute the original claim but that is related to it.
+        2. Generate a sentence based on these gaps, asserting, as if it were a fact, plausible scenarios or causes that, in reality, neither directly support nor refute the supports_claim but that is related to the supports_claim. Ensure that the sentence does not reveal that there is not enough information for it to be evaluated by the chart.
         3. Explain why the generated sentence cannot be verified with the available data by referencing information extracted from the chart. Note: information in charts can be expressed through visual elements, data points, categorical labels, numbers, etc. In the explanation, do not refer to the given supports claim.
         
     Output the result as a JSON object strictly following this structure:    
@@ -768,7 +772,7 @@ def parse_json_response(response):
 def generate_supports_claim(image_path, question, answer, model, base_dir):
     ''' Generate a 'supports' claim with an explanation. '''
     base64_image = encode_image(image_path, base_dir)
-    prompt = create_zero_shot_supports_prompt(question, answer) # change prompt version here
+    prompt = create_zero_shot_supports_prompt(base64_image, question, answer) # change prompt version here
     response = model(model_name='gpt-4o-mini', query=prompt, image_base64=base64_image) # change model here
     response_json = parse_json_response(response)
 
@@ -799,7 +803,7 @@ def generate_supports_claim_simple(question, answer, model):
 def generate_refutes_claim(image_path, supports_claim, model, base_dir):
     ''' Generate a 'refutes' claim with an explanation. '''
     base64_image = encode_image(image_path, base_dir)
-    prompt = create_zero_shot_refutes_prompt(supports_claim) # change prompt version here
+    prompt = create_zero_shot_refutes_prompt(base64_image, supports_claim) # change prompt version here
     response = model(model_name='gpt-4o-mini', query=prompt, image_base64=base64_image) # change model here
     response_json = parse_json_response(response)
 
@@ -830,14 +834,15 @@ def generate_nei_claim(image_path, supports_claim, model, base_dir):
 
     return claim, explanation
 
-def generate_claims_from_file(input_file, model, base_dir):
-    ''' Process an input file to generate one claim for each Q&A pair entry. '''
+def generate_claims_from_file(input_file, model, base_dir, claim_index):
+    ''' Process an input file to generate one claim for each Q&A pair entry.
+        Uses a persistent claim_index that is updated across files.
+    '''
     with open(input_file, 'r') as file:
         entries = json.load(file)
 
     results = []
     claim_types = ['Supports', 'Refutes', 'Not enough information']
-    claim_index = 0
     
     for entry in entries:
         # Check if necessary keys exist
@@ -879,6 +884,7 @@ def generate_claims_from_file(input_file, model, base_dir):
 
         # Generate 'not enough information' claim using 'supports' claim from simplified function
         if claim_type == 'Not enough information':
+            print("Reached Not Enough Information Claim Generation")
             simple_supports_claim = generate_supports_claim_simple(question, answer, model)
             nei_claim, explanation = generate_nei_claim(image, simple_supports_claim, model, base_dir)
             results.append({
@@ -890,8 +896,11 @@ def generate_claims_from_file(input_file, model, base_dir):
             claim_index += 1
             continue
 
-    # Save results to output file
+    # Save results to output file in the same folder as the input file.
     save_results(input_file, results)
+    
+    # Return the updated claim_index so that the counter persists across files.
+    return claim_index
 
 def save_results(input_file, results):
     ''' Save generated results to an output file. '''
@@ -919,6 +928,8 @@ def copy_folder_structure_and_files(src, dst):
 def main(src, dst):
     ''' Main function to process all JSON files in specified directory. '''
     model = QueryModel()
+    # Initialize a global counter that persists across multiple files.
+    global_claim_index = 0
 
     # Copy entire source directory to destination directory
     copy_folder_structure_and_files(src, dst)
@@ -927,11 +938,13 @@ def main(src, dst):
         for filename in files:
             if filename.startswith('preprocessed_') and filename.endswith('.json'):
                 input_file = os.path.join(root, filename)
-                generate_claims_from_file(input_file, model, dst)
+                # Pass the global counter into each file's processing,
+                # and update it with the returned value.
+                global_claim_index = generate_claims_from_file(input_file, model, dst, global_claim_index)
 
 if __name__ == '__main__':
     if len(sys.argv) != 3:
-        print("Usage: python data_prompting.py <from_path> <to_path>") # Indicate correct usage if wrong command line arguments
+        print("Usage: python data_prompting.py <from_path> <to_path>")
         sys.exit(1)
     from_path = sys.argv[1]
     to_path = sys.argv[2]

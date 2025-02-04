@@ -1,0 +1,14 @@
+[
+    {
+        "image": "figureQA_43249-train.png",
+        "claim": "Hot Pink is less than Teal.",
+        "label": "Refutes",
+        "explanation": "This statement contradicts the chart, which visually indicates that Hot Pink has a longer bar than Teal, suggesting that Hot Pink has a greater value. Therefore, claiming that Hot Pink is less than Teal is incorrect based on the data presented."
+    },
+    {
+        "image": "figureQA_99722-train.png",
+        "claim": "The trends of Dark Gold and Turquoise may vary significantly at different intervals.",
+        "label": "Not enough information",
+        "explanation": "The chart shows the trends of various colors over time, but it does not provide specific data points or intervals that would clarify how Dark Gold and Turquoise interact at different stages. Without detailed information on their values at specific intervals, it is impossible to determine the nature of their relationship."
+    }
+]
