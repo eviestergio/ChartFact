@@ -22,10 +22,10 @@ def create_zero_shot_supports_prompt(image, question, answer): # (final) 254 tok
         "answer": "{answer}"
     '''
 
-    Task: Convert the 'question' and 'answer' pair to a declarative sentence and generate an explanation of why the sentence is true based on the information in the chart.
+    Task: Check the validity of the "answer" by referring to the "chart", change the "answer" if necessary, then convert the 'question' and 'answer' pair to a declarative sentence and generate an explanation of why the sentence is true based on the information in the chart.
 
     Process for generating a declarative sentence and an explanation:
-        1. Check that the "answer" to the "question" is correct by examining the "chart". If the "answer" in correct, generate the correct answer and use this as the "answer" going forward.
+        1. Check that the "answer" to the "question" is precisely correct by examining the "chart". If the "answer" in correct, generate the correct answer and use this as the "answer" going forward.
         2. Using only the "question" and "answer", convert them into a sentence such that the resulting sentence is supported by the data in the chart. 
         3. Validate that the generated sentence is correct by carefully analyzing the chart image. 
         4. Explain why the sentence is correct by referencing information extracted from the chart. Note: information in charts can be expressed through visual elements, data points, categorical labels, numbers, etc. 
