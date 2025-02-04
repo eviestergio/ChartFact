@@ -236,7 +236,7 @@ def create_zero_shot_refutes_prompt(supports_claim): # (final) 279 tokens, 1355 
     Task: Generate a 'refutes' claim that contradicts the information in the chart and provide an explanation. 
 
     Process for generating a 'refutes' claim and explanation:
-        1. Develop a sentence that refutes the information in the chart based on the given claim that supports the information in the chart, without adding unverifiable information. This can be done by changing reported numbers, trends, or other factual elements in a plausible but incorrect way.
+        1. Develop a sentence that refutes the information in the chart based on the given claim that supports the information in the chart, without adding unverifiable information. This can be done by changing reported numbers, trends, or other factual elements in a plausible but incorrect way. Ensure that the statement does not reveal that it is refuted by the chart. 
         2. Validate that the generated sentences refutes the information in the chart by carefully analyzing the chart image. 
         3. Explain why the sentence refutes the chart image by referencing information extracted from the chart. Note: information in charts can be expressed through visual elements, data points, categorical labels, numbers, etc. In the explanation, do not refer to the given supports claim.
 
