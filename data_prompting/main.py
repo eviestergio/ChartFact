@@ -830,14 +830,15 @@ def generate_nei_claim(image_path, supports_claim, model, base_dir):
 
     return claim, explanation
 
-def generate_claims_from_file(input_file, model, base_dir):
-    ''' Process an input file to generate one claim for each Q&A pair entry. '''
+def generate_claims_from_file(input_file, model, base_dir, claim_index):
+    ''' Process an input file to generate one claim for each Q&A pair entry.
+        Uses a persistent claim_index that is updated across files.
+    '''
     with open(input_file, 'r') as file:
         entries = json.load(file)
 
     results = []
     claim_types = ['Supports', 'Refutes', 'Not enough information']
-    claim_index = 0
     
     for entry in entries:
         # Check if necessary keys exist
@@ -879,6 +880,7 @@ def generate_claims_from_file(input_file, model, base_dir):
 
         # Generate 'not enough information' claim using 'supports' claim from simplified function
         if claim_type == 'Not enough information':
+            print("Reached Not Enough Information Claim Generation")
             simple_supports_claim = generate_supports_claim_simple(question, answer, model)
             nei_claim, explanation = generate_nei_claim(image, simple_supports_claim, model, base_dir)
             results.append({
@@ -890,8 +892,11 @@ def generate_claims_from_file(input_file, model, base_dir):
             claim_index += 1
             continue
 
-    # Save results to output file
+    # Save results to output file in the same folder as the input file.
     save_results(input_file, results)
+    
+    # Return the updated claim_index so that the counter persists across files.
+    return claim_index
 
 def save_results(input_file, results):
     ''' Save generated results to an output file. '''
@@ -919,6 +924,8 @@ def copy_folder_structure_and_files(src, dst):
 def main(src, dst):
     ''' Main function to process all JSON files in specified directory. '''
     model = QueryModel()
+    # Initialize a global counter that persists across multiple files.
+    global_claim_index = 0
 
     # Copy entire source directory to destination directory
     copy_folder_structure_and_files(src, dst)
@@ -927,11 +934,13 @@ def main(src, dst):
         for filename in files:
             if filename.startswith('preprocessed_') and filename.endswith('.json'):
                 input_file = os.path.join(root, filename)
-                generate_claims_from_file(input_file, model, dst)
+                # Pass the global counter into each file's processing,
+                # and update it with the returned value.
+                global_claim_index = generate_claims_from_file(input_file, model, dst, global_claim_index)
 
 if __name__ == '__main__':
     if len(sys.argv) != 3:
-        print("Usage: python data_prompting.py <from_path> <to_path>") # Indicate correct usage if wrong command line arguments
+        print("Usage: python data_prompting.py <from_path> <to_path>")
         sys.exit(1)
     from_path = sys.argv[1]
     to_path = sys.argv[2]
