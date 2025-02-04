@@ -1,0 +1,14 @@
+[
+    {
+        "image": "chartQA_multi_col_40930-val.png",
+        "claim": "The blue bar was below 5 in the year 2020.",
+        "label": "Refutes",
+        "explanation": "This statement contradicts the chart, which clearly shows that the value of the blue bar for 2020 is approximately 5.76, indicating that it was above 5."
+    },
+    {
+        "image": "chartQA_two_col_43627-val.png",
+        "claim": "The increase in expenses for the Green Bay Packers in 2017 could be attributed to various factors such as player acquisitions, operational costs, or changes in revenue streams.",
+        "label": "Not enough information",
+        "explanation": "The chart provides data on the expenses for the Green Bay Packers from 2014 to 2018, but it does not specify the reasons behind the fluctuations in expenses. Without additional context or breakdowns of the expenses, it is impossible to determine the specific factors contributing to the increase in 2017."
+    }
+]

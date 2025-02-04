@@ -411,7 +411,7 @@ def create_zero_shot_nei_prompt(supports_claim): # (final) 269 tokens, 1390 char
 
     Process for generating a 'not enough information' claim and explanation:
         1. Analyze the chart data and the provided supports claim for gaps or missing details that prevent fully supporting or refuting the claim.
-        2. Generate a sentence based on these gaps, suggesting plausible scenarios or causes that neither directly support nor refute the original claim but that is related to it. Ensure that the sentence does not reveal that there is not enough information for it to be evaluated by the chart.
+        2. Generate a sentence based on these gaps, asserting, as if it were a fact, plausible scenarios or causes that, in reality, neither directly support nor refute the supports_claim but that is related to the supports_claim. Ensure that the sentence does not reveal that there is not enough information for it to be evaluated by the chart.
         3. Explain why the generated sentence cannot be verified with the available data by referencing information extracted from the chart. Note: information in charts can be expressed through visual elements, data points, categorical labels, numbers, etc. In the explanation, do not refer to the given supports claim.
         
     Output the result as a JSON object strictly following this structure:    
