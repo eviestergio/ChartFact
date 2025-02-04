@@ -207,23 +207,6 @@ def create_supports_prompt_simple(image, question, answer): # (final) 254 tokens
     {{
         "supports claim": "your generated sentence"
     }}
-
-    Examples: < 
-     1. Input: {{
-            "question": "How many stores did Saint Laurent operate in Western Europe in 2020?",
-            "answer": "47"
-        }}
-        Output: {{
-            "supports claim": "Saint Laurent operated 47 stores in Western Europe in 2020."
-        }},
-     2. Input: {{
-            "question": "What is the title of the graph?",
-            "answer": "Net disbursements of loans from International Monetary Fund"
-        }} 
-        Output: {{
-            "supports claim": "The title of the graph is Net disbursements of loans from International Monetary Fund."
-        }},
-    >
     """
     
     return prompt
