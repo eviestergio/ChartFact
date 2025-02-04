@@ -1,0 +1,12 @@
+[
+  {
+    "image": "chartQA_multi_col_20204-train.png",
+    "question": "How many people committed suicide in 2009?",
+    "answer": "517"
+  },
+  {
+    "image": "chartQA_two_col_42313-train.png",
+    "question": "What was the amount of British pounds spent on alcoholic drinks in 2020?",
+    "answer": "25964"
+  }
+]
