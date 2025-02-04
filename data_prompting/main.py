@@ -8,7 +8,7 @@ import base64
 # --- Image input prompts ---
 
 ## Supports prompts
-def create_zero_shot_supports_prompt(question, answer): # (final) 254 tokens, 1228 character w/o image and Q&A
+def create_zero_shot_supports_prompt(image, question, answer): # (final) 254 tokens, 1228 character w/o image and Q&A
     """ Creates a zero-shot prompt to generate a 'supports' claim with an explanation using image input based on a Q&A pair. """
 
     prompt = f"""
@@ -17,6 +17,7 @@ def create_zero_shot_supports_prompt(question, answer): # (final) 254 tokens, 12
     You will receive as input a chart image along with a question about the chart and its corresponding answer, delimited by triple single quotes (see data input below).
 
     Data input: '''
+        "chart": {image},
         "question": "{question}",
         "answer": "{answer}"
     '''
@@ -24,9 +25,10 @@ def create_zero_shot_supports_prompt(question, answer): # (final) 254 tokens, 12
     Task: Convert the 'question' and 'answer' pair to a declarative sentence and generate an explanation of why the sentence is true based on the information in the chart.
 
     Process for generating a declarative sentence and an explanation:
-        1. Using only the "question" and "answer", convert them into a sentence such that the resulting sentence is supported by the data in the chart. 
-        2. Validate that the generated sentence is correct by carefully analyzing the chart image. 
-        3. Explain why the sentence is correct by referencing information extracted from the chart. Note: information in charts can be expressed through visual elements, data points, categorical labels, numbers, etc. 
+        1. Check that the "answer" to the "question" is correct by examining the "chart". If the "answer" in correct, generate the correct answer and use this as the "answer" going forward.
+        2. Using only the "question" and "answer", convert them into a sentence such that the resulting sentence is supported by the data in the chart. 
+        3. Validate that the generated sentence is correct by carefully analyzing the chart image. 
+        4. Explain why the sentence is correct by referencing information extracted from the chart. Note: information in charts can be expressed through visual elements, data points, categorical labels, numbers, etc. 
 
     Output the result as a JSON object strictly following this structure:
     {{
@@ -221,7 +223,8 @@ def create_supports_prompt_simple(question, answer): # (final) 254 tokens, 1221 
     return prompt
 
 ## Refutes prompts
-def create_zero_shot_refutes_prompt(supports_claim): # (final) 279 tokens, 1355 characters w/o image and support claim
+def create_zero_shot_refutes_prompt(image, supports_claim): # (final) 279 tokens, 1355 characters w/o image and support claim
+    # Image must be included due to issue with figureQA_37961-train.png: When there are no numbers in the chart, the model struggles
     ''' Creates a zero-shot prompt to generate a 'refutes' claim with an explanation using image input based on a Q&A pair. '''
     
     prompt = f"""
@@ -230,6 +233,7 @@ def create_zero_shot_refutes_prompt(supports_claim): # (final) 279 tokens, 1355 
     You will receive as input a chart image along with a claim that supports the information in the chart, delimited by triple single quotes (see data input below).
 
     Data input: '''
+        "chart": {image},
         "supports claim": "{supports_claim}"
     '''
 
@@ -768,7 +772,7 @@ def parse_json_response(response):
 def generate_supports_claim(image_path, question, answer, model, base_dir):
     ''' Generate a 'supports' claim with an explanation. '''
     base64_image = encode_image(image_path, base_dir)
-    prompt = create_zero_shot_supports_prompt(question, answer) # change prompt version here
+    prompt = create_zero_shot_supports_prompt(base64_image, question, answer) # change prompt version here
     response = model(model_name='gpt-4o-mini', query=prompt, image_base64=base64_image) # change model here
     response_json = parse_json_response(response)
 
@@ -799,7 +803,7 @@ def generate_supports_claim_simple(question, answer, model):
 def generate_refutes_claim(image_path, supports_claim, model, base_dir):
     ''' Generate a 'refutes' claim with an explanation. '''
     base64_image = encode_image(image_path, base_dir)
-    prompt = create_zero_shot_refutes_prompt(supports_claim) # change prompt version here
+    prompt = create_zero_shot_refutes_prompt(base64_image, supports_claim) # change prompt version here
     response = model(model_name='gpt-4o-mini', query=prompt, image_base64=base64_image) # change model here
     response_json = parse_json_response(response)
 
