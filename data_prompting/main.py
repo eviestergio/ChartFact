@@ -183,23 +183,29 @@ def create_few_shot_supports_prompt_wo_QA():
     return prompt
 
 ### Simple supports prompt
-def create_supports_prompt_simple(question, answer): # (final) 254 tokens, 1221 characters
+def create_supports_prompt_simple(image, question, answer): # (final) 254 tokens, 1221 characters
     ''' Creates a simplified prompt to generate a 'supports' claim without an explanation. '''
     prompt = f"""
     You are a helpful assistant designed to output JSON.
 
-    You will be provided with a question and its corresponding answer delimited by triple single quotes.
+    You will receive as input a chart image along with a question about the chart and its corresponding answer, delimited by triple single quotes (see data input below).
 
-    Data entry: '''
-        question: "{question}",
-        answer: "{answer}"
+    Data input: '''
+        "chart": {image},
+        "question": "{question}",
+        "answer": "{answer}"
     '''
 
-    Task: Using the two input-output examples delimited by angle brackets, convert each 'question' and 'answer' pair to a claim that supports the information.
+    Task: Check the validity of the "answer" by referring to the "chart", change the "answer" if necessary, then convert the 'question' and 'answer' pair to a declarative sentence.
+
+    Process for generating a declarative sentence:
+        1. Check that the "answer" to the "question" is precisely correct by examining the "chart". If the "answer" in correct, generate the correct answer and use this as the "answer" going forward.
+        2. Using only the "question" and "answer", convert them into a sentence such that the resulting sentence is supported by the data in the chart. 
+        3. Validate that the generated sentence is correct by carefully analyzing the chart image, correct the sentence if necessary. 
 
     Output the result as a JSON object with the key "supports claim". The format should strictly follow this structure:
     {{
-        "supports claim": "your generated supports claim"
+        "supports claim": "your generated sentence"
     }}
 
     Examples: < 
@@ -399,7 +405,7 @@ def create_few_shot_refutes_prompt_wo_QA(image):
     return prompt
 
 ## Not enough information prompts
-def create_zero_shot_nei_prompt(supports_claim): # (final) 269 tokens, 1390 characters w/o image and support claim
+def create_zero_shot_nei_prompt(image, supports_claim): # (final) 269 tokens, 1390 characters w/o image and support claim
     ''' Creates a zero-shot prompt to generate a 'not enough information' claim with an explanation. '''
 
     prompt = f"""
@@ -408,6 +414,7 @@ def create_zero_shot_nei_prompt(supports_claim): # (final) 269 tokens, 1390 char
     You will receive as input a chart image along with a claim that supports the information in the chart, delimited by triple single quotes (see data input below).
 
     Data input: '''
+        "chart": {image},
         "supports claim": "{supports_claim}"
     '''
 
@@ -786,10 +793,11 @@ def generate_supports_claim(image_path, question, answer, model, base_dir):
 
     return claim, explanation
 
-def generate_supports_claim_simple(question, answer, model): 
+def generate_supports_claim_simple(image_path, question, answer, model, base_dir): 
     ''' Generate a simplified 'supports' claim without an explanation. '''
-    prompt = create_supports_prompt_simple(question, answer) # leave prompt as is
-    response = model(model_name='gpt-3.5-turbo', query=prompt) # leave model as is
+    base64_image = encode_image(image_path, base_dir)
+    prompt = create_supports_prompt_simple(base64_image, question, answer) # leave prompt as is
+    response = model(model_name='gpt-4o-mini', query=prompt, image_base64=base64_image) # change model here
     response_json = parse_json_response(response)
 
     # If failed, add empty entries to filter out from final dataset
@@ -820,7 +828,7 @@ def generate_refutes_claim(image_path, supports_claim, model, base_dir):
 def generate_nei_claim(image_path, supports_claim, model, base_dir):
     ''' Generate a 'not enough information' claim with an explanation. '''
     base64_image = encode_image(image_path, base_dir)
-    prompt = create_zero_shot_nei_prompt(supports_claim) # change prompt version here
+    prompt = create_zero_shot_nei_prompt(base64_image, supports_claim) # change prompt version here
     response = model(model_name='gpt-4o-mini', query=prompt, image_base64=base64_image) # change model here
     response_json = parse_json_response(response)
 
@@ -871,7 +879,7 @@ def generate_claims_from_file(input_file, model, base_dir, claim_index):
 
         # Generate 'refutes' claim using 'supports' claim from simplified function
         if claim_type == 'Refutes':
-            simple_supports_claim = generate_supports_claim_simple(question, answer, model)
+            simple_supports_claim = generate_supports_claim_simple(image, question, answer, model)
             refutes_claim, explanation = generate_refutes_claim(image, simple_supports_claim, model, base_dir)
             results.append({
                 "image": image,
@@ -885,7 +893,7 @@ def generate_claims_from_file(input_file, model, base_dir, claim_index):
         # Generate 'not enough information' claim using 'supports' claim from simplified function
         if claim_type == 'Not enough information':
             print("Reached Not Enough Information Claim Generation")
-            simple_supports_claim = generate_supports_claim_simple(question, answer, model)
+            simple_supports_claim = generate_supports_claim_simple(image, question, answer, model)
             nei_claim, explanation = generate_nei_claim(image, simple_supports_claim, model, base_dir)
             results.append({
                 "image": image,
