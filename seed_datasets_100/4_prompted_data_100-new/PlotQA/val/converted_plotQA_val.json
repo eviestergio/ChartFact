@@ -1,0 +1,32 @@
+[
+    {
+        "image": "plotQA_4212-val.png",
+        "claim": "The total grants received by the government in Cote d'Ivoire is 548650000 US dollars.",
+        "label": "Supports",
+        "explanation": "The chart shows the grants received by the government, including technical cooperation, for various years. The data point for Cote d'Ivoire indicates that the total grants received amount to 548650000 US dollars, which is clearly marked on the graph."
+    },
+    {
+        "image": "plotQA_20477-val.png",
+        "claim": "The values on the major ticks of the Y-axis are written in scientific E-notation.",
+        "label": "Refutes",
+        "explanation": "This statement contradicts the chart's visual representation, which clearly shows that the Y-axis values are displayed in standard numerical format rather than scientific notation. The presence of whole numbers indicates that the values are not expressed in E-notation, which typically involves a format like '1.0E+1' for 10."
+    },
+    {
+        "image": "plotQA_27994-val.png",
+        "claim": "The total calories required to address undernourishment may vary significantly based on factors such as local dietary habits and agricultural productivity.",
+        "label": "Not enough information",
+        "explanation": "The chart provides calorie requirements for different countries but does not include information on local dietary habits or agricultural conditions, which could influence the actual calories needed to lift the undernourished population."
+    },
+    {
+        "image": "plotQA_20471-val.png",
+        "claim": "The CPIA rating of social protection in 2008 is not less than that in 2012.",
+        "label": "Supports",
+        "explanation": "The chart shows that the CPIA rating for social protection remained constant at approximately 2.5 from 2008 to 2012. Therefore, the rating in 2008 is equal to the rating in 2012, confirming that it is not less."
+    },
+    {
+        "image": "plotQA_19779-val.png",
+        "claim": "The percentage of male workers in industry in 1986 was only 30.5%.",
+        "label": "Refutes",
+        "explanation": "This statement contradicts the chart, which clearly shows that the percentage of male workers in the industry sector in 1986 was significantly higher, at approximately 51.2%. The refuted claim misrepresents the data by suggesting a much lower percentage, which is not supported by the visual representation in the chart."
+    }
+]

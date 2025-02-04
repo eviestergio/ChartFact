@@ -1,0 +1,32 @@
+[
+    {
+        "image": "chartQA_two_col_20869-val.png",
+        "claim": "The profit contributions from regions other than South America may vary significantly, affecting the overall profit distribution.",
+        "label": "Not enough information",
+        "explanation": "The chart provides specific percentages for North America, Europe, and South America, but does not include information about other potential regions or factors that could influence profit contributions. Without this data, it is unclear how the contributions from these regions interact or compare, making it impossible to fully assess the implications of the stated profit contributions."
+    },
+    {
+        "image": "chartQA_multi_col_40930-val.png",
+        "claim": "In 2020, the expected spend for online was above 5 billion GBP.",
+        "label": "Supports",
+        "explanation": "The chart shows that in 2020, the blue bar representing online spending reached approximately 5.76 billion GBP, which is indeed above 5 billion GBP."
+    },
+    {
+        "image": "chartQA_two_col_43627-val.png",
+        "claim": "The expenses of the Green Bay Packers in 2017 amounted to 400.0 million.",
+        "label": "Refutes",
+        "explanation": "This statement contradicts the chart, which clearly shows that the expenses for 2017 were recorded at 376.1 million. By stating a higher figure, it misrepresents the actual data presented in the chart."
+    },
+    {
+        "image": "chartQA_two_col_43066-val.png",
+        "claim": "The overall satisfaction of users with search engines in 2020 may have varied significantly based on individual experiences and preferences.",
+        "label": "Not enough information",
+        "explanation": "The chart provides specific index points for Google and other search engines but does not detail user demographics, specific feedback, or the reasons behind the satisfaction levels. Without this context, it's unclear how individual experiences influenced the overall scores."
+    },
+    {
+        "image": "chartQA_multi_col_20676-val.png",
+        "claim": "In 2014, 20.7 million smart home devices were sold to dealers in the United States.",
+        "label": "Supports",
+        "explanation": "The chart clearly shows that in 2014, the sales of smart home devices amounted to 20.7 million units, as indicated by the height of the blue bar corresponding to that year."
+    }
+]
