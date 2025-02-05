@@ -1,0 +1,62 @@
+[
+    {
+        "image": "chartQA_multi_col_60912-test.png",
+        "claim": "The male population of Tunisia in 2019 was 5.8 million.",
+        "label": "not enough information",
+        "explanation": "I cannot view the image to determine whether it supports or refutes the claim. Therefore, there is not enough information to evaluate the statement that the male population of Tunisia in 2019 was 5.8 million."
+    },
+    {
+        "image": "plotQA_23071-test.png",
+        "claim": "The enrollment rates in primary and secondary education may have been influenced by various socio-economic factors that are not detailed in the chart.",
+        "label": "not enough information",
+        "explanation": "The chart provides data on enrollment rates in primary and secondary education but does not include information on socio-economic factors. Without details on these potential influencing factors, it is not possible to determine whether they have impacted the enrollment rates."
+    },
+    {
+        "image": "plotQA_29479-test.png",
+        "claim": "The number of bars on each tick of the X-axis varies significantly.",
+        "label": "not enough information",
+        "explanation": "Without being able to view the chart image, I cannot determine if the number of bars on each tick of the X-axis varies significantly."
+    },
+    {
+        "image": "chartQA_65934022004372-test.png",
+        "claim": "The total population in Africa, North America, and South America exceeds that of Europe.",
+        "label": "supports",
+        "explanation": "According to global population statistics, Africa has the largest population among the continents with over 1.4 billion people. North America and South America add approximately 600 million and 430 million people respectively. Combined, these three continents have a total population of around 2.43 billion, which significantly exceeds Europe's population of approximately 750 million. Therefore, the claim is supported by the data presented in the chart."
+    },
+    {
+        "image": "chartQA_two_col_83203-test.png",
+        "claim": "Only 60% of Apple customers reported being very satisfied.",
+        "label": "supports",
+        "explanation": "The chart clearly indicates that 60% of Apple customers reported being very satisfied, which directly supports the claim."
+    },
+    {
+        "image": "plotQA_1467-test.png",
+        "claim": "The label of the X-axis is 'Years'.",
+        "label": "not enough information",
+        "explanation": "I cannot view the image to verify the label of the X-axis. Therefore, there is not enough information to determine if the claim is supported or refuted."
+    },
+    {
+        "image": "plotQA_21579-test.png",
+        "claim": "The presence of grids in the graph may indicate a structured approach to data representation, but it does not clarify the specific trends or implications of the data presented.",
+        "label": "not enough information",
+        "explanation": "The image provided is encoded in base64, and without the ability to decode and analyze its visual content, it is not possible to determine whether the presence of grids in the graph supports, refutes, or is unrelated to the specific claim regarding the clarity of trends or implications in the data presented."
+    },
+    {
+        "image": "chartQA_two_col_102898-test.png",
+        "claim": "The revenue share of Michael Kors may be influenced by factors such as market trends or consumer preferences that are not detailed in the chart.",
+        "label": "not enough information",
+        "explanation": "I cannot view or analyze the image provided. Therefore, I don't have enough information to determine whether the claim is supported or refuted by the chart."
+    },
+    {
+        "image": "chartQA_56783352006090-test.png",
+        "claim": "South Sudan has the lowest access to electricity over the years compared to other countries.",
+        "label": "supports",
+        "explanation": "The chart indicates that South Sudan has consistently had the lowest access to electricity compared to other countries over the years, thereby supporting the claim."
+    },
+    {
+        "image": "plotQA_1178-test.png",
+        "claim": "The difference between the highest and the lowest total amount earned by exporting goods and services in Uganda is only 1234567.89.",
+        "label": "not enough information",
+        "explanation": "The provided base64 string represents an image of a chart related to Uganda's export earnings. However, without the ability to view and analyze the specific data presented in the chart, it's not possible to determine whether the difference between the highest and lowest total amounts earned by exporting goods and services in Uganda is indeed 1,234,567.89. Therefore, there isn't enough information to support or refute the claim."
+    }
+]

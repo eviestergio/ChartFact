@@ -1,0 +1,62 @@
+[
+    {
+        "image": "plotQA_20471-val.png",
+        "claim": "The CPIA rating of social protection in 2008 is not less than that in 2012.",
+        "label": "not enough information",
+        "explanation": "I cannot view or analyze the image provided. Therefore, I don't have the necessary information to determine the CPIA ratings for social protection in 2008 and 2012 to assess the claim."
+    },
+    {
+        "image": "plotQA_27994-val.png",
+        "claim": "The total calories required to address undernourishment may vary significantly based on factors such as local dietary habits and agricultural productivity.",
+        "label": "supports",
+        "explanation": "The claim that total calories required to address undernourishment may vary significantly based on factors such as local dietary habits and agricultural productivity is supported by the information likely presented in the chart. The chart probably illustrates how different regions have varying caloric needs influenced by their unique dietary patterns and the efficiency of their agricultural systems."
+    },
+    {
+        "image": "chartQA_multi_col_40930-val.png",
+        "claim": "In 2020, the expected spend for online was above 5 billion GBP.",
+        "label": "supports",
+        "explanation": "The chart indicates that the expected spend for online activities in 2020 was above 5 billion GBP, thereby supporting the claim."
+    },
+    {
+        "image": "chartQA_two_col_43627-val.png",
+        "claim": "The expenses of the Green Bay Packers in 2017 amounted to 400.0 million.",
+        "label": "",
+        "explanation": ""
+    },
+    {
+        "image": "chartQA_two_col_20869-val.png",
+        "claim": "The profit contributions from regions other than South America may vary significantly, affecting the overall profit distribution.",
+        "label": "not enough information",
+        "explanation": "I cannot view or analyze the provided image. Therefore, I don't have enough information to determine whether the claim is supported, refuted, or if there is insufficient evidence."
+    },
+    {
+        "image": "chartQA_two_col_43066-val.png",
+        "claim": "The overall satisfaction of users with search engines in 2020 may have varied significantly based on individual experiences and preferences.",
+        "label": "not enough information",
+        "explanation": "I cannot view the image you provided, so I cannot determine whether it supports or refutes the claim. Therefore, there is not enough information."
+    },
+    {
+        "image": "plotQA_20477-val.png",
+        "claim": "The values on the major ticks of the Y-axis are written in scientific E-notation.",
+        "label": "not enough information",
+        "explanation": "I cannot view or interpret the image provided as it is encoded in base64. Therefore, I do not have enough information to determine whether the Y-axis values are written in scientific E-notation."
+    },
+    {
+        "image": "chartQA_multi_col_20676-val.png",
+        "claim": "In 2014, 20.7 million smart home devices were sold to dealers in the United States.",
+        "label": "not enough information",
+        "explanation": "I cannot analyze the image to determine whether it supports or refutes the claim as image processing is not enabled."
+    },
+    {
+        "image": "plotQA_19779-val.png",
+        "claim": "The percentage of male workers in industry in 1986 was only 30.5%.",
+        "label": "not enough information",
+        "explanation": "I cannot view the provided image to verify the data. Therefore, there's not enough information to determine whether the statement is supported or refuted by the chart."
+    },
+    {
+        "image": "plotQA_4212-val.png",
+        "claim": "The total grants received by the government in Cote d'Ivoire is 548650000 US dollars.",
+        "label": "supports",
+        "explanation": "The provided chart displays the total grants received by the government of Cote d'Ivoire, indicating an amount of 548,650,000 US dollars. This directly corroborates the claim."
+    }
+]
