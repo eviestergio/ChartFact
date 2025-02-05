@@ -1,0 +1,62 @@
+[
+    {
+        "image": "chartQA_multi_col_60912-test.png",
+        "claim": "The male population of Tunisia in 2019 was 5.8 million.",
+        "label": "Supports",
+        "explanation": "The chart shows the male population of Tunisia for the year 2019 as 5.8 million, which is indicated by the data point on the black line representing males. This confirms that the answer provided is accurate."
+    },
+    {
+        "image": "plotQA_23071-test.png",
+        "claim": "The enrollment rates in primary and secondary education may have been influenced by various socio-economic factors that are not detailed in the chart.",
+        "label": "Not enough information",
+        "explanation": "The chart provides enrollment rates for different countries but does not include information on socio-economic conditions, educational policies, or other factors that could affect these rates. Without this context, it is impossible to determine the reasons behind the differences in enrollment rates."
+    },
+    {
+        "image": "plotQA_29479-test.png",
+        "claim": "The number of bars on each tick of the X-axis varies significantly.",
+        "label": "Refutes",
+        "explanation": "This statement contradicts the chart's visual representation, which shows that each tick on the X-axis has an equal number of bars representing different countries. The consistent grouping of bars indicates that the number of categories (countries) remains the same across all years, thus supporting the original claim."
+    },
+    {
+        "image": "chartQA_65934022004372-test.png",
+        "claim": "The total population in Africa, North America, and South America exceeds that of Europe.",
+        "label": "Refutes",
+        "explanation": "This statement contradicts the chart, which shows that Europe has a population of 549.33 million, while the combined populations of Africa (227.79 million), Northern America (172.6 million), and South America (113.77 million) total only 514.16 million. Therefore, the claim that the total population in these regions exceeds that of Europe is incorrect."
+    },
+    {
+        "image": "chartQA_two_col_83203-test.png",
+        "claim": "Only 60% of Apple customers reported being very satisfied.",
+        "label": "Refutes",
+        "explanation": "This statement contradicts the chart, which shows that 84% of Apple customers reported being very satisfied. By stating a lower satisfaction rate, it directly undermines the data presented in the chart."
+    },
+    {
+        "image": "plotQA_1467-test.png",
+        "claim": "The label of the X-axis is 'Years'.",
+        "label": "Supports",
+        "explanation": "The chart clearly indicates that the X-axis represents different years, as labeled at the bottom of the graph. Each tick mark corresponds to a specific year, confirming that 'Years' is indeed the correct label for the X-axis."
+    },
+    {
+        "image": "plotQA_21579-test.png",
+        "claim": "The presence of grids in the graph may indicate a structured approach to data representation, but it does not clarify the specific trends or implications of the data presented.",
+        "label": "Not enough information",
+        "explanation": "The chart shows a trend over time regarding the percentage of senior management time spent on government regulations, but it does not provide details on the reasons for this trend or how the grid structure influences the interpretation of the data."
+    },
+    {
+        "image": "chartQA_two_col_102898-test.png",
+        "claim": "The revenue share of Michael Kors may be influenced by factors such as market trends or consumer preferences that are not detailed in the chart.",
+        "label": "Not enough information",
+        "explanation": "The chart provides specific revenue share percentages for Michael Kors, Versace, and Jimmy Choo, but it does not include any contextual information about market conditions, consumer behavior, or other external factors that could affect these figures. Without this additional context, it is unclear whether the revenue share is solely due to the brand's performance or influenced by other variables."
+    },
+    {
+        "image": "chartQA_56783352006090-test.png",
+        "claim": "South Sudan has the lowest access to electricity over the years compared to other countries.",
+        "label": "Supports",
+        "explanation": "The chart shows that South Sudan consistently has the lowest percentage of the population with access to electricity, remaining below 20% throughout the years displayed. In contrast, other countries like Jamaica and Eritrea have significantly higher access rates, with Jamaica exceeding 80% and Eritrea showing a gradual increase but still above South Sudan."
+    },
+    {
+        "image": "plotQA_1178-test.png",
+        "claim": "The difference between the highest and the lowest total amount earned by exporting goods and services in Uganda is only 1234567.89.",
+        "label": "Refutes",
+        "explanation": "This statement contradicts the chart's data, which indicates a significant difference of 34564811.277677 between the highest and lowest amounts earned. By drastically reducing the reported difference to 1234567.89, the claim misrepresents the financial data shown in the chart."
+    }
+]
