@@ -1,0 +1,52 @@
+[
+    {
+        "image": "figureQA_55737-train.png",
+        "target": "not enough information",
+        "predicted": "not enough information"
+    },
+    {
+        "image": "plotQA_37698-train.png",
+        "target": "refutes",
+        "predicted": "not enough information"
+    },
+    {
+        "image": "chartQA_two_col_2248-train.png",
+        "target": "supports",
+        "predicted": "not enough information"
+    },
+    {
+        "image": "plotQA_139568-train.png",
+        "target": "not enough information",
+        "predicted": "supports"
+    },
+    {
+        "image": "chartQA_two_col_4043-train.png",
+        "target": "refutes",
+        "predicted": "refutes"
+    },
+    {
+        "image": "figureQA_80487-train.png",
+        "target": "supports",
+        "predicted": "refutes"
+    },
+    {
+        "image": "chartQA_two_col_4713-train.png",
+        "target": "supports",
+        "predicted": "supports"
+    },
+    {
+        "image": "plotQA_49754-train.png",
+        "target": "refutes",
+        "predicted": ""
+    },
+    {
+        "image": "chartQA_two_col_22311-train.png",
+        "target": "refutes",
+        "predicted": "supports"
+    },
+    {
+        "image": "plotQA_148613-train.png",
+        "target": "supports",
+        "predicted": ""
+    }
+]

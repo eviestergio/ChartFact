@@ -1,0 +1,20 @@
+[
+    {
+        "image": "chartQA_56783352006090-test.png",
+        "claim": "South Sudan has the lowest access to electricity over the years compared to other countries.",
+        "label": "Supports",
+        "explanation": "The chart shows that South Sudan consistently has the lowest percentage of the population with access to electricity, remaining below 20% throughout the years displayed. In contrast, other countries like Jamaica and Eritrea have significantly higher access rates, with Jamaica exceeding 80% and Eritrea showing a gradual increase but still above South Sudan."
+    },
+    {
+        "image": "chartQA_multi_col_60912-test.png",
+        "claim": "The male population of Tunisia in 2019 was 5.9.",
+        "label": "Refutes",
+        "explanation": "This statement contradicts the chart, which shows that the male population of Tunisia in 2019 was actually 5.8 million, as indicated by the data point on the black line representing the male population. The claim incorrectly states a higher figure, which misrepresents the actual data."
+    },
+    {
+        "image": "plotQA_1467-test.png",
+        "claim": "The label of the X-axis is 'Years'.",
+        "label": "Supports",
+        "explanation": "The chart clearly indicates that the X-axis is labeled 'Years', as seen at the bottom of the chart. This label represents the time intervals for which the rural population data is plotted, confirming that the answer provided is accurate."
+    }
+]

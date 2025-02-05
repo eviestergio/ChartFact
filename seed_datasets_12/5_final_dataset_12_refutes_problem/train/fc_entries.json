@@ -1,0 +1,38 @@
+[
+    {
+        "image": "plotQA_98527-train.png",
+        "claim": "The absence of grid lines may affect the readability of the data presented in the graph.",
+        "label": "Not enough information",
+        "explanation": "While the graph does not contain grid lines, it is unclear how this absence impacts the interpretation of the data. The visual clarity and ease of reading the trends could vary based on individual preferences and the specific context in which the graph is used."
+    },
+    {
+        "image": "plotQA_37698-train.png",
+        "claim": "There are only 2 bars on the 2nd tick from the top.",
+        "label": "Refutes",
+        "explanation": "This statement contradicts the chart, which clearly shows 3 distinct bars on the 2nd tick from the top, representing the percentage of firms in different categories. The presence of 3 bars indicates that the claim about only 2 bars is incorrect."
+    },
+    {
+        "image": "chartQA_two_col_42313-train.png",
+        "claim": "In 2020, the amount of British pounds spent on alcoholic drinks was 25964 million GBP.",
+        "label": "Supports",
+        "explanation": "The chart shows the expenditure on alcoholic drinks in the UK from 2005 to 2020, with the bar for 2020 reaching 25964 million GBP, confirming the accuracy of the claim."
+    },
+    {
+        "image": "chartQA_multi_col_20204-train.png",
+        "claim": "The total number of suicides may have been influenced by various social and economic factors in 2009.",
+        "label": "Not enough information",
+        "explanation": "The chart provides data on the number of suicides by age group for each year, but it does not include information on the social or economic conditions that could have affected these numbers. Without this context, it is impossible to determine the specific reasons behind the total of 517 suicides in 2009."
+    },
+    {
+        "image": "figureQA_43249-train.png",
+        "claim": "The comparison between Hot Pink and Teal may vary under different conditions or contexts.",
+        "label": "Not enough information",
+        "explanation": "The chart does not provide specific details about the conditions or contexts in which the values for Hot Pink and Teal were measured, making it impossible to definitively assess their relationship."
+    },
+    {
+        "image": "figureQA_37961-train.png",
+        "claim": "Olive is the least represented color.",
+        "label": "Refutes",
+        "explanation": "This statement contradicts the chart, which visually indicates that Olive occupies a significant portion of the pie chart, suggesting it is one of the more represented colors rather than the least."
+    }
+]

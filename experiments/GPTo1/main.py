@@ -59,13 +59,18 @@ class QueryModel:
 # --- Image input prompts ---
 
 ## Supports prompts
-def create_zero_shot_prompt(image, claim): # (final) 254 tokens, 1228 character w/o image and Q&A
-    """ Creates a zero-shot prompt to generate a 'supports' claim with an explanation using image input based on a Q&A pair. """
-
+def create_zero_shot_prompt(image, claim):
+    """ 
+    Creates a zero-shot prompt to generate a 'supports' claim with an explanation using 
+    image input based on a Q&A pair.
+    """
+    # Format the image as Markdown so the model (if multimodal) can render it.
+    # image_markdown = f"![chart](data:image/png;base64,{image})"
+    
     prompt = f"""
     Given the chart: {image} in the image input, what is the appropriate label (\'supports\', \'refutes\', or \'not enough information\') for the following claim: {claim}? Why? Output the result as a JSON object with the following keys: "explanation" and "label". The format should strictly follow this structure: {{"explanation": "your explanation for the label selected", "label": "your label for the claim"}}
     """
-
+    
     return prompt
 
 # --- Other functions ---
@@ -99,7 +104,7 @@ def generate_label_explanation(image_path, claim, model, base_dir):
     ''' Generate a 'label' and 'explanation' for a claim and image pair'''
     base64_image = encode_image(image_path, base_dir)
     prompt = create_zero_shot_prompt(base64_image, claim) # change prompt version here
-    response = model(model_name='o1-mini', query=prompt, image_base64=base64_image) # change model here
+    response = model(model_name='gpt-4o', query=prompt, image_base64=base64_image) # change model here
     response_json = parse_json_response(response)
 
     # If failed, add empty entries to filter out from final dataset
@@ -151,7 +156,7 @@ def generate_labels_explanations_from_file(input_file, model, base_dir, claim_in
 def save_results(input_file, results):
     ''' Save generated results to an output file. '''
     output_folder = os.path.dirname(input_file) # Determine the output folder based on the input file path
-    output_file_name = os.path.basename(input_file).replace('fc', 'gpto1mini')
+    output_file_name = os.path.basename(input_file).replace('fc', 'gpto1')
     output_path = os.path.join(output_folder, output_file_name)
 
     with open(output_path, 'w') as output_file:
@@ -189,7 +194,7 @@ def main(src, dst):
 
 if __name__ == '__main__':
     if len(sys.argv) != 3:
-        print("Usage: python experiments/GPTo1mini/main.py <from_path> <to_path>")
+        print("Usage: python experiments/GPTo1/main.py <from_path> <to_path>")
         sys.exit(1)
     from_path = sys.argv[1]
     to_path = sys.argv[2]
