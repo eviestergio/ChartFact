@@ -87,9 +87,7 @@ def create_zero_shot_prompt(claim):
     Creates a zero-shot prompt to generate a 'supports' claim with an explanation using 
     image input based on a Q&A pair.
     """
-    # Format the image as Markdown so the model (if multimodal) can render it.
-    # image_markdown = f"![chart](data:image/png;base64,{image})"
-    
+
     prompt = f"""
     You will receive as input a chart image along with a claim about the chart, what is the appropriate label (\'Supports\', \'Refutes\', or \'Not enough information\') for the following claim: {claim}? Why? Output the result as a JSON object with the following keys: "explanation" and "label". The format should strictly follow this structure: {{"explanation": "your explanation for the label selected", "label": "your label for the claim"}}
     """
