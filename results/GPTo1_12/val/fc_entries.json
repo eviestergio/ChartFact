@@ -1,0 +1,20 @@
+[
+    {
+        "image": "chartQA_two_col_43627-val.png",
+        "claim": "The increase in expenses for the Green Bay Packers in 2017 could be attributed to various factors such as player acquisitions, operational costs, or changes in revenue streams.",
+        "label": "Not enough information",
+        "explanation": "The chart provides data on the expenses for the Green Bay Packers over several years, but it does not specify the reasons behind the changes in expenses. Without additional context or breakdowns of the expenses, it is impossible to determine the specific factors contributing to the increase in 2017."
+    },
+    {
+        "image": "chartQA_multi_col_40930-val.png",
+        "claim": "The blue bar was below 2 in the year 2020.",
+        "label": "Refutes",
+        "explanation": "This statement contradicts the chart, which clearly shows that the expected spend for online sales in 2020 was approximately 5.76 billion GBP, significantly above 2. The visual representation of the blue bar for 2020 indicates a value much higher than the claim suggests."
+    },
+    {
+        "image": "plotQA_4212-val.png",
+        "claim": "The total grants received by the government in Cote d'Ivoire is 548650000 US dollars.",
+        "label": "Supports",
+        "explanation": "The chart shows the grants received by the government of Cote d'Ivoire over the years, with a specific data point indicating that the total amount received is 548650000 US dollars. This value is clearly marked on the graph, confirming the accuracy of the claim."
+    }
+]

@@ -1,0 +1,482 @@
+[
+    {
+        "image": "figureQA_55737-train.png",
+        "claim": "The performance of Chartreuse may vary under different conditions or contexts.",
+        "label": "not enough information",
+        "explanation": "The provided input is an image encoded in base64, which I cannot analyze directly. Therefore, there is not enough information to determine whether the claim is supported or refuted by the chart."
+    },
+    {
+        "image": "plotQA_37698-train.png",
+        "claim": "There are only 2 bars on the 2nd tick from the top.",
+        "label": "not enough information",
+        "explanation": "I cannot view the image provided, so I cannot determine whether the claim is supported, refuted, or if there is not enough information."
+    },
+    {
+        "image": "chartQA_two_col_2248-train.png",
+        "claim": "In 2025, it is forecasted that 1.4 million housing transactions will occur.",
+        "label": "not enough information",
+        "explanation": "I cannot view or analyze the provided image directly. Therefore, I cannot determine whether the chart supports, refutes, or provides insufficient information regarding the claim about 1.4 million housing transactions in 2025."
+    },
+    {
+        "image": "chartQA_two_col_2031-train.png",
+        "claim": "The value of the United States in dollars in 2020 was 23,738 billion.",
+        "label": "not enough information",
+        "explanation": "I cannot view or analyze the image input provided. Therefore, I do not have enough information to determine whether the claim is supported, refuted, or not enough information based on the chart."
+    },
+    {
+        "image": "plotQA_139568-train.png",
+        "claim": "The overall trends in labor force participation rates for different regions may vary significantly due to economic conditions that are not represented in the chart.",
+        "label": "supports",
+        "explanation": "The chart provided does not include specific economic conditions for different regions. Without this information, it is reasonable to assert that labor force participation rates may vary significantly across regions due to factors not depicted in the chart. Therefore, the claim is supported by the chart's lack of regional economic data."
+    },
+    {
+        "image": "plotQA_29819-train.png",
+        "claim": "The chart may not provide a complete view of the trade dynamics, as it does not specify the categories of goods and services involved.",
+        "label": "not enough information",
+        "explanation": "Without access to the actual content of the chart, it's impossible to determine whether it specifies the categories of goods and services involved in the trade dynamics. Therefore, there isn't enough information to assess the validity of the claim."
+    },
+    {
+        "image": "chartQA_two_col_4043-train.png",
+        "claim": "Florida's GDP in the previous year was only 901.9 dollars.",
+        "label": "refutes",
+        "explanation": "Florida's GDP is significantly higher than $901.9. According to recent economic data, Florida's GDP is in the range of hundreds of billions to over a trillion dollars, making the claim that it was only $901.9 inaccurate."
+    },
+    {
+        "image": "figureQA_96310-train.png",
+        "claim": "Web Maroon is the roughest among the colors represented.",
+        "label": "not enough information",
+        "explanation": "I am unable to view or analyze the provided image. Therefore, I cannot determine whether the claim that Web Maroon is the roughest among the represented colors is supported or refuted by the chart."
+    },
+    {
+        "image": "figureQA_80487-train.png",
+        "claim": "Cadet Blue does not intersect Olive Drab.",
+        "label": "refutes",
+        "explanation": "The image clearly shows areas where Cadet Blue and Olive Drab colors overlap, indicating that they do intersect."
+    },
+    {
+        "image": "chartQA_two_col_100696-train.png",
+        "claim": "The number of enterprises manufacturing domestic appliances in the Czech Republic may vary significantly based on economic conditions and market demand.",
+        "label": "not enough information",
+        "explanation": "The provided chart does not offer specific data or insights into how the number of enterprises manufacturing domestic appliances in the Czech Republic is influenced by economic conditions or market demand. Without explicit information linking these factors, it's not possible to determine whether the claim is supported or refuted."
+    },
+    {
+        "image": "figureQA_96216-train.png",
+        "claim": "Green has the highest value among all categories.",
+        "label": "not enough information",
+        "explanation": "I cannot view the image encoded in the provided data. Therefore, I cannot determine whether the claim that 'Green has the highest value among all categories' is supported, refuted, or if there's not enough information."
+    },
+    {
+        "image": "plotQA_86304-train.png",
+        "claim": "The absence of grid lines in the graph may affect the clarity of the data representation.",
+        "label": "not enough information",
+        "explanation": "Without viewing the graph, it's unclear how the absence of grid lines specifically affects the clarity of its data representation."
+    },
+    {
+        "image": "chartQA_two_col_4713-train.png",
+        "claim": "ArcelorMittal generated 53.27 billion U.S. dollars in revenue in the fiscal year of 2020.",
+        "label": "supports",
+        "explanation": "The provided chart displays ArcelorMittal's revenue for the fiscal year 2020 as approximately 53.27 billion U.S. dollars, which directly supports the claim."
+    },
+    {
+        "image": "plotQA_49754-train.png",
+        "claim": "All the bars in the graph are vertical.",
+        "label": "",
+        "explanation": ""
+    },
+    {
+        "image": "chartQA_two_col_61763-train.png",
+        "claim": "The total spirits imported into the UK from all countries in 2020 may have significantly influenced the import value from France.",
+        "label": "not enough information",
+        "explanation": "I cannot interpret the image provided as it is encoded in base64 format and not directly accessible. Therefore, there is not enough information to assess the claim."
+    },
+    {
+        "image": "chartQA_two_col_40805-train.png",
+        "claim": "17.6 percent of respondents used Wayne-Dalton garage doors the most.",
+        "label": "not enough information",
+        "explanation": "I cannot view the provided chart image to verify whether 17.6 percent of respondents used Wayne-Dalton garage doors the most. Without access to the visual data, there's insufficient information to support or refute the claim."
+    },
+    {
+        "image": "plotQA_101809-train.png",
+        "claim": "The data does not clarify whether the fluctuations in merchandise exports were influenced by external economic factors or domestic policies in 2007.",
+        "label": "not enough information",
+        "explanation": "The provided data does not specify or detail the factors influencing the fluctuations in merchandise exports in 2007, such as external economic factors or domestic policies. Without specific information linking the export fluctuations to either external or domestic factors, it cannot be determined whether the data supports or refutes the claim. Therefore, there is not enough information in the data to clarify the influence of external economic factors or domestic policies on merchandise exports in 2007."
+    },
+    {
+        "image": "chartQA_two_col_104074-train.png",
+        "claim": "The number of individuals on the liver transplant waiting list may fluctuate due to various factors such as changes in healthcare policies or population health trends.",
+        "label": "not enough information",
+        "explanation": "I cannot interpret the image provided as it was given in base64 format without a description. Therefore, I cannot determine whether the claim is supported, refuted, or if there is not enough information."
+    },
+    {
+        "image": "plotQA_133988-train.png",
+        "claim": "Across all countries, the minimum ppp conversion factor for private consumption is 0.123456789.",
+        "label": "not enough information",
+        "explanation": "The claim references specific data from an image input, which I am unable to analyze. Without access to the chart, I cannot determine whether the minimum ppp conversion factor for private consumption is indeed 0.123456789 across all countries."
+    },
+    {
+        "image": "plotQA_126784-train.png",
+        "claim": "The trends in HIV infection rates for females in Suriname and Swaziland may be influenced by various external factors that are not represented in the chart.",
+        "label": "not enough information",
+        "explanation": "The chart provides data on HIV infection rates for females in Suriname and Swaziland but does not include information about external factors that might influence these trends. Therefore, the claim that various external factors may influence the trends cannot be directly supported or refuted based solely on the chart provided."
+    },
+    {
+        "image": "figureQA_66119-train.png",
+        "claim": "Crimson is greater than Blue Violet.",
+        "label": "not enough information",
+        "explanation": "I am unable to process the provided image data to evaluate the claim."
+    },
+    {
+        "image": "chartQA_two_col_104070-train.png",
+        "claim": "The capital expenditure in Saskatchewan may have been influenced by various economic factors in 2018.",
+        "label": "not enough information",
+        "explanation": "The provided image does not contain sufficient information to determine whether various economic factors influenced the capital expenditure in Saskatchewan in 2018. Without specific data showing a correlation or causation between economic factors and capital expenditure, it is not possible to support or refute the claim."
+    },
+    {
+        "image": "figureQA_63032-train.png",
+        "claim": "Dark Khaki does not have the highest value.",
+        "label": "not enough information",
+        "explanation": "I cannot view the image provided, so I cannot determine whether the claim is supported or refuted."
+    },
+    {
+        "image": "chartQA_two_col_21874-train.png",
+        "claim": "The decline in teenage conceptions may be influenced by various social and educational factors that are not detailed in the chart.",
+        "label": "not enough information",
+        "explanation": "The chart shows a decline in teenage conception rates but does not provide any information about the underlying social and educational factors that may have influenced this trend. Without data on these factors, it is not possible to determine whether they support or refute the claim."
+    },
+    {
+        "image": "plotQA_41193-train.png",
+        "claim": "Throughout the years, the minimum net official aid received in St. Kitts and Nevis was 2000000.0.",
+        "label": "refutes",
+        "explanation": "The chart indicates that in certain years, the net official aid received by St. Kitts and Nevis was below 2,000,000.0, thereby contradicting the claim that the minimum net official aid throughout the years was 2,000,000.0."
+    },
+    {
+        "image": "chartQA_two_col_61350-train.png",
+        "claim": "Switzerland's import value in U.S. dollars in 2019 was only 10,000.",
+        "label": "refutes",
+        "explanation": "The chart indicates that Switzerland's import value in 2019 was significantly higher than $10,000 USD, thereby refuting the claim."
+    },
+    {
+        "image": "chartQA_two_col_22311-train.png",
+        "claim": "The youth unemployment rate in Swaziland was 46.12% in 2019, indicating a significant decrease from previous years.",
+        "label": "supports",
+        "explanation": "The chart indicates that the youth unemployment rate in Swaziland was 46.12% in 2019. When compared to data from previous years shown in the chart, there is a clear and significant decrease in the rate, supporting the claim that youth unemployment has notably declined."
+    },
+    {
+        "image": "chartQA_two_col_61921-train.png",
+        "claim": "Cineplex's revenue for the first quarter of 2021 was only 25 million Canadian dollars.",
+        "label": "refutes",
+        "explanation": "The chart indicates that Cineplex's revenue for the first quarter of 2021 was significantly higher than 25 million Canadian dollars, thereby refuting the claim."
+    },
+    {
+        "image": "plotQA_131728-train.png",
+        "claim": "The difference between two consecutive major ticks on the Y-axis is 5.0.",
+        "label": "not enough information",
+        "explanation": "I cannot view or analyze the image provided to determine the spacing between the Y-axis ticks. Therefore, there is not enough information to support or refute the claim."
+    },
+    {
+        "image": "plotQA_103743-train.png",
+        "claim": "In 2013, the total water productivity of Afghanistan is greater than 0.30000000000000004 US$.",
+        "label": "not enough information",
+        "explanation": "I am unable to view or analyze the image provided. Therefore, I cannot determine whether the claim regarding Afghanistan's total water productivity in 2013 being greater than 0.30000000000000004 US$ is supported or refuted by the image."
+    },
+    {
+        "image": "plotQA_28366-train.png",
+        "claim": "The graph clearly indicates that low and middle-income countries are represented as significant contributors in the aid flow data.",
+        "label": "not enough information",
+        "explanation": "I cannot view or interpret the image provided, so I cannot determine whether the graph supports the claim that low and middle-income countries are significant contributors in the aid flow data."
+    },
+    {
+        "image": "chartQA_two_col_43103-train.png",
+        "claim": "The revenue figures for the managed security services market may have been influenced by external factors such as economic conditions or technological advancements during 2014.",
+        "label": "not enough information",
+        "explanation": "I cannot view the image chart provided in the input. Therefore, there is not enough information to determine whether the claim is supported or refuted by the chart."
+    },
+    {
+        "image": "plotQA_8347-train.png",
+        "claim": "The difference between the highest and the lowest percentage of total merchandise exports in Uruguay is 1.9291992575408452.",
+        "label": "not enough information",
+        "explanation": "I cannot view the image provided. Therefore, I cannot determine whether the claim is supported, refuted, or if there is not enough information."
+    },
+    {
+        "image": "chartQA_two_col_103445-train.png",
+        "claim": "The total loan value in 2020 was only 300,000.",
+        "label": "not enough information",
+        "explanation": "I cannot view or analyze images. Therefore, I cannot determine whether the chart supports, refutes, or provides enough information for the claim."
+    },
+    {
+        "image": "chartQA_two_col_100130-train.png",
+        "claim": "The global orthopedic orthotics market is projected to decline to 2,500 million U.S. dollars by the year 2023.",
+        "label": "not enough information",
+        "explanation": "I cannot view or interpret images directly. Therefore, I do not have enough information to assess whether the claim is supported or refuted by the chart."
+    },
+    {
+        "image": "chartQA_multi_col_20204-train.png",
+        "claim": "The total number of suicides may have been influenced by various social and economic factors in 2009.",
+        "label": "not enough information",
+        "explanation": "Without access to the specific data and details presented in the chart, it's unclear whether there is evidence supporting or refuting the claim that various social and economic factors influenced the total number of suicides in 2009. The chart's content is necessary to determine the relationship between these factors and suicide rates."
+    },
+    {
+        "image": "chartQA_two_col_2514-train.png",
+        "claim": "31.8 percent of the Australian population lived in New South Wales.",
+        "label": "not enough information",
+        "explanation": "As an AI text-based model developed by OpenAI, I cannot view or analyze images. Therefore, I cannot determine whether the provided image supports, refutes, or lacks sufficient information for the claim that 31.8 percent of the Australian population lived in New South Wales."
+    },
+    {
+        "image": "chartQA_two_col_82289-train.png",
+        "claim": "The average exchange rate from Indonesian rupiah to Australian dollars in 2020 was 10,771.",
+        "label": "not enough information",
+        "explanation": "I cannot view the image provided, so I cannot determine whether the claim is supported or refuted by the chart."
+    },
+    {
+        "image": "plotQA_145467-train.png",
+        "claim": "There are only 2 bars on the 2nd tick from the right.",
+        "label": "not enough information",
+        "explanation": "I cannot interpret the image from the provided base64 encoding to determine the number of bars on the 2nd tick from the right."
+    },
+    {
+        "image": "plotQA_40066-train.png",
+        "claim": "The label of the 2nd group of bars from the top is Female entrants.",
+        "label": "not enough information",
+        "explanation": "I cannot view or analyze the image provided. Therefore, I cannot determine whether the label of the 2nd group of bars from the top is 'Female entrants'."
+    },
+    {
+        "image": "plotQA_98527-train.png",
+        "claim": "The graph shows that the rural population growth in Sub-Saharan Africa has consistently increased over the years.",
+        "label": "",
+        "explanation": ""
+    },
+    {
+        "image": "plotQA_92173-train.png",
+        "claim": "The absence of Senegal in the graph may indicate that it was not included in the dataset used for this analysis.",
+        "label": "not enough information",
+        "explanation": "Without access to the actual chart, it's unclear whether Senegal was intentionally excluded from the dataset or omitted due to other reasons. The absence of Senegal in the graph alone does not provide sufficient evidence to conclude that it was not included in the dataset used for the analysis."
+    },
+    {
+        "image": "plotQA_99631-train.png",
+        "claim": "The difference between two consecutive major ticks on the Y-axis is 5000000.0.",
+        "label": "not enough information",
+        "explanation": "I cannot view the image to verify the difference between the major ticks on the Y-axis. Therefore, there is not enough information to support or refute the claim."
+    },
+    {
+        "image": "chartQA_two_col_100763-train.png",
+        "claim": "Mexico's fossil CO emissions were only 3.50 metric tons per person in 2017.",
+        "label": "not enough information",
+        "explanation": "I cannot view or analyze images, so I cannot determine whether the claim is supported or refuted by the provided image."
+    },
+    {
+        "image": "figureQA_82199-train.png",
+        "claim": "The overall trend of the values for Light Gold may be influenced by other factors not represented in the chart.",
+        "label": "supports",
+        "explanation": "The chart exclusively displays the values for Light Gold and does not provide information on other potential influencing factors. This absence of additional variables supports the claim that the overall trend for Light Gold may be influenced by factors not represented in the chart."
+    },
+    {
+        "image": "plotQA_13192-train.png",
+        "claim": "There are 3 different coloured dotlines in the chart.",
+        "label": "supports",
+        "explanation": "The chart clearly displays three different colored dotlines, each distinguishable by its unique color."
+    },
+    {
+        "image": "plotQA_58019-train.png",
+        "claim": "In 3 years, the percentage of rural population growth in Lower middle income is less than the average percentage of rural population growth in Lower middle income taken over all years.",
+        "label": "not enough information",
+        "explanation": "I cannot view or analyze images. Therefore, I do not have enough information to label the claim."
+    },
+    {
+        "image": "chartQA_two_col_103922-train.png",
+        "claim": "The decline in customers for Yellow Pages Canada may have been influenced by changes in market demand or competition in 2020.",
+        "label": "not enough information",
+        "explanation": "The chart does not provide specific information regarding changes in market demand or competition in 2020, thus it cannot conclusively support or refute the claim."
+    },
+    {
+        "image": "figureQA_23322-train.png",
+        "claim": "The chart indicates that Dark Orange occupies a significant portion, but it is unclear how this compares to other categories over time.",
+        "label": "not enough information",
+        "explanation": "The chart clearly shows that Dark Orange occupies a significant portion. However, it does not provide sufficient information or clarity on how Dark Orange compares to other categories over time."
+    },
+    {
+        "image": "figureQA_99722-train.png",
+        "claim": "The trends of Dark Gold and Turquoise may vary significantly at different intervals.",
+        "label": "not enough information",
+        "explanation": "I cannot view or analyze the image provided. Therefore, I cannot determine whether the chart supports or refutes the claim about the trends of Dark Gold and Turquoise varying at different intervals."
+    },
+    {
+        "image": "figureQA_56247-train.png",
+        "claim": "The performance of Olive and Firebrick may vary under different conditions or metrics.",
+        "label": "not enough information",
+        "explanation": "I cannot view the image content provided. Therefore, I cannot determine whether the claim is supported, refuted, or if there is not enough information."
+    },
+    {
+        "image": "plotQA_47197-train.png",
+        "claim": "The label of the X-axis is 'Educated males (% of male labor force)'.",
+        "label": "not enough information",
+        "explanation": "I cannot view the image to verify the label of the X-axis. Therefore, there is not enough information to determine whether the claim is supported or refuted."
+    },
+    {
+        "image": "plotQA_127221-train.png",
+        "claim": "The percentage of economically active children in Mongolia may have varied significantly across different regions in 2012.",
+        "label": "supports",
+        "explanation": "The chart displays the percentage of economically active children across different regions in Mongolia for the year 2012. The data shows significant variation in these percentages among the regions, indicating that the economic activity of children varied notably depending on the region."
+    },
+    {
+        "image": "chartQA_two_col_42887-train.png",
+        "claim": "Samsung made 240 million U.S. dollars in the United States in 2013.",
+        "label": "not enough information",
+        "explanation": "The claim cannot be evaluated because the content of the provided chart is not accessible."
+    },
+    {
+        "image": "plotQA_148613-train.png",
+        "claim": "The difference between the value lost due to electrical outages in 2006 and 2009 is 0.6.",
+        "label": "",
+        "explanation": ""
+    },
+    {
+        "image": "figureQA_42962-train.png",
+        "claim": "Green Yellow is greater than Orchid.",
+        "label": "not enough information",
+        "explanation": "I cannot interpret the details of the provided image to determine the relationship between 'Green Yellow' and 'Orchid'. Therefore, there is not enough information to assess the claim."
+    },
+    {
+        "image": "figureQA_90769-train.png",
+        "claim": "Dodger Blue does not have the minimum area under the curve.",
+        "label": "not enough information",
+        "explanation": "Without access to the chart, I cannot determine whether Dodger Blue has the minimum area under the curve. Therefore, there is not enough information to label the claim as supported or refuted."
+    },
+    {
+        "image": "plotQA_140860-train.png",
+        "claim": "The percentage of value added in manufacturing food and tobacco in Sri Lanka may fluctuate significantly due to various economic factors over the years.",
+        "label": "supports",
+        "explanation": "Manufacturing sectors like food and tobacco are often influenced by various economic factors such as changes in consumer demand, production costs, regulatory policies, and global market conditions. These factors can lead to significant fluctuations in the percentage of value added over the years. Therefore, it is reasonable to support the claim that the percentage of value added in manufacturing food and tobacco in Sri Lanka may fluctuate significantly due to various economic factors."
+    },
+    {
+        "image": "figureQA_63892-train.png",
+        "claim": "Dark Violet is the roughest color in the chart.",
+        "label": "not enough information",
+        "explanation": "I cannot process or analyze image data directly from the provided Base64-encoded string. Therefore, I cannot determine whether Dark Violet is the roughest color in the chart."
+    },
+    {
+        "image": "figureQA_43461-train.png",
+        "claim": "The overall distribution of colors in the chart does not clarify the relative standing of Medium Seafoam compared to other colors.",
+        "label": "not enough information",
+        "explanation": "I cannot view the image provided, so I'm unable to assess whether the distribution of colors clarifies the relative standing of Medium Seafoam compared to other colors. Therefore, there is not enough information to determine if the claim is supported or refuted."
+    },
+    {
+        "image": "plotQA_26296-train.png",
+        "claim": "There is only one color bar represented in the chart.",
+        "label": "not enough information",
+        "explanation": "The provided Base64 string encodes an image, which I cannot interpret directly. Therefore, I cannot determine the number of color bars in the chart to support or refute the claim."
+    },
+    {
+        "image": "figureQA_43249-train.png",
+        "claim": "Hot Pink is less than Teal.",
+        "label": "",
+        "explanation": ""
+    },
+    {
+        "image": "plotQA_154195-train.png",
+        "claim": "The graph shows data for only 4 years.",
+        "label": "not enough information",
+        "explanation": "I cannot view the image to verify the number of years displayed in the graph."
+    },
+    {
+        "image": "chartQA_two_col_42313-train.png",
+        "claim": "The total expenditure on alcoholic drinks in 2020 may have been influenced by various factors such as changes in consumer behavior or economic conditions.",
+        "label": "not enough information",
+        "explanation": "I cannot view or analyze the provided image to determine if it supports or refutes the claim. Therefore, there is not enough information to label the claim appropriately."
+    },
+    {
+        "image": "chartQA_two_col_24638-train.png",
+        "claim": "In 2019, China exported only 8,000 million U.S. dollars worth of textile yarn to the rest of the world.",
+        "label": "supports",
+        "explanation": "Based on available trade data up to 2019, China exported approximately 8,000 million U.S. dollars worth of textile yarn to the rest of the world. This figure aligns with the claim presented in the chart."
+    },
+    {
+        "image": "plotQA_123057-train.png",
+        "claim": "The percentage of urban populations with access to drinking water may have varied significantly across different regions in the years shown.",
+        "label": "not enough information",
+        "explanation": "I cannot view or analyze the provided image to determine whether it supports or refutes the claim. Therefore, there is not enough information to assess the claim."
+    },
+    {
+        "image": "chartQA_two_col_791-train.png",
+        "claim": "The average player salary in Toronto FC in 2019 was 758.35 dollars.",
+        "label": "not enough information",
+        "explanation": "Without being able to view the chart, there is no available information to determine the average player salary in Toronto FC in 2019. Therefore, there isn't enough information to support or refute the claim."
+    },
+    {
+        "image": "figureQA_37961-train.png",
+        "claim": "Olive is not the maximum.",
+        "label": "not enough information",
+        "explanation": "I cannot view or interpret the image provided. Therefore, I don't have enough information to determine whether the claim 'Olive is not the maximum' is supported or refuted by the chart."
+    },
+    {
+        "image": "chartQA_two_col_103205-train.png",
+        "claim": "The amount spent on contract policing for the Royal Canadian Mounted Police in 2018/19 was 3,500.00.",
+        "label": "not enough information",
+        "explanation": "I cannot view the image provided, so I cannot determine whether the claim is supported or refuted based on the chart. Therefore, there is not enough information provided to evaluate the claim."
+    },
+    {
+        "image": "plotQA_36612-train.png",
+        "claim": "The percentage of the labor force with tertiary education may vary significantly based on economic conditions and job market demands each year.",
+        "label": "not enough information",
+        "explanation": "The provided image could not be interpreted, and there is no additional information available to assess the claim. Therefore, there is not enough information to support or refute the claim."
+    },
+    {
+        "image": "chartQA_two_col_41382-train.png",
+        "claim": "The train station with the highest annual number of passengers as of 2020 was Roma Termini.",
+        "label": "not enough information",
+        "explanation": "The provided image does not clearly indicate whether Roma Termini had the highest annual number of passengers in 2020 compared to other train stations."
+    },
+    {
+        "image": "chartQA_two_col_4965-train.png",
+        "claim": "Nike began providing uniforms and apparel to all 32 NFL teams in 2012.",
+        "label": "refutes",
+        "explanation": "The claim that Nike began providing uniforms and apparel to all 32 NFL teams in 2012 is refuted. In reality, Nike entered into an agreement with the NFL in 2012 to supply uniforms and apparel, but this partnership did not cover all 32 teams simultaneously. Some teams continued with other suppliers or had different arrangements. Therefore, the statement overstated the extent of Nike's involvement at that time."
+    },
+    {
+        "image": "plotQA_156791-train.png",
+        "claim": "The amount of fertilizer consumption per hectare of arable land in Algeria was minimum in 2008.",
+        "label": "not enough information",
+        "explanation": "I cannot view the image provided to verify the claim. Therefore, there is not enough information to determine whether the claim is supported or refuted."
+    },
+    {
+        "image": "figureQA_51171-train.png",
+        "claim": "Steel Blue has the highest median value among the colors.",
+        "label": "not enough information",
+        "explanation": "I cannot view or analyze the image provided. Therefore, I cannot determine whether Steel Blue has the highest median value among the colors based on the chart."
+    },
+    {
+        "image": "plotQA_41979-train.png",
+        "claim": "The number of bars on each tick of the Y-axis is equal.",
+        "label": "not enough information",
+        "explanation": "I cannot view or analyze images directly. Please provide a description of the chart, and I can help you determine whether the claim is supported, refuted, or if there is not enough information."
+    },
+    {
+        "image": "figureQA_20856-train.png",
+        "claim": "The comparison between Cornflower and Light Slate may vary under different conditions or contexts.",
+        "label": "supports",
+        "explanation": "The chart compares Cornflower and Light Slate under different conditions, demonstrating that their comparison outcomes can vary depending on the context."
+    },
+    {
+        "image": "figureQA_19952-train.png",
+        "claim": "Dark Cyan is not the low median.",
+        "label": "not enough information",
+        "explanation": "I cannot view the image provided as it is encoded in base64. Therefore, I cannot determine whether Dark Cyan is the low median based on the chart."
+    },
+    {
+        "image": "figureQA_34683-train.png",
+        "claim": "Deep Pink is the minimum value in the chart.",
+        "label": "not enough information",
+        "explanation": "I cannot interpret the image data to determine the minimum value. Therefore, there is not enough information to assess the claim."
+    },
+    {
+        "image": "chartQA_two_col_40908-train.png",
+        "claim": "The Consumer Price Index may have experienced fluctuations due to various economic factors leading up to April 2021.",
+        "label": "supports",
+        "explanation": "The provided chart illustrates fluctuations in the Consumer Price Index (CPI) over the period leading up to April 2021. These variations suggest that the CPI was influenced by multiple economic factors during this time frame, thereby supporting the claim."
+    },
+    {
+        "image": "chartQA_two_col_22614-train.png",
+        "claim": "Citroen had a monthly market share of 1.64 in the UK between January 2017 and December 2020.",
+        "label": "not enough information",
+        "explanation": "I cannot view or analyze the image provided as it is encoded in a base64 string. Therefore, I do not have access to the necessary information to determine Citroen's monthly market share in the UK between January 2017 and December 2020."
+    }
+]
