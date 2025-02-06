@@ -8,11 +8,11 @@ import base64
 # --- Image input prompts ---
 
 ## Supports prompts
-def create_zero_shot_supports_prompt(question, answer): # (final) 254 tokens, 1228 character w/o image and Q&A
+def create_zero_shot_supports_prompt(question, answer): # (final) 326 tokens, 1601 character w/o image and Q&A
     """ Creates a zero-shot prompt to generate a 'supports' claim with an explanation using image input based on a Q&A pair. """
 
     prompt = f"""
-    You are a helpful assistant designed to convert question-answering pairs into claims and output the result in JSON.
+    You are a helpful assistant designed to convert question-answering pairs into sentences and output the result in JSON.
 
     You will receive as input a chart image along with a question about the chart and its corresponding answer, delimited by triple single quotes (see data input below).
 
@@ -24,9 +24,9 @@ def create_zero_shot_supports_prompt(question, answer): # (final) 254 tokens, 12
     Task: Check the validity of the "answer" by referring to the "chart", change the "answer" if necessary, then convert the 'question' and 'answer' pair to a declarative sentence and generate an explanation of why the sentence is true based on the information in the chart.
 
     Process for generating a declarative sentence and an explanation:
-        1. Check that the "answer" to the "question" is precisely correct by examining the "chart". If the "answer" in correct, generate the correct answer and use this as the "answer" going forward.
+        1. Check that the "answer" to the "question" is precisely correct by examining the chart image. If the "answer" is correct, generate the correct answer and use this as the "answer" going forward.
         2. Using only the "question" and "answer", convert them into a sentence such that the resulting sentence is supported by the data in the chart. 
-        3. Validate that the generated sentence is correct by carefully analyzing the chart image. 
+        3. Validate that the generated sentence is correct by carefully analyzing the chart. 
         4. Explain why the sentence is correct by referencing information extracted from the chart. Note: information in charts can be expressed through visual elements, data points, categorical labels, numbers, etc. 
 
     Output the result as a JSON object strictly following this structure:
@@ -38,7 +38,7 @@ def create_zero_shot_supports_prompt(question, answer): # (final) 254 tokens, 12
 
     return prompt
 
-def create_zero_shot_supports_prompt_o(question, answer): #(!) 254 tokens, 1228 character w/o image and Q&A (w/ trying to fix incorrect input data)
+def create_zero_shot_supports_prompt_o(question, answer): #254 tokens, 1228 character w/o image and Q&A (w/ trying to fix incorrect input data)
     """ Creates a zero-shot prompt to generate a 'supports' claim with an explanation using image input based on a Q&A pair. """
 
     prompt = f"""
@@ -182,23 +182,23 @@ def create_few_shot_supports_prompt_wo_QA():
     return prompt
 
 ### Simple supports prompt
-def create_supports_prompt_simple(question, answer): # (final) 254 tokens, 1221 characters
+def create_supports_prompt_simple(question, answer): # (final) 259 tokens, 1243 characters
     ''' Creates a simplified prompt to generate a 'supports' claim without an explanation. '''
     prompt = f"""
-    You are a helpful assistant designed to output JSON.
+    You are a helpful assistant designed to convert question-answering pairs into sentences and output the result in JSON.
 
-    You will be provided with a question and its corresponding answer delimited by triple single quotes.
+    You will be provided with a question and its corresponding answer delimited by triple single quotes (see data input below).
 
     Data entry: '''
         question: "{question}",
         answer: "{answer}"
     '''
 
-    Task: Using the two input-output examples delimited by angle brackets, convert each 'question' and 'answer' pair to a claim that supports the information.
+    Task: Using the two input-output examples delimited by angle brackets, convert each 'question' and 'answer' pair to a sentence that supports the information.
 
-    Output the result as a JSON object with the key "supports claim". The format should strictly follow this structure:
+    Output the result as a JSON object strictly following this structure:
     {{
-        "supports claim": "your generated supports claim"
+        "supports claim": "your generated sentence"
     }}
 
     Examples: < 
@@ -222,12 +222,12 @@ def create_supports_prompt_simple(question, answer): # (final) 254 tokens, 1221 
     return prompt
 
 ## Refutes prompts
-def create_zero_shot_refutes_prompt(supports_claim): # (final) 279 tokens, 1355 characters w/o image and support claim
+def create_zero_shot_refutes_prompt(supports_claim): # (final) 302 tokens, 1551 characters w/o image and support claim
     # Image must be included due to issue with figureQA_37961-train.png: When there are no numbers in the chart, the model struggles
     ''' Creates a zero-shot prompt to generate a 'refutes' claim with an explanation using image input based on a Q&A pair. '''
     
     prompt = f"""
-    You are a helpful assistant designed to generate contradictory claims based on provided supporting claims and output the result in JSON.
+    You are a helpful assistant designed to generate contradictory sentences based on provided supporting claims and output the result in JSON.
 
     You will receive as input a chart image along with a claim that supports the information in the chart, delimited by triple single quotes (see data input below).
 
@@ -235,12 +235,12 @@ def create_zero_shot_refutes_prompt(supports_claim): # (final) 279 tokens, 1355 
         "supports claim": "{supports_claim}"
     '''
 
-    Task: Generate a 'refutes' claim that contradicts the information in the chart and provide an explanation. 
+    Task: Generate a 'refutes' sentence that contradicts the information in the chart and provide an explanation. 
 
-    Process for generating a 'refutes' claim and explanation:
-        1. Develop a sentence that refutes the information in the chart based on the given claim that supports the information in the chart, without adding unverifiable information. This can be done by changing reported numbers, trends, or other factual elements in a plausible but incorrect way. Ensure that the statement does not reveal that it is refuted by the chart. 
-        2. Validate that the generated sentences refutes the information in the chart by carefully analyzing the chart image. 
-        3. Explain why the sentence refutes the chart image by referencing information extracted from the chart. Note: information in charts can be expressed through visual elements, data points, categorical labels, numbers, etc. In the explanation, do not refer to the given supports claim.
+    Process for generating a 'refutes' sentence and explanation:
+        1. Develop a sentence that refutes the information in the chart image based on the given claim that supports the information in the chart, without adding unverifiable information. This can be done by changing reported numbers, trends, or other factual elements in a plausible but incorrect way. Ensure that the statement does not reveal that it is refuted by the chart. 
+        2. Validate that the generated sentences refutes the information in the chart by carefully analyzing the chart. 
+        3. Explain why the sentence refutes the chart by referencing information extracted from the chart. Note: information in charts can be expressed through visual elements, data points, categorical labels, numbers, etc. In the explanation, do not refer to the given supports claim.
 
     Output the result as a JSON object strictly following this structure:
     {{
@@ -397,7 +397,7 @@ def create_few_shot_refutes_prompt_wo_QA(image):
     return prompt
 
 ## Not enough information prompts
-def create_zero_shot_nei_prompt(supports_claim): # (final) 269 tokens, 1390 characters w/o image and support claim
+def create_zero_shot_nei_prompt(supports_claim): # (final) 331 tokens, 1725 characters w/o image and support claim
     ''' Creates a zero-shot prompt to generate a 'not enough information' claim with an explanation. '''
 
     prompt = f"""
@@ -409,17 +409,17 @@ def create_zero_shot_nei_prompt(supports_claim): # (final) 269 tokens, 1390 char
         "supports claim": "{supports_claim}"
     '''
 
-    Task: Generate a 'not enough information' claim that neither fully supports or refutes the information in the chart and provide an explanation. 
+    Task: Generate a 'not enough information' sentence that neither fully supports or refutes the information in the chart and provide an explanation. 
 
     Process for generating a 'not enough information' claim and explanation:
         1. Analyze the chart data and the provided supports claim for gaps or missing details that prevent fully supporting or refuting the claim.
-        2. Generate a sentence based on these gaps, asserting, as if it were a fact, plausible scenarios or causes that, in reality, neither directly support nor refute the supports_claim but that is related to the supports_claim. Ensure that the sentence does not reveal that there is not enough information for it to be evaluated by the chart.
+        2. Generate a sentence based on these gaps, asserting, as if it were a fact, plausible scenarios or causes that, in reality, neither directly support nor refute the supports claim but that is related to the supports claim. Ensure that the sentence does not reveal that there is not enough information for it to be evaluated by the chart.
         3. Explain why the generated sentence cannot be verified with the available data by referencing information extracted from the chart. Note: information in charts can be expressed through visual elements, data points, categorical labels, numbers, etc. In the explanation, do not refer to the given supports claim.
         
     Output the result as a JSON object strictly following this structure:    
     {{
         "not enough information claim": "your generated sentence",
-        "explanation": "your explanation for why the sentence lacks enough information to support the chart"
+        "explanation": "your explanation for why the sentence lacks enough information to support or refute the chart"
     }}
     """
 
@@ -787,7 +787,7 @@ def generate_supports_claim(image_path, question, answer, model, base_dir):
 def generate_supports_claim_simple(question, answer, model): 
     ''' Generate a simplified 'supports' claim without an explanation. '''
     prompt = create_supports_prompt_simple(question, answer) # leave prompt as is
-    response = model(model_name='gpt-3.5-turbo', query=prompt) # leave model as is
+    response = model(model_name='gpt-4o-mini', query=prompt) # leave model as is
     response_json = parse_json_response(response)
 
     # If failed, add empty entries to filter out from final dataset
