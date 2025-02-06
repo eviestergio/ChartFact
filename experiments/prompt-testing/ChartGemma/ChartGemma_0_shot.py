@@ -10,7 +10,7 @@ processor = AutoProcessor.from_pretrained("ahmed-masry/chartgemma")
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = model.to(device)
 
-chart = "5_final_dataset_12/train/png/plotQA_37698-train.png" 
+chart = "../../5_final_dataset_12/train/png/plotQA_37698-train.png" 
 claim = "There are 3 bars on the 2nd tick from the top."
 
 input_text_variations = [

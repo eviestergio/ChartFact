@@ -19,7 +19,7 @@ def encode_image(image_path):
     return base64.b64encode(image_file.read()).decode('utf-8')
 
 # Path to your image, manually added
-image_path = "seed_datasets_12/5_final_dataset_12/train/png/chartQA_multi_col_20204-train.png"
+image_path = "../../seed_datasets_12/5_final_dataset_12/train/png/chartQA_multi_col_20204-train.png"
 
 # Getting the base64 string
 chart = encode_image(image_path)
