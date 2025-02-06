@@ -1,0 +1,8 @@
+[
+    {
+        "image": "plotQA_1467-test.png",
+        "claim": "The label of the X-axis is 'Years'.",
+        "label": "Supports",
+        "explanation": "The X-axis of the chart is clearly labeled with the term 'Years', indicating that it represents the passage of time across the data points plotted for the rural population of the countries shown."
+    }
+]

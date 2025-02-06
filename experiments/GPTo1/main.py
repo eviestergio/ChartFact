@@ -42,24 +42,47 @@ class QueryModel:
         """
 
         # If no image provided, send text-only request
-        messages = [
-            {"role": "user", "content": query}
-        ]
-            
+        if image_base64 is None:
+            messages = [
+                {
+                    "role": "user", 
+                    "content": query
+                }
+            ]
+        else:
+            messages=[
+                {
+                    "role": "user",
+                    "content": [
+                        {
+                            "type": "text",
+                            "text": query,
+                        },
+                        {
+                            "type": "image_url",
+                            "image_url": {
+                                "url":  f"data:image/jpeg;base64,{image_base64}"
+                            },
+                        },
+                    ],
+                }
+            ]
+
         response = client.chat.completions.create(
             model=model_name,
             messages=messages,
             **self.params
         )
-        
+    
         response_text = response.choices[0].message.content
+
         print(response_text)
         return response_text
 
 # --- Image input prompts ---
 
 ## Supports prompts
-def create_zero_shot_prompt(image, claim):
+def create_zero_shot_prompt(claim):
     """ 
     Creates a zero-shot prompt to generate a 'supports' claim with an explanation using 
     image input based on a Q&A pair.
@@ -68,7 +91,7 @@ def create_zero_shot_prompt(image, claim):
     # image_markdown = f"![chart](data:image/png;base64,{image})"
     
     prompt = f"""
-    Given the chart: {image} in the image input, what is the appropriate label (\'supports\', \'refutes\', or \'not enough information\') for the following claim: {claim}? Why? Output the result as a JSON object with the following keys: "explanation" and "label". The format should strictly follow this structure: {{"explanation": "your explanation for the label selected", "label": "your label for the claim"}}
+    You will receive as input a chart image along with a claim about the chart, what is the appropriate label (\'Supports\', \'Refutes\', or \'Not enough information\') for the following claim: {claim}? Why? Output the result as a JSON object with the following keys: "explanation" and "label". The format should strictly follow this structure: {{"explanation": "your explanation for the label selected", "label": "your label for the claim"}}
     """
     
     return prompt
@@ -103,7 +126,7 @@ def parse_json_response(response):
 def generate_label_explanation(image_path, claim, model, base_dir):
     ''' Generate a 'label' and 'explanation' for a claim and image pair'''
     base64_image = encode_image(image_path, base_dir)
-    prompt = create_zero_shot_prompt(base64_image, claim) # change prompt version here
+    prompt = create_zero_shot_prompt(claim) # change prompt version here
     response = model(model_name='gpt-4o', query=prompt, image_base64=base64_image) # change model here
     response_json = parse_json_response(response)
 
